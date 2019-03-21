@@ -1,0 +1,50 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\begin{document}
+\title{Démonstration kholle 14}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Inégalité de Lagrange} 
+\textcolor{green}{Propriété :} \\ 
+
+\section{Unicité et produit du D.L}
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} Si on a : \\ 
+$f(x)=\sum_{k=0}^n \alpha_k(x-a)^k+o(x^n)$  \\
+$f(x)= \sum_{k=0}^n \beta_k(x-a)^k + o(x^n)$ \\ 
+Alors : $ \forall k \in [[0,n]], \alpha_k=\beta_k$ \\ 
+\textcolor{red}{Démonstration : } \\ 
+posons $E= \lbrace k \in [[0,n]]: \alpha_k \neq \beta_k$ \\
+si $E \neq \emptyset$ : comme $E\subset \mathbb{N}$, il a un minimum p : \\ 
+On a :\\ 
+$f(x)= \sum_{k=0}^n \alpha_k (x-a)^k + (x-a)^n \epsilon_1(x)$ où $ \epsilon_1(x) \rightarrow_{x\rightarrow a} 0$ \\ 
+$f(x)= \sum_{k=0}^n \beta_k (x-a)^k + (x-a)^n \epsilon_2(x)$ où $\epsilon_2(x) \rightarrow_{x \rightarrow a} 0$ \\ 
+ainsi pour tout $x \in d_f$ : \\ 
+$\sum_{k=1}^n(\alpha_k- \beta_k) (x-a)^k+ (x-a)^n (\epsilon_1(x) - \epsilon_2(x)) $
+\section{Etablir les DL en 0 à tout ordre de $1/(1\pm x)$, puis de $\ln(1+x)$ et $arctan(x)$(primitivation admise)}
+\section{$DL_5(0)$ de $\tan(x)$ par produit. Retrouver cela par division selon les puissances croissantes}
+\section{$DL_8(0)$ de $\tan(x)$ en exploitant $tan'(x)=1+\tanˆ2(x)$}
+\section{$DL_4(0)$ de $\frac{sh(x)-sin(x)}{1-\cos(x)}$}
+\end{document}

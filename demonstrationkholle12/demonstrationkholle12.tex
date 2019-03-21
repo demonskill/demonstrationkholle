@@ -1,0 +1,202 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\begin{document}
+\title{Démonstration kholle 12}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Continuité de la composée avec quantificateurs}
+\textcolor{green}{Propriété :} \\
+$I,J$ intervalles non triviaux,$a \in I, b \in J$ )\\
+$f : I \rightarrow \mathbb{R}, g: J \rightarrow \mathbb{R}$ )\\ 
+$f(I) \subset J$ et $b=f(a)$ \\ 
+f continue en a, g continue en b \\ 
+Alors $g \circ f$ est continue en a \\  
+\textcolor{red}{Démonstration :} \\
+Soit $\epsilon \in \mathbb{R}^*_+$, Alors : \\
+$\exists \delta \in \mathbb{R}^*_+, \forall y \in J (|y-b| \leq \delta \Rightarrow |g(y)-g(b)| \leq \epsilon $ \\ 
+Ecrivons la continuité de f en a avec $\delta >0$ au lieu d'epsilon : \\ 
+$\exists \eta \in \mathbb{R}^*_+, \forall x \in I, (|x-a| \leq \eta \Rightarrow |f(x)-f(a)| \leq \delta$ \\ 
+Alors pour $x \in I$ tel que $|x-a| \leq \eta$ : \\ 
+$|f(x)-f(a)| \leq \delta$ \\
+et $f(x) \in f(I) \subset J$ \\ 
+donc $|g(f(x))-\underbrace{g(b)|}_{g(f(a))} \leq \epsilon$
+\section{Théorème des valeurs intermédiaires (avec lemme)}
+\textcolor{green}{Propriété :} \\ 
+Soit I un intervalle non trivial et $f \in \mathcal{C}^0(I)$. \\ 
+Alors $f(I)$ est un intervalle \\ 
+\textcolor{red}{Démonstration :} \\ 
+Montrons le lemme du TVI : \\ 
+Supposons $f(a) \leq 0$ et $f(b) \geq 0$ : (l'autre cas s'obtient avec (-f)) \\
+posons $A= \lbrace x \in [a,b] : f(x) \leq 0 \rbrace$ \\ 
+On a $ A \subset \mathbb{R}$ et majorée par b $A \neq \emptyset$ car $a \in A$ \\ 
+Ainsi on peut poser $C=sup(a)$ : \\ 
+Comme b est majorant de a donc $c \leq b$. Comme $a \in A$ et C est un majorant de A : $a \leq c$ \\ 
+Ainsi: $c \in [a,b]$ donc $c \in I$, car $(a,b) \in I^2$ et I intervalle. \\ 
+D'une part: comme $c=sup(A)$, il existe $(x_n)_{n\in \mathbb{N}} \in A^{\mathbb{N}}$ tel que $x_n \rightarrow c$ \\ 
+La fonction f étant continue : \\ 
+$f(x_n) \rightarrow f(c)$ or $\forall n \in \mathbb{N},x_n \in A$ \\ 
+c'est-à-dire : $\forall n \in \mathbb{N}, f(x_n) \leq 0$ donc $f(c)\leq 0$ \\ 
+D'autre part: \\ 
+Si $f(b)>0:c<b$ \\ 
+Posons, pour $n \geq 1$ : $u_n=c+\frac{b-c}{n} \in ]c,b]$ \\ 
+Alors $u_n \in [a,b]$ mais $u_n \in A$ car $u_n>C=sup(A)$ donc $f(u_n)>0$ \\ 
+Or $u_n  \rightarrow c$ donc par continuité de f en c :$(f(c)\geq 0)$ donc $f(c) = 0$ \\ 
+Si $f(b)=0: b \in A$donc $b=max(A)$ donc b=c \\ 
+Montrons le TVI : \\ 
+Soit $(\alpha, \beta) \in (f(I))^2$ avec $\alpha \leq B$ soit $ \gamma \in [\alpha,\beta]$. \\ 
+Il existe $(a,b) \in I^2$ tel $\alpha=f(a)$ et $\beta=f(b)$ si $a<b$ applique le lemme: \\ 
+$g:I \rightarrow \mathbb{R}$ \\ 
+$x \rightarrow f(x)- \gamma$ \\ 
+On a $g(a)g(b)=(\alpha - \gamma)(\beta-\gamma)$ \\ 
+Donc si a>b: $\exists c \in [a,b] \subset I, g(c)=0$ donc $\gamma=f(c)$ avec $c\in I$ et $\gamma \in f(I)$ \\ 
+si b<a : de même, $\exists c \in [b,a] \subset I, g(c)=0$ $\gamma=f(c) \in f(I)$ \\ 
+si b=a : $\alpha=\beta$ donc $\gamma=\alpha=\beta$ on prend $c=a$ $\gamma=f(c)\in f(I)$. \\
+Dans tous les cas, on a bien $\gamma \in f(I)$
+\section{Théorème des valeurs extrêmes}
+\textcolor{green}{Propriété} : \\ 
+Une fonction continue sur un segment est bornée et atteint ses bornes. \\ 
+C'est-à-dire elle possède un maximum et un minimum \\ 
+{\bf Corrolaire :} Ainsi, l'image d'un segment pour une fonction continue est un segment \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $f \in \mathcal{C}^0([a,b])$ avec $a<b$. \\ 
+\textcolor{red}{1)}Montrons que f est majorée \\ 
+Si f n'était pas majorée : $\forall M \in \mathbb{R}, \exists x \in [a,b], f(x)>M$ \\ 
+Ainsi, pour $n \in \mathbb{N} $ : $\exists x_n \in [a,b], f(x_n)>n$ \\ 
+Ce qui définit une suite $(x_n)_{n\in \mathbb{N}} \in [a,b]^{\mathbb{N}}$ tel que : \\ 
+$\forall n \in \mathbb{N},f(x_n)>n$ \\ 
+La suite $(x_n)_{n \in \mathbb{N}}$ est bornée donc, par le théorème de Bolzano-Weierstrass: \\ 
+Il existe une extractrice $\phi$ tel que $(x_{\phi(n)})_{n \in \mathbb{N}}$ converge. \\ 
+Notons $c= \lim_{n\rightarrow + \infty} x_{\phi(n)} $ \\ 
+Comme on a : $\forall n \in \mathbb{N}, a \leq x_{\phi(n)} \leq b$ le passage à la limite donne : \\ 
+$a \leq c \leq b$ \\
+Ainsi, f est définie et continue en c donc : $f(x_{\phi(n)}) \rightarrow_{n\rightarrow + \infty}f(c) \in \mathbb{R}$ \\ 
+Or par définition de la suite $x_n$ : \\ 
+$\forall n \in \mathbb{N},f(x_{\phi(n)})> \phi(n)$
+donc $f(x_{\phi(n)}) \rightarrow + \infty$ \textcolor{red}{contradiction} \\ 
+\textcolor{red}{2)}Montrons que f possède un maximum : \\ 
+Soit $M=sup\lbrace f(x): a \leq x \leq b \rbrace$ qui existe car f est majorée \\ 
+Si f n'a pas de maximum alors : \\ 
+$\forall x \in [a,b], f(x)<M$ \\ 
+Posons $g: [a,b] \rightarrow \mathbb{R}$ \\ 
+$x \rightarrow \frac{1}{M-f(x)}$ \\ 
+Alors $g \in \mathcal{C}^0([a,b])$ et à valeurs $> 0$ \\ 
+Par \textcolor{red}{1}, g est majorée : \\ 
+$\exists c \in \mathbb{R}, \forall x \in [a,b],g(x) \leq c$ \\ 
+En particulier, $c \geq g(a) >0$ \\ 
+$\forall x \in [a,b], c \geq \frac{1}{M-f(x)}>0$ donc $M-f(x) \geq \frac{1}{c}$ et $f(x) \leq M- \frac{1}{c}$ \\ 
+Or $M-\frac{1}{c} \leq M=sup \lbrace f(x): a\leq x \leq b \rbrace$ contradiction donc f possède un maximum \\
+\textcolor{red}{3)} minorée et minimum :  appliquons \textcolor{red}{1} et \textcolor{red}{2} à -f
+\section{Continuité de la réciproque}
+\textcolor{green}{Propriété :} \\ 
+I intervalle non trivial : $f \in \mathcal{C}^0(I)$ strictement monotone \\ 
+$J=f(I)$(intervalle par le TVI) Alors : \\ 
+\textcolor{green}{1)} f réalise une bijection de I sur J \\ 
+\textcolor{green}{2)} $f^{-1}$ a même sens de variation que f \\ 
+\textcolor{green}{3)} $f^{-1} \in \mathcal{C}^0(J)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+on suppose f strictement croissante. \\ 
+\textcolor{green}{1)} f est strictement croissante donc injective donc réalise une bijection sur image \\ 
+\textcolor{green}{2)} Soit $u$ et $v \in J$ tel que $u<v$ : \\ 
+si $f^{-1}(u) \geq f^{-1}(v)$: \\
+$f(f^{-1}(u))\geq f(f^{-1}(v))$ car f croissante \\ 
+$u\geq v$ contradiction \\ 
+ainsi $f^{-1}$ strictement croissante \\ 
+\textcolor{green}{3)} Soit $b \in J$(autre que le minimum éventuel de J). \\ 
+Montrons que $f^{-1}$ est continue à gauche en b c'est-à-dire : \\ 
+$\lim_{y \rightarrow b^-} f^{-1}(y)=f^{-1}(b)$ \\ 
+Par le théorème de la limite monotone, $\lim_{y \rightarrow b^-} f^{-1}(y)$ existe est finie et $\leq f^{-1}(b)$ \\ 
+Notons $l=\lim_{y \rightarrow b^-} f^{-1}(y) \in \mathbb{R}$ \\ 
+Verifions que $l \in I$. \\ 
+Puisque b n'est pas un minimum éventuel de J, il existe $u \in J$ tel que $u< b$ \\ 
+Par le théorème de la limite monotone : \\ 
+$l : sup \lbrace f^{-1}(y): y\in J$ tel que $y<b \rbrace$ \\ 
+En particulier : $f^{-1}(u) \leq l$ ainsi $\underbrace{f^{-1}(u)}_{\in I} \leq l \leq \underbrace{f^{-1}(b)}_{\in I}$ \\ 
+Or I est un intervalle donc $l \in I$ \\ 
+la fonction f est donc continue en l : \\ 
+$\lim_{x \rightarrow l} f(x)=f(l)$ \\ 
+Par ailleurs : $l=\lim_{y \rightarrow b^-} f^{-1}(y)$ donc $b =f(l)$ et $l=f^{-1}(b)$ \\ 
+$f^{-1}$ est bien continue à gauche de même à droite si b n'est pas le maximum éventuelle de J
+\section{Dérivabilité implique continuité + dérivation du produit}
+\textcolor{green}{Propriété :} \\ 
+Soit $f: I \rightarrow \mathbb{R}$ et $a \in I$ si f est dérivable alors f est continue en a \\ 
+\textcolor{red}{Démonstration :} Pour $x \neq a$ : \\ 
+$f(x)=f(a)+(x-a) \frac{f(x)-f(a)}{x-a} \rightarrow_{x \rightarrow a} f(a)+ 0* f'(a)$ car $\frac{f(x)-f(a)}{x-a}$ converge vers f'(a) quand x tend vers a
+\textcolor{green}{Propriété :} Soit $a \in I$, f et g :$I \rightarrow \mathbb{R}$ dérivable en a alors : \\ 
+$fg$ dérivable en a  et $(fg)'(a)=f'(a)g(a)+f(a)g'(a)$ \\ 
+\textcolor{red}{Démonstration :} Pour $x \in I \backslash \lbrace a \rbrace$ : \\ 
+$(fg)(x)-(fg)(a)=f(x)g(x)-f(a)g(a)$ \\ 
+\indent $=(f(x)-f(a))g(x)+f(a)(g(x)-g(a))$ \\ 
+$\frac{(fg)(x)-(fg)(a)}{x-a}=(\frac{f(x)-f(a)}{x-a})g(x)+f(a)(\frac{g(x)-g(a)}{x-a})$ \\ 
+or g dérivable en a donc continue en a : $g(x) \rightarrow_{x\rightarrow a} g(a)$ d'où : \\ 
+$\rightarrow_{x \rightarrow a} f'(a)g(a)+f(a)g'(a)$
+\section{Dérivation composée}
+\textcolor{green}{Propriété :} \\ 
+I,J intervalles non triviaux \\ 
+$a \in I, b \in J$ \\ 
+$f: I \rightarrow \mathbb{R}, g: J \rightarrow \mathbb{R}$ avec $f(I ) \subset J$ \\ 
+$b=f(a)$ f dérivable en a, g dérivable en b \\ 
+Alors : $g \circ f$ est dérivable en a et $(g \circ f)'(a)=f'(a)g'(f(a))$ \\ 
+\textcolor{red}{Démonstration :} Pour $x \in I \backslash \lbrace a \rbrace$ : \\ 
+Posons $\tau : J \rightarrow \mathbb{R}$ \\ 
+$y \neq b \rightarrow \frac{g(y)-g(b)}{y-b}$ \\ 
+$b \rightarrow g'(b)$ \\ 
+On a alors : \\ 
+$\tau$ continue en b (par définition de g'(b)) \\ 
+$\forall y \in J, g(y)=g(b)+(y-b)\tau(y)$ \\ 
+Ainsi pour $x \in I$ : \\ 
+$g(f(x))=g(b)+(f(x)-b)\tau(f(x))$ \\ 
+pour $x \in I \backslash \lbrace a \rbrace$ \\ 
+$\frac{g(f(x))-g(f(a))}{x-a}= \frac{f(x)-f(a)}{x-a} \tau(f(x))$ \\ 
+Or : f est dérivable donc continue en a donc $f(x) \rightarrow_{x \rightarrow a} f(a)=b$ \\ 
+$\tau$ continue en b donc $\tau(f(x)) \rightarrow_{x \rightarrow a} \tau(b)$ \\ 
+Puis : $ \frac{g(f(x))-g(f(a))}{x-a} \rightarrow_{x \rightarrow a} f'(a)\tau(b)$ \\ 
+Or $\tau(b)=g'(b)=g'(f(a))$
+\section{Formule de Leibniz}
+\textcolor{green}{Propriété :} \\ 
+Soit $n \in \mathbb{N}$ $(f,g) \in (\mathcal{C}^n(I))^2$ alors : \\ 
+$fg \in \mathcal{C}^n(I)$ et : \\ 
+$(fg)^{(n)}= \sum_{k=0}^n \binom{n}{k} f^{(k)} g^{(n-k)}$ \\ 
+\textcolor{red}{Démonstration :} pour $n \in \mathbb{N}$ on pose : \\ 
+$H_n$ = si f et g sont $\mathcal{C}^n$, fg aussi et $(fg)^{(n)}= \sum_{k=0}^n \binom{n}{k} f^{(k)} g^{(n-k)}$ \\ 
+{\bf Initialisation  :} n=0 f et g sont $\mathcal{C}^0$ donc fg sont $\mathcal{C}^0$ connue \\ 
+$(fg)^{(0)}= \sum_{k=0}^0 \binom{0}{k} f^{(k)} g^{(0-0)}=fg$ Vrai  \\ 
+{\bf Hérédité :} Soit $n \in \mathbb{N}$ tel que $H_n$ soit vraie : \\ 
+Soit $(f,g) \in (\mathcal{C}^{n+1}(I))^2$ \\ 
+a fortiori f et g sont $\mathcal{C}^{n}$ donc : $fg \in \mathcal{C}^{n}$ et : \\ 
+$(fg)^{(n)}= \sum_{k=0}^n \binom{n}{k} f^{(k)} g^{(n-k)}$ \\ 
+Pour $k \in [[0,n]]$ \\ 
+$f^{(k)}\mathcal{C}^{n+1-k}(I) \subset \mathcal{C}^{1}(I)$ \\ 
+$f^{(n-k)}\mathcal{C}^{k+1}(I) \subset \mathcal{C}^{1}(I)$ \\ 
+Ainsi $(fg)^{(n)}$ est dérivable et : \\ 
+$(fg)^{(n+1)}= \sum_{k=0}^n \binom{n}{k} f^{(k+1)} g^{(n-k)}+f^{(k)}g^{n-k+1}$
+$(fg)^{(n+1)}= \sum_{k=0}^n \binom{n}{k} f^{(k+1)} g^{(n-k)}+ \sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n+1-k)}$ \\ 
+On remplace k par k-1 dans la première somme : \\ 
+$(fg)^{(n+1)}= \sum_{k=0}^n \binom{n}{k-1} f^{(k)} g^{(n+1-k)}+ \sum_{k=1}^{n+1} \binom{n}{k} f^{(k)}g^{(n+1-k)}+ \binom{n}{0} f^{(0)}g^{(n+1)}$ \\ 
+$(fg)^{(n+1)}= \underbrace{f^{(0)}g^{(n+1)}}_{=\binom{n+1}{0}{f^{(0)}g^{(n+1)}}}+  \sum_{k=1}^{n+1} [ \underbrace{\binom{n}{k-1}+\binom{n}{k}}_{=\binom{n+1}{k} Pascal} ] f^{(k)}g^{(n+1-k)}$ \\ 
+$(fg)^{(n+1)}=\sum_{k=0}^{n+1} \binom{n+1}{k} f^{(k)} g^{(n+1-k)}$ \\ 
+qui est bien continue car pour $k \in [[0;n+1]]$, \\ 
+$f^{(k)} \in \mathcal{C}^{n+1-k}(I) \subset \mathcal{C}^{0}(I)$ \\ 
+$g^{n+1-k} \in \mathcal{C}^{k}(I) \subset \mathcal{C}^{0}(I)$
+\end{document}

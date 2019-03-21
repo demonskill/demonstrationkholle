@@ -1,0 +1,227 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage{listings}
+\begin{document}
+\title{Démonstration kholle 19}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Projection : définition et propriétés.}
+\textcolor{red}{Définition :} \\
+E: K espace-vectoriel, F et G sous-espace vectoriel telle que $E= F \oplus G$ \\ 
+Soit $\vec{x} \in E$ alors : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+On pose p la projection sur F parallèlement à G : \\ 
+$p(\vec{x})= \vec{y} \in F$ \\ 
+\textcolor{green}{Propriété :} \\ 
+$p \in \mathcal{L}(E)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+On a d'abord bien $p: E \longrightarrow E$ \\ 
+Ensuite, pour $(\vec{x},\vec{x'}) \in E^2$ et $\lambda \in \mathbb{K}$: \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+$\exists!(\vec{y'},\vec{z'}) \in F \times G, \vec{x'}=\vec{y'}+ \vec{z'}$ \\ 
+alors : $\vec{x} +\lambda \vec{x'}=\underbrace{(\vec{y}+\lambda \vec{y'})}_{\in F}+\underbrace{(\vec{z} + \lambda \vec{z'})}_{\in G}$ \\ 
+donc par définition : \\ 
+$p(\vec{x}+ \lambda \vec{x'})=\vec{y}+ \lambda \vec{y'}$ \\ 
+Or toujours par définition de p : \\ 
+$p(\vec{x})= \vec{y}$ et $p(\vec{x'})= \vec{y'}$ \\ 
+On a donc : $p(\vec{x}+ \lambda \vec{x'})=p(\vec{x})+ \lambda p(\vec{x'})$ \\ 
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} $F=Inv(p)=Im(p)$ \\ 
+\textcolor{green}{2)} $G=Ker(p)$ \\ 
+\textcolor{green}{3)} $p^2=p$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Montrons que $F \subset Inv(p)=Ker(p-Id_E)$ \\ 
+Soit $\vec{x} \in F$ : \\ 
+$\vec{x}= \underbrace{\vec{x}}_{\in F}+ \underbrace{\vec{0}}_{\in G}$ \\ 
+donc par définition de p : $p(\vec{x})=\vec{x}$ \\ 
+Montrons que $Inv(p) \subset Im(p)$ vraie en général (pour tout endomorphisme) : \\ 
+Soit $\vec{x} \in Inv(p)$ : $\vec{x}=p(\vec{x}) \in Im(p)$ \\ 
+$Im(p) \subset F,$ triviale par la définition de p \\ 
+\textcolor{green}{2)} $\subset$ : soit $\vec{x} \in G$ : \\ 
+$\vec{x}=\underbrace{\vec{0}}_{\in F}+ \underbrace{\vec{x}}_{\in G}$ \\ 
+donc par définition de p : $p(\vec{x})=\vec{0}$ \\ 
+$\supset$ : soit $\vec{x} \in Ker(p)$ : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+avec $\vec{y}=p(\vec{x})$, par définition de p , on a par hypothèse $p(\vec{x})=0$ donc $\vec{x}=\vec{z}\in G$ \\ 
+\textcolor{green}{3)} Soit $\vec{x} \in E$, $p(\vec{x}) \in Im(p)=Inv(p)$ donc $p(p(\vec{x}))=p(\vec{x})$ \\ 
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} si p injective : $p=Id_E$ \\ 
+\textcolor{green}{2)} Si p surjective : $p=Id_E$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Soit $\vec{x} \in E :$ \\ 
+$p(p(\vec{x}))=p(\vec{x})$ donc si p injective : $p(\vec{x})=\vec{x}$ \\ 
+\textcolor{green}{2)} $\forall \vec{x} \in F,p(\vec{x})=\vec{x}$ or $F=Im(p)=E$ car p est surjective
+\section{Symétrie : définition et propriétés (démontrées avec la définition).}
+\textcolor{red}{Définition :} \\ 
+E: K espace-vectoriel, F et G sous-espace vectoriel telle que $E= F \oplus G$ \\ 
+Soit $\vec{x} \in E$ alors : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+On pose s la symétrie sur F parallèlement à G : \\
+$s(\vec{x})=\vec{y}-\vec{z}$ \\ 
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} $F=Inv(s)$ c'est-à-dire $Ker(s-Id_E)$ \\ 
+\textcolor{green}{2)} $G=Opp(s)$ c'est-à-dire $Ker (s+Id_E)$ \\ 
+\textcolor{green}{3)} $s^2=Id_E$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} $\subset$ : Soit $\vec{x} \in F$ : \\ 
+$\vec{x}=\underbrace{\vec{x}}_{\in F}+\underbrace{\vec{0}}_{\in G}$ donc $s(\vec{x})= \vec{x}-\vec{0}=\vec{x}$ \\ 
+$\supset$ : Soit $\vec{x} \in Inv(s)$ : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+alors : $s(\vec{x})= \vec{y}-\vec{z}$ (définition de s) or $s(\vec{x})=\vec{x}$ donc : \\ 
+$\vec{y}-\vec{z}=\vec{y}+\vec{z}$ \\ 
+$2 \vec{z}= \vec{0}$ or $2 \neq 0$ donc $\vec{z}=\vec{0}$ \\ 
+donc $\vec{x}=\vec{y} \in F$ \\ 
+\textcolor{green}{2)} Soit $\vec{x} \in Opp(s)$ : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$
+par définition : $s(\vec{x})=\vec{y}-\vec{z}$ \\ 
+par hypothèse : $s(\vec{x})=-\vec{x}=- \vec{y} -\vec{z}$ donc $\vec{y} =\vec{0}$ \\ 
+$\vec{x}=\vec{z} \in G$ \\ 
+\textcolor{green}{3)} Soit $\vec{x} \in E$ : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+par définition de s $s(x)= \vec{y}- \vec{z}=\underbrace{\vec{y}}_{\in F}+ \underbrace{(-\vec{z})}_{\in G}$ \\ 
+donc $s(s(\vec{x}))= \vec{y}+ \vec{z}=\vec{x}$
+\section{Symétrie : définition et propriétés (démontrées à partir de celles des projections).}
+\textcolor{red}{Définition :} \\ 
+E: K espace-vectoriel, F et G sous-espace vectoriel telle que $E= F \oplus G$ \\ 
+Soit $\vec{x} \in E$ alors : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+On pose s la symétrie sur F parallèlement à G : \\
+$s(\vec{x})=\vec{y}-\vec{z}$ \\ 
+\textcolor{green}{Propriété :} \\ 
+$s \in \mathcal{L}(E)$ \\ 
+\textcolor{red}{Démonstration :}
+$s=2p- Id_E$ or $(p,Id_E) \in \mathcal{L}(E)^2$ donc $s\in \mathcal{L}(E)$ \\
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} $F=Inv(s)$ c'est-à-dire $Ker(s-Id_E)$ \\ 
+\textcolor{green}{2)} $G=Opp(s)$ c'est-à-dire $Ker (s+Id_E)$ \\ 
+\textcolor{green}{3)} $s^2=Id_E$ \\ 
+\textcolor{red}{Démonstration :} \\
+Soit p la projection sur F parallèlement à G $s=2p-Id_E$ \\ 
+\textcolor{green}{1)} soit $\vec{x} \in F$ : \\ 
+$\vec{x} \in F \Leftrightarrow p(\vec{x})=\vec{x} \Leftrightarrow s(\vec{x})= \vec x$ \\ 
+\textcolor{green}{2)} De même : $\vec{x} \in G \Leftrightarrow p( \vec{x}) =\vec{0} \Leftrightarrow s(\vec{x})=-\vec{x}$ \\ 
+\textcolor{green}{3)} $s^2=(2p-Id_E)^2$ \\ 
+$2p$ et $-Id_E$ commutent donc : \\ 
+$s^2=4p^2-4pId+Id^2=4p-4p+Id=Id$ \\ 
+\section{Projecteur : définition et propriétés.}
+\textcolor{green}{Propriété :} \\ 
+Soit p un projecteur $p \in \mathcal{L}(E)$ et $p^2=p$ \\ 
+Alors : $E = Inv(p) \oplus Ker(p)$ (c'est-à-dire $E=Ker(p-Id_E) \oplus Ker(p)$) et p est la projection sur Inv(p) parallèlement à Ker(p) \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $\vec{x} \in E$ \\ 
+{\bf Analyse :} Si $\vec{x}=\vec{y}+ \vec{z}$ avec $(\vec{y},\vec{z}) \in Inv(p) \times Ker(p)$ alors : \\ 
+$p(\vec{x})=p(\vec{y})+p(\vec{z})$ car $p\in \mathcal{L}(E)$ \\ 
+$p(\vec{x})=\vec{y}+ \vec{0}$ d'où l'unique couple candidat : \\ 
+$(\vec{y},\vec{z})=(p(\vec{x}),\vec{x}-p(\vec{x}))$ \\ 
+{\bf Synthèse :} Posons $\vec{y}= p(\vec{x})$ et $\vec{z}= \vec{x}- p(\vec{x})$ alors : \\ 
+$\vec{x}=\vec{y}+\vec{z}$ \\ 
+$p(\vec{y})=p^2(\vec{x})=p(\vec{x})=\vec{y}$ donc $\vec{y} \in Inv(p)$ \\ 
+$p(\vec{z})=p(\vec{x})-p(\vec{y})=\vec{y}-\vec{y}=\vec{0}$ \\ 
+{\bf Conclusion :} $E=Inv(p) \oplus Ker(p)$ \\ 
+Soit $\vec{x} \in E$ : \\ 
+$\exists !(\vec{y},\vec{z}) \in Inv(p) \times Ker(p), \vec{x}= \vec{y} + \vec{z}$ \\ 
+Par définition, $\vec{y}$ est la projection de $\vec{x}$ sur Inv(p) parallèlement à Ker(p). \\ 
+On a vu que $\vec{y}=p(\vec{x})$ : \\ 
+$p(\vec{x})$ est donc le projeté de $\vec{x}$ sur F parallèlement à G
+\section{Involution linéaire : définition et propriétés.}
+\textcolor{green}{Propriété :} \\ 
+Soit s une involution linéaire ($s \in \mathcal{L}(E)$ et $s^2=Id_E$) Alors : \\ 
+$E=Inv(s) \oplus Opp(s)$ et s est la symetrie par rapport Inv(s) parallèlement à Opp(s) \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $\vec{x} \in E$ : \\ 
+{\bf Analyse } Si $\vec{x}=\vec{y}+ \vec{z}$ avec $\vec{y} \in Inv(s)$ et $\vec{z} \in Opp(s)$ \\ 
+$s(\vec{x})=s(\vec{y})+s(\vec{z})$ car $s \in \mathcal{L}(E)$ \\ 
+$s(\vec{x})=\vec{y}-\vec{z}$ \\ 
+$\vec{y}=\frac{1}{2}(\vec{x}+s(\vec{x}))$ \\ 
+$\vec{z}=\frac{1}{2}(\vec{x}-s(\vec{x}))$ \\ 
+$(\vec{y},\vec{z})$couple unique \\ 
+{\bf Synthèse  :} Posons : \\  
+$\vec{y}=\frac{1}{2}(\vec{x}+s(\vec{x}))$ \\ 
+$\vec{z}=\frac{1}{2}(\vec{x}-s(\vec{x}))$ \\ 
+alors : \\ 
+$\vec{x}=\vec{y}+ \vec{z}$ \\ 
+$s(\vec{y})=\frac{1}{2}(s(\vec{x})+\underbrace{s^2(\vec{x})}_{=\vec{x}})$ \\ 
+$s(\vec{y})=\vec{y}$ donc $\vec{y} \in Inv(s)$ \\ 
+$s(\vec{z})=\frac{1}{2}(s(\vec{x})-\underbrace{s^2(\vec{x})}_{=\vec{x}})$ \\ 
+$s(\vec{z})=- \vec{z}$ \\ 
+{\bf Conclusion :} $E=Inv(s) \oplus Opp(s)$ \\ 
+Soit $\vec{x} \in E$ : \\ 
+$\exists!(\vec{y},\vec{z}) \in F \times G, \vec{x}=\vec{y}+ \vec{z}$ \\ 
+Le symétrique de $\vec{x}$ sur Inv(s) parallèlement à Opp(s) est $\vec{y}-\vec{z}$ \\ 
+Or : $\vec{y}-\vec{z}=\frac{1}{2}(\vec{x}+s(\vec{x}))-\frac{1}{2}(\vec{x}-s(\vec{x}))$ \\ 
+$\vec{y}-\vec{z}=s(\vec{x})$ \\ 
+\section{Si H est un hyperplan (noyau de forme linéaire non nulle ), toute droite non incluse dans H en est un supplémentaire.}
+\textcolor{green}{Propriété :} \\ 
+Soit H un hyperplan de E alors pour toute droite D tel que $D\not\subset H$, $E= H \oplus D$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Par hypothèse il existe $\phi \in \mathcal{L}(E,K)$ tel que $\phi \neq \tilde{0}$ et $H=Ker(\phi)$ \\ 
+Soit D une droite vectoriel non inclus dans H : \\ 
+il existe $\vec{u} \in E \backslash \lbrace \vec{0} \rbrace$ tel que $D=Vect(\vec{u})$ et $\vec{u} \notin H$ \\ 
+Soit $\vec{x} \in E$ : \\ 
+{\bf Analyse :} Si $\vec{x}=\vec{y}+ \vec{z}$ avec $\vec{y} \in H$ et $\vec{z} \in D$ :\\ 
+$\phi(\vec{y})=0$ et $\exists \lambda \in \mathbb{K}, \vec{z}= \lambda \vec{u}$. \\ 
+Comme $\vec{x} =\vec{y}+ \vec{z}$ et $\phi$ linéaire : \\ 
+$\phi(\vec{x})=\phi(\vec{y})+ \phi(\vec{z})$ \\ 
+$\phi(\vec{x})=\lambda \phi(\vec{u})$
+or $\phi(\vec{u}) \in \mathbb{K}^*$ donc le seul candidat pour $\lambda$ est : \\ 
+$\lambda= \frac{\phi(\vec{x})}{\phi(\vec{u})} \in \mathbb{K}$ \\ 
+d'où l'unicité de $(\vec{y}, \vec{z})$ \\ 
+{\bf Synthèse :} Comme $\phi(\vec{u}) \in  \mathbb{K}^*$ posons : \\ 
+$\lambda= \frac{\phi(\vec{x})}{\phi(\vec{u})}$ \\ 
+$z= \lambda \vec u$ et $\vec y =\vec x - \vec z$ \\ 
+Alors : \\ 
+$ \vec x = \vec y + \vec z$ \\ 
+$\vec z \in Vect(\vec u)$ \\ 
+$\phi(\vec y)= \phi(\vec x) - \phi (\vec z)$ \\ 
+$\phi(\vec y) =\phi (\vec x) - \lambda \phi(\vec u)$ \\ 
+$\phi(\vec y) =\phi (\vec x) - \phi (\vec x)$ car $\lambda=\frac{\phi(\vec{x})}{\phi(\vec{u})}$ \\ 
+$\phi(\vec y)= 0$  donc $\vec y \in H$
+\section{Si un sous-espace H possède une droite supplémentaire, c'est un hyperplan.}
+\textcolor{red}{Démonstration :} \\ 
+Par hypothèse : $E= H \oplus D$ et $\exists \vec{u} \in E \backslash \lbrace \vec 0 \rbrace, D=Vect(\vec u)$ \\ 
+Soit p la projection sur D parallèlement à H, $p \in \mathcal{L}(E), H= Ker(p)$ et $D= Im(p)$ \\ 
+$( \vec u)$ est une base de D donc pour $\vec v \in D$ : \\ 
+$\exists ! \lambda \in  \mathbb{K}, \vec v = \lambda \vec u$ \\
+Notons $ \lambda = \psi(\vec  v)$ cela définit une application : \\ 
+$\psi : D \rightarrow \mathbb{K}$ \\ 
+Vérifions que $\psi \in \mathcal{L}(D,\mathbb{K})$, pour $(\vec v, \vec w) \in D^2$ et $\lambda \in \mathbb{K}$ on a : \\ 
+$\vec v = \psi( \vec v) \vec u$ et $\vec w = \psi( \vec w) \vec u$ \\ 
+donc $\vec v + \lambda \vec w= (\psi(\vec v) + \lambda \psi(\vec w)) \vec u $ \\ 
+Or par définition de $\psi$ : \\ 
+$\vec v + \lambda \vec w = \psi (\vec v + \lambda \vec w) \vec u$ \\ 
+Comme $\vec u$ est une base de D $\vec u \neq \vec 0$ : \\ 
+$ \psi (\vec v) + \lambda \psi(\vec w) = \psi (\vec v + \lambda \vec w)$ \\ 
+Comme $Im(p) \subset D$ on peut poser $ \phi = \psi \circ p \in \mathcal{L}(E,\mathbb{K})$ \\ 
+Vérifions que $H= Ker(\phi)$ : \\ 
+$H \subset Ker(\phi)$ : Soit $\vec x \in H :$ \\ 
+$\phi (\vec x)= \psi (p(\vec x))$ \\ 
+$\phi(\vec x)= \psi (\vec 0)$ car $H=Ker(p)$ \\ 
+$\phi (\vec x)= 0$ \\ 
+$H \supset Ker(\phi)$ Soit $\vec x \in Ker(\phi) : \phi (\vec x) =0$ \\ 
+c'est-à-dire $\psi(p(\vec x))= 0$ \\ 
+or $p(\vec x)= \psi(p(\vec x))\vec u$ par définition de $\psi$ avec $p(\vec x)= \vec 0$ \\ 
+donc $\vec x \in H$ \\ 
+Enfin : $Ker(\phi)=H \neq E$(hypothèse) donc $\phi \neq \tilde 0$
+\end{document}

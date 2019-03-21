@@ -1,0 +1,63 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage{listings}
+\begin{document}
+\title{Démonstration kholle 20}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Division euclidienne}
+\section{Factorisation d'une racine; un polynôme n'a pas plus de racines distincts que son degré}
+\textcolor{green}{Propriété :} \\ 
+Soit $P \in \mathbb{K}[X], \alpha \in \mathbb K$ \\
+\textcolor{green}{1)} Le reste de la division euclidienne de P par $X-\alpha$ est $P(\alpha)$ \\ 
+\textcolor{green}{2)} $P(\alpha)= 0 \Longleftrightarrow (X- \alpha)|P$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} $P=(X-\alpha)Q + R$ \\ 
+Avec $Q \in \mathbb K [X]$, $R \in \mathbb K [X]$ \\ 
+et $deg(R)< deg(X- \alpha) = 1$ donc R est constant \\ 
+substituons $\alpha$ à X : \\ 
+$P(\alpha)=R(\alpha)=R$ car R constante \\ 
+\textcolor{green}{2)} $(X- \alpha)|P \Longleftrightarrow R=0$ \\ 
+\textcolor{green}{Propriété :} \\
+	Soit $P \in \mathbb{K}[X]$ de degré $n \in \mathbb{N}$. Alors P possède au plus n racines. \\
+	\textcolor{red}{Démonstration} : récurrence sur n \\
+	\textcolor{red}{Initialisation} : n=0, $P \in \mathbb{K}^*$ aucune racine . \\
+	\textcolor{red}{Hérédité :} Soit $ n \in \mathbb{N}^*$ tel que la propriété est vraie au rang n-1 \\
+	Soit $ P \in \mathbb{K}[X]$ de degré n : \\
+	-si P n'a pas de racine : il n'en a pas plus de n\\
+	- si P a au moins une racine $c \in \mathbb{K}$,
+		soit $Q \in \mathbb{K}[X]$ tel que : \\
+		$\forall x \in \mathbb{R}, P(x)=(x-c)Q(x)$ \\
+		alors $deg(Q)=n-1$ \\
+			Q a donc au plus n-1 racines \\
+			On a pour $x \in \mathbb{K}$ : \\
+				$P(x)=0 \Leftrightarrow (x=c)$ ou $Q(x)=0$ \\
+			P possède au plus une racine de plus que Q donc au plus n au total
+\section{Factorisation simultanée de plusieurs racines distinctes ; cas où il y a autant de racines que le degré (polynôme scindé simple)}
+\section{Interpolation de Lagrange}
+\section{Dérivée de PQ}
+\section{Formule de Taylor}
+\section{Caractérisation différentielle de la multiplicité}
+\end{document}

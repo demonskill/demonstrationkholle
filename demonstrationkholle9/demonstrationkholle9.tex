@@ -1,0 +1,172 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\title{Démonstration kholle 9}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{Nombre réel}
+	\subsection{Borne supérieure: cas du maximum}
+	\textcolor{green}{Propriété :} \\ 
+ Soit $ A \subset \mathbb{R}$ non vide et majorée : \\ 
+	Si A possède un maximum alors $sup(A)=max(A) \in A$ \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	Par définition $max(A) \in A$ et $max(A)$ est un majorant de A. \\ 
+	Soit M un majorant de A: \\ 
+	$\forall x \in A, x\leq M$ \\ 
+	Or $max(A) \in A$ en particulier : $M \geq max(A)$ \\ 
+	$max(A)$ est le plus petit majorant de A $max(A)=sup(A)$
+	\subsection{Forme des intervalles bornées}
+	\textcolor{green}{Propriété :} \\ 
+	Soit I un intervalle non vide : \\ 
+	Si I est borné: il est de la forme $]a,b[,\quad ]a,b],\quad [a,b[,\quad[a, b]$ avec $a=inf(I)$ et $b=sup(I)$ \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	$I$ non vide et majoré : posons $b=sup(I)$ \\ 
+	$I$ non vide et minoré : posons $a=inf(I)$ \\ 
+	D'une part : soit $x \in I$ \\ 
+	a est un minorant de I donc $a \leq x$ \\ 
+	b est un majorant de I dans $b \geq x$ \\ 
+	Ainsi $I \subset [a,b]$. \\ 
+	D'autre part $x \in ]a,b[$ : \\ 
+	    si $x \geq a=inf(I)$ x ne minore donc pas  \\ 
+	    $\exists u \in I, u< x$ \\ 
+	$x<b=sup(I)$ donc x ne majore pas I : \\ 
+	$\exists v \in I, x < v$ \\ 
+	Ainsi $ u < x < v$ et $u \in I, v \in I$ \\ 
+	donc par définition d'un intervalle $x \in I$ \\ 
+	Ainsi : $]a,b[ \subset I$ \\ 
+	Conclusion: $]a,b[ \subset I \subset [a,b] $ ce qui donne les 4 cas 
+	\subsection{Caractérisation des intervalles ouverts}
+	\textcolor{green}{Propriété :} Soit I intervalle, les proposition suivantes sont équivalentes : \\ 
+	\textcolor{green}{1)} I n'a ni minimum ou maximum \\ 
+	\textcolor{green}{2)} $\forall a \in I, \exists \delta \in \mathbb{R}^*_+, [a- \delta , a+\delta] \subset I$ \\ 
+	I est alors un intervalle ouvert \\
+	\textcolor{red}{Démonstration :} \\ 
+	\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} : soit $a \in I$ \\ 
+	I n'a pas de minimum \\  
+	Si a minorait I, ce serait le minimum de I car $a \in I$ \\ 
+	donc a ne minore pas I : \\ 
+	$\exists u \in I, u<v$ \\ 
+	De même, a ne majore pas I : \\ 
+	$\exists v \in I , a<v$ \\ 
+	Posons $\delta = min(a-u,v-a)>0$ car $a-u$ et $v-a$ >0 \\ 
+	On a $\delta \leq a-u$ et $\delta \leq v-u$ \\ 
+	donc $u \leq a- \delta$ et $a+ \delta \leq v$ \\ 
+	Montrons que $\delta$ convient c'est-à-dire $[a-b;a+\delta] \subset I$ \\ 
+	Soit $x \in [a- \delta , a+ \delta] : u \leq a-\delta \leq x \leq a+ \delta$ et $(u,v) \in I$ \\ 
+	donc par définition d'un intervalle: $x \in I$
+	\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{1} On suppose: $\forall a \in I, \exists \delta \in \mathbb{R}^*_+ [a-\delta, a+ \delta] \subset I$ \\ 
+	Si I avait un minimum : \\ 
+	$\exists \delta \in \mathbb{R}^*_+,[m-\delta ; m+ \delta] \subset I$ \\ 
+	$m- \delta \in I$ \\ 
+	or $m-d < m=min(I)$ absurde \\ 
+	Si I avait un maximum M :
+	$\exists \delta \in \mathbb{R}^*_+,[M-\delta ; M+ \delta] \subset I$ \\ 
+	$M+ \delta \in I$ \\ 
+	Or $M+ \delta > M=max(I)$ absurde
+	\subsection{Densité de $\mathbb{Q}$}
+	\textcolor{green}{Propriété :} $\mathbb{Q}$ est dense dans $\mathbb{R}$ \\ 
+	\textcolor{red}{Démonstration :} Soit $(x,y) \in \mathbb{R}^2$ tel que $x<y$ \\ 
+	1er cas : si $y-x>1$ \\ 
+	On a alors $x < y-1 < \lfloor y \rfloor \leq y$ \\ 
+	- Si $y \notin \mathbb{Z}$ on a  $x < \underbrace{\lfloor y \rfloor}_{\in \mathbb{Z} \subset \mathbb{Q}} < y$ \\ 
+	- si $y \in \mathbb{Z} $ on a toujours $x < \underbrace{ y -1}_{\in \mathbb{Z} \subset \mathbb{Q}} < y$ \\ 
+	Cas général : on a seulement $x<y$ : \\ 
+	Posons $n=1+\underbrace{\lfloor \frac{1}{y-x}\rfloor}_{\in \mathbb{N} } \in \mathbb{N}^*$ \\ 
+	On a : $n > \frac{1}{y-x}$ \\ 
+	Comme $y-x>0$ $ny-nx>1$ \\ 
+	On applique le premier cas au couple $(nx,ny)$, \\ 
+	$\exists k \in \mathbb{Z}, nx<k<ny$ \\ 
+	comme n>0 : \\ 
+	$x<\underbrace{\frac{k}{n}}_{\in \mathbb{Q}}<y$
+	\subsection{Densité de $\mathbb{R} \backslash \mathbb{Q}$}
+	\textcolor{green}{Propriété :} $\mathbb{R} \backslash \mathbb{Q} $ est dense dans $\mathbb{R}$ \\ 
+	\textcolor{red}{Démonstration :} Soit $(x,y) \in \mathbb{R}^2$ tel que $x<y$ \\ 
+	On a car $\mathbb{Q}$ dense dans $\mathbb{R}$ \\ 
+	$\exists t \in \mathbb{Q}, x- \sqrt{2}<t<y-\sqrt 2$ \\ 
+	$x<t+\sqrt 2< y$ \\ 
+	si $t \in \mathbb{Q}$ : \\
+	comme $t \in \mathbb{Q}$ : \\ 
+	$(t+ \sqrt 2) -t \in \mathbb{Q}$ \\ 
+	Or $\sqrt 2 \notin \mathbb{Q}$ contradiction donc $t+\sqrt 2 \in \mathbb{R} \backslash \mathbb{Q}$ 
+	\section{Limites infinies}
+	\subsection{Existence de limite infinie par inégalité}
+	\textcolor{green}{Propriété :} soit $ \alpha \in \mathbb{R}^*_+$ : \\ 
+	$n^\alpha \rightarrow + \infty$ \\ 
+	\textcolor{red}{Démonstration :} soit $A \in \mathbb{R}$ \\ 
+	- Si $A \leq 0$ : $\forall n \in \mathbb{N}, u_n \geq A$ \\ 
+	- Si $A > 0$ : posons $n_0 > 1+ \lfloor A^{\frac{1}{\alpha}} \rfloor \in \mathbb{N}$ \\
+	pour $n \geq n_0$ : $n > A^{\frac{1}{\alpha}}$ \\ 
+	$n^{\alpha} > A$ car $t \rightarrow t^{\alpha}$ est croissante sur $\mathbb{R}_+$ \\ 
+	Ainsi on a toujours : \\ 
+	$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, n^{\alpha} \geq A$
+	     
+	\subsection{Théorème de la limite monotone (suite croissante non majorée)}
+	\textcolor{green}{Propriété :} \\ 
+	\textcolor{green}{1)} Si u est croissante et non majorée, $u_n \rightarrow + \infty$ \\ 
+	\textcolor{green}{2)} Si u est décroissante et non minorée, $u_n \rightarrow - \infty$ \\ 
+	\textcolor{red}{Démonstration :} \textcolor{green}{1)} Soit $A \in \mathbb{R} $ \\ 
+	A n'est pas un majorant : \\ 
+	$\exists n_0 \in \mathbb{N}, u_{n_0}> A$ \\ 
+	Pour $n\geq n_0$ : \\ 
+	$u_n \leq u_{n_0},$ car u est croissante  \\ 
+	on a donc : \\ 
+	$u_n \geq A$ \\ 
+	\textcolor{green}{2)} on applique \textcolor{green}{1} à $(-u_n)_{n \in \mathbb{N}}$
+	\subsection{Limite de $(\lambda u_n)_{n \in \mathbb{N}}$}
+	\textcolor{green}{Propriété :} \\ 
+	Si $u_n \rightarrow +\infty$ et $\lambda \in \mathbb{R}$, \\ 
+	$\lambda u_n \rightarrow + \infty$ \\ 
+	\textcolor{red}{Démonstration :} Soit $A \in \mathbb{R}$: \\ 
+	On suppose : \\ 
+	$\forall B \in \mathbb{R}, \exists n_0 \in \mathbb{N}, \forall n \geq n_0, u_n \geq B$ \\ 
+	Prenons $B=\frac{A}{\lambda} (\lambda \neq 0)$ \\ 
+	$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, u_n \geq \frac{A}{\lambda}$ \\ 
+	Comme $\lambda > 0$ : \\ 
+	pour $n \geq n_0, \lambda u_n \geq A$
+	\subsection{Somme d'une suite minorée et d'une suite tendant vers $+ \infty$, de deux suites de limite $+ \infty$}
+	\textcolor{green}{Propriété : } \\ 
+	Si $u_n \rightarrow + \infty$ et $v_n$ minoréé, $u_n+v_n \rightarrow + \infty$ \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	On suppose : \\ 
+	$\forall B \in \mathbb{R}, \exists n_0 \in \mathbb{N}, \forall n \geq n_0, u_n \geq B$  \\ 
+	$\exists m \in \mathbb{R}, \forall n \in \mathbb{N}, v_n \geq m$ \\ 
+	Montrons que $u_n +v_n \rightarrow + \infty$
+	Soit $A \in \mathbb{R}$ : \\ 
+	Prenons $B=A-m$ dans l'hypothèse : \\ 
+	$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, u_n \geq A-m$. \\ 
+	ainsi, pour $n \geq n_0$ \\ 
+	$u_n +v_n \geq A$
+	\subsection{Limite du produit de deux suites de limites infinies}
+	\textcolor{green}{Propriété :} \\ 
+	\textcolor{green}{1)} Si $u_n \rightarrow + \infty$ et $v_n \rightarrow + \infty$ alors $u_n \times v_n \rightarrow + \infty$\\
+	\textcolor{green}{2)} Si $u_n \rightarrow + \infty$ et $v_n \rightarrow - \infty$ alors $u_n \times v_n \rightarrow - \infty$ \\
+	\textcolor{green}{3)} Si $u_n \rightarrow - \infty$ et $v_n \rightarrow + \infty$ alors $u_n \times v_n \rightarrow - \infty$ \\ 
+	\textcolor{green}{4)} Si $u_n \rightarrow - \infty$ et $v_n \rightarrow - \infty$ alors $u_n \times v_n \rightarrow + \infty$ \\ 
+	\textcolor{red}{Démonstration :} \textcolor{green}{1)} Prenons A=1 comme $u_n \rightarrow + \infty$ et $v_n \rightarrow + \infty$ : \\ 
+	$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, v_n \geq 1 $ \\ 
+	Avec A=0 dans la définition de $u_n \rightarrow + \infty $ : \\ 
+	$\exists n_1 \in \mathbb{N}, \forall n \geq n_1, u_n \geq 0$ \\ 
+	A partir du rang $n_2=max(n_0,n_1) :$ \\ 
+	$u_n v_n \geq u_n$ \\ 
+	or $u_n \rightarrow + \infty$ \\ 
+	donc $u_n v_n \rightarrow + \infty$ \\ 
+	\textcolor{green}{2)} on applique \textcolor{green}{1} à $u_n$ et $-v_n$ \\
+	\textcolor{green}{3)} on applique \textcolor{green}{1} à $-u_n$ et $v_n$ \\ 
+	\textcolor{green}{4)} on applique \textcolor{green}{1} à $-u_n$ et $-v_n$ \\ 
+	
+	\end{document}

@@ -1,0 +1,162 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\begin{document}
+\title{Démonstration kholle 15}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{unicité du neutre, unicité du symétrique , symetrisabilité et symetrique de $x^{-1}$, de $x \ast y$}
+	\textcolor{green}{Propriété :} \\
+	Si le neutre existe, il est unique \\
+	Le magma est dit unif\`ere ou unitaire \\
+	\textcolor{red}{Démonstration :} \\
+	Soit $e$ et $e'$ neutres : \\
+	$e \ast e' = e'$ car e est neutre \\
+	$e \ast e' = e$ car e' est neutre \\
+	donc $e'=e$ \\
+	\textcolor{green}{Propriété:} \\ 
+	Soit $(M,\ast)$ un monoïde de neutre $e$ \\ 
+	soit $x \in M$ symétrisable, c'est-à-dire : \\ 
+	$\exists y \in M ,(x \ast y =e$ et $y \ast x =e)$ \\ 
+	Cet élément est unique : \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	si $(y,y')$ conviennent : \\ 
+	$(y \ast x) \ast y'= e \ast y' $ \\ 
+	$(y \ast x) \ast y'= y' $ \\ 
+	et $y \ast (x \ast y')= y \ast e$ \\ 
+	$y \ast (x \ast y')= y$ \\ 
+	La loi étant associative : \\ 
+	$y'=y$ \\ 
+	\textcolor{green}{Propriété :} \\
+     $\forall x \in U(m)$, ($x^{-1} \in U(M)$ et $(x^{-1})^{-1}=x$) \\
+	Pour une loi + : $-(-x)=x$ \\
+	\textcolor{red}{Démonstration :} Notons $y =x^{-1} \in M$ \\
+	 alors : $ x \ast y = e$ et $ y \ast x = e $ \\
+	 donc : $y \in U(M)$ donc $y^{-1}=x$ \\
+	\textcolor{green}{Propriété :} \\ $\forall (x,y) \in (U(M))^2, ( x \ast y) \in U(M)$ et $(x \ast y)^{-1} = x^{-1} \ast y^{-1}$ \\
+	$U(M)$ est donc stable par $\ast$ \\
+	\textcolor{red}{Démonstration :} \\ D'une part avec $u= x \ast y$ et $v=y^{-1}\ast x^{-1}$ 
+$u \ast v = (x \ast y) \ast (y^{-1} \ast x^{-1})$\\
+$u \ast v= x \ast (y \ast y^{-1}) \ast x^{-1}$ \\
+$u \ast v= x \ast e \ast x^{-1}$ \\
+$u \ast v= x \ast x^{-1}$ \\
+$u \ast v= e$ \\
+D'autre part : \\ 
+$v \ast u = y^{-1} \ast x^{-1} \ast x \ast y$ \\
+$v \ast u=y^{-1} \ast e \ast y$ \\
+$v \ast u= y^{-1} \ast y$ \\
+$v \ast u= e$ \\
+Ainsi: $ u \in U(M)$ et $u^{-1}=v$ \\ 
+\section{Caractérisation des sous-groupes (avec $x \ast y^{-1}$). Intersection de sous-groupes}
+\textcolor{green}{Propriété:} \\ 
+Soit $(G, \ast)$ groupe et H sous-ensembles de G. \\
+Les propositions suivantes sont équivalentes : \\ 
+\textcolor{green}{1)} H est un sous-groupe de $(G, \ast)$ \\ 
+\textcolor{green}{2)} $H \neq \emptyset$ et $ \forall (x,y) \in H^2, x \ast y^{-1} \in H$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1} $ \Rightarrow$ \textcolor{green}{2} \\ 
+on a : $H \subset G, H \neq \emptyset$ de plus $(x,y) \in H$  comme $y^{-1} \in H$ car H stable par inverse :\\
+$x \ast y^{-1} \in H$ car H stable par $\ast$  \\ 
+\textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} \\ 
+on a $H \subset G$ et $ H \neq \emptyset$ \\ 
+Montrons que H est stavle par $\ast$ et stable par symétrique. \\ 
+lemme: Montrons que $e \in H$ (e neutre de G) \\ 
+Comme $H \neq \emptyset$ soit $ u \in H$ On a donc : \\ 
+$u \ast u^{-1} \in H, e \in H$ \\ 
+Alors pour $y \in H$, comme $e \in H$ on a de même : \\ 
+$e \ast y^{-1} \in H, y^{-1}\in H$  donc H stable  par inverse\\ 
+puis pour $(x,y)\in H$ comme $y^{-1} \in H$ : \\ 
+$x \ast (y^{-1})^{-1}\in H, x \ast y \in H$ donc H stable par $\ast$ \\ 
+\textcolor{green}{Propriété :}\\ 
+Soit $(G,\ast)$ un groupe et $(H_i)_{i\in I}$ une feuille de sous-groupes de $(G, \ast)$. \\ 
+Alors : $(\cap_{i\in I}H_i)$ est un sous-groupe de $(G, \ast)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$\cap_{i\in I}H_i$ est bien une partie de G \\ 
+Soit $e$ le neutre de G alors : $ \forall i \in I, e \in H_i$ (car H, sous groupe de $(G,\ast)$) \\ 
+c'est-à-dire $ e\in \cap_{i\in I}H_i$ donc $\cap_{i\in I}H_i \neq \emptyset$ \\ 
+Soit $(x,y) \in (\cap_{i\in I}H_i)^2$ alors : \\ 
+Pour $i \in I$, x et $y \in H_i$ or $H_i$ sous-groupe de $(G, \ast)$ donc : \\ 
+$x \ast y^{-1} \in H_i$ \\ 
+ainsi : $\forall i \in I,x \ast y^{-1} \in H_i$ \\ 
+c'est-à-dire : $x \ast y^{-1} \in \cap_{i\in I}H_i$ donc $\cap_{i\in I}H_i$ sous-groupe
+\section{Règles de calcul dans un anneau (produit avec $0_A$ et $-1_A$, règles des signes)}
+\textcolor{green}{Propriété :} \\ 
+Soit $(A,+,\times)$ un anneau \\ 
+\textcolor{green}{1)} $\forall x \in A, x \times 0_A=0_A \times x =0_A$ ($0_A$ absorbant) \\ 
+\textcolor{green}{2)} $\forall x \in A , (-1_A)\times x = x \times (-1_A)=-x$ \\ 
+\textcolor{green}{3)} $\forall (x,y) \in A^2,(-x) \times y = x\times (-y) = - x \times y$ et $(-x) \times (-y)=xy$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Soit $x \in A$ :
+$x \times 0_A=x\times (0_A+0_A)$ car $0_A$ neutre de + \\ 
+donc $ x \times 0_A=(x \times 0_A) + (x \times 0_A)$ car $\times$ distributive sur +  \\ 
+Ajoutons $-(x \times 0_A)$ car tout élément a un opposé pour la loi + : \\ 
+$0_A=x\times 0_A$ idem pour $0_A \times  x$ \\ 
+\textcolor{green}{2)}  $0_A=x \times 0_A=x \times (-1_A + 1_A)$ \\ 
+$0_A=(x \times (-1_A))+(x \times 1_A)=(x \times (-1_A))+x$ par distributive de $\times$ sur +\\
+ajoutons $-x$ : \\ 
+$-x=x\times (-1_A)$ idem pour $(-1_A) \times x$ \\ 
+\textcolor{green}{3)} $x \times (-y)= x \times ((-1_A)\times y) = (x \times (-1_A)) \times y$ par \textcolor{green}{2} et associativité \\ 
+$x \times (-y)= (-x) \times y$ \\ 
+On a donc par ce qu'on vient de démontrer : \\ 
+$(-x) \times (-y)=(-(-x)) \times y= x \times y$ car $(-(-x))=x$ \\
+Enfin : \\ 
+$(-x) \times y = ((-1_A) \times x) \times y$ par \textcolor{green}{2} \\ 
+$(-x) \times y = (-1_A) \times (x \times y)=-(x \times y)$ par associativité et par \textcolor{green}{2} 
+\section{Formule du binôme de Newton dans un anneau}
+\textcolor{green}{Propriété : } \\ 
+Soit $(A, \times,+)$ un anneau \\ 
+Soit $(a,b)\in A^2$ tel que $ba=ab$ (c'est-à-dire a et b commutent) on a: \\
+$(a+b)^n=\sum_{k=0}^n\binom{n}{k}a^{n-k}b^k$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Récurrence : \\ 
+{\bf Initialisation :} $n=0$ $(a+b)^0=1_A$ et $\sum_{k=0}^0\binom{n}{k}a^{-k}b^k=1.1_A\times 1_A =1_A$ \\ 
+{\bf Hérédité :} On suppose la formule vrai au rang n  alors : \\ 
+$(a+b)^{n+1}=(a+b)(a+b)^n=(a+b)\sum_{k=0}^n\binom{n}{k}a^{n-k}b^k$ \\ 
+$(a+b)^{n+1}=a\sum_{k=0}^n\binom{n}{k}a^{n-k}b^k+ b\sum_{k=0}^n\binom{n}{k}a^{n-k}b^k$ par distributivité de $\times$ \\ 
+$(a+b)^{n+1}=\sum_{k=0}^n\binom{n}{k}a^{n+1-k}b^k+\sum_{k=0}^n\binom{n}{k}ba^{n-k}b^k$ par distributivité \\ 
+or $ba=ab$ donc par récurrence immédiate : \\ 
+$\forall j \in \mathbb{N}, ba^j=a^jb$ \\ 
+d'où : \\ 
+$(a+b)^{n+1}=\sum_{k=0}^n\binom{n}{k}a^{n+1-k}b^k+\sum_{k=0}^n\binom{n}{k}a^{n-k}b^{k+1}$ \\
+Comme $\binom{n+1}{n}=0_A$ on a : \\ 
+$(a+b)^{n+1}=\sum_{k=0}^{n+1}\binom{n}{k}a^{n+1-k}b^k+\sum_{k=1}^{n+1}\binom{n}{k-1}a^{n-k}b^{k}$ \\ 
+$(a+b)^{n+1}=\underbrace{\binom{n}{0}}_{=\binom{n+1}{0}}a^{n+1}b^0+\sum_{k=1}^{n+1}\underbrace{[\binom{n}{k}+\binom{n}{k-1}]}_{\binom{n+1}{k}}a^{n+1-k}b^k$ \\ 
+$(a+b)^{n+1}=\sum^{n}_{k=0}{\binom{n+1}{k}a^{n+1-k}b^k}$
+\section{Identité géométrique (factorisation de $a^n-b^n$) dans un anneau}
+\textcolor{green}{Propriété :} \\ 
+Soit $(A, \times,+)$ un anneau \\ 
+Soit $(a,b)\in A^2$ tel que $ba=ab$ (c'est-à-dire a et b commutent) on a: \\
+$a^n-b^n=(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}$\\
+$a^n-b^n=\sum^{n-1}_{k=0}{a^{n-k-1}b^k}(a-b)$ \\ 
+\textcolor{red}{Démonstration:} \\
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}= a\sum^{n-1}_{k=0}{a^{n-k-1}b^k}-b\sum^{n-1}_{k=0}{a^{n-k-1}b^k}$ \\
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}=\sum^{n-1}_{k=0}{a^{n-k}b^k} -\sum^{n-1}_{k=0}b{a^{n-1-k}b^k}$\\
+Comme $ba=ab$ on a : \\
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}=\sum^{n-1}_{k=0}{a^{n-k}b^k} -\sum^{n-1}_{k=0}{a^{n-1-k}b^{k+1}}$ \\ 
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}=\sum^{n-1}_{k=0}{c_k-c_{k+1}}$ avec $c_k=a^{n-k}b^{k}$ \\ 
+Par téléscopage : \\ 
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}=c_0-c_n$ \\ 
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}=a^nb^0-a^0b^n$ \\
+$(a-b)\sum^{n-1}_{k=0}{a^{n-k-1}b^k}=a^n-b^n$
+\end{document}

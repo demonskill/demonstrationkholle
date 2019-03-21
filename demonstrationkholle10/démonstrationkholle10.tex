@@ -1,0 +1,328 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\title{Démonstration kholle 10}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Première question de cours}
+\subsection{Unicité de la limite (cas des limites finies)}
+\textcolor{green}{Propriété :} \\
+Si $u_n \rightarrow l\in \mathbb{R}$ et $u_n \rightarrow l'\in \mathbb{R}$ alors $l=l'$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Supposons $l \neq l'$ \\ 
+$1^{er}$ cas: $l<l'$: \\ 
+Posons $\epsilon=\frac{l'-l}{3}>0$ \\ 
+$\exists p \in \mathbb{N}, \forall n \geq p, l- \epsilon \geq u_n \geq l+ \epsilon $ et $\exists q \in \mathbb{N}, \forall n \geq q, l'- \epsilon \geq u_n \geq l'+ \epsilon $ \\ 
+Par ailleurs : $l+ \epsilon = \frac{2}{3}l+\frac{1}{3}l$ et $l'- \epsilon = \frac{2}{3}l'+\frac{1}{3}l$\\
+$(l'-\epsilon )-(l+\epsilon)=\epsilon>0$ \\ 
+Posons $n \geq max(p,q)$: \\ 
+$u_n \leq l+ \epsilon < l- \epsilon \leq u_n$ donc $u_n < u_n$ absurde \\ 
+$2^{eme}$ cas : $l'<l$ : même principe  \\ 
+On a donc $l=l'$
+\subsection{Limite de la somme de deux suites convergente}
+\textcolor{green}{Propriété :} \\ 
+Si $u_n \rightarrow l \in \mathbb{R}$ et $v_n \rightarrow l' \in \mathbb{R}$, $u_n+v_n \rightarrow l + l'$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $\epsilon \in \mathbb{R}^*_+$, appliquons la définition de $u_n \rightarrow l$ avec $\frac{\epsilon}{2}>0$ au lieu de $\epsilon$ \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, |u_n-l| \leq \frac{\epsilon}{2}$ \\ 
+On a de même avec $v_n$: \\
+$\exists n_1 \in \mathbb{N}, \forall n \geq n_1, |v_n-l'| \leq \frac{\epsilon}{2}$ \\ 
+Posons $n_2=max(n_0,n_1) \in \mathbb{N}$ : \\ 
+Pour $n \geq n_2$
+$|(u_n+v_n)-(l+l')|=|(u_n-l)+(v_n-l')|$ \\ 
+$|(u_n+v_n)-(l+l')| \leq |u_n-l| + |v_n-l'|$ \\ 
+$|(u_n+v_n)-(l+l')| \leq \frac{\epsilon}{2} + \frac{\epsilon}{2}$ \\ 
+$|(u_n+v_n)-(l+l')| \leq \epsilon$
+\subsection{Toute suite convergente est bornée + lemme pour le produit (bornée x limite nulle) + limite de produit (cas convergent uniquement)}
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} Si $u_n$ tend vers un réel elle est bornée \\ 
+\textcolor{green}{2)} Si $u_n \rightarrow 0$ et $v_n$ borné, $u_n \times v_n\rightarrow 0$ \\ 
+\textcolor{green}{3)} Si $u_n \rightarrow l \in \mathbb{R}$ et $v_n \rightarrow l' \in \mathbb{R}$, $u_nv_n \rightarrow l \times  l'$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Prenons $\epsilon=1$ dans la définition de $u_n \rightarrow l \in \mathbb{R}$ \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, |u_n-l| \leq 1$
+Pour $n \geq n_0$ : \\ 
+$|u_n|=|(u_n-l)+l|$ \\ 
+$|u_n|\leq|(u_n-l)|+|l|$ \\ 
+$|u_n|\leq 1+|l|$ \\ 
+Posons $c= \underbrace{max{|u_k|:0\leq k \leq n_0}}_{finie \quad et \quad \neq \emptyset}$
+et $M=max(c,1+|l|)$ \\  
+$|u_n| \leq c \leq M$ si $n \leq n_0$ \\ 
+$|u_n| \leq 1 + |l| \leq M$ si $n\geq n_0$ \\ 
+On a donc : \\ 
+$\forall n \in \mathbb{N}, |u_n| \leq M$ \\ 
+\textcolor{green}{2)} Comme $v_n$ est bornée : \\ 
+$\exists M \in \mathbb{R}_+, \forall n \in \mathbb{N}, |v_n| \leq M$ \\ 
+On peut toujours choisir $M \in \mathbb{R}^*_+$(si M=0 $v=\tilde{0}$) \\ 
+Appliquons la définition de $u_n \rightarrow 0$ avec $\frac{\epsilon}{M}$ pour $\epsilon$: \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, |u_n-0|\leq \frac{\epsilon}{M}$ \\ 
+Pour $n \geq n_0$: $0 \leq |u_n| \leq \frac{\epsilon}{M}$ \\ 
+Or $ \forall n \in \mathbb{N},0 \leq |v_n| \leq M$ \\ 
+donc pour $n \geq n_0$ $|u_n v_n| \leq \epsilon$ \\ 
+\textcolor{green}{3)} $u_nv_n-l\times l'=u_n(v_n-l')+(u_n-l)v_n$ \\ 
+On a : $v_n-l' \rightarrow 0$ et $u_n$ borné car elle converge 
+donc $u_n(v_n-l')\rightarrow 0$ et de même $v_n(u_n-l)\rightarrow 0$  On en conclut: \\ 
+$u_nv_n-l\times l' \rightarrow 0$ \\
+$u_nv_n\rightarrow l\times l' $
+\subsection{Limite de somme et produit dans le cas où l'une est finie et l'autre infinie}
+\textcolor{green}{Propriété :}
+\textcolor{green}{1)} Si $u_n \rightarrow + \infty$ et $v_n \rightarrow l \in \mathbb{R}, u_n +v_n \rightarrow + \infty$ \\ 
+\textcolor{green}{2)} Si $u_n \rightarrow - \infty$ et $v_n \rightarrow l \in \mathbb{R}, u_n +v_n \rightarrow - \infty$ \\ 
+\textcolor{green}{3)} Si $u_n \rightarrow + \infty$ et $v_n \rightarrow l \in \mathbb{R}_+^*, u_n v_n \rightarrow + \infty$ \\ 
+\textcolor{green}{4)} Si $u_n \rightarrow - \infty$ et $v_n \rightarrow l \in \mathbb{R}_+^*, u_n v_n \rightarrow - \infty$ \\ 
+\textcolor{green}{5)} Si $u_n \rightarrow + \infty$ et $v_n \rightarrow l \in \mathbb{R}_-^*, u_n v_n \rightarrow - \infty$ \\
+\textcolor{green}{6)} Si $u_n \rightarrow - \infty$ et $v_n \rightarrow l \in \mathbb{R}_-^*, u_n v_n \rightarrow + \infty$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} $v_n$ converge donc est bornée, en particulier minorée. Comme $u_n \rightarrow + \infty$: \\ 
+$u_n + v_n \rightarrow + \infty$ \\ 
+\textcolor{green}{2)} Appliquons \textcolor{green}{1} à $-u_n$ et $-v_n$ donc : \\ 
+$-u_n-v_n \rightarrow + \infty$ \\ 
+$u_n+v_n \rightarrow - \infty$ \\ 
+\textcolor{green}{3)} Prenons $ \epsilon = \frac{l}{2}>0$ dans la définition de $v_n \rightarrow l$: \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, \underbrace{l- \epsilon}_{l/2} \leq v_n \leq l + \epsilon$ \\ 
+Prenons A=0 dans celle de $u_n \rightarrow + \infty$ : \\ 
+$\exists n_1 \in \mathbb{N}, \forall n \geq n_1,u_n \geq 0$ \\ 
+Pour $n \geq max(n_0,n_1)\in \mathbb{N}$: \\ 
+$v_n \geq \frac{l}{2}$ et $u_n \geq 0$ \\ 
+donc $u_nv_n\geq \frac{l}{2}u_n$ \\ 
+Comme $u_n \rightarrow + \infty$ et $\frac{l}{2} \in \mathbb{R}^*_+$ on a : \\
+$\frac{l}{2}u_n \rightarrow + \infty$ \\ 
+Comme $u_nv_n\geq \frac{l}{2}u_n$ à partir d'un certain rang : \\ 
+$u_n v_n \rightarrow + \infty$ \\ 
+\textcolor{green}{4)} Appliquons \textcolor{green}{3} à $-u_n$ et $v_n$ \\ 
+\textcolor{green}{5)} Appliquons \textcolor{green}{3} à $u_n$ et $-v_n$ \\ 
+\textcolor{green}{6)} Appliquons \textcolor{green}{3} à $-u_n$ et $-v_n$ \\ 
+\subsection{Limite d'inverse, cas convergente de limite non nulle }
+\textcolor{green}{Propriété :} \\ 
+Si $u_n \rightarrow l \in \mathbb{R}^*$ \\ 
+$u_n \neq 0$ à partir d'un certain rang et $\frac{1}{u_n} \rightarrow \frac{
+1}{l}$ \\
+\textcolor{red}{Démonstration :} \\ 
+$1^{er}$ cas : $l>0$ \\ 
+Prenons $ \epsilon = \frac{l}{2}>0$ dans la définition de $u_n \rightarrow l$: \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, \underbrace{l- \epsilon}_{l/2} \leq v_n \leq l + \epsilon$ \\ 
+en particulier pour $n \geq n_0$ : $u_n \geq \frac{l}{2} >0$ \\
+Pour $n \geq n_0$ : $|\frac{1}{u_n}-\frac{1}{l}|=|\frac{l-u_n}{u_nl}|$ \\ 
+$|\frac{1}{u_n}-\frac{1}{l}|= \frac{1}{u_nl}|u_n-l|$ \\ 
+donc  comme  $l>0$ : \\ 
+$u_n l \geq \frac{l^2}{2}>0$ \\ 
+$\frac{1}{u_nl}\leq \frac{2}{l^2}$ \\ 
+Comme $|u_n-l| \geq 0$ on a donc : \\ 
+$|\frac{1}{u_n}-\frac{1}{l}| \leq \frac{1}{u_nl}|u_n-l| \leq \frac{2}{l^2}|u_n-l|$ à partir du rang $n_0$ \\
+Conclusion : \\ 
+Soit $\epsilon \in \mathbb{R}^*_+$ \\ 
+Appliquons la définition de $u_n \rightarrow l$ avec $\epsilon \frac{l^2}{2}>0$ à la place de $ \epsilon$ : \\ 
+$\exists n_1 \in \mathbb{N}, \forall n \geq n_1, |u_n-l| \leq \epsilon \frac{l^2}{2}$ \\ 
+Posons $n_2=max(n_0,n_1) \in \mathbb{N}$ \\ 
+Pour $n \geq n_2$ : $|u_n-l| \leq \epsilon \frac{l^2}{2}$ \\ 
+donc $\frac{2}{l^2}>0: \frac{2}{l^2}|u_n - l| \leq \epsilon$  \\ 
+Or $|\frac{1}{u_n}-\frac{1}{l}|\leq \frac{2}{l^2}|u_n - l|$ \\ 
+On a donc : $|\frac{1}{u_n}-\frac{1}{l}|\leq \epsilon$ \\ 
+Or à partir de $n_0$ $u_n\geq \frac{l}{2}>0$ \\ 
+Comme l>0 : \\ 
+$u_nl \geq \frac{l^2}{2}>0$\\ \\ 
+$\frac{1}{u_nl}\leq \frac{2}{l^2}$ \\ 
+Pour $n \geq n_0$ : \\ 
+$|\frac{1}{u_n}-\frac{1}{l}|=\frac{1}{u_n l} |u_n-l|$ \\ 
+D'une part $|u_n-l| \rightarrow 0$ \\ 
+D'autre part pour $n \geq n_0$, $0<\frac{l}{2}\leq u_n$ \\ 
+$0<\frac{l^2}{2}\leq l u_n$(car $l>0$) \\ 
+$0<\frac{1}{u_n l}\leq \frac{2}{l^2}$ \\ 
+donc $\frac{1}{u_n l}$ est bornée à partir de $n_0$ \\ 
+Par le lemme du produit $ \frac{1}{u_nl}|u_n-l| \rightarrow 0$ c'est-à-dire $|\frac{1}{u_n}-\frac{1}{l}| \rightarrow 0$
+\subsection{Limite d'inverse, cas de limite infinie ou nulle }
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} Si $u_n \rightarrow + \infty$: $u_n >0$ à partir d'un certain rang et $\frac{1}{u_n} \rightarrow 0$ \\ 
+\textcolor{green}{2)} Si $u_n \rightarrow - \infty$: $u_n <0$ à partir d'un certain rang et $\frac{1}{u_n} \rightarrow 0$ \\
+\textcolor{green}{3)} Si $u_n \rightarrow 0$: $u_n >0$ à partir d'un certain rang et $\frac{1}{u_n} \rightarrow + \infty$ \\
+\textcolor{green}{4)} Si $u_n \rightarrow 0$: $u_n <0$ à partir d'un certain rang et $\frac{1}{u_n} \rightarrow - \infty$ \\
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Hypothèse : \\ 
+$\forall A \in \mathbb{R}, \exists n_0 \in \mathbb{N}, \forall n \geq n_0, u_n \geq A$ \\ 
+Prenons A=1 :
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, u_n \geq 1 >0$ \\ 
+Soit $ \epsilon \in \mathbb{R}^*_+$: \\ 
+Prenons $A=\frac{1}{\epsilon} \in \mathbb{R}$ dans l'hypothèse : \\
+$\exists n_1 \in \mathbb{N}, \forall n \geq n_1, u_n \geq \frac{1}{\epsilon}$ \\ 
+Pour $n \geq n_1$ : \\ 
+$u_n\geq \frac{1}{\epsilon}>0$ \\ 
+$0<\frac{1}{u_n}\leq \epsilon$ \\ 
+A fortiori : $0- \epsilon \leq \frac{1}{u_n} \leq 0+\epsilon $ \\ 
+\textcolor{green}{2)} On applique \textcolor{green}{1} à $-u_n$: \\ 
+$- u_n \rightarrow + \infty$ \\
+$\frac{1}{- u_n} \rightarrow 0$ \\
+$\frac{1}{ u_n} \rightarrow -0=0$ \\ 
+\textcolor{green}{3)} Il existe $N \in \mathbb{N}$ tel que : \\ 
+$\forall n \geq N, u_n >0$ \\
+Soit $A \in \mathbb{R}$: \\ 
+$1^{er}$ cas : $A \leq 0$ \\ 
+on a $ \frac{1}{U_n}>0\geq A$ pour $n \geq N$ \\ 
+$2^{eme}$cas : $A>0$ \\ 
+Prenons $ \epsilon= \frac{1}{A}>0$ dans la définition de $u_n \rightarrow 0$ \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, - \epsilon \leq u_n \leq \epsilon$ \\ 
+Prenons $n_1=max(N,n_0)$ : \\
+Pour $n \geq n_1$ $0<u_n<\frac{1}{A}$ donc $\frac{1}{u_n} \geq A$ \\
+\textcolor{green}{4)} On applique \textcolor{green}{3} à $-u_n$
+\subsection{Limite de sous-suite + réciproque partielle avec pairs et impairs(cas convergent uniquement)}
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} Si $u_n \rightarrow l$ et $\phi$ extractrice, $u_{\phi(n)} \rightarrow l$ \\ 
+\textcolor{green}{2)} Soit $u_n \in \mathbb{R}^{\mathbb{N}}$. Si $u_{2n} \rightarrow l$ et $u_{2n+
+1} \rightarrow l$ alors $u_n \rightarrow l$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Soit $\epsilon \in \mathbb{R}^*_+$ par hypothèse : \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, |u_n-l| \leq \epsilon$ \\ 
+Pour $n \geq n_0$ : $\phi(n)\geq n$ (lemme) donc $\phi(n)\geq n_0$ \\ 
+donc $|u_{\phi(n)}-l|\leq \epsilon$ \\ 
+\textcolor{green}{2)} Soit $\epsilon \in \mathbb{R}^*_+$, hypothèse : \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0 , |u_{2n}-l| \leq \epsilon$ \\ 
+$\exists n_1 \in \mathbb{N}, \forall n \geq n_1 , |u_{2n+1}-l| \leq \epsilon$ \\ 
+Posons $n_2=max(2n_0,2n_1+1)$ \\ 
+Pour $n \geq n_2$ : \\ 
+-Si n pair $n=2k \quad k \in \mathbb{N}$  comme $k \geq n_0$ donc $|u_{2k}-l|\leq \epsilon$ \\ 
+-Si n impair $n=2k+1 \quad k \in \mathbb{N}$  comme $k \geq n_1$ donc $|u_{2k+1}-l|\leq \epsilon$ \\ 
+Dans les deux cas : $|u_n-l| \leq \epsilon $
+\section{Deuxième question de cours }
+\subsection{Passage à la limite dans les inégalités larges}
+\textcolor{green}{Propriété :} \\ 
+Si $u_n \rightarrow l \in \mathbb{R} $ $v_n \rightarrow l' \in \mathbb{R}$ et $u_n \leq v_n$ à partir d'un certain rang alors $l \leq l'$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$1^{er}$ cas : supposons $v_n \rightarrow l' \in \mathbb{R}$ et $v_n \geq 0$ à partir du rang $N$. \\ 
+Montrons que $ l' \geq 0$ : \\ 
+Si $l' <0$: \\ 
+Prenons $\epsilon= -\frac{l'}{2}>0$ dans la définition de $v_n \rightarrow l'$: \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, l'- \epsilon \leq v_n \leq l'+ \epsilon$ \\ 
+En particulier, pour $n \geq n_0$: $v_n \leq l'+ \epsilon=\frac{l'}{2}<0$ contradiction au rang $max(N,n_0)$ \\ 
+Passons au cas général : \\ 
+On a alors : $v_n-u_n \rightarrow l'-l$ et $v_n-u_n \geq 0$ à partir d'un certain rang \\ 
+donc $l'-l\geq 0$ et $l' \geq l$
+\subsection{Théorème de la limite monotone: cas croissante et majorée}
+\textcolor{green}{Propriété :} \\ 
+Soit $u_n \in \mathbb{R}^\mathbb{N}$ croissante  et majorée alors elle converge vers sa borne supérieure \\ 
+\textcolor{red}{Démonstration :} \\ 
+Posons $X=\lbrace u_n : n \in \mathbb{N} \rbrace$(image de la suite) \\ 
+On a : $X \in \mathbb{R}$ $X\neq \emptyset$ car par exemple $u_0 \in X$ et X majorée par hypothèse. \\ 
+Posons $l=sup(X)$ et montrons que $u_n \rightarrow l$ : \\ 
+Soit $\epsilon \in \mathbb{R}^*_+$:
+Alors : $l- \epsilon $ n'est pas un majorant car $l - \epsilon <l=sup(X)$ donc : \\ 
+$\exists n_0 \in \mathbb{N}, l- \epsilon < u_{n_0}$ \\ 
+Comme $u_n$ est croissante donc pour tout $n \geq n_0$ : \\ 
+$u_n \geq u_{n_0}$ \\ 
+Par ailleurs : $l=sup(X)$ donc l est un majorant de $u_n$ : \\ 
+$\forall n \in \mathbb{N},u_n \leq l$ \\ 
+ainsi pour $n \geq n_0$ : \\ 
+$l- \epsilon < u_{n_0} \leq u_n \leq l$
+a fortiori : $l- \epsilon  \leq u_n \leq l+ \epsilon$
+\subsection{Adjacence des approximation décimales} 
+\textcolor{green}{Propriété :}  \\ 
+Pour $x \in \mathbb{R}$ et $n \in \mathbb{N}$ on pose : \\ 
+$a_n= \frac{1}{10^n} \lfloor 10^nx \rfloor \in \mathbb{D}$ \\ 
+$b_n=a_n+\frac{1}{10^n} \in \mathbb{D}$ \\ 
+approximation décimales par défaut et par excès à $10^{-n}$ près de x \\
+Les suites $a_n$ et $b_n$ sont adjacentes de limite x \\ 
+\textcolor{red}{Démonstration :} \\  
+Montrons que $a_n$ est croissante pour $n \in \mathbb{N} $ : \\ 
+$\lfloor 10^nx \rfloor \leq 10^nx$ \\ 
+$10\lfloor 10^{n}x \rfloor \leq 10^{n+1}x$ \\ 
+$10 \lfloor 10^n x \rfloor$ est un entier $\leq10^{n+1}x$ donc : \\ 
+$10\lfloor 10^{n}x \rfloor \leq \lfloor10^{n+1}x \rfloor$ \\ 
+On divise par $10^{n+1}>0$ : \\ 
+$a_n \leq a_{n+1}$ \\ 
+Montrons que $b_n$ décroissante pour $n \in \mathbb{N}$: \\ 
+$10^{n}x < 1+ \lfloor10^nx \rfloor$ \\ 
+$10^{n+1}x < 10+ 10\lfloor10^{n}x \rfloor$ \\ 
+ou $ \lfloor 10^{n+1} x \rfloor \leq 10^{n+1}x$ donc : \\ 
+$\lfloor 10^{n+1}\rfloor < 10 +10 \lfloor 10^n x \rfloor$ \\ 
+Les deux membres étant entier : \\ 
+$1+\lfloor 10^{n+1}\rfloor \leq 10 +10 \lfloor 10^n x \rfloor$ \\ 
+On divise par $10^{n+1}>0$ : \\ 
+$b_{n+1}=b_n$ \\ 
+$b_n-a_n= \frac{1}{10^n} \rightarrow 0$ \\ 
+Ainsi ces suites converge vers un réel l vérifiant : \\ 
+$\forall n \in \mathbb{N}, a_n \leq l \leq b_n$ \\ 
+Calculons $l$, pour $n \in \mathbb{N}$ : \\ 
+$\lfloor 10^nx \rfloor \leq 10^nx < 1+ \lfloor 10^nx \rfloor$ \\ 
+$a_n \leq x <b_n$ \\ 
+Puisque $a_n$ et $b_n$ converge vers $l$, le passage à la limite dans les inégalités large donne : \\ 
+$l \leq x \leq l$ donc $x=l$
+\subsection{Théorème des gendarmes}
+\textcolor{green}{Propriété :} \\ 
+Soit $a_n, b_n$ et $u_n \in \mathbb{R}^\mathbb{N}$ et $l \in \mathbb{R}$. On suppose : \\ 
+$a_n \rightarrow l$ et $b_n \rightarrow l$ \\ 
+$a_n \leq u_n \leq b_n$ à partir d'un certain rang \\ 
+Alors : $u_n \rightarrow l$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $n_0 \in \mathbb{N}$ tel que : \\ 
+$\forall n \geq n_0, a_n\leq u_n \leq b_n$ \\ 
+Soit $ \epsilon \in \mathbb{R}^*_+$: \\ 
+Par hypothèse : \\ 
+$\exists n_1 \in \mathbb{N}, \forall n \geq n_1, l- \epsilon \leq a_n \leq l+\epsilon$ \\ 
+$\exists n_2 \in \mathbb{N}, \forall n \geq n_2, l- \epsilon \leq b_n \leq l+\epsilon$ \\ 
+Posons $n_3=max(n_0,n_1,n_2) \in \mathbb{N}$ \\ 
+pour $n \geq n_3$: $l- \epsilon \leq a_n \leq u_n \leq b_n \leq l+ \epsilon$ \\ 
+donc $l- \epsilon \leq u_n \leq l+ \epsilon$
+\subsection{Démonstration du théorème des suites adjacentes}
+\textcolor{green}{Propriété :} \\ 
+Deux suites $u_n$ et $v_n$ sont adjacentes si : \\ 
+$u_n$ croissante \\ 
+$v_n$ décroissante \\ 
+$v_n-u_n \rightarrow 0$ \\ 
+Alors : elles sont convergentes de même limite l et : \\ 
+$\forall n \in \mathbb{N}, u_n \leq l \leq v_n$ \\ 
+\textcolor{red}{Démonstration :} lemme : montrons que \\ 
+$\forall n \in \mathbb{N}, u_n \leq v_n$ \\ 
+Posons $w_n=v_n-u_n$($n\in \mathbb{N}$) \\ 
+D'une part : $w_n \rightarrow 0$ \\ 
+D'autre part : pour $n \in \mathbb{N}$, \\ 
+$w_{n+1}-w_n=\underbrace{(v_{n+1}-v_n)}_{\leq 0}-\underbrace{(u_{n+1}-u_n)}_{\geq 0}$ \\ 
+$w_{n+1}-w_n \leq 0$ \\ 
+donc $w_n$ décroit  \\
+Ainsi: soit $w_n \rightarrow - \infty$, soit elle tend vers sa borne inférieure. \\
+Comme $w_n \rightarrow 0$ : sa borne inférieure est 0 donc $\forall n \in \mathbb, w_n \geq 0$ \\ 
+Pour $n \in \mathbb{N}$: \\ 
+$u_n \leq v_n$ et $v_n \leq v_0$ donc $u_n \leq v_0$ \\ 
+Ainsi: $u_n$ est croissante est majorée et croissante donc elle converge. \\ 
+Notons $l= \lim_{n\rightarrow + \infty} u_n \in \mathbb{R}$. \\ 
+On a aussi: $l=sup \lbrace u_n, n \in \mathbb{N} \rbrace $ donc : \\ 
+$\forall n \in \mathbb{N},u_n \leq l$ \\ 
+$v_n=(v_n-u_n)+u_n \rightarrow 0+l$ \\ 
+Comme $v_n$ décroit et $l$ est sa borne inférieure donc : \\ 
+$\forall n \in \mathbb{N}, l\leq v_n$
+\subsection{Caractérisation séquentielle de la densité}
+\textcolor{green}{Propriété :} Soit $D \subset \mathbb{R}$ les propositions suivantes sont équivalentes : \\ 
+\textcolor{green}{1)} $D$ est dense dans $\mathbb{R}$ \\ 
+\textcolor{green}{2)} $\forall x \in \mathbb{R}, \exists u_n \in \mathbb{D}^\mathbb{N},u_n \rightarrow x$ \\ 
+C'est-à-dire tout réel est limite d'une suite d'élément de $D$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} : \\ 
+Soit $x \in \mathbb{R} $ pour $n \in \mathbb{N} $ on a : \\ 
+$x < x+ \frac{1}{2^n}$ \\ 
+donc comme $D$ est dense dans $\mathbb{R}$: \\ 
+$\exists u_n \in D, x<u_n<x+ \frac{1}{2^n}$ \\ 
+Ainsi : \\ 
+$\forall n \in \mathbb{N},\exists u_n \in D, x<u_n<x+ \frac{1}{2^n}$ \\ 
+On a : $u_n \in \mathbb{D}^{\mathbb{N}}$ \\ 
+Par théorème des gendarmes : $u_n \rightarrow x$ \\ 
+\textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} : \\ 
+Soit $(x,y) \in \mathbb{R}^2$ tel que $x<y$ : \\ 
+Comme on a \textcolor{green}{2} : $\exists u_n \in \mathbb{D}^\mathbb{N},u_n \rightarrow \frac{x+y}{2}$ \\ 
+Prenons $\epsilon= \frac{y-x}{4}>0$ dans la définition : \\ 
+$\exists n_0 \in \mathbb{N}, \forall n \geq n_0, \frac{x+y}{2}-\epsilon \leq u_n \leq \frac{x+y}{2}+\epsilon$ \\ 
+Ainsi pour $n \geq n_0$ : \\ 
+$x<\frac{3}{4}x+\frac{1}{4}y\leq u_n \leq \frac{3}{4}y+\frac{1}{4}x<y $ \\ 
+$u_{n_0} \in \mathbb{D} \quad \cap \quad ]x,y[  \quad \neq 0$
+\end{document}

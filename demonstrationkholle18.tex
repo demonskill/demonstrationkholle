@@ -1,0 +1,165 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage{listings}
+\begin{document}
+\title{Démonstration kholle 18}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Composition d'application linéaires, linéarité de la réciproque d'un isomorphisme.}
+\textcolor{green}{Propriété :} \\ 
+soit $f \in \mathcal{L}(E,F)$ et $g \in \mathcal{L}(G,H)$ avec E,F,G,H K espace-vectoriel tel que : $f(E) \subset G$ \\ 
+Alors : $g \circ f \in \mathcal{L} (E,H)$ \\ 
+\textcolor{red}{Démonstration :}  \\ 
+Soit $(\vec{x}, \vec{y}) \in E^2$ et $\lambda \in \mathbb{K}$ \\ 
+$(g \circ f) (\vec{x}+ \lambda \vec{y})=g(f(\vec{x}+ \lambda \vec{y}))$ \\ 
+$(g \circ f) (\vec{x}+ \lambda \vec{y})=g(f(\vec{x}) + \lambda f(\vec{y}))$ car f est linéaire. \\
+$(g \circ f) (\vec{x}+ \lambda \vec{y})=g(f(\vec{x})) + \lambda g(f(\vec{x}))$ car g est linéaire. \\ 
+$(g \circ f) (\vec{x}+ \lambda \vec{y})=(g \circ f)(\vec{x})+ \lambda (g \circ f)(\vec{y})$ \\ 
+\textcolor{green}{Propriété :} \\
+Soit $f \in \mathcal{L}(E,F)$ bijective (isomorphisme de E dans F) alors $f^{-1} \in \mathcal{L}(E,F)$ \\ 
+\textcolor{red}{Démonstration :} \\
+Soit $(\vec{y_1}, \vec{y_2}) \in F^2$ et $\lambda \in \mathbb{K}$ \\ 
+Notons $\vec{x_1}=f^{-1}(\vec{y_1}) \in E$ et $\vec{x_2}=f^{-1}(\vec{y_2}) \in E$ \\ 
+On a : $f(\vec{x_1}+ \lambda \vec{x_2})=f(\vec{x_1})+ \lambda f(\vec{x_2})$ car $f \in \mathcal{L}(E,F)$ \\ 
+$f(\vec{x_1}+ \lambda \vec{x_2})= \vec{y_1} + \lambda \vec{y_2}$ \\ 
+Donc par définition de $f^{-1}$ : \\ 
+$\vec{x_1}+ \lambda \vec{x_2}= f^{-1}(\vec{y_1}+ \lambda \vec{y_2})$ \\ 
+On a bien : $f^{-1}(\vec{y_1}+ \lambda \vec{y_2})= f^{-1}(\vec{y_1})+ \lambda f^{-1}(\vec{y_2})$
+\section{Théorème de structure : $\mathcal{L}(E,F)$ est sous-espace vectoriel de $F^E$.}
+ \textcolor{green}{Propriété :}\\ 
+ $\mathcal{L}(E, \mathbb{K})$ est un K espace-vectoriel pour les opérations point par point  c'est-à dire $f+g$ et $\lambda \cdot f$ \\ 
+ \textcolor{red}{Démonstration :} \\ 
+Montrons que c'est un sous-espace vectoriel de $F^E$ :  \\ 
+$\mathcal{L}(E,F)\subset F^E$ par définition \\ 
+$\tilde{0} \in \mathcal{L}(E,F)$ donc $\mathcal{L}(E,F) \neq \emptyset$ \\ 
+Soit $(f,g) \in (\mathcal{L}(E,F))^2$ et $\lambda \in \mathbb{K}$ : \\ 
+Montrons que $\underbrace{f + \lambda g}_{h} \in  \mathcal{L}(E,F)$ \\ 
+Soit $(\vec{x}, \vec{y}) \in E$ et $\alpha \in \mathbb{K}$ : \\ 
+$h(\vec{x}+ \alpha \vec{y}) = (f + \lambda g)(\vec{x}+ \alpha \vec{y})$ \\ 
+$h(\vec{x}+ \alpha \vec{y}) = f(\vec{x}+ \alpha \vec{y})+ \lambda g (\vec{x}+ \alpha \vec{y})$ par définition des opérations point par point  \\
+$h(\vec{x}+ \alpha \vec{y}) = \underbrace{f(\vec{x})+ \alpha f(\vec{y})}_{f \in \mathcal{L}(E,F)}+ \underbrace{\lambda g(\vec{x})+ \lambda \alpha g(\vec{y})}_{g \in \mathcal{L}(E,F)}$ \\ 
+$h(\vec{x}+ \alpha \vec{y}) = f(\vec{x})+ \lambda g(\vec{x}) + \alpha (f(\vec{y})+ \lambda g(\vec{y}))$ \\ 
+$h(\vec{x}+ \alpha \vec{y}) = h(\vec{x})+ \alpha h(\vec{y})$
+ \section{Bilinéarité de la composition.}
+\textcolor{green}{Propriété :} \\ 
+Soit E,F,G K sous-espace \\ 
+\textcolor{green}{1)}$\forall (f,g) \in (\mathcal{L}(E,F))^2,\forall h \in \mathcal{L}(G,E), \forall \lambda \in \mathbb{K}, (f +\lambda g)\circ h= f\circ h + \lambda(g\circ h)$ \\ 
+\textcolor{green}{2)}$\forall (f,g) \in (\mathcal{L}(E,F))^2,\forall h \in \mathcal{L}(F,G), \forall \lambda \in \mathbb{K}, h \circ (f +\lambda g)= (h \circ f) + \lambda(h\circ g)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Soit $\vec{x} \in G$ : \\ 
+$((f +\lambda g)\circ h)(\vec{x})= (f + \lambda g)(h(\vec{x}))$ \\
+$((f +\lambda g)\circ h)(\vec{x})=f(h(\vec{x}))+ \lambda g(h(\vec{x}))$ \\ 
+$((f +\lambda g)\circ h)(\vec{x})=f \circ h (\vec{x})+ \lambda (g \circ h)(\vec{x})$ \\ 
+\textcolor{green}{2)} Soit $\vec{x} \in E$ : \\ 
+$(h \circ (f +\lambda g))(\vec{x})=h  ((f +\lambda g)(\vec{x}))$ \\ 
+$(h \circ (f +\lambda g))(\vec{x})= h(f(\vec{x})+ \lambda g(\vec{x}))$ \\ 
+$(h \circ (f +\lambda g))(\vec{x})=h(f(\vec{x}))+ \lambda h(g(\vec{x}))$ car $h \in \mathcal{L}(F,G)$ \\ 
+$(h \circ (f +\lambda g))(\vec{x})= (h \circ f)(\vec{x})+ \lambda(h\circ g)(\vec{x})$
+\section{Image directe d'un sous-espace par une application linéaire.}
+\textcolor{green}{Propriété :} \\ 
+E,F : K espace-vectoriel \\ 
+E' : sous-espace vectoriel de E,$f \in \mathcal{L}(E,F)$ \\ 
+Alors $f(E')$ est un sous-espace vectoriel de F. \\ 
+\textcolor{red}{Démonstration :} \\ 
+$f(E') \subset F$, par définition \\ 
+$\vec{0}_E \in E'$ donc $f(\vec{0}_E) \in f(E') \neq \emptyset$ \\ 
+Soit $(\vec{x},\vec{y}) \in (f(E'))^2$ et $ \lambda \in \mathbb{K}$ \\ 
+$\exists (\vec{u}, \vec{v}) \in (E')^2, \vec{x}=f(\vec{u})$ et $\vec{y}=f(v)$ \\ 
+$\vec{x}+\lambda \vec{y}=f(\vec{u})+ \lambda f(\vec{v})$ \\ 
+$\vec{x}+\lambda \vec{y}=f(\vec{u}+ \lambda \vec{v})$ car $f \in \mathcal{L}(E,F)$ \\ 
+Or : $(\vec{u}, \vec{v}) \in (E')^2$ qui est un sous-espace vectoriel de E donc $\vec{u}+ \lambda \vec{v} \in E'$ donc $f(\vec{u}+ \lambda \vec{v})\in f(E')$
+\section{Image réciproque d'un sous-espace par une application linéaire.}
+\textcolor{green}{Propriété :} \\ 
+soit $f \in \mathcal{L}(E,F),F'$ sous-espace vectoriel de F alors : \\ 
+$f^{-1}(F')$ est un sous-espace vectoriel de E \\ 
+\textcolor{red}{Démonstration :} \\ 
+$f^{-1}(F') \subset E$ par définition \\ 
+$f(\vec{0}_E)=\vec{0}_F \in F'$ donc $\vec{0}_E \in f^{-1}(F')\neq \emptyset$ \\
+Soit $(\vec{x}, \vec{y}) \in (f^{-1}(F'))^2$ et $ \lambda \in \mathbb{K}$ \\ 
+$f(\vec{x} + \lambda \vec{y})= f(\vec{x}) +\lambda f(\vec{y})$ car $f \in \mathcal{L}(E,F)$ \\ 
+Or : $(f(\vec{x}),f(\vec{y})) \in F'$ par hypothèse \\ 
+Comme F' est un sous-espace vectoriel $f(\vec{x})+ \lambda f(\vec{y}) \in F'$ \\ 
+$\vec{x}+ \lambda \vec{y} \in f^{-1}(F')$ 
+\section{Caractérisation de l'injectivité par le noyau.}
+\textcolor{green}{Propriété :} \\ 
+Soit $f \in \mathcal{L}(E,F)$ \\ 
+$f$ injective $\Longleftrightarrow$ $Ker(f)= \lbrace\vec{0}_E \rbrace$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$\Rightarrow$ Montrons que $Ker(f)= \lbrace 0_E \rbrace$ \\ 
+$\supset$ $Ker (f)$ sous-espace vectoriel de E donc $\vec{0}_E \in Ker(f)$ donc $\lbrace \vec{0}_E \rbrace \subset Ker(f)$ \\ 
+$\subset$ Soit $\vec{x} \in Ker(f) : f(\vec{x})=\vec{0}_F$ or $f(\vec{0_E})=\vec{0_F}$ car f est linéaire \\ 
+Par hypothèse, f est injective donc $\vec{x}=\vec{0}_E$ \\ 
+$\Leftarrow$ Montrons que f est injective : \\ 
+Soit $(\vec{x},\vec{y}) \in E^2$ tel que $f(\vec{x})=f(\vec{y})$ alors $f(\vec{x})-f(\vec{y})=\vec{0}_F$ \\
+Or f linéaire donc $f(\vec{x}-\vec{y})=\vec{0}_F$ donc $\vec{x} -\vec{y} \in Ker(f)$ \\ 
+Or $Ker(f)= \lbrace \vec{0}_E \rbrace$ par hypothèse donc $\vec{x}- \vec{y}=\vec{0}_E$ c'est-à-dire $\vec{x}=\vec{y}$
+
+\section{$g \circ f = \tilde{0} \Leftrightarrow Im(f) \subset Ker(g),$ $Ker(f) \subset Ker (g \circ f),$ $Im(g \circ f) \subset Im(g),$ $Ker(g \circ f)=f^{-1}(Ker(g)),$ $Im(g \circ f)=g(Im (f))$.}
+\textcolor{green}{Propriété :} \\ 
+Soit $f \in \mathcal{L}(E,F)$ et $g \in \mathcal{L}(F,G)$ : \\ 
+$g \circ f = \tilde{0} \Leftrightarrow Im(f) \subset Ker(g)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$g\circ f = \tilde{0} \Leftrightarrow \forall \vec{x} \in E, g(f(\vec{x}))=\vec{0}_G$ \\ 
+(définition de $Ker(g)$) $\Leftrightarrow \forall \vec{x} \in E, f(\vec{x}) \in Ker(g)$ \\ 
+(définition de $Im(f)$) $\Leftrightarrow \forall \vec{y} \in Im(f), \vec{y} \in Ker(g)$ \\ 
+$\Leftrightarrow Im(f) \subset Ker(g)$ \\ 
+\textcolor{green}{Propriété :}\\ 
+Soit $f \in \mathcal{L}(E,F)$ et $g \in \mathcal{L}(F,G)$ \\ 
+\textcolor{green}{1)} $Ker(f) \subset Ker (g \circ f)$ \\ 
+\textcolor{green}{2)} $Im(g \circ f) \subset Im(g)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Soit $\vec{x} \in Ker(f)$ $f(\vec{x})=\vec{0}_F$. On a : \\ 
+$(g \circ f)(\vec{x})=g(f(\vec{x}))=g(\vec{0}_F)= \vec{0_G}$ car g linéaire donc $\vec{x} \in Ker(g \circ f)$ \\ 
+\textcolor{green}{2)} Soit $\vec{z} \in  Im(g \circ f)$ : \\ 
+$\exists \vec{x} \in E, \vec{z}= (g \circ f)(\vec{x})$ \\ 
+Posons $\vec{y}=f(\vec{x}) \in F$ : $g(\vec{y})=\vec{z}$ donc $\vec{z} \in Im(g)$ \\ 
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} $Ker(g\circ f)= f^{-1}(Ker(g))$ \\ 
+\textcolor{green}{2)} $Im(g \circ f)=g(Im(f))$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Soit $ \vec{x} \in E$ : \\ 
+$\vec{x} \in Ker(g \circ f) \Leftrightarrow g(f(\vec{x}))=\vec{0}_G \Leftrightarrow f(\vec{x}) \in Ker(g) \Leftrightarrow \vec{x} \in f^{-1}(Ker(g))$ \\ 
+\textcolor{green}{2)} $Im(g \circ f)= \lbrace g(f(\vec{x})) : \vec{x} \in E \rbrace= \lbrace g(\vec{y}): \vec{y} \in Im(f) \rbrace = g(Im(f))$ \\ 
+\section{Théorème de structure : $\mathcal{L}(E)$ est une algèbre.}
+\textcolor{green}{Propriété :} \\ 
+Soit E un K espace-vectoriel alors $(\mathcal{L}(E),+, \circ ,\cdot)$ est une K algèbre \\ 
+Le neutre de $\circ$ est $Id_E$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{red}{a)}$(\mathcal{L}(E), + , \cdot)$ est un K espace-vectoriel (démo II avec F=E) \\ 
+\textcolor{red}{b)}Montrons que $(\mathcal{L}(E),+,\circ)$ est un anneau : \\ 
+\textcolor{red}{1)}$(\mathcal{L}(E),+)$ groupe abélien vu en \textcolor{red}{a} \\ 
+\textcolor{red}{2)}$\circ$ loi de composition interne car la composée d'applications linéaires est linéaire \\
+\textcolor{red}{3)}$\circ$ est associative car : \\ 
+soit $x \in E$ : \\ 
+D'une part : $h \circ (g \circ f)(x)=h((g\circ f)(x))= h(g(f(x)))$ \\ 
+D'autre part : $(h \circ g) \circ f)(x)=(h \circ g)(f(x))=h(g(f(x)))$ \\ 
+donc $h \circ (g \circ f)=(h \circ g) \circ f$ \\ 
+\textcolor{red}{4)} $Id_E \in \mathcal{L}(E)$ est neutre par la loi $\circ$ \\ 
+\textcolor{red}{5)}$\circ$ est distributive sur + : bilinéarité de la composition avec $\lambda =1$ \\ 
+\textcolor{red}{c)} Il faut enfin que : \\ 
+$\forall(f,g) \in (\mathcal{L}(E))^2,\forall \lambda \in \mathbb{K},(\lambda f) \circ g=f \circ (\lambda g) = \lambda (f \circ g)$ \\
+Bilinéarité de la compostion avec $f=\tilde{0}$ : \\ 
+$\forall (g,h) \in (\mathcal{L}(E))^2, \lambda g \circ h= \lambda (g \circ h)$ et $h \circ \lambda g = \lambda (h \circ g)$
+\end{document}

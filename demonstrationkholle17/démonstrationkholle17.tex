@@ -1,0 +1,191 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage{listings}
+\begin{document}
+\title{Démonstration kholle 17}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Sous-espace vectoriel définition, caractérisation, intersection}
+\textcolor{green}{Propriété :} \\ 
+Soit F une partie d'un $\mathbb{K}$ espace vectoriel E.\\ 
+Alors F est un sous espace vectoriel de E si et seulement si : \\ 
+$F \neq \emptyset$ et $\forall (\vec{x},\vec{y}) \in F^2, \forall \lambda \in \mathbb{K}, \vec{x}+ \lambda \vec{y} \in F$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$\Rightarrow$ : si F est un sous-espace vectoriel de E on a $F \neq \emptyset$ pour $(\vec{x},\vec{y}) \in F^2$ et $\lambda \in \mathbb{K}, \lambda \vec{y} \in F$ \\ 
+$\vec{x} + \lambda \vec{y} \in F$ (stable par +) \\ 
+$\Leftarrow$ : F est par hypothèse une partie non vide de E . \\ 
+{\bf Sous-groupe  de (E,+)} \\ 
+Pour $(\vec{x}, \vec{y}) \in F^2, \vec{x} - \vec{y} = \vec{x} + \lambda \vec{y}$ avec $\lambda = -1$ \\  donc $\vec{x} - \vec{y} \in F$ \\ 
+{\bf Stabilité par $\cdot$} \\ 
+Soit $\lambda \in \mathbb{K}$ et $ \vec{y} \in F$ $\lambda \vec{y}=\vec{0}+\lambda \vec{y}$ or $\vec{0} \in F$ car F sous-groupe de (E,+) donc $\vec{0}+ \lambda \vec{y} \in F$ \\ 
+\textcolor{green}{Propriété :} \\ 
+Soit $(E,+,\cdot)$ un $\mathbb{K}$ espace vectoriel et $(F_i)_{i \in I}$ une famille de sous espace vectoriel de E. Alors : \\ 
+$\cap_{i \in I} F_i$ est un sous espace vectoriel de E. \\ 
+\textcolor{red}{Démonstration :}  \\ 
+$\cap_{i \in I} F_i \subset E$ par définition et $\neq \emptyset$ car $\forall i \in I, \vec{0} \in F_i$ \\ 
+Soit $(\vec{x},\vec{y}) \in (\cap F_i)$ et $\lambda \in \mathbb{K}$. Alors pour $i\in I$ : \\
+$\vec{x} \in F_i$ et $\vec{y} \in F_i$ donc $\vec{x}+ \lambda \vec{y}\in F_i$( car sous-espace vectoriel) \\ 
+Ainsi : $\forall i \in I, \vec{x} + \lambda \vec{y} \in F_i$ c'est-à-dire $\vec{x}+ \lambda \vec{y} \in \cap_{i \in I} F_i$
+\section{Sous-espace engendré par une partie, croissance}
+\textcolor{green}{Propriété :} \\ 
+$Vect(X)= \cap F$ F sous-espace vectoriel de E tel que $X \subset F$ \\ 
+\textcolor{green}{1)} $Vect(X)$ est un sous-espace vectoriel de E et $X \subset Vect(X)$. \\ 
+\textcolor{green}{2)} Pour tout sous-espace vectoriel G de E tel que $X \subset G$ on a $Vect(X) \subset G$ . $Vect(X)$ est le plus petit sous-espace vectoriel de E. \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} $Vect(X)$ est un intersection de sous-espace vectoriel de E c'est donc un sous-espace vectoriel de E. \\ 
+De plus, X est inclus dans chaque facteur de cette intersection donc $X \subset Vect(X)$. \\ 
+\textcolor{green}{2)} G est l'un des F de l'intersection donc $Vect(X) =\cap F \subset G$ \\ 
+\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{1)} $Vect(\emptyset)= \lbrace \vec{0} \rbrace$ \\ 
+\textcolor{green}{2)} Pour tout sous-espace vectoriel G de E, $Vect(G)=G$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} D'une part : $\emptyset \subset \lbrace \vec{0} \rbrace$ et $\lbrace \vec{0} \rbrace$ sous-espace vectoriel de E donc $Vect(\emptyset) \subset \lbrace \vec{0} \rbrace$. \\ 
+D'autre part : $Vect(\emptyset)$ sous-espace vectoriel de E donc $\vec{0} \in Vect(\emptyset), \lbrace \vec{0} \rbrace \subset Vect(\emptyset)$ donc $Vect(\emptyset) = \lbrace \vec{0} \rbrace$ \\ 
+\textcolor{green}{2)} $G \subset Vect(G)$ par définition de Vect. \\ 
+De plus : $G\subset G$ et G sous-espace vectoriel de E donc $Vect(G)\subset G$, $Vect(G)=G$\\
+\textcolor{green}{Propriété :} \\ 
+Soit $(E, + , \cdot)$ un K espace vectoriel. A et B deux parties de E. \\  
+Si $A\subset B$ alors $Vect(A) \subset Vect(B)$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$A \subset B$ (hypothèse) et $B \subset Vect(B)$ (par définition de Vect) donc $A \subset Vect(B)$. \\ 
+Or Vect(B) est un sous-espace vectoriel de E ainsi : $Vect(A) \subset Vect(B)$. \\ 
+Or $Vect(A)$ est le plus petit sous-espace vectoriel de E contenant la partie A
+ \section{Vect(X) est l'ensemble des combinaisons linéaires d'élément de X}
+ \textcolor{green}{Propriété :} \\ 
+ E un K espace vectoriel, $X \in  \mathcal{P}(E),$ $Vect(X)$ est l'ensemble des combinaisons linéaires d'élément de X \\ 
+ \textcolor{red}{Démonstration :} \\ 
+ Notons F l'ensemble des combinaisons linéaires d'élément de X \\ 
+ Montrons que $F \subset Vect(X)$ \\ 
+ Soit $\vec{x} \in F$ : $\exists(\vec{x_1},...,\vec{x_n}) \in X^n, \exists (\lambda_1,...,\lambda_n) \in \mathbb{K}^n, \vec{x}=\sum_{k=1}^n \lambda_k \vec{x_k}$ \\ 
+ Comme $X \subset Vect(X)$ $\forall k \in [[1,n]], \vec{x_k} \in  Vect(X)$ \\ 
+ Or $Vect(X)$ est un sous-espace vectoriel de E donc $\sum_{k=1}^n \lambda_k \vec{x_k} \in Vect(X)$ donc $\vec{x} \in Vect(X)$ \\ 
+ Montrons que $Vect(X) \subset F$ :\\ 
+ Montrons que $X \subset F$ : Soit $\vec{x} \in X, \vec{x}= 1 \cdot \vec{x} \in F$ \\ 
+ Montrons que F est un sous-espace vectoriel de E: \\ 
+ $F \subset E$ par définition et $\vec{0} \in F$ (combinaisons linéaires vide) \\ 
+ Soit $(\vec{x}, \vec{y}) \in F^2$ et $\lambda \in \mathbb{K}$ \\ 
+ $\exists (\vec{x_1},...,\vec{x_n}) \in X^n, \exists (\lambda_1,...,\lambda_n) \in \mathbb{K}^n,\vec{x}= \sum_{k=1}^n \lambda_k \vec{x_k}$ \\ 
+ $\exists (\vec{y_1},...,\vec{y_p}) \in X^p, \exists (\mu_1,...,\mu_p) \in \mathbb{K}^n,\vec{y}= \sum_{k=1}^p \mu_k \vec{y_k}$ \\ 
+ alors $\vec{x}+ \lambda \vec{y}= \sum_{k=1}^{n+p}\alpha_k \vec{u_k}$ \\ 
+ où $\vec{u_k} = x_k \in X$ si $1 \leq k \leq n$ \\  
+ $\vec{u_k} =y_{k-n} \in X$ si $n+1 \leq k \leq n+p$ \\ 
+ et $\alpha_k= \lambda_k$ si $1 \leq k \leq n$ \\ 
+ $\alpha_k=\lambda \times  \mu_{k-n} \in X$ si $n+1 \leq k \leq n+p$ \\ 
+ c'est-à-dire $\vec{x}+ \lambda \vec{y} \in F$ \\ 
+ {\bf Conclusion :} F est un sous-espace vectoriel de E tel que $X \subset F$ donc $Vect(X) \subset F$ donc $Vect(X) = F$
+\section{F + G : définition, c'est un sous-espace vectoriel.}
+\textcolor{green}{Propriété :} \\
+Avec F et G sous-espace vectoriel on pose : \\ 
+$F +G = \lbrace \vec{x}+ \vec{y} : \vec{x} \in F, \vec{y} \in G \rbrace$ \\ 
+$F+G$ est un sous-espace vectoriel de E \\ 
+\textcolor{red}{Démonstration :} \\ 
+$F +G \subset E$ par définition. \\ 
+$\vec{0}=\vec{0}+\vec{0} \in F +G$ donc $F+G \neq \emptyset$ \\ 
+Soit $(\vec{x},\vec{y}) \in (F+G)^2$ et $\lambda \in \mathbb{K}$ : \\ 
+Comme $\vec{x}\in F+G: \exists (\vec{x_1},\vec{x_2}) \in F \times G, \vec{x}= \vec{x_1} + \vec{x_2}$ \\ 
+Comme $\vec{y}\in F+G: \exists (\vec{y_1},\vec{y_2}) \in F \times G, \vec{y}= \vec{y_1} + \vec{y_2}$ \\ 
+alors $\vec{x}+ \lambda \vec{y}=(\vec{x_1}+ \vec{x_2})+ \lambda (\vec{y_1} + \vec{y_2})$
+$\vec{x}+ \lambda \vec{y}=\underbrace{(\vec{x_1}+ \lambda \vec{y_1})}_{\in F}+\underbrace{(\vec{x_2} + \lambda \vec{y_2})}_{\in G}$ \\ 
+donc $\vec{x}+ \lambda \vec{y} \in F+G$
+\section{$F+ G = Vect(F\cup G)$}
+\textcolor{green}{Propriété :} $F+G = Vect(F \cup G)$ c'est-à-dire \\ 
+Si H est un sous-espace vectoriel de E tel que $F \subset H$ et $G \subset H$ alors $F+G \subset H$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+$Vect(F \cup G) \subset F+G$ \\ 
+On a : $F \subset F+G$ et $G \subset F+G$ donc $F \cup G \subset F+G$ \\ 
+De plus $F+G$ est une sous-espace vectoriel de E donc $Vect(F \cup G) \subset F+G$ \\ 
+Montrons que $F+G \subset Vect(F \cup G)$ : \\ 
+Soit $\vec{x} \in F +G$, $\exists(\vec{u},\vec{v})\in F\times G, \vec{x}=\vec{u}+\vec{v}$ \\ 
+Comme $(\vec{u},\vec{v}) \in F \cup G$ leur combinaison linéaire $\underbrace{\vec{u}+\vec{v}}_{\vec{x}} \in Vect(F \cup G) $
+\section{Somme directe : définition, caractérisation par l'intersection nulle. Illustration : fonctions paires et impaires.}
+\textcolor{green}{Propriété} Les propositions suivantes sont équivalentes : \\ 
+\textcolor{green}{1)} F et G sont en somme directe \\ 
+\textcolor{green}{2)} $F\cap G =\lbrace \vec{0} \rbrace$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} $\Rightarrow$ \textcolor{green}{2)}: $F \cap G$ sous-espace vectoriel de E donc $\vec{0} \in F \cap G$ donc $\vec{0} \in F \cap G$ c'est-à-dire $\vec{0} \subset F \cap G$. \\ 
+Soit $\vec{x} \in F \cap G$  $\underbrace{\vec{x}}_{\in F} + \underbrace{\vec{0}}_{\in G}= \underbrace{\vec{0}}_{\in F}+\underbrace{\vec{x}}_{\in G}$ \\ 
+Par hypothèse : décomposition unique c'est-à-dire $\vec{x}= \vec{0}$ \\ 
+\textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} Soit $\vec{x} \in F + G$ : \\ 
+Si $\vec{x}= \vec{x_1}+\vec{y_1} =\vec{x_2} +\vec{y_2}$ \\ 
+$\underbrace{\vec{x_1}-\vec{x_2}}_{\in F} = \underbrace{\vec{y_2}-\vec{y_1}}_{\in G}$ car F et G  sous-espace vectoriel. \\ 
+C'est donc un élément de $F \cap G = \lbrace \vec{0} \rbrace$ \\ 
+Ainsi : $\vec{x_1}-\vec{x_2}=\vec{0}$ $\vec{y_2}-\vec{y_1}=\vec{0}$ \\ 
+$\vec{x_1}=\vec{x_2}$ et $\vec{y_1}=\vec{y_2}$ \\ 
+{\bf Illustration : fonctions paires et impaires :} \\ 
+$D \subset \mathbb{R}$, symétrique par rapport à 0 \\ 
+$E=\mathbb{R}^D$ \\ 
+$\mathcal{P}=\lbrace f \in E : f$ paire $\rbrace$ \\ 
+$\mathcal{I}=\lbrace f \in E : f$ impaire $\rbrace$ \\ 
+Montrons que $\mathcal{P}$ et $\mathcal{I}$ supplémentaire sur E : \\ 
+Montrons qu'ils sont bien des sous-espace vectoriel de E \\ 
+Pour $\mathcal{P}$: $\mathcal{P} \subset E$ par définition \\ 
+$\tilde{0} \in \mathcal{P}$ donc $\mathcal{P} \neq \emptyset$ \\ 
+Soit $(f,g) \in \mathcal{P}$ et $\lambda \in \mathbb{R}$ pour $t \in D$ : \\ 
+$(f+\lambda g)(-t)=f(-t)+\lambda g(-t)$ \\ 
+$(f+\lambda g)(-t)=f(t)+\lambda g(t)$ car $(f,g) \in \mathcal{P}$ \\ 
+$(f+\lambda g)(-t)=(f+\lambda g)(t)$ donc $(f+\lambda g)\in \mathcal{P}$ \\ 
+Pour $\mathcal{I}$ : idem \\ 
+Montrons $E \subset \mathcal{P} \oplus \mathcal{I}$ \\ 
+{\bf Analyse :} S'il existe $(f,g) \in \mathcal{P} \times \mathcal{I}$ tel que $u=f+g$ alors pour $t \in D$ :\\
+$u(t)=f(t)+g(t)$ \\ 
+donc $u(-t)=f(-t)+g(-t)=f(t)-g(t)$ \\ 
+car $f \in \mathcal{P}$ et $g \in \mathcal{I}$ \\ 
+$f(t)=\frac{1}{2}(u(t)+u(-t))$ \\ 
+$g(t)=\frac{1}{2}(u(t)-u(-t))$ \\ 
+unicité : le couple $(f,g)$ unique candidat \\
+{\bf Synthèse :} Posons : \\ 
+$f: D \rightarrow \mathbb{R}$ \\ 
+$t \rightarrow \frac{1}{2}(u(t)+u(-t))$ \\ 
+$g: D \rightarrow \mathbb{R}$ \\ 
+$t \rightarrow \frac{1}{2}(u(t)-u(-t))$ \\ 
+On a bien $f \in \mathcal{P}$ et $g \in \mathcal{I}$.
+De plus : $u= f+g$
+\section{Ajout à une famille libre finie d'un vecteur qui n'est pas combinaisons linéaires des autres}
+\textcolor{green}{Propriété :} \\ 
+E: K espace vectoriel $(\vec{x_1},...,\vec{x_n}) \in E^n$ libre \\
+Soit $\vec{x}_{n+1} \in E$, si $\vec{x}_{n+1} \notin Vect(\vec{x_1},...,\vec{x_n})$ \\ 
+Alors $(\vec{x_1},...,\vec{x}_{n+1})$ est libre \\ 
+\textcolor{red}{Démonstration :} \\ 
+Montrons que $(\vec{x_1},...,\vec{x}_{n+1}) \in E^{n+1}$ est libre. \\ 
+Soit $(\lambda_1,...,\lambda_{n+1})\in \mathbb{K}^{n+1}$ tel que $\sum_{k=1}^{n+1} \lambda_k\vec{x_k}=\vec{0}$ \\ 
+si $\lambda_{n+1}\neq 0$: $x_{n+1}=\sum_{k=1}^n(-\frac{\lambda_k}{\lambda_{n+1}})\vec{x_k}$ \\ 
+$\vec{x}_{n+1} \in Vect(\vec{x_1},...,\vec{x_n})$ contradiction donc $\lambda_{n+1}=0$ \\ 
+Il reste : $\sum_{k=1}^n \lambda_k \vec{x_k}= \vec{0}$ or $(\vec{x_1},...,\vec{x_n})$ est libre donc $\lambda_1=...=\lambda_n=0$ \\ 
+On a bien : $\forall k \in [[1,n+1]], \lambda_k=0$
+\section{Famille de polynômes échelonné en degré : si $deg(P_k)=k$ pour $0 \leq k \leq n$ alors $(P_0,...,P_n)$ est libre (démonstration avec $max \lbrace k \in [[0,n]] : \lambda_k \neq 0 \rbrace$)}
+\textcolor{green}{Propriété :} \\ 
+Une famille $(P_0,...,P_n)$ de polynômes est échelonnés en degré si : \\ 
+$\forall k \in [[0,n]], deg(P_k)=k$ \\ 
+Une telle famille est libre. \\ 
+\textcolor{red}{Démonstration :} \\ 
+Montrons que  $(P_0,...,P_n)$ est libre : \\ 
+Soit $(\lambda_0,...,\lambda_n) \in \mathbb{K}^{n+1}$ tel que $\sum_{k=0}^n \lambda_k P_k=0$ \\ 
+Posons $A=\lbrace k \in [[0,n]] : \lambda_k \neq 0 \rbrace$ \\ 
+Si $A \neq \emptyset$ : comme A est fini il a un maximum $r$ : \\ 
+$\sum_{k=0}^{r}\lambda_kP_k=0$ \\ 
+$\lambda_r\neq 0$ : $P_r= \sum^{r-1}_{k=0}{-\frac{\lambda_k}{\lambda_r}P_k}$ \\ 
+$deg(P_r) \leq max \lbrace deg(P_k) : 0 \leq k < r \rbrace$ donc $r<r$ absurde \\ 
+donc $A= \emptyset$ c'est-à-dire $\lambda_0=...=\lambda_n=0$
+\end{document}

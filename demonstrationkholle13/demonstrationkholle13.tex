@@ -1,0 +1,193 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\begin{document}
+\title{Démonstration kholle 13}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+\section{Dérivation de $f^{-1}$ en $b=f(a)$ tel que $f'(a) \neq 0$, cas $f'(a)=0$}
+\textcolor{green}{Propriété :} \\
+ Cas $f'(a)\neq 0$ \\
+Soit $f \in \mathcal{C}^0(I)$, strictement monotone, dérivable en a : \\
+Notons $J=f(I)$ et $b=f(a)$ \\ 
+On sait que f réalise une bijection $I$ sur $J$. \\ 
+Alors $f^{-1}$ est dérivable en b et : \\
+$(f^{-1})(b)=\frac{1}{f'(a)}= \frac{1}{f'(f^{-1}(b))}$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+On a $f^{-1}(y)=a \Leftrightarrow y=b$ \\ 
+Par ailleurs : \\ 
+$\frac{f(x)-f(a)}{x-a} \rightarrow_{x \rightarrow a} f'(a)$ \\ 
+Et comme $f^{-1}$ est continue : \\ 
+$f(f^{-1}(y)) \rightarrow_{y \rightarrow b}f^{-1}(b)=a$ \\ 
+d'où : $\frac{f(f^{-1}(y))-f(a)}{f^{-1}(y)-a} \rightarrow _{y \rightarrow b} f'(a)$
+Comme $f(a)=b$ et $f(f^{-1}(y))=y$ \\ 
+$\frac{y-b}{f^{-1}(y)-f^{-1}(b)} \rightarrow_{y \rightarrow b} f'(a) \in \mathbb{R}^*$ \\
+d'où : $\frac{f^{-1}(y)-f^{-1}(b)}{y-b} \rightarrow_{y \rightarrow b} \frac{1}{f'(a)}$ \\ 
+\textcolor{green}{Propriété :} \\ 
+Cas $f'(a)=0$ alors $\mathcal{C}_{f^{-1}}$ a une tangente verticale en b. \\ 
+\textcolor{red}{Démonstration :} \\ 
+$\frac{y-b}{f^{-1}(y)-f^{-1}(b)} \rightarrow_{y \rightarrow b} 0 $ \\ 
+$0^+$ si $f^{-1}$ strictement croissante $0^-$ si $f^{-1}$ strictement décroissante. \\ 
+$\frac{f^{-1}(y)-f^{-1}(b)}{y-b} \rightarrow_{y \rightarrow b} + \infty$
+\section{CN d'extremum local + théorème de Rolle}
+\textcolor{green}{Propriété :} condition nécessaire d'extremum local. \\ 
+I: intervalle non trivial $a \in$ \r{I}  $f: I \rightarrow \mathbb{R}$ dérivable en a \\ 
+On suppose que f possède un extremum local en a : \\
+Alors $f'(a)=0$, c'est-à-dire : a est un point critique \\
+\textcolor{red}{Démonstration :} cas d'un maximum local \\ 
+Par hypothèse : \\ 
+$\exists \delta_1 \in \mathbb{R}^*_+, \forall x \in I \cap [a-\delta_1,a+ \delta_1],f(x)\leq f(a)$ \\ 
+Comme $a \in$ \r{I}, qui est ouvert : \\ 
+$\exists \delta_2 \in \mathbb{R}^*_+, [a- \delta_2, a+ \delta_2] \subset$ \r{I} $\subset I$ \\ 
+Posons $ \delta = min(\delta_1,\delta_2)>0$: \\ 
+$\forall x \in [a- \delta , a+ \delta ], f(x) \leq f(a)$ \\ 
+Pour $x \in ]a,a+ \delta ]$ : $f(x)-f(a)\leq 0$ et $x-a>0$ on a donc : \\
+$\frac{f(x)-f(a)}{x-a} \leq 0$ \\ 
+limite $x \rightarrow a$ : $f'(a) \leq 0$ \\ 
+Pour $x \in [a- \delta, a[$ : $f(x)-f(a)\leq 0$ et $x-a<0$ \\ 
+$\frac{f(x)-f(a)}{x-a} \geq 0$ \\ 
+D'où quand x tend vers a : $f'(a)\geq 0$ \\ 
+Donc $f'(a)=0$ \\ 
+\textcolor{green}{Propriété :} \\ 
+Théorème de Rolle : \\ 
+Soit $a<b$ réels $f:[a,b] \rightarrow \mathbb{R}$ \\ 
+f continue sur $[a,b]$, dérivable sur $]a,b[$ tel que $f(a)=f(b)$ alors : \\ 
+\indent $\exists c \in ]a,b[, f'(c)=0$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+f est continue sur le segment $[a,b]$ \\ 
+Elle possède un minimum et un maximum : \\ 
+$\exists (u,v) \in [a,b]^2, \forall x \in [a,b], f(u) \leq f(x) \leq f(v)$ \\ 
+Premier cas : $u \in ]a,b[$ : \\ 
+Par la condition neccessaire d'extremum local, comme f est dérivable en u : \\ 
+$f'(u)=0$ \\ 
+Deuxième cas : $v \in ]a,b[$. Pour la même raison : $f'(v)=0$ \\
+Troisième cas : sinon $u=a$ ou $b$ et $v=a$ ou $b$ \\ 
+Or $f(a)=f(b)$ donc: $f(u)=f(v)$ \\ 
+donc f est constante : \\ 
+$\forall c \in ]a,b[, f'(c)=0$
+\section{Egalité des accroissements finis + inégalité (deux versions: sans et avec valeur absolue)}
+\textcolor{green}{Propriété :} \\  
+Egalité des accroissements finis : \\ 
+Soient $a<b$ réels : \\ 
+$f:[a,b]\rightarrow \mathbb{R}$ \\ 
+f continue sur $[a,b]$, dérivable sur $]a,b[$ alors : \\ 
+$\exists c \in ]a,b[, f'(c)= \frac{f(b)-f(a)}{b-a}$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $g:x \in [a,b] \rightarrow \mathbb{R}$ \\ 
+$x \rightarrow f(x) - \frac{f(b)-f(a)}{b-a}(x-a)$ \\
+Alors : $g \in \mathcal{C}^0([a,b])$ $g \in \mathcal{D}^1(]a,b[)$ $g(a)=g(b)=f(a)$ \\
+donc par le théorème de Rolle : \\ 
+$\exists c \in ]a,b[, g'(c)=0$ \\ 
+Or : $\forall x \in ]a,b[, g'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}$ \\ 
+donc: $f'(c)= \frac{f(b)-f(a)}{b-a}$ \\ 
+\textcolor{green}{Propriété :} inégalité des accroissements finis deux énoncés : \\ 
+\textcolor{green}{1)} $a<b, f \in \mathcal{C}^0([a,b])\cap \mathcal{D}^1(]a,b[)$ on suppose f' bornée sur $]a,b[$ \\ 
+Notons $(m,M) \in \mathbb{R}^2$ tel que : \\ 
+$\forall x \in ]a;b[, m \leq f'(x) \leq M$ \\ 
+Alors: $m(b-a)\leq f(b) -f(a) \leq M(b-a)$ \\ 
+\textcolor{green}{2)} I intervalle non trivial, $(a,b) \in I^2, f \in \mathcal{D}^1(I)$ \\ 
+on suppose $f'$ bornée sur I, notons $k \in \mathbb{R}_+$ tel que : \\ 
+$\forall x \in I, |f'(x)| \leq k$ Alors : \\ 
+$|f(b)-f(a)| \leq k |b-a|$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+\textcolor{green}{1)} Les hypothèse de l'égalité des accroissements finis sont vérifiées : \\ 
+$\exists c \in ]a,b[, f'(c)= \frac{f(b)-f(a)}{b-a}$ \\ 
+de plus : \\ 
+$m \leq f'(c) \leq M$ on multiplie par $(b-a)>0$ \\ 
+$m(b-a) \leq f'(c) \leq M(b-a)$ \\ 
+\textcolor{green}{2)} si $a<b$ : on applique \textcolor{green}{1} avec $M=k$ et $m=-k$ \\ 
+$-k (b-a) \leq f(b)-f(a) \leq k(b-a)$ donc : \\ 
+$|f(b)-f(a)| \leq k(b-a)=k|b-a|$ car $b-a>0$ \\ 
+si $a>b$: on applique le premier cas à$(b,a)$ : \\ 
+$|f(a)-f(b)| \leq k |a-b|$ \\ 
+c'est-à-dire : $|f(b)-f(a)| \leq k |b-a|$ \\ 
+Si $a=b$ : $0 \leq 0$
+\section{Sens de variation (large et strict) en fonction du signe de la dérivée}
+\textcolor{green}{Propriété :} soit I intervalle non trivial \\  Soit $f:I \rightarrow \mathbb{R},$ continue sur $I$, dérivable \r{I} \\
+\textcolor{green}{1)} f croissante sur $I \Leftrightarrow \forall x \in $ \r{I}, $f'(x) \geq 0$ \\ 
+\textcolor{green}{2)} f décroissante sur $I \Leftrightarrow \forall x \in $ \r{I}, $f'(x) \leq 0$ \\ 
+\textcolor{green}{3)} f constante sur $I \Leftrightarrow \forall x \in $ \r{I}, $f'(x) = 0$ \\ 
+\textcolor{green}{4)}  $\forall x \in $ \r{I}, $f'(x) > 0 \Rightarrow f$ strictement croissante sur I \\ 
+\textcolor{green}{5)}$\forall x \in $ \r{I}, $f'(x) < 0 \Rightarrow f$ strictement décroissante sur I \\ 
+\textcolor{red}{Démonstration :} \textcolor{green}{1)} $\Rightarrow$ Soit $x \in $ \r{I} pour $y \in I \backslash \lbrace x \rbrace$ \\ 
+$f(y)-f(x)$ et $y-x$ ont même signe car f est croissante\\
+ainsi: $\frac{f(y)-f(x)}{y-x}\geq 0$\\ 
+limite $ y \rightarrow x$ : \\ 
+$f'(x) \geq 0$ \\ 
+$\Leftarrow$ : soit $(a,b) \in I^2$ avec $a<b$ alors : \\ 
+$[a,b] \subset I, ]a,b[ \subset $ \r{I} \\ 
+ainsi f est $\mathcal{C}^0([a,b]), \mathcal{D}^1(]a,b[)$
+Par l'égalité des accroissements finis : \\ 
+$\exists c \in ]a,b[, \frac{f(b)-f(a)}{b-a}=f'(c) \underbrace{\geq 0}_{hypothese}$ \\ 
+Comme $b-a> 0$ : \\ 
+$f(b)-f(a) \geq 0$
+$f(a) \leq f(b)$ \\ 
+\textcolor{green}{2)} appliquons \textcolor{green}{1} à $-f$ \\ 
+\textcolor{green}{3) 1 et 2} \\
+\textcolor{green}{4)} Soit $(a,b) \in I^2$ avec $a < b$ : \\ 
+$[a,b] \subset I, ]a,b[ \subset$ \r{I} \\ 
+Egalité des accroissements finis : \\ 
+$\exists c \in ]a,b[, \frac{f(a)-f(b)}{b-a}=f'(c)>0$ \\ 
+or $b-a > 0$ \\ 
+donc $f(b)-f(a)>0$ $f(a) <f(b)$ \\ 
+\textcolor{green}{5)} Appliquons \textcolor{green}{4} à $-f$
+\section{Théorème de la limite de la dérivée}
+\textcolor{green}{Propriété :} \\ 
+I intervalle non trivial, $a \in I$ \\ 
+$f: I \rightarrow \mathbb{R},\mathcal{C}^0(I)$ dérivable sur $I \backslash \lbrace a \rbrace$ \\ 
+On suppose : $f'(x)\rightarrow_{x \rightarrow a} l \in \bar{\mathbb{R}}$ \\ 
+Alors : $\frac{f(x)-f(a)}{x-a} \rightarrow_{x \rightarrow a} l$ \\ 
+\textcolor{red}{Démonstration :} \\ 
+Soit $x \in I \backslash \lbrace a \rbrace$ : \\ 
+Si $a< x$ : f est $\mathcal{C}^0([a,x]),\mathcal{D}^1(]a,x[)$ \\ 
+Donc par l'égalité des accroissements finis : \\ 
+$ \exists c \in ]a,b[, \frac{f(x)-f(a)}{x-a}=f'(c) $ \\ 
+Si $x < a$ : de même: $ \exists c \in ]a,b[, \frac{f(x)-f(a)}{x-a}=f'(c) $ \\ 
+Dans chaque cas c dépend de x : notons c $c(x)$ \\ 
+On a donc pour $x \in I \backslash \lbrace a \rbrace$ : \\ 
+$ \frac{f(x)-f(a)}{x-a}=f'(c(x)) $ \\ 
+De plus : $ \forall x \in I \backslash \lbrace a \rbrace, |c(x)-a| \leq |x-a|$ \\ 
+Car suivant le signe de $x-a$ on a $c(x)-a \leq x-a$ ou $a-c(x) \leq a-x$ \\ 
+Ainsi : $c(x) \rightarrow_{x \rightarrow a} a$ \\ 
+par limite de composée : $f'(c(x)) \rightarrow_{x \rightarrow a}l$ \\ 
+c'est-à-dire : $\frac{f(x)-f(a)}{x-a} \rightarrow_{x \rightarrow a} l$
+\section{Formule de Taylor avec reste intégral}
+\textcolor{green}{Propriété :} \\ 
+I, intervalle non trivial : \\
+$n \in \mathbb{N}, f \in \mathcal{C}^{n+1}, (a,b) \in I^2$ \\ 
+Alors : $f(b)=\sum_{k=0}^n[\frac{f^{(k)}(a)}{k!}(b-a)^k]+ \int_a^b \frac{(b-t)^n}{n!}f^{(n+1)}(t)dt$ (Formule à l'ordre {\bf n} ) \\ 
+\textcolor{red}{Démonstration :} \\ 
+Récurrence sur n : \\ 
+n=0 : $f(b)=f(a)+ \int_a^bf'(t)dt$ \\ 
+{\bf Hérédité :} Si vraie à un certain rang n : \\ 
+On suppose $f \in \mathcal{C}^{n+2}(I)$ alors \\ 
+$f \in \mathcal{C}^{n+1}(I)$ donc, on a : \\ 
+$f(b)=\sum_{k=0}^n[\frac{f^{(k)}(a)}{k!}(b-a)^k]+ \int_a^b \frac{(b-t)^n}{n!}f^{(n+1)}(t)dt$ \\ 
+Comme $f^{(n+1)} \in \mathcal{C}^1(I)$, intégrons par parties : \\ 
+$\int_a^b \frac{(b-t)^n}{n!}f^{(n+1)}(t)dt=[-\frac{(b-t)^{n+1}}{(n+1)!}f^{(n+1)(t)dt}]_a^b- \int^{b}_{a}{-\frac{(b-t)^{n+1}}{(n+1)!}f^{n+2}(t)dt}$ \\ 
+$\int_a^b \frac{(b-t)^n}{n!}f^{(n+1)}(t)dt=\frac{(b-a)^{n+1}}{(n+1)!}f^{(n+1)}(a)+\int^{b}_{a}{\frac{(b-t)^{n+1}}{(n+1)!}f^{n+2}(t)dt}$ \\ 
+d'où : \\
+$f(b)=\sum_{k=0}^{n+1}[\frac{f^{(k)}(a)}{k!}(b-a)^k]+ \int_a^b \frac{(b-t)^{n+1}}{(n+1)!}f^{(n+2)}(t)dt$
+
+\end{document}
