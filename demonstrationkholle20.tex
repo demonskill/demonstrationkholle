@@ -28,18 +28,49 @@
 	\renewcommand{\thesection}{\Roman{section}}
 	\setlength{\parindent}{1.5cm}
 \section{Division euclidienne}
+\textcolor{green}{Propriété : } \\
+Soit $(A,B) \in (\mathbb K [X])^2$ avec $B \neq 0$ \\
+$\exists ! (Q,R) \in (\mathbb K [X])^2, (A=BQ+R)$ et $deg(R) < deg(B)$ \\
+\textcolor{red}{Démonstration :} \\
+{\bf Unicité :} \\
+Si $A = BQ_1+R_1$ et $A=BQ_2 +R_2$ \\
+avec $deg(R_1)$ e $deg(R_2)< deg (B)$ \\
+$B(Q_1-Q_2)=R_2-R_1$ \\
+$deg(B) +deg(Q_1-Q_2)=deg(R_2-R_1) $ \\
+donc $deg(B)+deg(Q_1-Q_2)<deg(B)$ \\
+or $deg(B) \in \mathbb N$ car $B  \neq 0$ $deg(Q_1-Q_2)<0$ \\
+donc $Q_1-Q_2=0$ donc $Q_1=Q_2$ et $R_1=R_2$ \\
+{\bf Existence :} \\
+$Q,R \leftarrow 0,A$ \\
+Tant que $deg(R) \geq deg(B)$ : \\
+\indent Soit $sX^d$ le monome tel que $sX^dB$ ont le même terme de plus haut degré que R : \\
+\indent $Q,R \leftarrow Q+sX^d,R-sX^dB$ \\
+Renvoyer Q,R \\
+Notons $Q_k$ et $R_k$ les valeurs de Q et R après k itérations \\
+{\bf Terminaison :} $deg(R_k)$ décroit strictement dans $\mathbb N \cup \lbrace - \infty \rbrace$ \\
+{\bf Correction} Montrons que qu'après chaque itérations on a bien $A=BQ_k+R_k$ \\
+{\bf Initialisation :} $k=0, Q_0=0, R_0=A$ \\
+$A=B \times 0 +A$ \\
+{\bf Hérédité} Soit $ k \in \mathbb N^*$ tel que la propriété soit vraie au rang k-1. Si on effectue une k-ième itération : \\
+$deg(R_{k-1}) \geq deg(B)$ \\
+prenons $d=deg(R_{k-1}) -deg(B) \in \mathbb N$ et $s= \frac{dom(R{k-1})}{dom(B)}$ a un sens car $dom(B) \in \mathbb K ^*$ \\
+Alors : $Q_k =Q_{k-1} + s X^d$ et $R_k=R_{k-1} -s X^dB$ \\
+donc $B Q_k +R_k =B Q_{k-1} +R_{k-1} =A$ \\
+{\bf Conclusion :} Soit $k_0$ le nombre total d'itérations, on renvoie $(Q_{k_0},R_{k_0})$ \\
+Par principe de réccurrence : $A=BQ_{k_0} + R_{k_0}$ \\
+Puisque l'on effectue plus d'itération supplémentaire $deg(R_{k_0}) < deg(B)$
 \section{Factorisation d'une racine; un polynôme n'a pas plus de racines distincts que son degré}
-\textcolor{green}{Propriété :} \\ 
+\textcolor{green}{Propriété :} \\
 Soit $P \in \mathbb{K}[X], \alpha \in \mathbb K$ \\
-\textcolor{green}{1)} Le reste de la division euclidienne de P par $X-\alpha$ est $P(\alpha)$ \\ 
-\textcolor{green}{2)} $P(\alpha)= 0 \Longleftrightarrow (X- \alpha)|P$ \\ 
-\textcolor{red}{Démonstration :} \\ 
-\textcolor{green}{1)} $P=(X-\alpha)Q + R$ \\ 
-Avec $Q \in \mathbb K [X]$, $R \in \mathbb K [X]$ \\ 
-et $deg(R)< deg(X- \alpha) = 1$ donc R est constant \\ 
-substituons $\alpha$ à X : \\ 
-$P(\alpha)=R(\alpha)=R$ car R constante \\ 
-\textcolor{green}{2)} $(X- \alpha)|P \Longleftrightarrow R=0$ \\ 
+\textcolor{green}{1)} Le reste de la division euclidienne de P par $X-\alpha$ est $P(\alpha)$ \\
+\textcolor{green}{2)} $P(\alpha)= 0 \Longleftrightarrow (X- \alpha)|P$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $P=(X-\alpha)Q + R$ \\
+Avec $Q \in \mathbb K [X]$, $R \in \mathbb K [X]$ \\
+et $deg(R)< deg(X- \alpha) = 1$ donc R est constant \\
+substituons $\alpha$ à X : \\
+$P(\alpha)=R(\alpha)=R$ car R constante \\
+\textcolor{green}{2)} $(X- \alpha)|P \Longleftrightarrow R=0$ \\
 \textcolor{green}{Propriété :} \\
 	Soit $P \in \mathbb{K}[X]$ de degré $n \in \mathbb{N}$. Alors P possède au plus n racines. \\
 	\textcolor{red}{Démonstration} : récurrence sur n \\
@@ -56,7 +87,54 @@ $P(\alpha)=R(\alpha)=R$ car R constante \\
 				$P(x)=0 \Leftrightarrow (x=c)$ ou $Q(x)=0$ \\
 			P possède au plus une racine de plus que Q donc au plus n au total
 \section{Factorisation simultanée de plusieurs racines distinctes ; cas où il y a autant de racines que le degré (polynôme scindé simple)}
+\textcolor{green}{Propriété:} \\
+Soit $P \in \mathbb K [X]$ \\
+Soit $(\alpha_1,...,\alpha_r)$ des racines deux à deux distinctes de P. Alors : \\
+$(X-\alpha_1)...(X-\alpha_r)|P$ \\
+c'est-à-dire: $\exists Q \in \mathbb K  [X], P=(X-\alpha_1)...(X_\alpha_r)Q$\\
+\textcolor{red}{Démonstration :} soit la division euclidienne : \\
+$P=(X-\alpha_1)...(X_\alpha_r)Q +R$  avec $(Q,R) \in \mathbb K [X]$ \\
+et $deg(R)<deg((X-\alpha_1) ...(X- \alpha_r)=r$ \\
+Pour $k \in [[1,r]]$ : \\
+$R(\alpha_k)=P(\alpha_k)=0$ donc R possède au moins $r$ racines or $deg(R)<r$ donc $R=0$\\
+\textcolor{green}{Corrolaire :} \\
+Soit $P \in \mathbb K [X]$ de degré $d \in \mathbb N^*$. \\
+On suppose qu'il possède d racines distinctes 2à 2 $\alpha_1,...,\alpha_d$ alors : \\
+$P=dom(P) \prod_{k=1}^d (X-\alpha_k)$
+\textcolor{red}{Démonstration : } Comme les racines sont 2 à 2 disctincts : \\
+$\exists Q \in \mathbb K [X], P=(X- \alpha_1)...(X- \alpha_d)Q$ \\
+de degré $d=\underbrace{1+ ...+1}_{d \quad termes} + deg(Q)$ $deg(Q)=0$ donc $Q=\lambda \in \mathbb K^*$ \\
+coefficient dominant : $dom(P)=\lambda$
 \section{Interpolation de Lagrange}
+\textcolor{green}{Propriété :} \\
+Soit $n \in \mathbb N^*$, et $(a_1,...,a_n) \in \mathbb K^n$ deux à deux distincts. \\
+La famille des polynomes associée à $(a_1,...,a_n=$ est $(L_1,...,L_n)$ où : \\
+$L_k=\prod_{i=1,i \neq k}ˆn \frac{X-a_i}{a_k-a_i}$ \\
+\textcolor{green}{1)} $\forall k \in [[1,n]], deg(L_k)=n-1$ \\
+\textcolor{green}{2)} $\forall (k,j) \in [[1,n]]^2, L_k(a_j)=\delta_{k,j}$ \\
+\textcolor{green}{3)} $(L_1,...,L_n)$ est une base de $\mathbb K_{n-1} [X] $ Plus précisement : \\
+$\forall P \in \mathbb K_{n-1} [X], P= \sum_{k=1}^n P(a_k) L_k$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} Il y a n-1 facteur de degré 1 \\
+\textcolor{green}{2)} $L_k(a_j)=\prod_{i=1,i \neq k}ˆn \frac{a_j-a_i}{a_k-a_i}$ \\
+si $j \neq k$, i peut prendre la valeur j et donne un facteur nul $L_k(a_j)=0$ \\
+si $j=k$ : tous les facteurs valent 1 $L_k(a_j)=1$ \\
+\textcolor{green}{3)} C'est bien une famille de $\mathbb K_{n-1} [X] $ \\
+Montrons que tout $P \in \mathbb K_{n-1} [X]$ est combinaison linéaire de $(L_1,...,L_n)$ de façon unique \\
+Soit $P \in \mathbb K_{n-1} [X]$ \\
+{\bf analyse :} si $P= \sum_{k=1}^n \lambda_k L_k$ avec $(\lambda_1,...,\lambda_n) \in \mathbb K^n$ \\
+Pour $j \in [[1,n]]$ : \\
+$P(a_j)= \sum_{k=1}^n \lambda_k L_k(a_j) $ \\
+$P(a_j)= \sum_{k=1}^n \lambda_k \delta(a_j) $ \\
+$P(a_j)= \lambda_j $ \\
+unicité des candidats $(\lambda_1,..., \lambda_n)$ \\
+{\bf Synthèse :} Pour $Q=P- \sum_{k=1}^n P(\alpha_k) L_k$ \\
+d'une part : $P,L_1,...,L_n \in \mathbb K_{n-1} [X]$ donc $Q \in \mathbb K_{n-1} [X]$ \\
+d'autre part : pour $j \in [[1,n ]]$ : \\
+$Q(a_j)=P(a_j)-\underbrace{\sum_{k=1}^n P(a_k) L_k(a_j)}_{=P(a_j)}$ \\
+$Q(a_j)=0$ \\
+Ainsi $deg(Q)<n$ et Q possède au moins n racines distinctes donc $Q=0$, $P= \sum_{k=1}^n P(\alpha_k) L_k$ \\
+
 \section{Dérivée de PQ}
 \section{Formule de Taylor}
 \section{Caractérisation différentielle de la multiplicité}
