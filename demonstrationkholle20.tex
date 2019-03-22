@@ -100,7 +100,7 @@ $R(\alpha_k)=P(\alpha_k)=0$ donc R possède au moins $r$ racines or $deg(R)<r$ d
 \textcolor{green}{Corrolaire :} \\
 Soit $P \in \mathbb K [X]$ de degré $d \in \mathbb N^*$. \\
 On suppose qu'il possède d racines distinctes 2à 2 $\alpha_1,...,\alpha_d$ alors : \\
-$P=dom(P) \prod_{k=1}^d (X-\alpha_k)$ \\ 
+$P=dom(P) \prod_{k=1}^d (X-\alpha_k)$ \\
 \textcolor{red}{Démonstration : } Comme les racines sont 2 à 2 disctincts : \\
 $\exists Q \in \mathbb K [X], P=(X- \alpha_1)...(X- \alpha_d)Q$ \\
 de degré $d=\underbrace{1+ ...+1}_{d \quad termes} + deg(Q)$ $deg(Q)=0$ donc $Q=\lambda \in \mathbb K^*$ \\
@@ -172,4 +172,31 @@ $Q'=0$ donc $Q \in \mathbb K$ \\
 or $Q(a)= P(a)-\sum_{k=0}^{n+1} \frac{P^{(k)}(a)}{k!}0^k$ \\
 $Q(a)=P(a)-P(a)=0$ donc $Q=0$ l'hypothèse est vérifié au rang n+1
 \section{Caractérisation différentielle de la multiplicité}
+\textcolor{green}{Propriété :} \\
+Soit $P \in \mathbb K [X] \backslash \lbrace 0 \rbrace, \alpha \in \mathbb K, n \in \mathbb N$ Les propositions suivantes sont équivalentes : \\
+\textcolor{green}{1)} $\alpha$ est racine de P de multiplicité m \\
+\textcolor{green}{2)} $P^{(k)}(\alpha)=0$ pour $k<m$ et $P^{(m)}\neq 0$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} : Soit $Q \in \mathbb K [X]$ tel que : \\
+$P=(X-\alpha)^mQ$ et $Q(\alpha)\neq0$ \\
+Soit $k\in [[0,m]]$, par la formule de Leibniz : \\
+$P^{(k)}=\sum_{j=0}^k \binom{k}{j}((X- \alpha)^m)^{(k-j)}Q^{(j)}$
+$P^{(k)}=\sum_{j=0}^k \binom{k}{j} \frac{m!}{(m-k+j)!}(X- \alpha)^{m-k+j}Q^{(j)}$ car $(k-j) \in [[0,k]] \subset [[0,m]]$ donc $m-(k-j)=m-k+j \in \mathbb N$ \\
+donc $P^{(k)}=\sum_{j=0}^k \binom{k}{j} \frac{m!}{(m-k+j)!}0^{m-k+j}Q^{(j)}(\alpha)$ \\
+si $k<m$ : $k-j$ varie entre 0 et k donc : \\
+$\forall j \in [[0,k]], m-(k-j) \in \mathbb N$ \\
+$P^{(k)}(\alpha)=0$ \\
+si $k=m$ : \\
+$P^{(m)}(\alpha)=\sum_{j=0}^n \binom{n}{j} \frac{n!}{j!}0^j Q^{(j)}(\alpha)$ \\
+$P^{(m)}(\alpha)=m! Q(\alpha) \neq 0$ car $Q(\alpha) \n eq 0$ \\
+\textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} on a : $P^{(k)}(\alpha)=0$ si $k<n$ et $P^{(n)}(\alpha)\neq 0$ \\
+Formule de Taylor $d=deg(P)$ : \\
+$P=\sum_{k=0}^d \frac{P^{(k)}(\alpha)}{k!}(X-\alpha)^k$ \\
+on a $0 \leq m \leq d$ car si $m>d,P^{(m)}=0$ donc $P^{(m)}(\alpha)=0$ \\
+On a donc : \\
+$P=\sum_{k=m}^d \frac{P^{(k)}(\alpha)}{k!}(X-\alpha)^k$ \\
+$P=(X-\alpha)^m\underbrace{\sum_{k=m}^d \frac{P^{(k)}(\alpha)}{k!}(X-\alpha)^{k-m \in \mathbb N}}_{Q \in \mathbb K[X]}$ \\
+enfin : \\
+$Q(\alpha)=\sum_{k=m}^d\frac{P^{(k)}(\alpha)}{k!}0^{k-m} $ \\
+$Q(\alpha)=\frac{P^{(m)}(\alpha)}{m!} \neq 0$
 \end{document}

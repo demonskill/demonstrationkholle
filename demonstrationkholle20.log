@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  22 MAR 2019 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  22 MAR 2019 22:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1351,7 +1351,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--137
 
  []
 
-[2] [3] [4] (./demonstrationkholle20.aux) ) 
+[2] [3]
+./demonstrationkholle20.tex:191: Undefined control sequence.
+l.191 ...a)=m! Q(\alpha) \neq 0$ car $Q(\alpha) \n
+                                                   eq 0$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4] (./demonstrationkholle20.aux) ) 
 Here is how much of TeX's memory you used:
  41644 strings out of 492616
  955409 string characters out of 6132769
@@ -1359,23 +1369,24 @@ Here is how much of TeX's memory you used:
  44923 multiletter control sequences out of 15000+600000
  557969 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,9n,96p,738b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2018/texmf-dist/fonts/en
-c/dvips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texli
-ve/2018/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on demonstrationkholle20.pdf (4 pages, 120288 bytes).
+ 62i,10n,96p,738b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2018/texmf-dist/fonts/enc/dvips/
+base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
+:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/tex
+live/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2018/texmf
+-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on demonstrationkholle20.pdf (4 pages, 127715 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
