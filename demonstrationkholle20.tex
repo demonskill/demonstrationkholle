@@ -80,7 +80,7 @@ $P(\alpha)=R(\alpha)=R$ car R constante \\
 	-si P n'a pas de racine : il n'en a pas plus de n\\
 	- si P a au moins une racine $c \in \mathbb{K}$,
 		soit $Q \in \mathbb{K}[X]$ tel que : \\
-		$\forall x \in \mathbb{R}, P(x)=(x-c)Q(x)$ \\
+		$\forall x \in \mathbb{K}, P(x)=(x-c)Q(x)$ \\
 		alors $deg(Q)=n-1$ \\
 			Q a donc au plus n-1 racines \\
 			On a pour $x \in \mathbb{K}$ : \\
@@ -91,10 +91,10 @@ $P(\alpha)=R(\alpha)=R$ car R constante \\
 Soit $P \in \mathbb K [X]$ \\
 Soit $(\alpha_1,...,\alpha_r)$ des racines deux à deux distinctes de P. Alors : \\
 $(X-\alpha_1)...(X-\alpha_r)|P$ \\
-c'est-à-dire: $\exists Q \in \mathbb K  [X], P=(X-\alpha_1)...(X_\alpha_r)Q$\\
+c'est-à-dire: $\exists Q \in \mathbb K  [X], P=(X-\alpha_1)...(X-\alpha_r)Q$\\
 \textcolor{red}{Démonstration :} soit la division euclidienne : \\
-$P=(X-\alpha_1)...(X_\alpha_r)Q +R$  avec $(Q,R) \in \mathbb K [X]$ \\
-et $deg(R)<deg((X-\alpha_1) ...(X- \alpha_r)=r$ \\
+$P=(X-\alpha_1)...(X -\alpha_r)Q +R$  avec $(Q,R) \in \mathbb K [X]$ \\
+et $deg(R)<deg((X-\alpha_1) ...(X- \alpha_r))=r$ \\
 Pour $k \in [[1,r]]$ : \\
 $R(\alpha_k)=P(\alpha_k)=0$ donc R possède au moins $r$ racines or $deg(R)<r$ donc $R=0$\\
 \textcolor{green}{Corrolaire :} \\
@@ -108,16 +108,16 @@ coefficient dominant : $dom(P)=\lambda$
 \section{Interpolation de Lagrange}
 \textcolor{green}{Propriété :} \\
 Soit $n \in \mathbb N^*$, et $(a_1,...,a_n) \in \mathbb K^n$ deux à deux distincts. \\
-La famille des polynomes associée à $(a_1,...,a_n=$ est $(L_1,...,L_n)$ où : \\
-$L_k=\prod_{i=1,i \neq k}ˆn \frac{X-a_i}{a_k-a_i}$ \\
+La famille des polynomes associée à $(a_1,...,a_n)$ est $(L_1,...,L_n)$ où : \\
+$L_k=\prod_{i=1,i \neq k}^n \frac{X-a_i}{a_k-a_i}$ \\
 \textcolor{green}{1)} $\forall k \in [[1,n]], deg(L_k)=n-1$ \\
 \textcolor{green}{2)} $\forall (k,j) \in [[1,n]]^2, L_k(a_j)=\delta_{k,j}$ \\
 \textcolor{green}{3)} $(L_1,...,L_n)$ est une base de $\mathbb K_{n-1} [X] $ Plus précisement : \\
 $\forall P \in \mathbb K_{n-1} [X], P= \sum_{k=1}^n P(a_k) L_k$ \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{1)} Il y a n-1 facteur de degré 1 \\
-\textcolor{green}{2)} $L_k(a_j)=\prod_{i=1,i \neq k}ˆn \frac{a_j-a_i}{a_k-a_i}$ \\
-si $j \neq k$, i peut prendre la valeur j et donne un facteur nul $L_k(a_j)=0$ \\
+\textcolor{green}{2)} $L_k(a_j)=\prod_{i=1,i \neq k}^n \frac{a_j-a_i}{a_k-a_i}$ \\
+si $j \neq k$, $i$ peut prendre la valeur $j$ et donne un facteur nul $L_k(a_j)=0$ \\
 si $j=k$ : tous les facteurs valent 1 $L_k(a_j)=1$ \\
 \textcolor{green}{3)} C'est bien une famille de $\mathbb K_{n-1} [X] $ \\
 Montrons que tout $P \in \mathbb K_{n-1} [X]$ est combinaison linéaire de $(L_1,...,L_n)$ de façon unique \\
@@ -125,7 +125,7 @@ Soit $P \in \mathbb K_{n-1} [X]$ \\
 {\bf analyse :} si $P= \sum_{k=1}^n \lambda_k L_k$ avec $(\lambda_1,...,\lambda_n) \in \mathbb K^n$ \\
 Pour $j \in [[1,n]]$ : \\
 $P(a_j)= \sum_{k=1}^n \lambda_k L_k(a_j) $ \\
-$P(a_j)= \sum_{k=1}^n \lambda_k \delta(a_j) $ \\
+$P(a_j)= \sum_{k=1}^n \lambda_k \delta_{k,j} $ \\
 $P(a_j)= \lambda_j $ \\
 unicité des candidats $(\lambda_1,..., \lambda_n)$ \\
 {\bf Synthèse :} Pour $Q=P- \sum_{k=1}^n P(\alpha_k) L_k$ \\
@@ -158,7 +158,7 @@ Récurrence sur n : \\
 {\bf Initialisation} : Soit $P \in \mathbb K_0 [K]=\mathbb K$ \\
 $P=P(a)=\frac{P^{(0)}(a)}{0!}(X-a)^0= \sum_{k=0}^0\frac{P^{(k)}(a)}{k!}(X-a)^k $ \\
 {\bf Hérédité} Soit $n \in \mathbb N$ tel que la formule soit vraie au rang n  : \\
-Soit $P \in \mathbb K_{n-1}[X]$ \\
+Soit $P \in \mathbb K_{n+1}[X]$ \\
 $P' \in \mathbb K_n[X]$ donc par hypothèse de récurrence : \\
 $P'=\sum_{k=0}^n \frac{P^{(k+1)}(a)}{k!}(X-a)^k$ car $P'^{(k)}=P^{(k+1)}$ \\
 Posons : \\
@@ -184,11 +184,11 @@ $P^{(k)}=\sum_{j=0}^k \binom{k}{j}((X- \alpha)^m)^{(k-j)}Q^{(j)}$
 $P^{(k)}=\sum_{j=0}^k \binom{k}{j} \frac{m!}{(m-k+j)!}(X- \alpha)^{m-k+j}Q^{(j)}$ car $(k-j) \in [[0,k]] \subset [[0,m]]$ donc $m-(k-j)=m-k+j \in \mathbb N$ \\
 donc $P^{(k)}=\sum_{j=0}^k \binom{k}{j} \frac{m!}{(m-k+j)!}0^{m-k+j}Q^{(j)}(\alpha)$ \\
 si $k<m$ : $k-j$ varie entre 0 et k donc : \\
-$\forall j \in [[0,k]], m-(k-j) \in \mathbb N$ \\
+$\forall j \in [[0,k]], m-(k-j) \in \mathbb N^*$ \\
 $P^{(k)}(\alpha)=0$ \\
 si $k=m$ : \\
 $P^{(m)}(\alpha)=\sum_{j=0}^n \binom{n}{j} \frac{n!}{j!}0^j Q^{(j)}(\alpha)$ \\
-$P^{(m)}(\alpha)=m! Q(\alpha) \neq 0$ car $Q(\alpha) \n eq 0$ \\
+$P^{(m)}(\alpha)=m! Q(\alpha) \neq 0$ car $Q(\alpha) \neq 0$ \\
 \textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} on a : $P^{(k)}(\alpha)=0$ si $k<n$ et $P^{(n)}(\alpha)\neq 0$ \\
 Formule de Taylor $d=deg(P)$ : \\
 $P=\sum_{k=0}^d \frac{P^{(k)}(\alpha)}{k!}(X-\alpha)^k$ \\
