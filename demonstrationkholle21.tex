@@ -77,6 +77,27 @@ pour $k \in [[1,p]], \bar{z}_k=e^{-\frac{2ik\pi}{2p+1}}=e^{\frac{2i(2p+1-k)\pi}{
 $X^{2p+1}-1=(X-1) \prod_{k=1}^p (X-z_k)(X-\bar{z}_k)$ \\
 $X^{2p+1}-1=(X-1) \prod_{k=1}^p (X^2-2cos(\frac{2k\pi}{2p+1})X+1)$
 \section{Enoncer sans démonstration les relations coefficients-racines, les formules $\sum_{k=1}^n x_k^2= \sigma_1^2-2 \sigma_2$ et $\sum_{k=1}^n \frac{1}{x_k}=\frac{\sigma_{n-1}}{\sigma_{n}}$. Exemple : somme des carrés, cubes et inverses des racines de $X^3-3X+1$}
+\textcolor{green}{Propriété :} \\
+soit $P \in \mathbb K [X]$ de degré $n \geq 1$ alors : \\
+\textcolor{green}{1)} la somme des multiplicités de ses racines est $\leq n$ \\
+\textcolor{green}{2)} égalité si et seulement si P scindé (toujours le cas quand $\mathbb K = \mathbb C$) \\
+\textcolor{green}{Propriété :} \\
+\textcolor{green}{1)} $\sum_{k=1}^n x_k^2= \sigma_1^2-2 \sigma_2$ \\
+\textcolor{green}{2)} $\sum_{k=1}^n \frac{1}{x_k}=\frac{\sigma_{n-1}}{\sigma_{n}}$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $(\sum_{k=1}^n x_k)^2= \sum_{k=1}^n x_k^2+ 2 \sum_{i<j}x_ix_j$ \\
+\textcolor{green}{2)} Mise au même dénominateur. \\
+\textcolor{blue}{Exemple :} \\
+$P=X^3-3X+1=(X-a)(X-b)(X-c)$ \\
+avec $(a,b,c) \in \mathbb C^3$ : \\
+$\sigma_1=a+b+c=0$ \\
+$\sigma_2=ab+bc+ac=-3$ \\
+$\sigma_3=abc=-1$ \\
+\textcolor{blue}{1)} $a^2+b^2+c^2= \sigma_1^2-2\sigma_2=6$ \\
+\textcolor{blue}{2)} $\frac{1}{a}+ \frac{1}{b} + \frac{1}{c}= \frac{\sigma_2}{sigma_3}$ \\
+Comme $(a,b,c)$ sont racines de $X^2-3X+1$ on a : \\
+$a^3+b^3+c^3=(3a-1)+(3b-1)+(3c-1)$ \\
+$a^3+b^3+c^3=3 \sigma_1 -3 =-3$ 
 \section{Existence et unicité de la forme irréductibles d'une fraction rationnelle.}
 \section{Coefficients d'un põle simple (formule $\frac{A(\alpha)}{B'(\alpha)}$), décomposition de $\frac{1}{X^n-1}$ dans $\mathbb{C}(X)$}
 \section{Décomposition en élément simples de $\frac{P'}{P}$ lorsque P est scindé}
