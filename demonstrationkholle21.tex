@@ -63,6 +63,19 @@ $P=\underbrace{(X^2-2*Re(z)X+|z|^2)}_{\in \mathbb K [X]}Q$ \\
 On constate que $Q$ est le quotient de la division euclidienne de $P \in \mathbb{R}[X]$ par $(X^2-2*Re(z)X+|z|^2) \in \mathbb R [X]$ donc $Q \in \mathbb{R}[X]$ \\
 Comme P est irréductible dans $\mathbb{R}[X]$ Q est constante $deg(P)=2$ et P n'a pas de racine réelle donc son discriminant est strictement négatif
 \section{Factorisation de $X^n-1$ dans $\mathbb R [X]$ selon la parité de n}
+Factorisons $X^n-1$ dans $\mathbb R [X]$ \\
+{\bf $1^{er}$ cas :} n paire , $n=2p p \in \mathbb N^*$ \\
+$e^{\frac{2ik\pi}{n}}=e^{\frac{ik\pi}{p}}, 0 \leq k \leq 2p-1$ \\
+$z_0=1$ et $z_p=-1$, les autres $\in \mathbb C \backslash \mathbb R$ \\
+Pour $k \in [[1,p-1]]:$ $\bar{z}_k=e^{\frac{-ik\pi}{p}}=e^{\frac{i(2p-k)\pi}{p}}=z_{2p-k}$ avec $2p-k \in [[p+1,2p-1]]$ \\
+$X^{2p}-1=(X-1)(X+1)\prod_{k=1}^{p-1}\underbrace{(X-z_k)(X-\bar{z}_k)}_{=X^2-2*Re(z)X+|z|^2}$ \\
+$X^{2p}-1=(X-1)(X+1) \prod_{k=1}^{p-1(X^2-2cos(\frac{k\pi}{p})+1)}$ \\
+{\bf $2^eme$ cas :} $n=2p+1 (p \in \mathbb N^*)$ \\
+$z_k=e^{\frac{2ik\pi}{2p+1}},0 \leq k \leq 2p $ \\
+$z_0=1$, les autres sont dans $\mathbb C \backslash \mathbb R$: \\
+pour $k \in [[1,p]], \bar{z}_k=e^{-\frac{2ik\pi}{2p+1}}=e^{\frac{2i(2p+1-k)\pi}{2p+1}}$ avec $2p+1-k \in [[p+1,2p]]$ \\
+$X^{2p+1}-1=(X-1) \prod_{k=1}^p (X-z_k)(X-\bar{z}_k)$ \\
+$X^{2p+1}-1=(X-1) \prod_{k=1}^p (X^2-2cos(\frac{2k\pi}{2p+1})X+1)$
 \section{Enoncer sans démonstration les relations coefficients-racines, les formules $\sum_{k=1}^n x_k^2= \sigma_1^2-2 \sigma_2$ et $\sum_{k=1}^n \frac{1}{x_k}=\frac{\sigma_{n-1}}{\sigma_{n}}$. Exemple : somme des carrés, cubes et inverses des racines de $X^3-3X+1$}
 \section{Existence et unicité de la forme irréductibles d'une fraction rationnelle.}
 \section{Coefficients d'un põle simple (formule $\frac{A(\alpha)}{B'(\alpha)}$), décomposition de $\frac{1}{X^n-1}$ dans $\mathbb{C}(X)$}
