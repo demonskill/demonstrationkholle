@@ -33,14 +33,26 @@ Un idéal de $\mathbb{K}[X]$ est une partie de I de $\mathbb K [X]$ tel que : \\
 \textcolor{red}{1)} I est un sous-groupe de $(\mathbb K[X],+)$ \\
 \textcolor{red}{2)}$\forall P \in I, \forall Q \in \mathbb K[X], PQ \in I$ \\
 \textcolor{green}{Propriété :} \\
-Pour $P \in \mathbb{K} [X]$, $P \mathbb{K}[X]$ est un idéal de $\mathbb K[X]$ \\
+Tout idéal de $\mathbb K [X]$ est de la forme $P \mathbb K[X]$ avec P unique à association près
 \textcolor{red}{Démonstration :} \\
-\textcolor{red}{1)} $P\mathbb{K}[X] \subset \mathbb{K}[X]$ et
-$ \neq \emptyset$ car $0 \in P \mathbb{K}[X]$ \\
-Soit $(A,B) \in (P \mathbb K [X])^2 : P |A$ et $P|B$ donc $P|(A+B)$ \\
-\textcolor{red}{2)} Soit $(A,B) \in (P \mathbb K [X]) \times \mathbb K[X]$ : \\
-$P|A$ donc $P|AB$ $AB \in P \mathbb K [X]$
-\section{En admettant le théorème de D'Alembert-Gauss: description des irréductibles de $\mathbb C [X]$, de $\mathbb R[X]$}
+{\bf Unicité} On sait que : \\
+$P_1 \mathbb K [X]=P_2 \mathbb K [X] \Leftrightarrow P_1$ et $P_2$ associé \\
+{\bf Existence :} Soit I idéal de $\mathbb K [X] $ : \\
+Si $I=\lbrace 0 \rbrace$: $P=0$ convient \\
+Sinon, posons $E= \lbrace deg(B):B \in I \backslash \lbrace 0 \rbrace \rbrace $ \\
+Alors $E \subset \mathbb{N}$ : \\
+$E \neq \emptyset$ car $I \neq \lbrace 0 \rbrace$ et $0 \in I$ \\
+Ainsi E possède un minimum d : \\
+Soit $B \in I \backslash \lbrace 0 \rbrace$, tel que $deg(B)=d$ \\
+Montrons que $I=B \mathbb K [X]$ : \\
+\boldmath$B \mathbb K [X] \subset I$ : \\
+$B \in I$ donc: $ \forall Q \in \mathbb K[X], BQ \in I$ \\
+\boldmath$I \subset \mathbb K [X]$ \\
+Soit $A \in I$ comme $B \neq 0$ : \\
+$\exists ! (Q,R) \in (\mathbb K [X])^2, (A=BQ+R)$ et $deg(R) < deg(B)$ \\
+$R=A-BQ$ donc $R \in I$ or $deg(R)<deg(B)=d$ donc comme $d=min(E)$, $R=0$ \\
+$A=BQ \in B \mathbb K [X]$
+\section{En admettant  le théorème de D'Alembert-Gauss: description des irréductibles de $\mathbb C [X]$, de $\mathbb R[X]$}
 \textcolor{green}{Propriété :} \\
 \textcolor{green}{1)} Les polynômes irréductibles de $\mathbb C [X]$ sont ceux de degré 1 \\
 \textcolor{green}{2)} Dans $\mathbb R [X]$ : \\
