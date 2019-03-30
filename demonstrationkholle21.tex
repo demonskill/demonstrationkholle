@@ -45,9 +45,9 @@ $E \neq \emptyset$ car $I \neq \lbrace 0 \rbrace$ et $0 \in I$ \\
 Ainsi E possède un minimum d : \\
 Soit $B \in I \backslash \lbrace 0 \rbrace$, tel que $deg(B)=d$ \\
 Montrons que $I=B \mathbb K [X]$ : \\
-\boldmath$B \mathbb K [X] \subset I$ : \\
+{\boldmath$B \mathbb K [X] \subset I$ }: \\
 $B \in I$ donc: $ \forall Q \in \mathbb K[X], BQ \in I$ \\
-\boldmath$I \subset \mathbb K [X]$ \\
+{\boldmath$I \subset \mathbb K [X]$} \\
 Soit $A \in I$ comme $B \neq 0$ : \\
 $\exists ! (Q,R) \in (\mathbb K [X])^2, (A=BQ+R)$ et $deg(R) < deg(B)$ \\
 $R=A-BQ$ donc $R \in I$ or $deg(R)<deg(B)=d$ donc comme $d=min(E)$, $R=0$ \\
@@ -106,7 +106,7 @@ $\sigma_1=a+b+c=0$ \\
 $\sigma_2=ab+bc+ac=-3$ \\
 $\sigma_3=abc=-1$ \\
 \textcolor{blue}{1)} $a^2+b^2+c^2= \sigma_1^2-2\sigma_2=6$ \\
-\textcolor{blue}{2)} $\frac{1}{a}+ \frac{1}{b} + \frac{1}{c}= \frac{\sigma_2}{sigma_3}$ \\
+\textcolor{blue}{2)} $\frac{1}{a}+ \frac{1}{b} + \frac{1}{c}= \frac{\sigma_2}{\sigma_3}$ \\
 Comme $(a,b,c)$ sont racines de $X^2-3X+1$ on a : \\
 $a^3+b^3+c^3=(3a-1)+(3b-1)+(3c-1)$ \\
 $a^3+b^3+c^3=3 \sigma_1 -3 =-3$
@@ -127,5 +127,20 @@ $\exists \lambda \in \mathbb K^*,B_2= \lambda B_1$ puis : \\
 $\lambda A_1 B_1=A_2B_1$ \\
 or $B_1 \neq 0$ donc $A_2= \lambda A_1$ (intégrité de $\mathbb K [X]$)
 \section{Coefficients d'un põle simple (formule $\frac{A(\alpha)}{B'(\alpha)}$), décomposition de $\frac{1}{X^n-1}$ dans $\mathbb{C}(X)$}
+\textcolor{green}{Propriété :} \\
+Si $\alpha$ est un pôle simple de $F= \frac{A}{B}$ avec $A \wedge B=1$. \\
+Alors le coefficient de $\frac{1}{X-\alpha}$ dans la décomposition en élément simple est $\frac{A(\alpha)}{B'(\alpha)}$ \\
+\textcolor{red}{Démonstration :} \\
+Soit $Q \in \mathbb K [X]$ tel que $B=(X-\alpha)Q$ et $Q(\alpha) \neq 0$(en effet $A \wedge B =1$ donc $\alpha pole simple$ signifie $\alpha$ racine simple de B) \\
+Soit $ \lambda$ le coefficient cherché : \\
+D'une part : $\lambda=(X-\alpha)F(X)|_{\alpha}= \frac{A(\alpha)}{Q(\alpha)}$  \\
+D'autre part : $B'=Q+(X-\alpha)Q'$ donc $B'(\alpha)=Q(\alpha)$ \\
+\textcolor{blue}{Exemple :} \\
+$\frac{1}{X^n-1}(\mathbb K = \mathbb C, n \geq 1)$ \\
+on a la factorisation : $X^n-1=\prod_{k=0}^{n-1}(X-\omega^k), \omega=e^{\frac{2i\pi}{n}}$ \\
+Donc $\frac{1}{X^n-1}= \sum_{k=0}^{n-1} \frac{\lambda_k}{X-\omega^k}$ \\
+Avec $A=1$ et $B=X^n-1$, $B'=nX^{n-1}$ \\
+$\lambda_k=\frac{A(\omega^k)}{B'(\omega^k)}=\frac{1}{n(\omega^k)^{n-1}}=\frac{\omega^k}{n}$ car $(\omega^k)^n=1$ \\
+On a donc : $\frac{1}{X^n-1}=\frac{1}{n}\sum^{n-1}_{k=0}\frac{\omega^k}{X-\omega^k}$
 \section{Décomposition en élément simples de $\frac{P'}{P}$ lorsque P est scindé}
 \end{document}
