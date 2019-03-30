@@ -131,7 +131,7 @@ or $B_1 \neq 0$ donc $A_2= \lambda A_1$ (intégrité de $\mathbb K [X]$)
 Si $\alpha$ est un pôle simple de $F= \frac{A}{B}$ avec $A \wedge B=1$. \\
 Alors le coefficient de $\frac{1}{X-\alpha}$ dans la décomposition en élément simple est $\frac{A(\alpha)}{B'(\alpha)}$ \\
 \textcolor{red}{Démonstration :} \\
-Soit $Q \in \mathbb K [X]$ tel que $B=(X-\alpha)Q$ et $Q(\alpha) \neq 0$(en effet $A \wedge B =1$ donc $\alpha pole simple$ signifie $\alpha$ racine simple de B) \\
+Soit $Q \in \mathbb K [X]$ tel que $B=(X-\alpha)Q$ et $Q(\alpha) \neq 0$(en effet $A \wedge B =1$ donc $\alpha$ pôle simple signifie $\alpha$ racine simple de B) \\
 Soit $ \lambda$ le coefficient cherché : \\
 D'une part : $\lambda=(X-\alpha)F(X)|_{\alpha}= \frac{A(\alpha)}{Q(\alpha)}$  \\
 D'autre part : $B'=Q+(X-\alpha)Q'$ donc $B'(\alpha)=Q(\alpha)$ \\
@@ -143,4 +143,10 @@ Avec $A=1$ et $B=X^n-1$, $B'=nX^{n-1}$ \\
 $\lambda_k=\frac{A(\omega^k)}{B'(\omega^k)}=\frac{1}{n(\omega^k)^{n-1}}=\frac{\omega^k}{n}$ car $(\omega^k)^n=1$ \\
 On a donc : $\frac{1}{X^n-1}=\frac{1}{n}\sum^{n-1}_{k=0}\frac{\omega^k}{X-\omega^k}$
 \section{Décomposition en élément simples de $\frac{P'}{P}$ lorsque P est scindé}
+Soit P scindé :  \\
+$P= \lambda \prod_{k=1}^r (X-\alpha)^{m_k}$ avec $\lambda \in \mathbb K^*,r \in \mathbb N^*,(\alpha_1,...,\alpha_r) \in \mathbb K^r$, racines distinctes de multiplicités $(m_1,....,m_r)$ alors \\
+$\frac{P'}{P}=\sum_{k=1}^r \frac{m_k}{X-\alpha_k}$ \\
+\textcolor{red}{Démonstration :} \\
+$P=\lambda P_1 ... P_r$ avec $P_k=(X-\alpha_k)^{m_k}$ et $P'=\lambda \sum_{k=1}^rP_1...P'_k...P_r$ \\
+$\frac{P'}{P}=\sum_{k=1}^r \frac{P'_k}{P_k}=\sum^r_{k=1} \frac{m_k}{X-\alpha_k}$
 \end{document}
