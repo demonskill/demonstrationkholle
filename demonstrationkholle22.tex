@@ -28,7 +28,26 @@
 	\renewcommand{\thesection}{\Roman{section}}
 	\setlength{\parindent}{1.5cm}
 \section{Théorème de la base incomplète (cas $\mathcal L \subset \mathcal G$).}
+\textcolor{green}{Théorème de la base incomplète :} \\
+Soit  E un K-espace vectoriel de dimension finie : \\
+Soit $ \mathcal G$ une famille génératrice finie de E et $\mathcal L \subset \mathcal G$ tel que $ \mathcal L$ soit libre. \\
+Alors il existe une base $\matchcal B$ de E tel que $\mathcal L \subset \mathcal B \subset \mathcal G$ \\
+\textcolor{red}{Démonstration :} \\
+Posons : $\Omega= \lbrace \mathcal H$ famille libre de E : $ \mathcal L \subset \mathcal H \subset \mathcal G \rbrace$ \\
+$A= \lbrace Card(\mathcal H) : \mathcal H \in \Omega \rbrace$ \\
+A est une partie de $\mathbb N$ majorée par $Card(\mathcal G)$ et $A \neq \emptyset$ car $ \mathcal L \in \Omega $ donc $card(\mathcal L) \in A$ \\
+Soit $p=max(A)$ et $B \in \Omega$ tel que $Card(B)=p$. \\
+On a bien $\mathcal L \subset \mathcal B \subset \mathcal G$ et $\mathcal B$ libre car $\mathcal B \in \Omega$ \\
+Supposons que B n'engendre pas E : \\
+Si tous les vecteurs de $\mathcal G$ appartiennent à $Vect(\mathcal B)$ : \\
+$E=Vect(\mathcal G) \subset Vect(\mathcal B)$, ce qu'on a exclu. \\
+Soit $\vec x \in \mathcal G$ tel que $\vec x \notin Vect( \mathcal B )$ et $\mathcal M= \mathcal B \cup \lbrace \vec x \rbrace$ alors : \\
+$\mathcal L \subset \mathcal M \subset \mathcal G$ et $ \mathcal M$ libre car $ \matchcal B$ libre et $x \notin Vect(\mathcal B)$ \\
+donc $\mathcal M \in \Omega$ et $Card(M)>max(A)$ absurde
 \section{Lemme de Steinitz.}
+\textcolor{green}{Lemme de Steinitz :} \\
+Dans un K-espace vectoriel engendré par n vecteurs, toute famille d'au moins n+1 vecteurs est liée \\
+\textcolor{red}{Démonstration}
 \section{Conséquences du lemme de Steinitz : les bases sont finies et de même cardinal, cardinaux des familles libres et cas d'égalité.}
 \section{Sous-espaces : inégalité des dimensions en cas d'égalité. }
 \section{Si $E= F \oplus G, dim(E)=dim(F)+dim(G)$}
