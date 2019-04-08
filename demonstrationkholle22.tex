@@ -31,7 +31,7 @@
 \textcolor{green}{Théorème de la base incomplète :} \\
 Soit  E un K-espace vectoriel de dimension finie : \\
 Soit $ \mathcal G$ une famille génératrice finie de E et $\mathcal L \subset \mathcal G$ tel que $ \mathcal L$ soit libre. \\
-Alors il existe une base $\matchcal B$ de E tel que $\mathcal L \subset \mathcal B \subset \mathcal G$ \\
+Alors il existe une base $\mathcal B$ de E tel que $\mathcal L \subset \mathcal B \subset \mathcal G$ \\
 \textcolor{red}{Démonstration :} \\
 Posons : $\Omega= \lbrace \mathcal H$ famille libre de E : $ \mathcal L \subset \mathcal H \subset \mathcal G \rbrace$ \\
 $A= \lbrace Card(\mathcal H) : \mathcal H \in \Omega \rbrace$ \\
@@ -42,13 +42,60 @@ Supposons que B n'engendre pas E : \\
 Si tous les vecteurs de $\mathcal G$ appartiennent à $Vect(\mathcal B)$ : \\
 $E=Vect(\mathcal G) \subset Vect(\mathcal B)$, ce qu'on a exclu. \\
 Soit $\vec x \in \mathcal G$ tel que $\vec x \notin Vect( \mathcal B )$ et $\mathcal M= \mathcal B \cup \lbrace \vec x \rbrace$ alors : \\
-$\mathcal L \subset \mathcal M \subset \mathcal G$ et $ \mathcal M$ libre car $ \matchcal B$ libre et $x \notin Vect(\mathcal B)$ \\
+$\mathcal L \subset \mathcal M \subset \mathcal G$ et $ \mathcal M$ libre car $ \mathcal B$ libre et $x \notin Vect(\mathcal B)$ \\
 donc $\mathcal M \in \Omega$ et $Card(M)>max(A)$ absurde
 \section{Lemme de Steinitz.}
 \textcolor{green}{Lemme de Steinitz :} \\
 Dans un K-espace vectoriel engendré par n vecteurs, toute famille d'au moins n+1 vecteurs est liée \\
-\textcolor{red}{Démonstration}
+\textcolor{red}{Démonstration :} \\
+récurrence sur n : \\
+{\bf Initialisation :}  n=0, l'espace est noté $ \lbrace  \vec 0 \rbrace $ \\
+Seule la famille ($\vec 0$) convient qui est liée car $\underbrace{1}_{\neq 0}\cdot \vec 0= \vec 0$ \\
+{\bf Hérédité : } soit $n \in \mathbb N$ tel que les propriétés soit vraie au rang n : \\
+Soit E engendré par n+1 vecteurs \\
+$E=Vect(\vec g_1,...,\vec g_{n+1})$ \\
+Soit une famille de n+2 vecteurs : $(\vec u_1,...,\vec u_{n+2})$ \\
+Il existe des scalairs $\alpha_{i,j}$ ($1 \leq i \leq n+2$, $1 \leq j \leq n+1$) tel que : \\
+$\forall i [[1,n+2]], \vec u_i= \sum_{j=1}^{n+1} \alpha_{i,j} \vec g_j$ car $(\vec g_1,...,\vec g_{n+1})$ engendre E : \\
+Notons : \\
+$\vec v_i=\sum_{k=1}^n \alpha_{i,j} \vec g_j (1 \leq i \leq n)$ \\
+$\beta_i=\alpha_{i,n+1}$ \\
+$F=Vect(\vec g_1,...,\vec g_n)$ \\
+Alors : $\forall i \in [[1,n+2]], \vec u_i=\vec v_i + \beta_i \vec g_{n+1}$ \\
+{\boldmath \bf $1^{er}$ cas :} Si $\beta_1=...=\beta_{n+2}=0$ \\
+Alors : $\forall i \in [[1,n+2]], \vec u_i=\vec v_i \in F$ ainsi $(\vec u_1,..., \vec u_{n+2})$ est une famille d'au moins n+1 vecteurs de F qui est engendré par n vecteurs per hypothèse de récurrence, elle est liée. \\
+{\boldmath $2^{er}$ \bf cas :}$\exists i_0 \in [[1,n+2]], \beta_{i_0}\neq 0$sans perte de généralité supposons $\beta_{n+2}\neq 0$ \\
+On a donc: $\vec g_{n+1}= \frac{1}{\beta_{n+2}}(\vec u_{n+2}-\vec v_{n+2})$ \\
+Donc pour $1 \leq i \leq n+1$ : \\
+$\vec u_i=\vec v_i+ \frac{\beta_i}{\beta_{n+2}}(\vec u_{n+2}-\vec v_{n+2})$ \\
+Posons $\vec w_i= \vec u_i - \frac{\beta_i}{\beta_{n+2}}\vec u_{n+2} (1 \leq i \leq n+1)$ \\
+Ainsi : $\forall i \in [[1,n+1]], \vec w_i=\vec v_i-\frac{\beta_i}{\beta_{n+2}} \vec v_{n+2} \in F $ \\
+Par hypothèse de récurrence : \\
+$(\vec w_1,...,\vec w_{n+1})$ est liée \\
+ainsi $\exists (\mu_1,...,\mu_{n+1}) \in \mathbb K^{n+1}, \sum_{i=1}^{n+1} \mu_i \vec w_i= \vec 0$ et $(\mu_1,...,\mu_{n+1}) \neq (0,...,0)$ \\
+c'est-à-dire : $\mu_1 \vec u_1 +... +\mu_{n+1} \vec u_{n+1}+(- \sum_{i=1}^{n+1} \frac{\mu_i \beta_i}{\beta_{n+2}}) \vec u_{n+2}= \vec 0$ \\
+Comme au moins l'un des n+1 premiers coefficients $\neq 0$, \\
+cela montre que : $(\vec u_1,..., \vec u_{n+2})$ est liée.
 \section{Conséquences du lemme de Steinitz : les bases sont finies et de même cardinal, cardinaux des familles libres et cas d'égalité.}
+\textcolor{green}{Propriétés :} \\
+Soit E un K-espace vectoriel de dimension finie. Toutes ses bases sont finies et ont toutes même cardinal. Ce cardinal est la dimension de E, notéé dim(E) \\
+\textcolor{red}{Démonstration :} \\
+On sait qu'il existe une base finie $\mathcal B_0$. Soit $\mathcal B$ une base de E, elle est libre donc finie et $ \mathcal B_0$engendre E donc $Card(B) \leq card(B_0)$. De même : $B_0$ est libre et B génératrice de E donc $Card(B_0) \leq Card(B)$ on a donc $Card(\mathcal B)=Card(\mathcal B_0)$\\
+\textcolor{green}{Propriété :} \\
+Soit $ \mathcal L$ une famille libre de E alors : \\
+\textcolor{green}{1)} $\mathcal L$ est finie et $Card(\mathcal L) \leq dim(E)$ \\
+\textcolor{green}{2)} $Card(\mathcal L)=dim(E) \Longleftrightarrow \mathcal L$ base de E \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} Soit $\mathcal B$ une base de E. Lemme de Steinitz : $\mathcal L$ libre et $\mathcal B$ génératrice finie \\
+donc $\mathcal L$ finie et $Card(\mathcal L) \leq \underbrace{Card(\mathcal B)}_{=dim(E)}$ \\
+\textcolor{green}{2)} $\Rightarrow$ definition de dim(E) par le fait que toutes les bases ont même cardinal \\
+$\Leftarrow$ Notons $n=dim(E)$ \\
+Si n=0 : $E=\lbrace 0 \rbrace$ et $\mathcal L=()$ \\
+Si $n \geq 1$ : Notons $\mathcal L=(\vec x_1,..., \vec x_n)$ \\
+Si $\mathcal L$ n'engendrait pas E: \\
+Considérons $\vec x_{n+1} \in E$ tel que $\vec x_{n+1} \notin Vect(\vec x_1,...,\vec x_n)$ \\
+Alors $(\vec x_1,...,\vec x_{n+1})$ est encore libre mais son cardinal est $n+1> dim(E)$: contradiction \\
+Donc $\mathcal L$ engendre E et est libre c'est donc une base E
 \section{Sous-espaces : inégalité des dimensions en cas d'égalité. }
 \section{Si $E= F \oplus G, dim(E)=dim(F)+dim(G)$}
 \section{Existence de supplémentaires, formule de Grassmann.}
