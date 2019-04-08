@@ -96,7 +96,27 @@ Si $\mathcal L$ n'engendrait pas E: \\
 Considérons $\vec x_{n+1} \in E$ tel que $\vec x_{n+1} \notin Vect(\vec x_1,...,\vec x_n)$ \\
 Alors $(\vec x_1,...,\vec x_{n+1})$ est encore libre mais son cardinal est $n+1> dim(E)$: contradiction \\
 Donc $\mathcal L$ engendre E et est libre c'est donc une base E
-\section{Sous-espaces : inégalité des dimensions en cas d'égalité. }
+\section{Sous-espaces : inégalité des dimensions et cas d'égalité. }
+\textcolor{green}{Propriété :} \\
+Soit E K-espace vectoriel, F sous-espace vectoriel de E \\
+\textcolor{green}{1)} F est de dimension finie et $dim(F) \leq dim(E)$ \\
+\textcolor{green}{2)} $dim(F)=dim(E) \Longleftrightarrow F=E$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $\Omega=\lbrace \mathcal L :$ famille libre de F $\rbrace$ \\
+$A=\lbrace Card(\mathcal L) : \mathcal L \in \Omega \rbrace$. Pour $\mathcal L \in \Omega  : \mathcal L$ est aussi une famille libre de E donc $\mathcal L$ est finie et $Card(\mathcal L) \leq dim(E)$ \\
+Ainsi : $A \subset \mathbb N$ et majoré par $dim(E)$ $A \neq \subset$  car $0 \in A$(car $()\in \Omega$) donc A possède un maximum p : \\
+Soit $\mathcal L_0 \in \Omega$ tel que $Card(\mathcal L_0) = p $ : \\
+On a : $\mathcal L_0$ libre car $\mathcal L \in \Omega$, $Vect(\mathcal L_0) \subset F$ par définition de $ \Omega $ \\
+Si $Vect(\mathcal L_0) \subsetneq F$ : \\
+Soit $\vec x \in  F \backslash Vect (\mathcal L_0)$ : \\
+Alors $\mathcal L_0 \cup (\vec x)$ est une famille libre de F donc $\mathcal L \cup (\vec x) \in \Omega$ mais $Card(\mathcal L_0 \cup (\vec x))=p+1>p$ contradiction \\
+Ainsi : $Vect(\mathcal L_0)=F$ \\
+Conclusion : $\mathcal L_0$ est une base de F donc: F est de dimension finie et $dim(F)=p \leq dim(E)$ car $dim(E)$ est un majorant de A. \\
+\textcolor{green}{2)} Soit $ \mathcal B$ une base de F \\
+En particulier : $ \mathcal B$ est une famille libre de F donc $ \mathcal B$ est une famille de E. \\
+De plus: $Card(\mathcal B)=dim(F)$ car $\mathcal B$ base de F ^^
+$Card(\mathcal B)=dim(E)$ par hypothèse donc $\mathcal B$ base de E \\
+$F=Vect(\mathcal B)=E$ \\
 \section{Si $E= F \oplus G, dim(E)=dim(F)+dim(G)$}
 \section{Existence de supplémentaires, formule de Grassmann.}
 \section{Dimension de $E \times F$, de $\mathcal L(E,F)$.}
