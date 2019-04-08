@@ -118,6 +118,36 @@ De plus: $Card(\mathcal B)=dim(F)$ car $\mathcal B$ base de F ^^
 $Card(\mathcal B)=dim(E)$ par hypothèse donc $\mathcal B$ base de E \\
 $F=Vect(\mathcal B)=E$ \\
 \section{Si $E= F \oplus G, dim(E)=dim(F)+dim(G)$}
+\textcolor{green}{Propriété :} \\
+E K-espace vectoriel de dimension finie, F et G sous-espace vectoriel suppléméntaire de E ($E=F \oplus G$) alors : \\
+\textcolor{green}{1)} Si $\mathcal B$ base de F et $\mathcal C$ une base de G, $\mathcal B \cup \mathcal C$ est une base de E \\
+\textcolor{green}{2)} $dim(E)=dim(F)+dim(G)$ \\
+\textcolor{red}{Démonstration :} \\
+Si $F=\lbrace 0 \rbrace 0,G=E,B=()$ propriété trivialement vérifiée \\
+Idem si $G=\lbrace 0 \rbrace,F=E,\mathcal C=() $ \\
+Sinon, notons : $p=dim(F) \geq 1$ $g=dim(G) \geq 1$ \\
+$\mathcal B = (\vec x_1, ... ,\vec x_p)$ et $\mathcal C = (\vec y_1, ..., \vec y_q)$ \\
+Montrons que $\mathcal B \cup \mathcal C$ est une base de E  \\
+{\bf libre :} soit$(\lambda_1,...,\lambda_p,\mu_1,...,\mu_q) \in \mathbb K^{p+q}$ tel que : \\
+$\lambda_1 \vec x_1 + ... + \lambda_p \vec x_p + \mu_1 \vec y_1 +... + \mu_q \vec y_q = \vec 0$ \\
+$\underbrace{\lambda_1 \vec x_1 + ... + \lambda_p \vec x_p}_{\in F} = \underbrace{ -(\mu_1 \vec y_1 +... + \mu_q \vec y_q)}_{\in G}$ \\
+or $F \cap  G =\lbrace \vec 0 \rbrace$ donc : \\
+$\lambda_1 \vec x_1 + ... + \lambda_p \vec x_p=\vec 0$ \\
+$\mu_1 \vec y_1 +... + \mu_q \vec y_q=\vec 0$ \\
+or $\mathcal B$ libre donc $ \lambda_1=...=\lambda_p=0$ \\
+et $\mathcal C$ libre donc $\mu_1=...=\mu_q=0$ \\
+{\bf génératrice :} on a trivialement $Vect(\mathcal B \cup \mathcal C) \subset E$ : \\
+Soit $\vec x \in E$ \\
+comme $E=F +G $ \\
+$\exists (\vec y, \vec z) \in F \times G, \vec x =\vec y + \vec z$ \\
+Or $F= Vect(\mathcal B)$ donc : \\
+$\exists (\lambda_1,..., \lambda_p)\in \mathbb K^p, \vec y=\sum_{k=1}^p \lambda_k \vec x_k$ \\
+de même $G=Vect(\mathcal C)$ donc : \\
+$\exists (\mu_1,..., \mu_q)\in \mathbb K^q, \vec z=\sum_{k=1}^q \mu_k \vec y_k$ \\
+ainsi : $ \vec x =\sum_{k=1}^p \lambda_k \vec x_k +\sum_{k=1}^q \mu_k \vec y_k \in Vect(\mathcal B \cup \mathcal C)$ \\
+donc $Vect(\mathcal B \cup \mathcal C)=E$ \\
+\textcolor{green}{2)} $dim(E)= Card (\mathcal B \cup \mathcal C)$ \\
+$dim(E)= Card (\mathcal B) + Card (\mathcal C)=dim(F)+dim(G)$
 \section{Existence de supplémentaires, formule de Grassmann.}
 \section{Dimension de $E \times F$, de $\mathcal L(E,F)$.}
 \section{Détermination d'une application linéaire par l'image d'une base (énoncé complet + démonstration de la caractérisation de l'injectivité).}
