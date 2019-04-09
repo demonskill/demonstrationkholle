@@ -55,7 +55,7 @@ Seule la famille ($\vec 0$) convient qui est liée car $\underbrace{1}_{\neq 0}\
 Soit E engendré par n+1 vecteurs \\
 $E=Vect(\vec g_1,...,\vec g_{n+1})$ \\
 Soit une famille de n+2 vecteurs : $(\vec u_1,...,\vec u_{n+2})$ \\
-Il existe des scalairs $\alpha_{i,j}$ ($1 \leq i \leq n+2$, $1 \leq j \leq n+1$) tel que : \\
+Il existe des scalaires $\alpha_{i,j}$ ($1 \leq i \leq n+2$, $1 \leq j \leq n+1$) tel que : \\
 $\forall i [[1,n+2]], \vec u_i= \sum_{j=1}^{n+1} \alpha_{i,j} \vec g_j$ car $(\vec g_1,...,\vec g_{n+1})$ engendre E : \\
 Notons : \\
 $\vec v_i=\sum_{k=1}^n \alpha_{i,j} \vec g_j (1 \leq i \leq n)$ \\
@@ -191,6 +191,7 @@ $dim(G)=dim(F \cap G) +dim(H)$ \\
 $dim(F+G) = dim(F)+ dim(H)$ \\
 $dim(F+G)=dim(F)+dim(G)-dim(F \cap G)$
 \section{Dimension de $E \times F$, de $\mathcal L(E,F)$.}
+\textcolor{green}{Propriété :} \\
 E,F : K-espace vectoriel de dimension finie $n=dim(E)$ et $p=dim(F)$ . \\
 Alors $E \times F$ est de dimension finie et $dim(E \times F)=dim(E) +dim(F)$ \\
 Si n et p $\geq 1$ : \\
@@ -225,5 +226,43 @@ $\Phi (f+ \lambda g)= \Phi (f) + \lambda \Phi(g)$ \\
 De plus, $\Phi$ est bijective : c'est le théorème de détermination des applications linéaires. \\
 Ainsi, $\Phi$ est un isomorphisme, or $F^p$ est de dimension finie égale à $p \times dim(F)$ donc $\mathcal L (E,F)$ est de dimension finie égale : $p \times dim(F)= dim(E) \times dim(F)$
 \section{Détermination d'une application linéaire par l'image d'une base (énoncé complet + démonstration de la caractérisation de l'injectivité).}
+\textcolor{green}{Propriété :}
+E: K-espace vectoriel de dimension finie $n \geq 1$ \\
+$(\vec u_1,..., \vec u_n)$ base de E \\
+$(\vec v_1,..., \vec v_n)$ famille quelconque de n vecteurs de F, K-espace vectoriel quelconque \\
+\textcolor{green}{1)} $\exists ! f \in \mathcal L (E,F), \forall k \in [[1,n]], f(\vec u_k)= \vec v_k$ \\
+\textcolor{green}{2)} f injective $\Longleftrightarrow (\vec v_1,..., \vec v_n)$ libre \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} \\
+{\bf Existence :} Soit $\vec x \in E$ : \\
+Notons $(\lambda_1,...,\lambda_n) \in \mathbb K^n$ l'unique n-uplet de scalaires tel que : \\
+$\vec x = \sum_{k=1}^n \lambda_k \vec u_k$ \\
+On pose: $f(\vec x)= \sum_{k=1}^n \lambda_k \vec v_k$ . Cela définit bien une application : \\
+$f :E \rightarrow F$ car une seule valeur est posé pour $f(\vec x)$ (car $(\lambda_1,.., \lambda_n)$ unique ). \\
+Montrons que $f \in \mathcal L (E,F)$ : \\
+Soit $\vec x= \sum_{k=1}^n \lambda_k \vec u_k \in E$ \\
+$\vec y= \sum_{k=1}^n \mu_k \vec u_k \in E$ \\
+$\alpha \in \mathbb K$ \\
+Alors par définition de f : $f(\vec x)= \sum_{k=1}^n \lambda_k \vec v_k$ \\
+$F(\vec y) = \sum_{k=1}^n \mu_k \vec v_k$ \\
+Par ailleurs : $x+ \alpha \vec y= \sum_{k=1}^n (\lambda_k + \alpha \mu_k) \vec u_k$ \\
+donc : $f(x+\alpha y) = \sum_{k=1}^n(\lambda_k+\alpha \mu_k) \vec v_k= f(\vec x) + \alpha f(\vec y)$ \\
+Enfin pour $j \in [[1,n]]$ : \\
+$f(\vec u_j)=f(\sum_{k=1}^n \delta_{k,j} \vec u_k)$ \\
+$f(\vec u_j)=\sum_{k=1}^n \delta_{k,j} \vec v_k = \vec v_j$ \\
+{\bf Unicité :} si f et g conviennent : \\
+$\forall k \in [[1,n]], \vec u_k \in Ker(f-g)$ car $f(\vec u_k)=g(\vec u_k)$ \\
+Or $Vect(\vec u_1,..., \vec u_n)=E$ d'où $E \subset Ker(f-g)$  \\
+donc $f-g=\tilde{0}$, $f=g$ \\
+\textcolor{green}{2)} $\Rightarrow$  Déjà vu : $(\vec u_1,..., \vec u_n)$ libre et f injective donc $(\vec v_1,...,\vec v_n)$ libre. \\
+$\Leftarrow$ On suppose $(\vec v_1,..., \vec v_n)$ libre. \\
+Montrons que f est injective, c'est-à-dire $Ker(F)=\lbrace \vec 0 \rbrace$ \\
+$\supset :$ toujours vraie \\
+$\subset :$ soit $\vec x \in Ker(f)$ : \\
+Ecrivons $\vec x$ dans la base $(\vec u_1,...,\vec u_n)$ : \\
+$\vec x=\sum_{k=1}^n \lambda_k \vec u_k$ \\
+Par définition de f : \\
+$f(\vec x)= \sum_{k=1}^n \lambda_k \vec v_k$ \\
+Or $f(\vec x) = \vec 0$ et $(\vec v_1,..., \vec v_n)$ libre donc $\lambda_1=...= \lambda_n=0$ puis $\vec x= \vec 0$
 \section{Théorème du rang (avec énoncé et démonstration du lemme )}
 \end{document}
