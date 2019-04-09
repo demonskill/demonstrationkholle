@@ -119,7 +119,7 @@ $Card(\mathcal B)=dim(E)$ par hypothèse donc $\mathcal B$ base de E \\
 $F=Vect(\mathcal B)=E$ \\
 \section{Si $E= F \oplus G, dim(E)=dim(F)+dim(G)$}
 \textcolor{green}{Propriété :} \\
-E K-espace vectoriel de dimension finie, F et G sous-espace vectoriel suppléméntaire de E ($E=F \oplus G$) alors : \\
+E K-espace vectoriel de dimension finie, F et G sous-espace vectoriel supplémentaire de E ($E=F \oplus G$) alors : \\
 \textcolor{green}{1)} Si $\mathcal B$ base de F et $\mathcal C$ une base de G, $\mathcal B \cup \mathcal C$ est une base de E \\
 \textcolor{green}{2)} $dim(E)=dim(F)+dim(G)$ \\
 \textcolor{red}{Démonstration :} \\
@@ -254,7 +254,11 @@ $f(\vec u_j)=\sum_{k=1}^n \delta_{k,j} \vec v_k = \vec v_j$ \\
 $\forall k \in [[1,n]], \vec u_k \in Ker(f-g)$ car $f(\vec u_k)=g(\vec u_k)$ \\
 Or $Vect(\vec u_1,..., \vec u_n)=E$ d'où $E \subset Ker(f-g)$  \\
 donc $f-g=\tilde{0}$, $f=g$ \\
-\textcolor{green}{2)} $\Rightarrow$  Déjà vu : $(\vec u_1,..., \vec u_n)$ libre et f injective donc $(\vec v_1,...,\vec v_n)$ libre. \\
+\textcolor{green}{2)} $\Rightarrow$  Soit $(\lambda_1,..., \lambda_n) \in \mathbb K^n$ tel que :  \\
+$\sum_{k=1}^n \lambda_k \vec v_k= \vec 0$ \\
+$f(\sum_{k=1}^n \lambda_k \vec u_k)= \vec 0$ car $f \in \mathcal L(E,F)$ \\
+or $Ker(f)= \lbrace \vec 0 \rbrace$ (car f injective) \\
+donc $\sum_{k=1}^n \lambda_k \vec u_k = \vec 0 $ or $(\vec u_1,..., \vec u_n)$ libre donc $\lambda_1=...=\lambda_n=0$ donc $(\vec v_1,..., \vec v_n)$ est libre \\
 $\Leftarrow$ On suppose $(\vec v_1,..., \vec v_n)$ libre. \\
 Montrons que f est injective, c'est-à-dire $Ker(F)=\lbrace \vec 0 \rbrace$ \\
 $\supset :$ toujours vraie \\
@@ -265,4 +269,44 @@ Par définition de f : \\
 $f(\vec x)= \sum_{k=1}^n \lambda_k \vec v_k$ \\
 Or $f(\vec x) = \vec 0$ et $(\vec v_1,..., \vec v_n)$ libre donc $\lambda_1=...= \lambda_n=0$ puis $\vec x= \vec 0$
 \section{Théorème du rang (avec énoncé et démonstration du lemme )}
+\textcolor{green}{Propriété :} \\
+Soit E K-espace vectoriel de dimension finie \\
+F K-espace vectoriel \\
+Il est équivalent de dire : \\
+\textcolor{green}{1)} E et F sont isomorphe \\
+\textcolor{green}{2)} F est de dimension fini et $dim(F)=dim(E)$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{ 1 $\Rightarrow$ 2} : \\
+Soit $f \in \mathcal L (E,F)$ bijective \\
+Si $E= \lbrace \vec 0_E \rbrace$ : $F=\lbrace \vec 0_F \rbrace$ \\
+Si $dim(E)=n \geq 1$, soit $(\vec u_1,..., \vec u_n)$ une base de E. \\
+Comme f est un isomorphisme: $(f(\vec u_1),...,f(\vec u_n))$ est une base de F donc F est de dimension finie et $dim(F)=n$ \\
+\textcolor{green}{2 $\Rightarrow$ 1} si dimension nulle : $E=\lbrace  \vec 0_E \rbrace$ et $F=\lbrace \vec 0_F \rbrace$ $f: \vec 0_E \rightarrow \vec 0_F$ est un isomorphisme si $dim(E)=dim(F)=n \geq 1$ : \\
+Soit $(\vec u_1,..., \vec u_n)$ une base de E et $(\vec v_1,..., \vec v_n)$ base de F. \\
+Soit f l'unique élément de $\mathcal L (E,F)$ tel que : \\
+$\forall k \in [[1,n]],f(\vec u_k)=\vec v_k$. \\
+Puisque $(\vec v_1,..., \vec v_n)$ est une base de F, f est un isomorphisme \\ 
+\textcolor{green}{Propriété :} \\
+Soit $f \in \mathcal L (E,F)$ avec E de dimension finie \\
+\textcolor{green}{1)} Tout supplémentaires S de Ker(f) dans E est un isomorphisme à $Im(f)$. \\
+Plus précisément : \\
+$g: S \rightarrow Im(f)$ \\
+$ \vec x \rightarrow f(\vec x)$ \\
+est un isomorphisme $g= f|_{S}^{Im(f)}$ \\
+\textcolor{green}{2)} $dim(Ker(f))+\underbrace{dim(Im(f))}_{rg(f)} =dim(E)$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} un tel S existe bien \\
+On a : $\ast g \in \mathcal L (S,Im(f))$ \\
+$\ast Ker(g)=Ker(f) \cap S =\lbrace \vec 0 \rbrace$ donc g injective \\
+$\ast Im(g)=f(S) \subset Im(f)$ \\
+Par ailleurs, pour $\vec y \in Im(f)$ : \\
+$\exists \vec x \in E, \vec y=f(\vec x)$ or $E=Ker(f) \oplus S$ donc : \\
+$\exists (\vec u, \vec v) \in Ker(f) \times S, \vec x =\vec u + \vec v$ \\
+alors : $\vec y= f(\vec x)= f(\vec u)+ f(\vec v)$ \\
+$\vec y = f(\vec v) \in f(S)$ \\
+Ainsi : $Im(g)=Im(f)$ g surjective \\
+\textcolor{green}{2)} On a donc : \\
+$dim(S)=dim(Im(f))$ \\
+or: $E=Ker(f) \oplus S$ \\
+donc $dim(E)=dim(Ker(f))+dim(S)$ d'où le résultat
 \end{document}
