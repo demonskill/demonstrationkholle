@@ -43,7 +43,7 @@ Si tous les vecteurs de $\mathcal G$ appartiennent à $Vect(\mathcal B)$ : \\
 $E=Vect(\mathcal G) \subset Vect(\mathcal B)$, ce qu'on a exclu. \\
 Soit $\vec x \in \mathcal G$ tel que $\vec x \notin Vect( \mathcal B )$ et $\mathcal M= \mathcal B \cup \lbrace \vec x \rbrace$ alors : \\
 $\mathcal L \subset \mathcal M \subset \mathcal G$ et $ \mathcal M$ libre car $ \mathcal B$ libre et $x \notin Vect(\mathcal B)$ \\
-donc $\mathcal M \in \Omega$ et $Card(M)>max(A)$ absurde
+donc $\mathcal M \in \Omega$ et $Card(M)>max(A)$ absurde donc $\mathcal B$ est une base de E
 \section{Lemme de Steinitz.}
 \textcolor{green}{Lemme de Steinitz :} \\
 Dans un K-espace vectoriel engendré par n vecteurs, toute famille d'au moins n+1 vecteurs est liée \\
@@ -51,19 +51,19 @@ Dans un K-espace vectoriel engendré par n vecteurs, toute famille d'au moins n+
 récurrence sur n : \\
 {\bf Initialisation :}  n=0, l'espace est noté $ \lbrace  \vec 0 \rbrace $ \\
 Seule la famille ($\vec 0$) convient qui est liée car $\underbrace{1}_{\neq 0}\cdot \vec 0= \vec 0$ \\
-{\bf Hérédité : } soit $n \in \mathbb N$ tel que les propriétés soit vraie au rang n : \\
+{\bf Hérédité : } soit $n \in \mathbb N$ tel que la propriété soit vraie au rang n : \\
 Soit E engendré par n+1 vecteurs \\
 $E=Vect(\vec g_1,...,\vec g_{n+1})$ \\
 Soit une famille de n+2 vecteurs : $(\vec u_1,...,\vec u_{n+2})$ \\
 Il existe des scalaires $\alpha_{i,j}$ ($1 \leq i \leq n+2$, $1 \leq j \leq n+1$) tel que : \\
 $\forall i [[1,n+2]], \vec u_i= \sum_{j=1}^{n+1} \alpha_{i,j} \vec g_j$ car $(\vec g_1,...,\vec g_{n+1})$ engendre E : \\
 Notons : \\
-$\vec v_i=\sum_{k=1}^n \alpha_{i,j} \vec g_j (1 \leq i \leq n)$ \\
+$\vec v_i=\sum_{j=1}^n \alpha_{i,j} \vec g_j (1 \leq i \leq n+2)$ \\
 $\beta_i=\alpha_{i,n+1}$ \\
 $F=Vect(\vec g_1,...,\vec g_n)$ \\
 Alors : $\forall i \in [[1,n+2]], \vec u_i=\vec v_i + \beta_i \vec g_{n+1}$ \\
 {\boldmath \bf $1^{er}$ cas :} Si $\beta_1=...=\beta_{n+2}=0$ \\
-Alors : $\forall i \in [[1,n+2]], \vec u_i=\vec v_i \in F$ ainsi $(\vec u_1,..., \vec u_{n+2})$ est une famille d'au moins n+1 vecteurs de F qui est engendré par n vecteurs per hypothèse de récurrence, elle est liée. \\
+Alors : $\forall i \in [[1,n+2]], \vec u_i=\vec v_i \in F$ ainsi $(\vec u_1,..., \vec u_{n+2})$ est une famille d'au moins n+1 vecteurs de F qui est engendré par n vecteurs par hypothèse de récurrence, elle est liée. \\
 {\boldmath $2^{er}$ \bf cas :}$\exists i_0 \in [[1,n+2]], \beta_{i_0}\neq 0$sans perte de généralité supposons $\beta_{n+2}\neq 0$ \\
 On a donc: $\vec g_{n+1}= \frac{1}{\beta_{n+2}}(\vec u_{n+2}-\vec v_{n+2})$ \\
 Donc pour $1 \leq i \leq n+1$ : \\
@@ -88,8 +88,8 @@ Soit $ \mathcal L$ une famille libre de E alors : \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{1)} Soit $\mathcal B$ une base de E. Lemme de Steinitz : $\mathcal L$ libre et $\mathcal B$ génératrice finie \\
 donc $\mathcal L$ finie et $Card(\mathcal L) \leq \underbrace{Card(\mathcal B)}_{=dim(E)}$ \\
-\textcolor{green}{2)} $\Rightarrow$ definition de dim(E) par le fait que toutes les bases ont même cardinal \\
-$\Leftarrow$ Notons $n=dim(E)$ \\
+\textcolor{green}{2)} $\Leftarrow$ definition de dim(E) par le fait que toutes les bases ont même cardinal \\
+$\Rightarrow$ Notons $n=dim(E)$ \\
 Si n=0 : $E=\lbrace 0 \rbrace$ et $\mathcal L=()$ \\
 Si $n \geq 1$ : Notons $\mathcal L=(\vec x_1,..., \vec x_n)$ \\
 Si $\mathcal L$ n'engendrait pas E: \\
@@ -104,17 +104,17 @@ Soit E K-espace vectoriel, F sous-espace vectoriel de E \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{1)} $\Omega=\lbrace \mathcal L :$ famille libre de F $\rbrace$ \\
 $A=\lbrace Card(\mathcal L) : \mathcal L \in \Omega \rbrace$. Pour $\mathcal L \in \Omega  : \mathcal L$ est aussi une famille libre de E donc $\mathcal L$ est finie et $Card(\mathcal L) \leq dim(E)$ \\
-Ainsi : $A \subset \mathbb N$ et majoré par $dim(E)$ $A \neq \subset$  car $0 \in A$(car $()\in \Omega$) donc A possède un maximum p : \\
+Ainsi : $A \subset \mathbb N$ et majoré par $dim(E)$ $A \neq \emptyset$  car $0 \in A$(car $()\in \Omega$) donc A possède un maximum p : \\
 Soit $\mathcal L_0 \in \Omega$ tel que $Card(\mathcal L_0) = p $ : \\
 On a : $\mathcal L_0$ libre car $\mathcal L \in \Omega$, $Vect(\mathcal L_0) \subset F$ par définition de $ \Omega $ \\
 Si $Vect(\mathcal L_0) \subsetneq F$ : \\
 Soit $\vec x \in  F \backslash Vect (\mathcal L_0)$ : \\
 Alors $\mathcal L_0 \cup (\vec x)$ est une famille libre de F donc $\mathcal L \cup (\vec x) \in \Omega$ mais $Card(\mathcal L_0 \cup (\vec x))=p+1>p$ contradiction \\
 Ainsi : $Vect(\mathcal L_0)=F$ \\
-Conclusion : $\mathcal L_0$ est une base de F donc: F est de dimension finie et $dim(F)=p \leq dim(E)$ car $dim(E)$ est un majorant de A. \\
+Conclusion : $\mathcal L_0$ est une base de F donc F est de dimension finie et $dim(F)=p \leq dim(E)$ car $dim(E)$ est un majorant de A. \\
 \textcolor{green}{2)} Soit $ \mathcal B$ une base de F \\
-En particulier : $ \mathcal B$ est une famille libre de F donc $ \mathcal B$ est une famille de E. \\
-De plus: $Card(\mathcal B)=dim(F)$ car $\mathcal B$ base de F ^^
+En particulier : $ \mathcal B$ est une famille libre de F donc $ \mathcal B$ est une famille libre de E. \\
+De plus: $Card(\mathcal B)=dim(F)$ car $\mathcal B$ base de F \\
 $Card(\mathcal B)=dim(E)$ par hypothèse donc $\mathcal B$ base de E \\
 $F=Vect(\mathcal B)=E$ \\
 \section{Si $E= F \oplus G, dim(E)=dim(F)+dim(G)$}
@@ -123,8 +123,8 @@ E K-espace vectoriel de dimension finie, F et G sous-espace vectoriel supplémen
 \textcolor{green}{1)} Si $\mathcal B$ base de F et $\mathcal C$ une base de G, $\mathcal B \cup \mathcal C$ est une base de E \\
 \textcolor{green}{2)} $dim(E)=dim(F)+dim(G)$ \\
 \textcolor{red}{Démonstration :} \\
-Si $F=\lbrace 0 \rbrace 0,G=E,B=()$ propriété trivialement vérifiée \\
-Idem si $G=\lbrace 0 \rbrace,F=E,\mathcal C=() $ \\
+Si $F=\lbrace \vec 0 \rbrace ,G=E,B=()$ propriété trivialement vérifiée \\
+Idem si $G=\lbrace \vec 0 \rbrace,F=E,\mathcal C=() $ \\
 Sinon, notons : $p=dim(F) \geq 1$ $g=dim(G) \geq 1$ \\
 $\mathcal B = (\vec x_1, ... ,\vec x_p)$ et $\mathcal C = (\vec y_1, ..., \vec y_q)$ \\
 Montrons que $\mathcal B \cup \mathcal C$ est une base de E  \\
@@ -159,16 +159,16 @@ Posons $F=Vect(\mathcal B_1)$ et $G=Vect(\mathcal B_2)$ \\
 Alors : $\mathcal B_1$ base de F, $\mathcal B_2$ base de G et $E= F \oplus G$ \\
 \textcolor{red}{Démonstration :} \\
 $\mathcal B_1$ est engendre F par définition et $\mathcal B_1 \subset \mathcal B$ qui est libre donc $\mathcal B_1$ est libre. Idem pour $\mathcal B_2$ \\
-{\boldmath $F+G \subset E$} trivial
+{\boldmath $F+G \subset E$} trivial \\
 {\boldmath $E \subset F+G$} Soit $\vec x \in E$ : \\
 $\exists (\lambda_1,...,\lambda_n) \in \mathbb K^n, \vec x= \sum_{k=1}^n \lambda_k \vec u_k$ \\
-ainsi $\vec x= \underbrace{ \sum_{k=1}^p \lambda_k \vec u_k}{\in F} + \underbrace{\sum_{k=p+1}^n \lambda_k \vec u_k}{\in G}$ \\
+ainsi $\vec x= \underbrace{ \sum_{k=1}^p \lambda_k \vec u_k}_{\in F} + \underbrace{\sum_{k=p+1}^n \lambda_k \vec u_k}_{\in G}$ \\
 donc $\vec x \in F + G$ \\
 {\boldmath $\lbrace \vec 0 \rbrace \subset F \cap G$} trivial \\
-{\boldmath $F \subset \lbrace \vec 0 \rbrace $} Soit $\vec x \in F \cap G$ alors : \\
+{\boldmath $F \cap G \subset \lbrace \vec 0 \rbrace $} Soit $\vec x \in F \cap G$ alors : \\
 $\vec x \in F$ donc : $\exists (\lambda_1,...,\lambda_p) \in \mathbb K^p, \vec x= \sum_{k=1}^p \lambda_k \vec u_k$ \\
 $\vec x \in G$ donc : $\exists (\lambda_{p+1},...,\lambda_n) \in \mathbb K^{n-p}, \vec x= \sum_{k=p+1}^n \lambda_k \vec u_k$ \\
-$\lambda_1 \vec u_1 +... +\lambda_p \vec u_p + (-\lambda_{p+1})+...+(- \lambda_n \vec u_n)= \vec 0$ \\
+$\lambda_1 \vec u_1 +... +\lambda_p \vec u_p + (-\lambda_{p+1} \vec u_{p+1})+...+(- \lambda_n \vec u_n)= \vec 0$ \\
 Or $\mathcal B$ libre donc $\lambda_1=...=\lambda_n=0$ d'où $\vec x= \vec 0$ \\
 \textcolor{green}{Propriété :} \\
 Formule de Grassmann : \\
@@ -178,8 +178,8 @@ $dim(F+G)=dim(F)+dim(G)-dim(F \cap G)$ \\
 $F \cap G$ sous-espace vectoriel de G qui est de dimension finie : \\
 Il existe H,sous-espace vectoriel de G tel que : $G=(F \cap G) \oplus H$ \\
 Montrons que $F+G=F \oplus H$ \\
-Par hypothèse $F \cap G \cap H =\lbrace \vec 0 \rbrace$ or $H \subset G$ donc : $F \cap H=\lbrace \vec 0 \rbrace$
-{$\boldmath F\oplus H \subset F+G$} évident car n$H \subset G$ \\
+Par hypothèse $F \cap G \cap H =\lbrace \vec 0 \rbrace$ or $H \subset G$ donc : $F \cap H=\lbrace \vec 0 \rbrace$ \\
+{$\boldmath F\oplus H \subset F+G$} évident car $H \subset G$ \\
 {$\boldmath F+G \subset F \oplus H $} soit $\vec x \in F+G$ : \\
 $\exists (\vec y , \vec z) \in F \times G, \vec x =\vec y + \vec z$ \\
 Comme $\vec z \in G $ par hypothèse : \\
@@ -201,13 +201,13 @@ $((\vec u_1,\vec 0_F),...,(\vec u_n, \vec 0_F),(\vec 0_E, \vec v_1),...,(\vec 0_
 {\bf libre :} soit $(\lambda_1,...,\lambda_{n+p}) \in \mathbb K^{n+p}$ tel que : \\
 $\lambda_1 (\vec u_1, \vec 0_F)+...+ \lambda_n (\vec u_n, \vec 0_F)+ \lambda_{n+1} (\vec 0_E, \vec v_1)+...+ \lambda_{n+p}(\vec 0_E, \vec v_p =(\vec 0_E, \vec 0_F)$ \\
 $\lambda_1 \vec u_1+...+ \lambda_n \vec u_n + \lambda_{n+1}  \vec v_1 +...+ \lambda_{n+p} \vec v_p =(\vec 0_E, \vec 0_F)$ \\
-$\lambda_1 \vec u_1+...+ \lambda_n \vec u_n =\vec 0_F$ \\
+$\lambda_1 \vec u_1+...+ \lambda_n \vec u_n =\vec 0_E$ \\
 $\lambda_{n+1}  \vec v_1 +...+ \lambda_{n+p} \vec v_p =\vec 0_F$ \\
 Comme $(\vec u_1,..., \vec u_n)$ base de E et $(\vec v_1,...,\vec v_p)$ base de F : \\
 $\lambda_1=...=\lambda_{n+p}=0$ \\
 {\bf génératrice} Soit $(\vec x, \vec y) \in E \times F$ : \\
 $(\vec u_1,..., \vec u_n)$ base de E donc $\exists (\lambda_1,..., \lambda_n) \in \mathbb K^n, \vec x =\lambda_1 \vec u_1+...+ \lambda_n \vec u_n$ \\
-$(\vec v_1,..., \vec v_p)$ base de E donc $\exists (\mu_1,..., \mu_p) \in \mathbb K^p, \vec x =\mu_1 \vec v_1+...+ \mu_n \vec v_p$ \\
+$(\vec v_1,..., \vec v_p)$ base de F donc $\exists (\mu_1,..., \mu_p) \in \mathbb K^p, \vec y =\mu_1 \vec v_1+...+ \mu_p \vec v_p$ \\
 d'où : $(\vec x, \vec y)= (\vec x, \vec 0_F)+ (\vec 0_E, \vec y)$ \\
 $(\vec x, \vec y)=\sum_{k=1}^n \lambda_k (\vec u_k, \vec 0_F)+ \sum_{k=1}^p \mu_k (\vec 0_E, \vec v_k)$ \\
 \textcolor{green}{Propriété :} \\
@@ -216,8 +216,8 @@ $dim(\mathcal L(E,F))= dim(E) \times dim(F)$ \\
 \textcolor{red}{Démonstration :} \\
 soit $p=dim(E)$. \\
 Si $p=0$ : $E= \lbrace \vec 0 \rbrace$, $\mathcal L (E,F)= \lbrace \tilde{0} \rbrace$ \\
-Sinon,  soit $(\vec u_1,...n  \vec u_p)$ base de E. \\
-Posons : $\Phi : \mathcal L(E,F) \rightarrow F$ \\
+Sinon, soit $(\vec u_1,...,  \vec u_p)$ base de E. \\
+Posons : $\Phi : \mathcal L(E,F) \rightarrow F^p$ \\
 $f \rightarrow (f(\vec u_1),...,f(\vec u_p))$ \\
 $\Phi$ est bien linéaire : pour f et g$\in \mathcal L (E,F)$ et $\lambda \in \mathbb K$ \\
 $\Phi (f+ \lambda g)= (f( \vec u_1)+ \lambda g(\vec u_1),...,f(\vec u_p)+ \lambda g(\vec u_p))$ \\
@@ -226,7 +226,7 @@ $\Phi (f+ \lambda g)= \Phi (f) + \lambda \Phi(g)$ \\
 De plus, $\Phi$ est bijective : c'est le théorème de détermination des applications linéaires. \\
 Ainsi, $\Phi$ est un isomorphisme, or $F^p$ est de dimension finie égale à $p \times dim(F)$ donc $\mathcal L (E,F)$ est de dimension finie égale : $p \times dim(F)= dim(E) \times dim(F)$
 \section{Détermination d'une application linéaire par l'image d'une base (énoncé complet + démonstration de la caractérisation de l'injectivité).}
-\textcolor{green}{Propriété :}
+\textcolor{green}{Propriété :} \\
 E: K-espace vectoriel de dimension finie $n \geq 1$ \\
 $(\vec u_1,..., \vec u_n)$ base de E \\
 $(\vec v_1,..., \vec v_n)$ famille quelconque de n vecteurs de F, K-espace vectoriel quelconque \\
@@ -281,11 +281,11 @@ Soit $f \in \mathcal L (E,F)$ bijective \\
 Si $E= \lbrace \vec 0_E \rbrace$ : $F=\lbrace \vec 0_F \rbrace$ \\
 Si $dim(E)=n \geq 1$, soit $(\vec u_1,..., \vec u_n)$ une base de E. \\
 Comme f est un isomorphisme: $(f(\vec u_1),...,f(\vec u_n))$ est une base de F donc F est de dimension finie et $dim(F)=n$ \\
-\textcolor{green}{2 $\Rightarrow$ 1} si dimension nulle : $E=\lbrace  \vec 0_E \rbrace$ et $F=\lbrace \vec 0_F \rbrace$ $f: \vec 0_E \rightarrow \vec 0_F$ est un isomorphisme si $dim(E)=dim(F)=n \geq 1$ : \\
+\textcolor{green}{2 $\Rightarrow$ 1} Si dimension nulle : $E=\lbrace  \vec 0_E \rbrace$ et $F=\lbrace \vec 0_F \rbrace$ $f: \vec 0_E \rightarrow \vec 0_F$ est un isomorphisme\\  Si $dim(E)=dim(F)=n \geq 1$ : \\
 Soit $(\vec u_1,..., \vec u_n)$ une base de E et $(\vec v_1,..., \vec v_n)$ base de F. \\
-Soit f l'unique élément de $\mathcal L (E,F)$ tel que : \\
-$\forall k \in [[1,n]],f(\vec u_k)=\vec v_k$. \\
-Puisque $(\vec v_1,..., \vec v_n)$ est une base de F, f est un isomorphisme \\ 
+Soit $f$ l'unique élément de $\mathcal L (E,F)$ tel que : \\
+$\forall k \in [[1,n]],f(\vec u_k)=\vec v_k$ (qui existe par le théorème de détermination) \\
+Puisque $(\vec v_1,..., \vec v_n)$ est une base de F, f est un isomorphisme \\
 \textcolor{green}{Propriété :} \\
 Soit $f \in \mathcal L (E,F)$ avec E de dimension finie \\
 \textcolor{green}{1)} Tout supplémentaires S de Ker(f) dans E est un isomorphisme à $Im(f)$. \\
@@ -308,5 +308,7 @@ Ainsi : $Im(g)=Im(f)$ g surjective \\
 \textcolor{green}{2)} On a donc : \\
 $dim(S)=dim(Im(f))$ \\
 or: $E=Ker(f) \oplus S$ \\
-donc $dim(E)=dim(Ker(f))+dim(S)$ d'où le résultat
+donc $dim(E)=dim(Ker(f))+dim(S)$ d'où le résultat : \\
+$dim(E)=dim(Ker(f))+dim(Im(f))$ \\
+$dim(E)=dim(Ker(f))+rg(f)$
 \end{document}
