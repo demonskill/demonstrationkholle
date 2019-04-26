@@ -85,6 +85,30 @@ $=I_2$ de même $\frac{1}{ad-bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
 	$a=b=c=d=0$ donc $A=0_2$ contradiction avec A inversible
 \end{pmatrix}
 	\section{Une matrice carrée A est inversible si, et seulement si, pour toute colonne C, il existe une unique colonne X telle que $AX=C$}
+	\textcolor{green}{Propriété :} \\
+	Soit $A \in M_n(\mathbb K)$ on a les équivalences : \\
+	\textcolor{green}{1)} $A \in GL_n(\mathbb K)$ \\
+	\textcolor{green}{2)} Pour toute matrice colonne $C \in M_{n,1}(\mathbb K)$, il existe une unique solution $X \in M_{n,1}(\mathbb K)$ tel que $AX=C$ \\
+	\textcolor{green}{3)} Tout système dont la matrice des coefficient est A possède une unique solution \\
+	\textcolor{red}{Démonstration :} \\
+	\textcolor{green}{$3 \Leftrightarrow 2$ } est immédiate. On transpose le système en écriture matricielle. \\
+	\textcolor{green}{$1 \Rightarrow 3$} \\
+	On cherche $X \in M_{n,1}(\mathbb K)$ tel que  $AX=C$ \\
+	{\bf Analyse :} si une matrice $X_0$ convient alors comme A est inversible on aurait $X_0=A^{-1}C$ d'où l'unicité de $X_0$ \\
+	{\bf Synthèse :} vérifions que $A^{-1}C$ convient : \\
+	$A(A^{-1}C)= (A A^{-1})C=I_n C =C$ il convient \\
+	\textcolor{green}{ $2 \rightarrow 1$} \\
+	On va construire une matrice B tel que $AB=I_n$. On vérifiera $BA=I_n$ pour $j \in [[1,n]],$ notons $E_j \in M_{n,1}(\mathbb K)$ la j-ième colonne de $I_n$ soit $B_j \in M_{n,1}$ telle que
+	$AB_j=E_j$ ($B_j$ existe et est unique par \textcolor{green}{2}) considérons $B \in M_n(\mathbb K)$ avec $B_j$ l'ensemble des colonnes de B : \\
+	$B= \begin{pmatrix}
+B_1 & B_2 & ... & B_n \\
+	\end{pmatrix}$ \\
+	alors $AB= \begin{pmatrix}
+	AB_1 & AB_2 & ... & AB_n\end{pmatrix}=I_n$ (propriété au calcul matriciel par colonne) \\
+	pour $j \in [[1,n]] ;$ on note note $A_j$ la j-ième colone de A \\
+	par définition du produit matriciel : $AE_j=A_j$ \\
+	Par ailleurs, on sais que $AB=I_n$ donc $(AB)A_j=A_j$ et $A(BA_j)=A_j$
+	donc par unicité $BA_j=E_j$ et par propriété du calcul matriciel : \\ $BA=I_n$
 	\section{Transposition : produit, inverse $M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$}
 	\section{Trace : définition et propriété $tr(AB)=tr(BA)$.}
 	\section{L'application $\Phi : A \in M_{n,p} \longmapsto (\Phi_A : M \mapsto tr({}^tAM))\in \mathcal L(M_{n,p}(\mathbb K), \mathbb K)$ est un isomorphisme}
