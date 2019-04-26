@@ -28,6 +28,27 @@
 	\renewcommand{\thesection}{\Roman{section}}
 	\setlength{\parindent}{1.5cm}
 	\section{ Produit matriciel : associativité, matrices identités.}
+	\textcolor{green}{Propriété :}
+	$\forall (A,B,C) \in M_{np}(\mathbb K) \times M_{pr}(\mathbb K) \times M_{rs}(\mathbb K), A(BC)=(AB)C$ \\
+	\textcolor{red}{Démonstration :} \\
+	$A=(a_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq p}}$
+	$B=(b_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq r}}$
+	 $C=(c_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq j\leq s}}$
+	 $BC=(d_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq s}}$
+	 $AB=(e_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq r}}$
+	 Pour $1 \leq i \leq n$ et $1 \leq j \leq s$ d'une part, le coefficient i-j de $A(BC)$ est :\\
+	  $\sum_{k=1}^n a_{ik}d_{kj}$ \\
+	 or $d_{kj}= \sum_{l=1}^r b_{kl} c_{lj}$ donc c'est : $\sum_{k=1}^p \sum_{l=1}^r a_{ik}b_{kl}c_{lj}$ \\
+	 d'autre part le coefficient de i-j de $(AB)C$ est : \\
+	 $\sum_{l=1}^r e_{il}c_{ej}$ \\
+	 Or $e_{il}= \sum_{k=1}^p a_{ik} b_{kl}$ donc c'est : $\sum_{l=1}^r \sum_{k=1}^p a_{ik} b_{kl} c_{lj}$ \\
+	 même valeur par intervertion des sommes rectangulaires. \\
+	 \textcolor{green}{Propriété :}
+	 $\forall A \in M_{np}(\mathbb K), \underbrace{I_n}_{n \times n} \underbrace{A_{}}_{n \times p} = \underbrace{A_{}}_{n \times p} \underbrace{I_p}_{p \times p} = \underbrace{A_{}}_{n \times p} $ \\
+	 \textcolor{red}{Démonstration :} \\
+	 coefficient  i-j de $I_nA$ : \\
+	 $\sum_{k=1}^n \delta_{ik}a_{kj}=a_{ij}$ \\
+	 pour $A I_p :$ $\sum_{k=1}^p a_{ik} \delta_{kj}=a_ij$
 	\section{ Matrice d'ordre 2 : caractérisation de l'inversibilité et formule pour l'inverse}
 	\section{Une matrice carrée A est inversible si, et seulement si, pour toute colonne C, il existe une unique colonne X telle que $AX=C$}
 	\section{Transposition : produit, inverse $M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$}
