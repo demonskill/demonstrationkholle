@@ -50,6 +50,40 @@
 	 $\sum_{k=1}^n \delta_{ik}a_{kj}=a_{ij}$ \\
 	 pour $A I_p :$ $\sum_{k=1}^p a_{ik} \delta_{kj}=a_ij$
 	\section{ Matrice d'ordre 2 : caractérisation de l'inversibilité et formule pour l'inverse}
+	\textcolor{green}{Propriété :} \\
+	La matrice $A=\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}$ est inversible si et seulement si $ad-bc \neq 0$ et on a alors : $A^{-1}=\frac{1}{ad-bc}\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}$ \\
+\textcolor{red}{Démonstration :} \\
+si $ad-bc \neq 0$ alors : \\
+$\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix} \frac{1}{ad-bc}\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}$  \\
+$=\frac{1}{ad-bc}
+\begin{pmatrix}
+ad-bc & -ab+ab \\
+cd-dc & ad-bc
+\end{pmatrix} \begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}$ \\
+$=I_2$ de même $\frac{1}{ad-bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+\begin{pmatrix} a &b \\ c & d  \end{pmatrix} =I_2 $ \\
+	si $ad-bc=0$ alors \\
+	$\begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} a & -b \\ -c & a \end{pmatrix}=0_2$ \\
+	si A était inversible on aurait : \\
+	$Aç{-1} A \times \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} =A^{-1} \times 0_2 $ \\
+	$\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}=0_2$ \\
+	$a=b=c=d=0$ donc $A=0_2$ contradiction avec A inversible
+\end{pmatrix}
 	\section{Une matrice carrée A est inversible si, et seulement si, pour toute colonne C, il existe une unique colonne X telle que $AX=C$}
 	\section{Transposition : produit, inverse $M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$}
 	\section{Trace : définition et propriété $tr(AB)=tr(BA)$.}
