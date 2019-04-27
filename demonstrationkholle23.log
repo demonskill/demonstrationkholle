@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  27 APR 2019 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  27 APR 2019 18:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1406,20 +1406,16 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./demonstrationkholle23.tex:141: Missing $ inserted.
-<inserted text> 
-                $
-l.141 	\section
-               {Trace : définition et propriété $tr(AB)=tr(BA)$.}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 113--141
 
  []
 
-[2] [3] (./demonstrationkholle23.aux) ) 
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 142--159
+
+ []
+
+[3] (./demonstrationkholle23.aux) ) 
 Here is how much of TeX's memory you used:
  41653 strings out of 492616
  955555 string characters out of 6132769
@@ -1428,22 +1424,22 @@ Here is how much of TeX's memory you used:
  560155 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,96p,738b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2018/texmf-dist/fonts/enc/dv
-ips/base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
-10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c
-:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c
-:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive
-/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2018/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/ur
-w/helvetic/uhvr8a.pfb>
-Output written on demonstrationkholle23.pdf (3 pages, 128470 bytes).
+{c:/texlive/2018/texmf-dist/fonts/enc/dvips/
+base/8r.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2018/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/201
+8/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2018/texmf-dist/fon
+ts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/he
+lvetic/uhvr8a.pfb>
+Output written on demonstrationkholle23.pdf (3 pages, 130608 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream

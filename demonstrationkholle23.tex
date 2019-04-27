@@ -132,12 +132,34 @@ $AA^{-1}=A^{-1}A=I_n$ transposons : \\
 ${}^t (A^{-1}){}^tA= {}^t A {}^t A^{-1}=I_n$ car ${}^t I_n=I_n$ \\
 donc ${}^t A \in Gl_n( \mathbb K)$ d'inverse ${}^t (A^{-1})$ \\
 \textcolor{green}{Propriété :}  \\
-$M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$ \\ 
+$M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$ \\
 \textcolor{red}{Démonstration :} \\
 Soit $s :M_n(\mathbb K) \rightarrow M_n (\mathbb K)$ \\
-$A \rightarrow {}^t A$ \\
+$A \mapsto {}^t A$ \\
 Alors s est une involution linéaire ($s^2=Id_{M_n(\mathbb K)}$) donc : \\
-$M_n (\mathbb K)= \underbrace{Ker(s-Id_{M_n(\mathbb K)})}_{S_n(\mathbb K)} \oplus \underbrace{Ker(s+ Id_{M_n(\mathbb K)})}_{AS_n(\mathbb K)}
+$M_n (\mathbb K)= \underbrace{Ker(s-Id_{M_n(\mathbb K)})}_{S_n(\mathbb K)} \oplus \underbrace{Ker(s+ Id_{M_n(\mathbb K)})}_{AS_n(\mathbb K)}$
 	\section{Trace : définition et propriété $tr(AB)=tr(BA)$.}
+	\textcolor{red}{Définition :} \\
+	soit $A=(a_{ij}){}_{\substack{1\leq i,j\leq n}}\in M_n(\mathbb K)$ \\
+	On pose $tr(A)=\sum_{i=1}^n a_{ii} \in \mathbb K$ trace de A \\
+	\textcolor{green}{Propriété :} \\
+	$\forall A \in M_{np}(\mathbb K), \forall B \in M_{pn}(\mathbb K),tr(\underbrace{AB}_{n \times n})=tr(\underbrace{BA}_{p \times p})$ \\
+	\textcolor{red}{Démonstration :} \\
+	$A=(a_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq p}}$,
+	$B=(b_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq n}}$ \\ \\
+	$AB=(c_{ij}){}_{\substack{1\leq i,j\leq n}}$,
+	$BA=(d_{ij}){}_{\substack{1\leq i,j\leq p}}$ \\
+	$tr(AB)= \sum_{i=1}^n c_{ii}$ \\
+	$tr(AB)= \sum_{i=1}^n \sum_{k=1}^p a_{ik}b_{ki}$ \\
+	$tr(BA)= \sum_{i=1}^p d_{ii}$ \\
+	$tr(BA)= \sum_{i=1}^p \sum_{k=1}^n b_{ik}a_{ki}$ \\
+	$tr(BA)= \sum_{k=1}^n \sum_{i=1}^p a_{ki}b_{ik}$ \\
+	On échange les rôles des indices i et k : \\
+	$tr(BA)= \sum_{i=1}^n \sum_{k=1}^p a_{ik}b_{ki}=tr(AB)$
 	\section{L'application $\Phi : A \in M_{n,p} \longmapsto (\Phi_A : M \mapsto tr({}^tAM))\in \mathcal L(M_{n,p}(\mathbb K), \mathbb K)$ est un isomorphisme}
+\textcolor{green}{Propriété :} on fixe $(n,p) \in \mathbb (N^*)^2$
+\textcolor{green}{1)} Pour $A \in M_{np}(\mathbb K)$, l'application : \\
+$\phi_A :M_{np}(\mathbb K) \rightarrow \mathbb K$ \\ 
+$M \mapsto tr(\underbrace{{}^t AM}_{p \times p})$ \\
+est unes forme linéaire sur $M_{np}(\mathbb K)$
 \end{document}
