@@ -110,6 +110,34 @@ B_1 & B_2 & ... & B_n \\
 	Par ailleurs, on sais que $AB=I_n$ donc $(AB)A_j=A_j$ et $A(BA_j)=A_j$
 	donc par unicité $BA_j=E_j$ et par propriété du calcul matriciel : \\ $BA=I_n$
 	\section{Transposition : produit, inverse $M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$}
+	\textcolor{green}{Propriété :} Soit $A \in M_{np}( \mathbb K)$ et $B \in  M_{pr}(\mathbb K)$. Alors : \\
+	 \indent $ \underbrace{{}^t(\underbrace{AB}_{n \times r})}_{r \times n}=\underbrace{\underbrace{{}^t B}_{r \times p}  \underbrace{{}^tA}_{p \times n}}_{r \times n}$ \\
+	 \textcolor{red}{Démonstration :} \\
+	 $A=(a_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq p}}$,
+	 $B=(b_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq r}}$ \\
+	 $AB=(c_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq r}}$
+	 ${}^tB{}^tA=(d_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq j\leq n}}$ \\ \\
+	 ${}^tA=(a'_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq n}}$ avec $a'_{ij}=a_{ji}$
+	 ${}^t B=(b'_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq j\leq p}}$ avec $b'_{ij}=b_{ji}$
+	 ${}^t(AB)=(c'_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq n}}$ avec  $c'_{ij}=c_{ji}$ \\
+	 Soit $(i,j) \in [[1,r]] \times [[1,n]]$ \\
+	 $d_{ij} = \sum_{k=1}^p b'_{ik}a'_{kj}$ par définition de ${}^t B {}^t A$ \\
+	 $d_{ij} =\sum_{k=1}^p b_{ki}a_{jk}$ déf de ${}^t A$ et ${}^tB$ \\
+	 $d_{ij}=c_{ji}$ définition de $AB$ \\
+	 $d_{ij}=c'_{ij}$ définition de ${}^t (AB)$ \\
+\textcolor{green}{Propriété :} \\
+Soit $A \in GL_n ( \mathbb K), {}^tA \in GL_n(\mathbb K)$ et $({}^tA)^{-1}={}^t(A^{-1})$ \\
+\textcolor{red}{Démonstration :} \\
+$AA^{-1}=A^{-1}A=I_n$ transposons : \\
+${}^t (A^{-1}){}^tA= {}^t A {}^t A^{-1}=I_n$ car ${}^t I_n=I_n$ \\
+donc ${}^t A \in Gl_n( \mathbb K)$ d'inverse ${}^t (A^{-1})$ \\
+\textcolor{green}{Propriété :}  \\
+$M_n(\mathbb K)= S_n(\mathbb K) \oplus AS_n(\mathbb K)$ \\ 
+\textcolor{red}{Démonstration :} \\
+Soit $s :M_n(\mathbb K) \rightarrow M_n (\mathbb K)$ \\
+$A \rightarrow {}^t A$ \\
+Alors s est une involution linéaire ($s^2=Id_{M_n(\mathbb K)}$) donc : \\
+$M_n (\mathbb K)= \underbrace{Ker(s-Id_{M_n(\mathbb K)})}_{S_n(\mathbb K)} \oplus \underbrace{Ker(s+ Id_{M_n(\mathbb K)})}_{AS_n(\mathbb K)}
 	\section{Trace : définition et propriété $tr(AB)=tr(BA)$.}
 	\section{L'application $\Phi : A \in M_{n,p} \longmapsto (\Phi_A : M \mapsto tr({}^tAM))\in \mathcal L(M_{n,p}(\mathbb K), \mathbb K)$ est un isomorphisme}
 \end{document}
