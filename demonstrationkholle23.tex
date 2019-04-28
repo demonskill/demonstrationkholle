@@ -81,7 +81,7 @@ $=I_2$ de même $\frac{1}{ad-bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
 	si $ad-bc=0$ alors \\
 	$\begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} a & -b \\ -c & a \end{pmatrix}=0_2$ \\
 	si A était inversible on aurait : \\
-	$Aç{-1} A \times \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} =A^{-1} \times 0_2 $ \\
+	$A^{-1} A \times \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} =A^{-1} \times 0_2 $ \\
 	$\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}=0_2$ \\
 	$a=b=c=d=0$ donc $A=0_2$ contradiction avec A inversible
 	\section{Une matrice carrée A est inversible si, et seulement si, pour toute colonne C, il existe une unique colonne X telle que $AX=C$}
@@ -122,7 +122,7 @@ B_1 & B_2 & ... & B_n \\
 	 ${}^tB{}^tA=(d_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq j\leq n}}$ \\ \\
 	 ${}^tA=(a'_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq n}}$ avec $a'_{ij}=a_{ji}$
 	 ${}^t B=(b'_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq j\leq p}}$ avec $b'_{ij}=b_{ji}$
-	 ${}^t(AB)=(c'_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq n}}$ avec  $c'_{ij}=c_{ji}$ \\
+	 ${}^t(AB)=(c'_{ij}){}_{\substack{1\leq i\leq r \\ 1\leq j \leq n}}$ avec  $c'_{ij}=c_{ji}$ \\
 	 Soit $(i,j) \in [[1,r]] \times [[1,n]]$ \\
 	 $d_{ij} = \sum_{k=1}^p b'_{ik}a'_{kj}$ par définition de ${}^t B {}^t A$ \\
 	 $d_{ij} =\sum_{k=1}^p b_{ki}a_{jk}$ déf de ${}^t A$ et ${}^tB$ \\
