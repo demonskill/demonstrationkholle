@@ -25,9 +25,46 @@
 \title{Démonstration kholle 24}
 \date{}
 \maketitle
-	\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesection}{\Roman{section}}
 	\setlength{\parindent}{1.5cm}
         \section{Matrice de $f(\vec x)$, de $g \circ f $}
+        \textcolor{green}{Propriété :} \\
+        E: $\mathbb K$ espace-vectoriel de dimension finie $p\geq 1$ \\
+        $\mathcal B=(\vec u_1,...,\vec u_p)$ base de E \\
+        F: $\mathbb K$ espace-vectoriel de dimension finie $n\geq 1$ \\
+        $\mathcal C=(\vec v_1,...,\vec v_n)$ base de F \\
+        $f \in \mathcal L (E,F)$, $\vec x \in E$ \\
+        $\underbrace{Mat_{\mathcal{C}}(f(\vec x))}_{$n\times 1$} = \underbrace{Mat(f)_{\mathcal{BC}}}_{$n\times p} \underbrace{Mat(\vec x)_{\mathcal B}}_{$p \times 1}$ \\
+        \textcolor{red}{Démonstration :} \\
+        Notons : $Mat(\vec x)_{\mathcal B}= \begin{pmatrix} x_1 \\ . \\ .  \\ . \\ x_p \end{pmatrix}$ \\
+        c'est-à-dire : $\vec x = \sum_{k=1}^p x_k \vec u_k$  \\
+        et $Mat (f)_{\mathcal{BC}} = (a_{ij})$ $Mat (f(\vec x))_{\mathcal C} =\begin{pmatrix} y_1 \\ . \\ . \\ . \\ y_n \end{pmatrix}$ \\
+        c'est-à-dire : $f(\vec x) = \sum_{i=1}^p y_i \vec v_i$ \\
+        Or : $f(\vec x)= \sum_{k=1}^p x_k f(\vec u_k)$ car $f \in \mathcal L (E,F)$ \\
+        $f(\vec x)= \sum_{k=1}^p x_k (\sum_{i=1}^n a_{ik} \vec v_i)$ par définition de $Mat(f)_{\mathcal{BC}}$  \\
+        $f(\vec x)= \sum_{k=1}^p \sum_{i=1}^n x_k a_{ik} \vec v_i$ \\
+        $f(\vec x)= \sum_{i=1}^n (\sum_{k=1}^p a_k x_k) \vec v_i$ \\
+        on a $(\sum_{k=1}^p a_k x_k)=y_i$ donc le coefficient de i de $Mat(f)_{\mathcal{BC}} Mat(\vec x)_{\mathcal B}=y_i$ \\
+        \textcolor{green}{Propriété :} $E: \mathbb K$ espace vectoriel de dimension finie $r \geq 1$ \\
+        $F: \mathbb K$ espace vectoriel de dimension finie $p \geq 1$ \\
+        $G: \mathbb K$ espace vectoriel de dimension finie $n \geq 1$ \\
+        $f \in \mathcal L(E,F), g \in \mathcal L(F,G)$ \\
+        $\mathcal B =( \vec u_1,..., \vec u_r) $ base de E \\
+        $\mathcal C =( \vec v_1,..., \vec v_p) $ base de F \\
+        $\mathcal D =( \vec w_1,..., \vec w_n) $ base de G \\
+        Alors : \\
+        $\underbrace{Mat(g \circ f)_{\mathcal{BD}}}_{n \times r}=\underbrace{Mat(g)_{\mathcal{CD}}}_{n \times p} \underbrace{Mat(f)_{\mathcal{BC}}}_{p \times r}$
+        \textcolor{red}{Démonstration :} \\
+        Notons : $Mat(g)_{\mathcal{CD}}=(a_{ij})$ 
+        $Mat(f)_{\mathcal{BC}}=(b_{ij})$ 
+        $Mat(g \circ f)_{\mathcal{BD}}=(c_{ij})$  \\
+        Par définition : \\
+        $\forall j \in [[1,r]], f(\vec u_j)=\sum_{k=1}^p b_{kj} \vec v_k$\\
+        et :$\forall k \in [[1,p]], g(\vec v_k)=\sum_{i=1}^n a_{ik} \vec w_i$ \\
+        Alors pour $j \in [[ 1,r ]] $ : \\
+        $g(f(\vec u_j))= \sum_{k=1}^p b_{kj} g(\vec v_k)$ car g linéaire \\
+        $g(f(\vec u_j))=\sum_{k=1}^p(b_{kj}\sum_{i=1}^n a_{ik} \vec w_i)$ \\
+        $g(f(\vec u_j))=\sum_{i=1}^n\underbrace{(\sum_{k=1}^p a_{ik} b_{kj})}_{=c_{ij}} \vec w_i$ \\ 
         \section{Définition des matrices de passage et démonstration des formules de changement de base (vecteurs, applications linéaires en génénral, endomorphisme)}
         \section{Relation de similitude : c'est une relation d'équivalence sur $M_n( \mathbb K)$, invariance de la trace, trace d'un projecteur.}
         \section{si $f \in \mathcal L(E,F)$ est de rang r, il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{$\mathcal{UV}$}(f)=J_{n,p,r}$}
