@@ -128,6 +128,34 @@
 				 1 &  & (0) \\  & \ddots & \\ (0) & & 1
 				 \end{matrix} & 0 \\ \hline0 & 0 \end{array}\right)$
         \section{si $f \in \mathcal L(E,F)$ est de rang r, il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$}
+				\textcolor{green}{Propriété :} \\
+				$dim(E)=p \in \mathbb N^*$ $dim(F)=n \in \mathbb N^*$ \\
+				$f \in \mathcal L (E,F)$ de rang r. Alors : \\
+				il existe une base $\mathcal U$ de $E$ et une base $\mathcal V$ de $F$ tel que :  $Mat_{\mathcal{UV}}(f)=J_{npr}=\left(\begin{array}{c|c}I _r& 0 \\ \hline0 & 0 \end{array}\right)$ \\
+				\textcolor{red}{Démonstration :} \\
+				si $r=0, f=\tilde{0}$, toutes bases conviennent. \\
+				sinon : \\
+				soit $(\vec v_1,..., \vec v_r)$ base de $Im(f)$ \\
+				pour $1 \leq j \leq r, $ soit $\vec u_j$, un antécédent de $\vec v_j$ de f \\
+				$(\vec v_1,..., \vec v_r)$ est en particulier libre : par le théorème de la base incomplète, il existe $(\vec v_{r+1},..., \vec v_n) \in F^{n-r}$ tel que $(\vec v_1,...,\vec v_n)$ soit une base de F. \\
+				Théorème du rang : $dim(Ker(f))=p-r$. \\
+				Soit $(\vec u_{r+1},..., \vec u_p)$ base de $Ker(f)$ et montrons que $(\vec u_1,..., \vec u_p)$ est base de E \\
+				Montrons qu'elle est libre : \\
+				Soit $\lambda_1,...,\lambda_p) \in \mathbb K,$ tel que $\sum_{j=1}^p \lambda_j \vec u_j = \vec 0_E$ \\
+				appliquons f : on a $f(\vec u_j)=\vec v_j$ si $j \leq r$ ou $\vec 0_F$ sinon donc $\sum_{j=1}^r \lambda_j \vec v_j=\vec 0_F$ \\
+				Or $(\vec v_1,..., \vec v_r)$ libre donc $\lambda_1=...= \lambda_r=0$ \\
+				Si $r=p$, c'est triviale \\
+				sinon, il reste alors : $\sum_{j=r+1}^p \lambda_j \vec u_j= \vec 0_E$ \\
+				$(\vec u_{r+1},...,\vec u_p)$ libre (car base de $Ker(f)$) donc $\lambda_{r+1}=...= \lambda_n= 0$ \\
+				avec $\mathcal U= (\vec u_1,..., \vec u_p)$ base de E et $\mathcal V=(\vec v_1,..., \vec v_n)$ base de F : \\
+				$Mat_{\mathcal{UV}}(f)=\left(\begin{array}{c|c}\begin{matrix}
+				1 &  & (0) \\  & \ddots & \\ (0) & & 1
+				\end{matrix} & 0 \\ \hline0 & 0 \end{array}\right)$
         \section{Si $f \in \mathcal L(E,F)$ et s'il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$, $rg(f)=r$}
+				\textcolor{green}{Propriété :} \\
+				$dim(E)=p \in \mathbb N^*$ $f \in \mathcal L(E,F)$ \\
+				S'il existe une base $\mathcal U$ de E et une base $\mathcal V$ de F tel que $Mat_{\mathcal{UV}}(f)=J_{npr}=\left(\begin{array}{c|c}I _r& 0 \\ \hline0 & 0 \end{array}\right)$ alors $rg(f)=r$ \\
+				\textcolor{red}{Démonstration :} \\
+				Notons $\mathcal U= (\vec u_1,...,\vec u_p)$
         \section{Une matrice $n \times p$ est de rang $r$ si et seulemnt si, elle est équivalente à$J_{n,p,r}$. Application au rang de la transposée}
 \end{document}
