@@ -34,17 +34,17 @@
         F: $\mathbb K$ espace-vectoriel de dimension finie $n\geq 1$ \\
         $\mathcal C=(\vec v_1,...,\vec v_n)$ base de F \\
         $f \in \mathcal L (E,F)$, $\vec x \in E$ \\
-        $\underbrace{Mat_{\mathcal{C}}(f(\vec x))}_{n\times 1} = \underbrace{Mat(f)_{\mathcal{BC}}}_{n\times p} \underbrace{Mat(\vec x)_{\mathcal B}}_{p \times 1}$ \\
+        $\underbrace{Mat_{\mathcal{C}}(f(\vec x))}_{n\times 1} = \underbrace{Mat_{\mathcal{BC}}(f)}_{n\times p} \underbrace{Mat_{\mathcal B}(\vec x)}_{p \times 1}$ \\
         \textcolor{red}{Démonstration :} \\
-        Notons : $Mat(\vec x)_{\mathcal B}= \begin{pmatrix} x_1 \\ . \\ .  \\ . \\ x_p \end{pmatrix}$ \\
+        Notons : $Mat_{\mathcal B}(\vec x)= \begin{pmatrix} x_1 \\ . \\ .  \\ . \\ x_p \end{pmatrix}$ \\
         c'est-à-dire : $\vec x = \sum_{k=1}^p x_k \vec u_k$  \\
-        et $Mat (f)_{\mathcal{BC}} = (a_{ij})$ $Mat (f(\vec x))_{\mathcal C} =\begin{pmatrix} y_1 \\ . \\ . \\ . \\ y_n \end{pmatrix}$ \\
+        et $Mat_{\mathcal{BC}}(f) = (a_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq p}}$ $Mat_{\mathcal C} (f(\vec x)) =\begin{pmatrix} y_1 \\ . \\ . \\ . \\ y_n \end{pmatrix}$ \\
         c'est-à-dire : $f(\vec x) = \sum_{i=1}^p y_i \vec v_i$ \\
         Or : $f(\vec x)= \sum_{k=1}^p x_k f(\vec u_k)$ car $f \in \mathcal L (E,F)$ \\
-        $f(\vec x)= \sum_{k=1}^p x_k (\sum_{i=1}^n a_{ik} \vec v_i)$ par définition de $Mat(f)_{\mathcal{BC}}$  \\
+        $f(\vec x)= \sum_{k=1}^p x_k (\sum_{i=1}^n a_{ik} \vec v_i)$ par définition de $Mat_{\mathcal{BC}}(f)$  \\
         $f(\vec x)= \sum_{k=1}^p \sum_{i=1}^n x_k a_{ik} \vec v_i$ \\
         $f(\vec x)= \sum_{i=1}^n (\sum_{k=1}^p a_k x_k) \vec v_i$ \\
-        on a $(\sum_{k=1}^p a_k x_k)=y_i$ donc le coefficient de i de $Mat(f)_{\mathcal{BC}} Mat(\vec x)_{\mathcal B}=y_i$ \\
+        on a $(\sum_{k=1}^p a_k x_k)=y_i$ donc le coefficient de i de $Mat_{\mathcal{BC}} (f) Mat(\vec x)_{\mathcal B}=y_i$ \\
         \textcolor{green}{Propriété :} $E: \mathbb K$ espace vectoriel de dimension finie $r \geq 1$ \\
         $F: \mathbb K$ espace vectoriel de dimension finie $p \geq 1$ \\
         $G: \mathbb K$ espace vectoriel de dimension finie $n \geq 1$ \\
@@ -53,11 +53,11 @@
         $\mathcal C =( \vec v_1,..., \vec v_p) $ base de F \\
         $\mathcal D =( \vec w_1,..., \vec w_n) $ base de G \\
         Alors : \\
-        $\underbrace{Mat(g \circ f)_{\mathcal{BD}}}_{n \times r}=\underbrace{Mat(g)_{\mathcal{CD}}}_{n \times p} \underbrace{Mat(f)_{\mathcal{BC}}}_{p \times r}$ \\
+        $\underbrace{Mat(g \circ f)_{\mathcal{BD}}}_{n \times r}=\underbrace{Mat(g)_{\mathcal{CD}}}_{n \times p} \underbrace{Mat_{\mathcal{BC}}(f)}_{p \times r}$ \\
         \textcolor{red}{Démonstration :} \\
-        Notons : $Mat(g)_{\mathcal{CD}}=(a_{ij})$
-        $Mat(f)_{\mathcal{BC}}=(b_{ij})$
-        $Mat(g \circ f)_{\mathcal{BD}}=(c_{ij})$  \\
+        Notons : $Mat(g)_{\mathcal{CD}}=(a_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq p}}$
+        $Mat_{\mathcal{BC}}(f)=(b_{ij}){}_{\substack{1\leq i\leq p \\ 1\leq j\leq r}}$ \\ 
+        $Mat_{\mathcal{BD}}(g \circ f)=(c_{ij}){}_{\substack{1\leq i\leq n \\ 1\leq j\leq r}}$  \\
         Par définition : \\
         $\forall j \in [[1,r]], f(\vec u_j)=\sum_{k=1}^p b_{kj} \vec v_k$\\
         et :$\forall k \in [[1,p]], g(\vec v_k)=\sum_{i=1}^n a_{ik} \vec w_i$ \\
@@ -67,30 +67,32 @@
         $g(f(\vec u_j))=\sum_{i=1}^n\underbrace{(\sum_{k=1}^p a_{ik} b_{kj})}_{=c_{ij}} \vec w_i$ \\
         \section{Définition des matrices de passage et démonstration des formules de changement de base (vecteurs, applications linéaires en général, endomorphisme)}
 				\textcolor{red}{Définition :} \\
-				On  note la matrice de passage de $\mathcal B$ à $\mathcal C$ $P_{\mathcal{BC}}= Mat(\mathcal C)_{\mathcal B}= Mat(Id_E)_{\mathcal{CB}}$ \\
+				On  note la matrice de passage de $\mathcal B$ à $\mathcal C$ $P_{\mathcal{BC}}= Mat_{\mathcal B}(\mathcal C)= Mat_{\mathcal{CB}}(Id_E)$ \\
 				\textcolor{green}{Propriété :} Pour $\vec x \in E$ : \\
-				$Mat(\vec x)_{\mathcal B}=P_{\mathcal{BC}} Mat_{\mathcal C}(\vec x)$ \\
+				$Mat_{\mathcal B}(\vec x)=P_{\mathcal{BC}} Mat_{\mathcal C}(\vec x)$ \\
 				\textcolor{red}{Démonstration :}  \\
-				$P_{\mathcal{BC}}Mat_{\mathcal C}(\vec x)= Mat(Id_E)_{\mathcal{CB}} Mat(\vec x)_{\mathcal C}$ \\
+				$P_{\mathcal{BC}}Mat_{\mathcal C}(\vec x)= Mat_{\mathcal{CB}}(Id_E) Mat_{\mathcal C}(\vec x)$ \\
+				$P_{\mathcal{BC}}Mat_{\mathcal C}(\vec x)= Mat_{\mathcal B}(Id_E(\vec x))$ \\
+				$P_{\mathcal{BC}}Mat_{\mathcal C}(\vec x)= Mat_{\mathcal B}(\vec x)$ \\
 				\textcolor{green}{Propriété :} \\
 				$E: \mathbb K$ espace vectoriel de dimension $p \in \mathbb N^*$ \\
 				$F: \mathbb K$ espace vectoriel de dimension $n \in \mathbb N^*$ \\
 				$\mathcal B$ et $\mathcal C$, bases de  E \\
-				$\mathcal u$ et $\mathcal v$, bases de F alors : \\
-				$Mat(f)_{\mathcal{CV}}= \underbrace{P_{\mathcal{vu}}}_{n \times n} \underbrace{Mat(f)_{\mathcal{Bu}}}_{n \times p}  \underbrace{P_{\mathcal{BC}}}_{p \times p}$ \\
+				$ u$ et $ v$, bases de F alors : \\
+				$Mat_{\mathcal C  v}(f)= \underbrace{P_{vu}}_{n \times n} \underbrace{Mat_{\mathcal B u}(f)}_{n \times p}  \underbrace{P_{\mathcal{BC}}}_{p \times p}$ \\
 				\textcolor{red}{Démonstration :} \\
-				$P_{\mathcal{vu}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}}=Mat(Id_F)_{\mathcal{uv}} Mat(f)_{\mathcal{Bu}} Mat(Id_E)_{\mathcal{CB}}$ \\
-				$P_{\mathcal{vu}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}} = Mat(Id_f \circ f \circ Id_E)_{\mathcal{Cv}}$ \\
-				$P_{\mathcal{vu}} Mat(f)_{\mathcal{Bu}}  P_{\mathcal{BC}} = Mat(f)_{\mathcal{Cv}}$ \\
+				$P_{vu} Mat_{\mathcal B u}(f) P_{\mathcal{BC}}=Mat_{uv}(Id_F) Mat_{\mathcal{B} u}(f) Mat_{\mathcal{CB}}(Id_E)$ \\
+				$P_{vu} Mat_{\mathcal B u}(f) P_{\mathcal{BC}} = Mat_{\mathcal C  v}(Id_f \circ f \circ Id_E)$ \\
+				$P_{vu} Mat_{\mathcal B u} (f) P_{\mathcal{BC}} = Mat_{\mathcal C  v}(f)$ \\
 				\textcolor{green}{Corrolaire} cas d'un endomorphisme \\
 				$dim(E)=n \in \mathbb N^*$ $(p=n)$ \\
 				$\mathcal {B,C}$ bases de E $f \in \mathcal L (E)$  alors : \\
-				$Mat(f)_{\mathcal C}=P_{\mathcal{CB}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}}$ \\
-				$Mat(f)_{\mathcal C}=P^{-1}_{\mathcal{BC}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}}$
+				$Mat_{\mathcal C}(f)=P_{\mathcal{CB}} Mat_{\mathcal{B}}(f) P_{\mathcal{BC}}$ \\
+				$Mat_{\mathcal C}(f)=P^{-1}_{\mathcal{BC}} Mat_{\mathcal{B}}(f)P_{\mathcal{BC}}$
 
         \section{Relation de similitude : c'est une relation d'équivalence sur $M_n( \mathbb K)$, invariance de la trace, trace d'un projecteur.}
 				\textcolor{green}{Propriété :} \\
-				la similitude est une relation d'équivalence. \\
+				la similitude est une relation d'équivalence sur $M_n(\mathbb K)$. \\
 				\textcolor{red}{Démonstration :} \\
 				{\bf reflexivité :} Soit $A \in M_n(\mathbb K)$ avec $P=I_n \in Gl_n(\mathbb K)$ : \\
 				$A=P^{-1}A P$ \\
@@ -141,7 +143,7 @@
 				Théorème du rang : $dim(Ker(f))=p-r$. \\
 				Soit $(\vec u_{r+1},..., \vec u_p)$ base de $Ker(f)$ et montrons que $(\vec u_1,..., \vec u_p)$ est base de E \\
 				Montrons qu'elle est libre : \\
-				Soit $\lambda_1,...,\lambda_p) \in \mathbb K,$ tel que $\sum_{j=1}^p \lambda_j \vec u_j = \vec 0_E$ \\
+				Soit $(\lambda_1,...,\lambda_p) \in \mathbb K,$ tel que $\sum_{j=1}^p \lambda_j \vec u_j = \vec 0_E$ \\
 				appliquons f : on a $f(\vec u_j)=\vec v_j$ si $j \leq r$ ou $\vec 0_F$ sinon donc $\sum_{j=1}^r \lambda_j \vec v_j=\vec 0_F$ \\
 				Or $(\vec v_1,..., \vec v_r)$ libre donc $\lambda_1=...= \lambda_r=0$ \\
 				Si $r=p$, c'est triviale \\
@@ -167,12 +169,13 @@
 				\textcolor{green}{Propriété : } \\
 				soit $A \in M_{np}(\mathbb K)$, $r \in [[0,min(n,p)]]$: \\
 				$rg(A)=r \Longleftrightarrow$ A équivalente à $J_{npr}$ \\
-				\textcolor{red}{Démonstration :} $\mathcal B$ base canonique de $\mathbb K^p$ $\mathcal C$ base canonique base canonique de $\mathbb K^n$ \\
+				\textcolor{red}{Démonstration :} \\
+				$\mathcal B$ base canonique de $\mathbb K^p$, $\mathcal C$ base canonique base canonique de $\mathbb K^n$ \\
 				$\Rightarrow$ soit f canoniquement associé à A : \\
 				$rg(f)=r$ (par définition de rg(A)) et $Mat_{\mathcal{BC}}(f)=A$ \\
 				Or: il existe $\mathcal U$ base de E et $\mathcal V$ base de F tel que :$Mat_{\mathcal{UV}}(f)=J_{npr}$ \\
 				Formule de changement de base général : \\
-				$Mat_{\mathcal{BC}}(f)=\underbrace{Mat_{\mathcal{VC}}(Id_E)}_{P_{\mathcal{CV}} \in Gl_n(\mathbb K) } Mat_{\mathcal{UV}}(f) \underbrace{Mat_{\mathcal{BU}}(Id_E)}_{P \in GL_p(\mathbb K)}$ \\
+				$Mat_{\mathcal{BC}}(f)=\underbrace{Mat_{\mathcal{VC}}(Id_E)}_{P_{\mathcal{CV}} \in Gl_n(\mathbb K) } Mat_{\mathcal{UV}}(f) \underbrace{Mat_{\mathcal{BU}}(Id_E)}_{P_{\mathcal{UB}} \in GL_p(\mathbb K)}$ \\
 				$\Leftarrow : \exists (P,Q) \in GL_n(\mathbb K) \times GL_p(\mathbb K), A=PJ_{npr}Q$ \\
 				donc $rg(A)=rg(J_{npr})$ \\
 				Soit $g \in \mathcal L(\mathbb K^p, \mathbb K^n)$ canoniquement associé à $J_{npr}$ : \\

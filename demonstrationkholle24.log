@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.30)  4 MAY 2019 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.30)  4 MAY 2019 16:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1221,41 +1221,20 @@ Overfull \hbox (8.52289pt too wide) in paragraph at lines 68--68
  général,
  []
 
-Missing character: There is no u in font rsfs10!
-Missing character: There is no v in font rsfs10!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no v in font rsfs7!
-Missing character: There is no u in font rsfs7!
-Missing character: There is no u in font rsfs7!
 
-Overfull \hbox (3.00711pt too wide) in paragraph at lines 91--91
+Overfull \hbox (3.00711pt too wide) in paragraph at lines 93--93
 []\T1/phv/b/n/14.4 Relation de simil-i-tude : c'est une re-la-tion d'équivalenc
 e sur $\OML/cmm/m/it/14.4 M[]\OT1/cmr/m/n/14.4 (\U/msb/m/n/14.4 K\OT1/cmr/m/n/1
 4.4 )$\T1/phv/b/n/14.4 ,
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 97.
 [2] [3] [4] (./demonstrationkholle24.aux) ) 
 Here is how much of TeX's memory you used:
  38266 strings out of 492701
  873623 string characters out of 6134503
- 1088407 words of memory out of 5000000
+ 1085407 words of memory out of 5000000
  41539 multiletter control sequences out of 15000+600000
  556858 words of font info for 74 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
@@ -1278,7 +1257,7 @@ rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on demonstrationkholle24.pdf (4 pages, 157650 bytes).
+Output written on demonstrationkholle24.pdf (4 pages, 159678 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
