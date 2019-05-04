@@ -166,5 +166,24 @@
         \section{Une matrice $n \times p$ est de rang $r$ si et seulemnt si, elle est équivalente à$J_{n,p,r}$. Application au rang de la transposée}
 				\textcolor{green}{Propriété : } \\
 				soit $A \in M_{np}(\mathbb K)$, $r \in [[0,min(n,p)]]$: \\
-				$rg(A)=1 \Longleftrightarrow$ A équivalente à $J_{npr}$
+				$rg(A)=r \Longleftrightarrow$ A équivalente à $J_{npr}$ \\
+				\textcolor{red}{Démonstration :} $\mathcal B$ base canonique de $\mathbb K^p$ $\mathcal C$ base canonique base canonique de $\mathbb K^n$ \\
+				$\Rightarrow$ soit f canoniquement associé à A : \\
+				$rg(f)=r$ (par définition de rg(A)) et $Mat_{\mathcal{BC}}(f)=A$ \\
+				Or: il existe $\mathcal U$ base de E et $\mathcal V$ base de F tel que :$Mat_{\mathcal{UV}}(f)=J_{npr}$ \\
+				Formule de changement de base général : \\
+				$Mat_{\mathcal{BC}}(f)=\underbrace{Mat_{\mathcal{VC}}(Id_E)}_{P_{\mathcal{CV}} \in Gl_n(\mathbb K) } Mat_{\mathcal{UV}}(f) \underbrace{Mat_{\mathcal{BU}}(Id_E)}_{P \in GL_p(\mathbb K)}$ \\
+				$\Leftarrow : \exists (P,Q) \in GL_n(\mathbb K) \times GL_p(\mathbb K), A=PJ_{npr}Q$ \\
+				donc $rg(A)=rg(J_{npr})$ \\
+				Soit $g \in \mathcal L(\mathbb K^p, \mathbb K^n)$ canoniquement associé à $J_{npr}$ : \\
+				$Mat_{\mathcal{BC}}(g)=J_{npr}$ donc $rg(g)=r$ \\
+				Or par définition $rg(J_{npr})=rg(g)=r$ donc : $rg(A)=r$ \\
+				\textcolor{green}{Propriété :} \\
+				$\forall A \in M_{np}(\mathbb K), rg({}^tA)=rg(A)$ \\
+				\textcolor{red}{Démonstration :} \\
+				Soit n=rg(A) : \\
+				$\exists P \in GL_n(\mathbb K), \exists Q \in Gl_p(\mathbb K),A=PJ_{npr}Q$ \\
+				${}^t A = \underbrace{^t Q}_{\in Gl_p (\mathbb K)} {}^t J_{npr} \underbrace{^t P}_{\in Gl_n(\mathbb K)}$ \\
+				donc : ${}^t A$ équivalent à ${}^t J_{npr}= J_{pn \underline{r}}$ \\
+				donc $rg({}^t A)=r$
 \end{document}
