@@ -156,6 +156,15 @@
 				$dim(E)=p \in \mathbb N^*$ $f \in \mathcal L(E,F)$ \\
 				S'il existe une base $\mathcal U$ de E et une base $\mathcal V$ de F tel que $Mat_{\mathcal{UV}}(f)=J_{npr}=\left(\begin{array}{c|c}I _r& 0 \\ \hline0 & 0 \end{array}\right)$ alors $rg(f)=r$ \\
 				\textcolor{red}{Démonstration :} \\
-				Notons $\mathcal U= (\vec u_1,...,\vec u_p)$
+				Notons $\mathcal U= (\vec u_1,...,\vec u_p)$ et $\mathcal V=(\vec v_1,...,\vec v_n)$ \\
+				Si $r=0:Mat_{\mathcal{UV}}(f)=0_{np},f=\tilde{0},rg(f)=0=r$ \\
+				Sinon : on a : \\
+				$Im(f)=Vect(\underbrace{f(\vec u_1)}_{=\vec v_1},...,\underbrace{f(\vec u_r)}_{=\vec v_r},\underbrace{f(\vec u_{r+1})}_{=\vec 0_F},...,\underbrace{f(\vec u_p))}_{=\vec 0_F}$ \\
+				donc : $Im(f)=Vect(\vec v_1,..., \vec v_r)$ \\
+				Or $(\vec v_1,...,\vec v_r)$ est libre car sous-famille de $\mathcal V$, qui l'est. \\
+				On a donc :$(\vec v_1,...,\vec v_r)$ base de $Im(f)$ donc $dim(Im(f))=r$
         \section{Une matrice $n \times p$ est de rang $r$ si et seulemnt si, elle est équivalente à$J_{n,p,r}$. Application au rang de la transposée}
+				\textcolor{green}{Propriété : } \\
+				soit $A \in M_{np}(\mathbb K)$, $r \in [[0,min(n,p)]]$: \\
+				$rg(A)=1 \Longleftrightarrow$ A équivalente à $J_{npr}$
 \end{document}
