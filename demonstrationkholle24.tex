@@ -53,10 +53,10 @@
         $\mathcal C =( \vec v_1,..., \vec v_p) $ base de F \\
         $\mathcal D =( \vec w_1,..., \vec w_n) $ base de G \\
         Alors : \\
-        $\underbrace{Mat(g \circ f)_{\mathcal{BD}}}_{n \times r}=\underbrace{Mat(g)_{\mathcal{CD}}}_{n \times p} \underbrace{Mat(f)_{\mathcal{BC}}}_{p \times r}$
+        $\underbrace{Mat(g \circ f)_{\mathcal{BD}}}_{n \times r}=\underbrace{Mat(g)_{\mathcal{CD}}}_{n \times p} \underbrace{Mat(f)_{\mathcal{BC}}}_{p \times r}$ \\
         \textcolor{red}{Démonstration :} \\
-        Notons : $Mat(g)_{\mathcal{CD}}=(a_{ij})$ 
-        $Mat(f)_{\mathcal{BC}}=(b_{ij})$ 
+        Notons : $Mat(g)_{\mathcal{CD}}=(a_{ij})$
+        $Mat(f)_{\mathcal{BC}}=(b_{ij})$
         $Mat(g \circ f)_{\mathcal{BD}}=(c_{ij})$  \\
         Par définition : \\
         $\forall j \in [[1,r]], f(\vec u_j)=\sum_{k=1}^p b_{kj} \vec v_k$\\
@@ -64,10 +64,45 @@
         Alors pour $j \in [[ 1,r ]] $ : \\
         $g(f(\vec u_j))= \sum_{k=1}^p b_{kj} g(\vec v_k)$ car g linéaire \\
         $g(f(\vec u_j))=\sum_{k=1}^p(b_{kj}\sum_{i=1}^n a_{ik} \vec w_i)$ \\
-        $g(f(\vec u_j))=\sum_{i=1}^n\underbrace{(\sum_{k=1}^p a_{ik} b_{kj})}_{=c_{ij}} \vec w_i$ \\ 
-        \section{Définition des matrices de passage et démonstration des formules de changement de base (vecteurs, applications linéaires en génénral, endomorphisme)}
+        $g(f(\vec u_j))=\sum_{i=1}^n\underbrace{(\sum_{k=1}^p a_{ik} b_{kj})}_{=c_{ij}} \vec w_i$ \\
+        \section{Définition des matrices de passage et démonstration des formules de changement de base (vecteurs, applications linéaires en général, endomorphisme)}
+				\textcolor{red}{Définition :} \\
+				On  note la matrice de passage de $\mathcal B$ à $\mathcal C$ $P_{\mathcal{BC}}= Mat(\mathcal C)_{\mathcal B}= Mat(Id_E)_{\mathcal{CB}}$ \\
+				\textcolor{green}{Propriété :} Pour $\vec x \in E$ : \\
+				$Mat(\vec x)_{\mathcal B}=P_{\mathcal{BC}} Mat_{\mathcal C}(\vec x)$ \\
+				\textcolor{red}{Démonstration :}  \\
+				$P_{\mathcal{BC}}Mat_{\mathcal C}(\vec x)= Mat(Id_E)_{\mathcal{CB}} Mat(\vec x)_{\mathcal C}$ \\
+				\textcolor{green}{Propriété :} \\
+				$E: \mathbb K$ espace vectoriel de dimension $p \in \mathbb N^*$ \\
+				$F: \mathbb K$ espace vectoriel de dimension $n \in \mathbb N^*$ \\
+				$\mathcal B$ et $\mathcal C$, bases de  E \\
+				$\mathcal u$ et $\mathcal v$, bases de F alors : \\
+				$Mat(f)_{\mathcal{CV}}= \underbrace{P_{\mathcal{vu}}}_{n \times n} \underbrace{Mat(f)_{\mathcal{Bu}}}_{n \times p}  \underbrace{P_{\mathcal{BC}}}_{p \times p}$ \\
+				\textcolor{red}{Démonstration :} \\
+				$P_{\mathcal{vu}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}}=Mat(Id_F)_{\mathcal{uv}} Mat(f)_{\mathcal{Bu}} Mat(Id_E)_{\mathcal{CB}}$ \\
+				$P_{\mathcal{vu}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}} = Mat(Id_f \circ f \circ Id_E)_{\mathcal{Cv}}$ \\
+				$P_{\mathcal{vu}} Mat(f)_{\mathcal{Bu}}  P_{\mathcal{BC}} = Mat(f)_{\mathcal{Cv}}$ \\
+				\textcolor{green}{Corrolaire} cas d'un endomorphisme \\
+				$dim(E)=n \in \mathbb N^*$ $(p=n)$ \\
+				$\mathcal {B,C}$ bases de E $f \in \mathcal L (E)$  alors : \\
+				$Mat(f)_{\mathcal C}=P_{\mathcal{CB}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}}$ \\
+				$Mat(f)_{\mathcal C}=P^{-1}_{\mathcal{BC}} Mat(f)_{\mathcal{Bu}} P_{\mathcal{BC}}$
+
         \section{Relation de similitude : c'est une relation d'équivalence sur $M_n( \mathbb K)$, invariance de la trace, trace d'un projecteur.}
+				\textcolor{green}{Propriété :} \\
+				la similitude est une relation d'équivalence. \\
+				\textcolor{red}{Démonstration :} \\
+				{\bf reflexivité :} Soit $A \in M_n(\mathbb K)$ avec $P=I_n \in Gl_n(\mathbb K)$ : \\
+				$A=P^{-1}A P$ \\
+				{\bf symétrie :} s'il existe $P \in Gl_n(\mathbb K)$ tel que $B=P^{-1}A P$ : \\
+				 $A=Q^{-1}B Q$ avec $Q=P^{-1} \in Gl_n(\mathbb K)$ \\
+				 {\bf transitivité :} \\
+				 si $B=P^{-1}AP$ et $C=Q^{-1}BQ$ avec $(B,Q) \in GL_n(\mathbb K)$ \\
+				 alors $C=R^{-1}AR$ où $R=PQ \in Gl_n(\mathbb K)$ \\
+				 \textcolor{green}{Propriété :} \\
+				  si A et B sont semblables : $tr(A)=tr(B)$ \\
+				 \textcolor{red}{Démonstration :}
         \section{si $f \in \mathcal L(E,F)$ est de rang r, il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$}
-        \section{Si $f \in mathcal L(E,F)$ et s'il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$, $rg(f)=r$}
+        \section{Si $f \in \mathcal L(E,F)$ et s'il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$, $rg(f)=r$}
         \section{Une matrice $n \times p$ est de rang $r$ si et seulemnt si, elle est équivalente à$J_{n,p,r}$. Application au rang de la transposée}
 \end{document}
