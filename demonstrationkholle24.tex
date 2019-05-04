@@ -101,7 +101,32 @@
 				 alors $C=R^{-1}AR$ où $R=PQ \in Gl_n(\mathbb K)$ \\
 				 \textcolor{green}{Propriété :} \\
 				  si A et B sont semblables : $tr(A)=tr(B)$ \\
-				 \textcolor{red}{Démonstration :}
+				 \textcolor{red}{Démonstration :} \\
+				 Soit $P \in Gl_n(\mathbb K)$ tel que : \\
+				 $B=P^{-1}A P$ \\
+				 $tr(B)=tr(P^{-1}A P)$ \\
+				 $tr(B)=tr(A P^{-1}P)$ \\
+				 $tr(B)=tr(A)$ \\
+				 \textcolor{green}{Propriété :} \\
+				 $dim(E)=n \in \mathbb N^*$ \\
+				 $p \in \mathcal L (E)$ projecteur  et $r=rg(p)$ \\
+				 Alors : il existe une base de E tel que : \\
+				 $Mat(p)_{\mathcal B}= \begin{pmatrix} 1 &  &  & & &(0) \\ & \ddots \\
+				 & & 1 \\ & & &0 \\
+				 & & & &\ \ddots \\ (0)& & & & &0 \end{pmatrix}=\left(\begin{array}{c|c}I _r& 0 \\ \hline0 & 0 \end{array}\right)
+		$
+				 En particulier $tr(p)=r$ \\
+				 \textcolor{red}{Démonstration :} \\
+				 si $r=0$ : $p= \tilde{0}$, si $r=n : p=Id_E$ \\
+				 si $1 \leq r \leq n-1$ on a : \\
+				 $E= Inv(f) \oplus Ker(f)$ \\
+				 et $dim(Ker(f))=n-r$ (théorème du rang) $dim(Inv(f))=r$ \\
+				 Soit $(\vec u_1,..., \vec u_r)$ base de $Inv(f)$ \\
+				 $(\vec u_{r+1},..., \vec u_{n})$ base de $Ker(f)$ \\
+				 Posons $\mathcal C =(\vec u_1,..., \vec u_n)$ c'est une base de E car concaténation de bases de sous-espace vectoriel supplémentaires : \\
+				 $Mat_{\mathcal C}(p)=\left(\begin{array}{c|c}\begin{matrix}
+				 1 &  & (0) \\  & \ddots & \\ (0) & & 1
+				 \end{matrix} & 0 \\ \hline0 & 0 \end{array}\right)$
         \section{si $f \in \mathcal L(E,F)$ est de rang r, il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$}
         \section{Si $f \in \mathcal L(E,F)$ et s'il existe $\mathcal U$ base de $E$ et $\mathcal V$ base de $F$ telles que $Mat_{\mathcal{UV}}(f)=J_{n,p,r}$, $rg(f)=r$}
         \section{Une matrice $n \times p$ est de rang $r$ si et seulemnt si, elle est équivalente à$J_{n,p,r}$. Application au rang de la transposée}
