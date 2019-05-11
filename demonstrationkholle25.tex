@@ -62,6 +62,28 @@
 	$det_{\mathcal B}(\mathcal B)= \epsilon(id) \prod_{j=1}^n \delta_{j,j}$ \\
 	$det_{\mathcal B}(\mathcal B)= 1$
 	\section{Formule de changement de base des déterminants, caractérisation des bases.}
+	\textcolor{green}{Propriété :} \\
+	Fixons $\mathcal B$ base de E. Soit $\phi \in A_n(E)$, alors : \\
+	$\forall \mathcal F \in E, \phi(\mathcal F)= \phi(\mathcal B)det_{\mathcal B}(\mathcal F)$ \\
+	\textcolor{green}{Propriété :} \\
+	formule de changement de base. Soient $\mathcal B$ et $\mathcal C$ bases de E. Alors : \\
+	$\forall \mathcal F, det_{\mathcal C}(\mathcal F)= det_{\mathcal C}(\mathcal B) det_{\mathcal B}(\mathcal F)$ \\
+	\textcolor{red}{Démonstration :} \\
+	cas particulier de la propriété précédente avec $\phi= det_{\mathcal C} \in A_n$ \\
+	\textcolor{green}{Corrolaire :} \\
+	$\mathcal B$ et $\mathcal{C}$ bases de E. Alors : \\
+	$det_{\mathcal B}(\mathcal C) \neq 0$ et $det_{\mathcal C}(\mathcal B)= \frac{1}{det_{\mathcal B}(\mathcal C)}$ \\
+	\textcolor{red}{Démonstration :} \\
+	En prenant $\mathcal F= \mathcal C$ : $\underbrace{det_{\mathcal C}(\mathcal C)}_{=1}=det_{\mathcal C}(\mathcal B)det_{\mathcal B}(\mathcal C)$ \\
+	\textcolor{green}{Corrolaire :} \\
+	Soit $\mathcal B$ base de E, $\mathcal F \in  E^n$ quelconque . Alors : \\
+	$\mathcal F$ base de E $\Longleftrightarrow det_{\mathcal B}(\mathcal F) \neq 0$ \\
+	\textcolor{red}{Démonstration :} \\
+	$\Rightarrow$ : propriété précédente \\
+	$\Leftarrow :$ par contraposition. \\
+	Supposons que $\mathcal F$ ne soit pas une base de E. Comme elle a $n=dim(E)$ vecteurs, si elle était libre alors ce serait une base, elle est donc liée. \\
+	Commme $det_{\mathcal B} \in A_n(E)$ : \\
+	$det_{\mathcal B}(\mathcal F)=0$
 	\section{$det_{\mathcal B}(f(\mathcal B))$ ne dépend pas du choix de $\mathcal B$ + $det_{\mathcal B}(f(x_1),...,f(x_n))=det(f)det_{\mathcal B}(x_1,...,x_n) $.}
 	\section{Propriété variées de $det(f)$ déduites de la question précédente.}
 	\section{$det({}^tA)=det(A)$}
