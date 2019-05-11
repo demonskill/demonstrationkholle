@@ -41,14 +41,14 @@
 	Or $\epsilon(\sigma)=-1$ \\
 	Pour $\sigma $ quelconque : \\
 	$\sigma= \sigma_1 .... \sigma_m$ avec $\sigma_k$ transposition. \\
-	$\phi(\vec x_{\sigma(1)},..., \vec x_{\sigma(n)})=\underbrace{\epsilon(\sigma_1)... \epsilon(\sigma_m)}_{\epsilon(\sigma)} \phi(\vec x_1,..., \vec x_m)$ \\
+	$\phi(\vec x_{\sigma(1)},..., \vec x_{\sigma(n)})=\underbrace{\epsilon(\sigma_1)... \epsilon(\sigma_m)}_{\epsilon(\sigma)} \phi(\vec x_1,..., \vec x_n)$ \\
 	$\phi(\vec x_{\sigma(1)},...,\vec x_{\sigma(n)})=\epsilon(\sigma) \phi(\vec x_1,...,\vec x_n)$
 	\section{$det_{\mathcal B}$ est alternée et vaut 1 sur $\mathcal B$.}
 	\textcolor{green}{Propriété :} \\
 	Soit $\mathcal B$ une base de E . \\
-	Alors : $det_{\mathcal{B}}$ est une forme n-alternée sur E et $det_{\mathcal B}(\mathcal B)=1$ \\
+	Alors : $det_{\mathcal{B}}$ est une forme alternée sur E et $det_{\mathcal B}(\mathcal B)=1$ \\
 	\textcolor{red}{Démonstration :}
-	{\bf n-alternée :} si $\vec x_i= \vec x_k$ avec $i\neq k$ :
+	{\bf alternée :} si $\vec x_i= \vec x_k$ avec $i\neq k$ :
 	$\forall j \in [[1,n]],a_{ij}=a_{kj}$, $\tau=( i \quad k)$ \\
 	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j),j}$ \\
 	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n   a_{\sigma(j),\tau(j)}$ car $\vec x_i= \vec x_k$ \\
@@ -85,6 +85,7 @@
 	Commme $det_{\mathcal B} \in A_n(E)$ : \\
 	$det_{\mathcal B}(\mathcal F)=0$
 	\section{$det_{\mathcal B}(f(\mathcal B))$ ne dépend pas du choix de $\mathcal B$ + $det_{\mathcal B}(f(x_1),...,f(x_n))=det(f)det_{\mathcal B}(x_1,...,x_n) $.}
+	\textcolor{green}{Propriété :}\\
 	Soit $f \in \mathcal L(E)$ \\
 \textcolor{green}{1)} Pour toutes bases $\mathcal B$ et $\mathcal C$ de E \\
 $det_{\mathcal B}(f(\mathcal B))=det_{\mathcal C}(f(\mathcal C))$ \\
@@ -99,7 +100,7 @@ $\phi : E^n \rightarrow \mathbb K$ \\
 Soit $\vec y$ et $\vec z \in E$, $\lambda \in K$. \\
 $\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=det_{\mathcal B}(f(\vec x_1),...,f(\vec y)+ \lambda f(\vec z),..,f(\vec x_n))$ car $f \in \mathcal L(E)$ \\
 $\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=det_{\mathcal B}(f(\vec x_1),...,f(\vec y),..,f(\vec x_n))+\lambda det_{\mathcal B}(f(\vec x_1),..., f(\vec z),..,f(\vec x_n))$ car $det_{\mathcal B} \in A_n (E)$ \\
-$\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=\phi(\vec x_1,...,\vec y,...,f(\vec x_n))+\lambda \phi(\vec x_1,..., \vec z,...,f(\vec x_n))$ \\
+$\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=\phi(\vec x_1,...,\vec y,...,\vec x_n)+\lambda \phi(\vec x_1,..., \vec z,...,\vec x_n)$ \\
 {\bf alternance :} s'il existe $i \neq k$ tel que $\vec x_i= \vec x_k$ : \\
 $f(\vec x_i)=f(\vec x_k)$ donc comme $det_{\mathcal B}$ est alternée : \\
 $det_{\mathcal B}(f(\vec x_1),...,f(\vec x_n))=0$ \\
@@ -152,23 +153,23 @@ par définition de $\phi$ : $det_{\mathcal B}(f(\mathcal F))=det(f)det_{\mathcal
 	$A=(a_{ij}) \in M_n(\mathbb K)$  ${}^tA=(a'_{ij}) \in M_n(\mathbb K)$ avec $a'_{ij}=a_{ji}$ \\
 	$det({}^tA)= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a'_{\sigma(j),j}$ \\
 	$det({}^tA)= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a_{j,\sigma(j)}$  \\
-	en posant $\sigma= \gamma^{-1}$ $det({}^tA)= \sum_{\gammma \in S_n} \underbrace{\epsilon(\gamma^{-1})}_{=\epsilon(\gamma)} \prod_{j=1}^n a_{j,\gamma^{-1}(j)}$ \\
+	en posant $\sigma= \gamma^{-1}$ $det({}^tA)= \sum_{\gamma \in S_n}$ $ \underbrace{\epsilon(\gamma^{-1})}_{=\epsilon(\gamma)} \prod_{j=1}^n a_{j,\gamma^{-1}(j)}$ \\
 	Dans le produit pour $\gamma$ donnée, posons $j= \gamma(i)$ : \\
 	$det({}^tA)= \sum_{\gamma \in S_n} \epsilon(\gamma) \prod_{i=1}^n a_{\gamma(i),i}$ \\
 	$det({}^tA)=det(A)$
 	\section{Déterminant triangulaire}
-	\textcolor{green}{Propriété :} soit $A=(a_{ij}) \in M_n{\mathbb K}$
+	\textcolor{green}{Propriété :} soit $A=(a_{ij}) \in M_n(\mathbb K)$
 	Si A est triangulaire (éventuellement diagonale) : \\
 	$det(A)= \prod_{j=1}^n a_{jj}$ \\
 	\textcolor{red}{Démonstration :} \\
 	Si $A \in \mathcal T^s_n(\mathcal K)$ : \\
-	pour $i>j, a_ij=0$ \\
+	pour $i>j, a_{ij}=0$ \\
 	$det(A)=\sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j),j}$ \\
 	Soit $\sigma \in S_n$ dès qu'il existe un $j \in [[1,n]]$ tel que $\sigma(j)>j$, le produit est nul. Les seules $\sigma$ considéré sont ceux tel que $\sigma(j)\leq j$ pour $j \in [[1,n]]$ : \\
 	$\sigma(1) \leq 1$ donc $\sigma(1)=1$ \\
 	$\sigma(2) \leq 2$ et $\sigma(1)\neq \sigma(2)$ (car $\sigma$ injective) donc $\sigma(2)=2$ etc. \\
 	donc $\sigma=id$ \\
-	$det(A) = \epsilon(id) \prod_{j=1}^n a_jj $ \\
+	$det(A) = \epsilon(id) \prod_{j=1}^n a_{jj} $ \\
 	Si $A \in \mathcal T^i_n$ : \\
 	$det(A)=det({}^t A)$ cas précédent.
 	\end{document}
