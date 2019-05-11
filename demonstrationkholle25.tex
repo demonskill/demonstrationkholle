@@ -1,0 +1,52 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz,tkz-tab}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage{listings}
+\begin{document}
+\title{Démonstration kholle 25}
+\date{}
+\maketitle
+\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{Toute forme n-linéaire alternée est antisymétrique.}
+	\textcolor{green}{Propriété :} \\
+	Soit $\phi \in A_n(E)$ \\
+	$\forall (\vec x_1,...,\vec x_n) \in E^n, \forall \sigma \in S_n, \phi(\vec x_{\sigma(1)},...,\vec x_{\sigma(n)})=\epsilon(\sigma) \phi(\vec x_1,...,\vec x_n)$ \\
+	On dit que $\phi$ est antisymétrique \\
+	\textcolor{red}{Démonstration :} \\
+	cas où $\sigma =(i \quad  j), i<j$ Comme $\phi$ est alternée : \\
+	$\phi(\vec x_1,..., \vec x_i + \vec x_j,..., \vec x_i + \vec x_j,...,\vec x_n)=0$ \\
+	$0=\phi(\vec x_1,..., \vec x_i,..., \vec x_i + \vec x_j,...,\vec x_n)+\phi(\vec x_1,...,  \vec x_j,..., \vec x_i + \vec x_j,...,\vec x_n) $ \\
+	$0=\underbrace{\phi(\vec x_1,..., \vec x_i,..., \vec x_i ,...,\vec x_n)}_{=0}+\phi(\vec x_1,...,  \vec x_j,..., \vec x_i ,...,\vec x_n)+\phi(\vec x_1,..., \vec x_i,...,  \vec x_j,...,\vec x_n)+\underbrace{\phi(\vec x_1,...,  \vec x_j,..., \vec x_j,...,\vec x_n)}_{=0}$ \\
+	$\phi(\vec x_1,..., \vec x_j,...,  \vec x_i,...,\vec x_n)=-\phi(\vec x_1,...,  \vec x_i,..., \vec x_j ,...,\vec x_n)$ \\
+	Or $\epsilon(\sigma)=-1$ \\
+	Pour $\sigma $ quelconque : \\
+	$\sigma= \sigma_1 .... \sigma_m$ avec $\sigma_k$ transposition. \\
+	$\phi(\vec x_{\sigma(1)},..., \vec x_{\sigma(n)})=\underbrace{\epsilon(\sigma_1)... \epsilon(\sigma_m)}_{\epsilon(\sigma)} \phi(\vec x_1,..., \vec x_m)$ \\
+	$\phi(\vec x_{\sigma(1)},...,\vec x_{\sigma(n)})=\epsilon(\sigma) \phi(\vec x_1,...,\vec x_n)$ 
+	\section{$det_{\mathcal B}$ est alternée et vaut 1 sur $\mathcal B$.}
+	\section{Formule de changement de base des déterminants, caractérisation des bases.}
+	\section{$det_{\mathcal B}(f(\mathcal B))$ ne dépend pas du choix de $\mathcal B$ + $det_{\mathcal B}(f(x_1),...,f(x_n))=det(f)det_{\mathcal B}(x_1,...,x_n) $.}
+	\section{Propriété variées de $det(f)$ déduites de la question précédente.}
+	\section{$det({}^tA)=det(A)$}
+	\section{Déterminant triangulaire}
+	\end{document}
