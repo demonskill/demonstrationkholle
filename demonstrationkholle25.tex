@@ -85,7 +85,37 @@
 	Commme $det_{\mathcal B} \in A_n(E)$ : \\
 	$det_{\mathcal B}(\mathcal F)=0$
 	\section{$det_{\mathcal B}(f(\mathcal B))$ ne dépend pas du choix de $\mathcal B$ + $det_{\mathcal B}(f(x_1),...,f(x_n))=det(f)det_{\mathcal B}(x_1,...,x_n) $.}
+	Soit $f \in \mathcal L(E)$ \\
+\textcolor{green}{1)} Pour toutes bases $\mathcal B$ et $\mathcal C$ de E \\
+$det_{\mathcal B}(f(\mathcal B))=det_{\mathcal C}(f(\mathcal C))$ \\
+On note cette valeur $det(f) \in \mathbb K$ c'est le déterminant de f \\
+\textcolor{green}{2)} $\forall \mathcal F \in E^n,det_{\mathcal B}(f(\mathcal F))=det(f)det_{\mathcal B}(\mathcal F)$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} Soit $\phi : E^n \rightarrow \mathbb K$ \\
+\indent $(\vec x_1,...,\vec x_n) \mapsto det_{\mathcal B}(f(\vec x_1),...,f(\vec x_n))$ \\
+Montrons que $\phi \in A_n(E)$ : \\
+$\phi : E^n \rightarrow \mathbb K$ \\
+{\bf n-linéarité }Soit $i \in [[1,n]]$, fixons $\vec x_k \in E$ pour $k\neq i$ . \\
+Soit $\vec y$ et $\vec z \in E$, $\lambda \in K$. \\
+$\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=det_{\mathcal B}(f(\vec x_1),...,f(\vec y)+ \lambda f(\vec z),..,f(\vec x_n))$ car $f \in \mathcal L(E)$ \\
+$\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=det_{\mathcal B}(f(\vec x_1),...,f(\vec y),..,f(\vec x_n))+\lambda det_{\mathcal B}(f(\vec x_1),..., f(\vec z),..,f(\vec x_n))$ car $det_{\mathcal B} \in A_n (E)$ \\
+$\phi(\vec x_1,...,\vec y + \lambda \vec z,...,f(\vec x_n))=\phi(\vec x_1,...,\vec y,...,f(\vec x_n))+\lambda \phi(\vec x_1,..., \vec z,...,f(\vec x_n))$ \\
+{\bf alternance :} s'il existe $i \neq k$ tel que $\vec x_i= \vec x_k$ : \\
+$f(\vec x_i)=f(\vec x_k)$ donc comme $det_{\mathcal B}$ est alternée : \\
+$det_{\mathcal B}(f(\vec x_1),...,f(\vec x_n))=0$ \\
+c'est-à-dire $\phi(\vec x_1,..., \vec x_n)=0$ \\
+{\bf Conclusion :} comme $\phi \in A_n(E)$ et $\mathcal C$ base de E on a : \\
+$\forall \mathcal F \in E^n, \phi(\mathcal F)= \phi(\mathcal C)det_{\mathcal C}(\mathcal F)$
+avec $\mathcal F=\mathcal B$ : \\
+$\phi(\mathcal B)=\phi(\mathcal C) det_{\mathcal C}(\mathcal B)$ \\
+donc, par définition de $\phi$, $det_{\mathcal B}(f(\mathcal B))= det_{\mathcal B}(f(\mathcal C))det_{\mathcal C}(\mathcal B)$ \\
+$det_{\mathcal B}(f(\mathcal B))=det_{\mathcal C}(f(\mathcal C))$(formule de changement de base) \\
+\textcolor{green}{2)} Si l'on écrit plutôt : \\
+$\forall \mathcal F \in E^n, \phi(\mathcal F)= \phi(\mathcal B)det_{\mathcal B}(\mathcal F)$ \\
+$\phi(\mathcal F)=det_{\mathcal B}(f(\mathcal B))$ c'est-à-dire $det(f)$ par \textcolor{green}{1} \\
+par définition de $\phi$ : $det_{\mathcal B}(f(\mathcal F))=det(f)det_{\mathcal B}(\mathcal F)$
 	\section{Propriété variées de $det(f)$ déduites de la question précédente.}
+	
 	\section{$det({}^tA)=det(A)$}
 	\section{Déterminant triangulaire}
 	\end{document}
