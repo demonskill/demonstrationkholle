@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.30)  11 MAY 2019 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.30)  11 MAY 2019 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1182,6 +1182,8 @@ LaTeX Warning: No \author given.
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 51.
 [1
 Non-PDF special ignored!
 <special> header=pstricks.pro
@@ -1210,31 +1212,36 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]
 (./demonstrationkholle25.aux) ) 
 Here is how much of TeX's memory you used:
- 38263 strings out of 492701
- 873590 string characters out of 6134503
- 1079407 words of memory out of 5000000
- 41537 multiletter control sequences out of 15000+600000
- 554128 words of font info for 72 fonts, out of 8000000 for 9000
+ 38284 strings out of 492701
+ 873806 string characters out of 6134503
+ 1082407 words of memory out of 5000000
+ 41548 multiletter control sequences out of 15000+600000
+ 559615 words of font info for 83 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  62i,10n,96p,742b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
-/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on demonstrationkholle25.pdf (1 page, 89118 bytes).
+ase/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on demonstrationkholle25.pdf (2 pages, 126290 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

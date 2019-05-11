@@ -42,8 +42,25 @@
 	Pour $\sigma $ quelconque : \\
 	$\sigma= \sigma_1 .... \sigma_m$ avec $\sigma_k$ transposition. \\
 	$\phi(\vec x_{\sigma(1)},..., \vec x_{\sigma(n)})=\underbrace{\epsilon(\sigma_1)... \epsilon(\sigma_m)}_{\epsilon(\sigma)} \phi(\vec x_1,..., \vec x_m)$ \\
-	$\phi(\vec x_{\sigma(1)},...,\vec x_{\sigma(n)})=\epsilon(\sigma) \phi(\vec x_1,...,\vec x_n)$ 
+	$\phi(\vec x_{\sigma(1)},...,\vec x_{\sigma(n)})=\epsilon(\sigma) \phi(\vec x_1,...,\vec x_n)$
 	\section{$det_{\mathcal B}$ est alternée et vaut 1 sur $\mathcal B$.}
+	\textcolor{green}{Propriété :} \\
+	Soit $\mathcal B$ une base de E . \\
+	Alors : $det_{\mathcal{B}}$ est une forme n-alternée sur E et $det_{\mathcal B}(\mathcal B)=1$ \\
+	\textcolor{red}{Démonstration :}
+	{\bf n-alternée :} si $\vec x_i= \vec x_k$ avec $i\neq k$ :
+	$\forall j \in [[1,n]],a_{ij}=a_{kj}$, $\tau=( i \quad k)$ \\
+	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j),j}$ \\
+	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n   a_{\sigma(j),\tau(j)}$ car $\vec x_i= \vec x_k$ \\
+	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = \sum_{\gamma \in S_n} \underbrace{\epsilon(\gamma \tau)}_{=\epsilon(\gamma)\epsilon(\tau)=-\epsilon(\gamma)} \prod_{j=1}^n a_{\gamma(\tau(j)),\tau(j)}$ \\
+	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = - \sum_{\gamma \in S_n} \epsilon(\gamma) \prod_{l=1}^n a_{\gamma(l),l}$ en posant $l=\tau(j)$ \\
+	$det_{\mathcal B}(\vec x_1,..., \vec x_n) = -det_{\mathcal B}(\vec x_1,...,\vec x_n) $ qui est donc nul \\
+	{\boldmath $det_{\mathcal B}(\mathcal B)=1$ :} \\
+	$a_{ij}=\delta_{ij}$ \\
+		$det_{\mathcal B}(\mathcal B)= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n \delta_{\sigma(j),j}$ \\
+	si $\sigma\neq id$ : il existe j tel que $\sigma(j)\neq j$ donc $\delta_{\sigma(j),j}=0$ produit nul \\
+	$det_{\mathcal B}(\mathcal B)= \epsilon(id) \prod_{j=1}^n \delta_{j,j}$ \\
+	$det_{\mathcal B}(\mathcal B)= 1$
 	\section{Formule de changement de base des déterminants, caractérisation des bases.}
 	\section{$det_{\mathcal B}(f(\mathcal B))$ ne dépend pas du choix de $\mathcal B$ + $det_{\mathcal B}(f(x_1),...,f(x_n))=det(f)det_{\mathcal B}(x_1,...,x_n) $.}
 	\section{Propriété variées de $det(f)$ déduites de la question précédente.}
