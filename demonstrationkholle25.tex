@@ -115,7 +115,47 @@ $\forall \mathcal F \in E^n, \phi(\mathcal F)= \phi(\mathcal B)det_{\mathcal B}(
 $\phi(\mathcal F)=det_{\mathcal B}(f(\mathcal B))$ c'est-à-dire $det(f)$ par \textcolor{green}{1} \\
 par définition de $\phi$ : $det_{\mathcal B}(f(\mathcal F))=det(f)det_{\mathcal B}(\mathcal F)$
 	\section{Propriété variées de $det(f)$ déduites de la question précédente.}
-	
+	\textcolor{green}{Propriété :} \\
+	$det(Id_E)=1$ \\
+	\textcolor{red}{Démonstration :} \\
+	Soit $\mathcal B$ base de E : \\
+	$det(Id_E)=det_{\mathcal B}(Id_E(\mathcal B))$ \\
+	$det(Id_E)=det_{\mathcal B}(\mathcal B)=1$ \\
+	\textcolor{green}{Propriété :} \\
+	$\forall f \in \mathcal L(E), \forall \lambda \in \mathbb K, det(\lambda f) =\lambda^ndet(f)$ \\
+	\textcolor{red}{Démonstration :} \\
+	$\mathcal B=(\vec e_1,.., \vec e_n)$ base de E \\
+	Par définition : $det(\lambda f)= det_{\mathcal B}(\lambda f(\vec e_1),...,\lambda f(\vec e_n))$ \\
+	$det(\lambda f)=\lambda det(f(\vec e_1), \lambda f(\vec e_2),..., \lambda f(\vec e_n))$ par linéarité par rapport à la première variable
+	etc. \\
+	$det(\lambda f) = \lambda^n \underbrace{det_{\mathcal B}(f(\vec e_1),...,f(\vec e_n))}_{det_{\mathcal B}(f(\mathcal B))=det(f)}$ \\
+	\textcolor{green}{Propriété :} \\
+	$\forall (f,g) \in (\mathcal L(E))^2,det(gf)=det(g)det(f)$ \\
+	\textcolor{red}{Démonstration :} \\
+	Soit $\mathcal B$ base de E: \\
+	$det(gf)=det_{\mathcal B}(gf(\mathcal B))$ \\
+	$det(gf)=det(g) \underbrace{det_{\mathcal B}(f(\mathcal B))}_{=det(f)}$ \\
+	\textcolor{green}{Propriété :} Soit $f\in \mathcal L(E)$ : \\
+	$f \in GL(E) \Leftrightarrow det(f) \neq 0$ \\
+	Dans ce cas $det(f^{-1})=\frac{1}{det(f)}$ \\
+	\textcolor{red}{Démonstration :} \\
+	$f \in GL(E) \Leftrightarrow f(\mathcal B)$ base de E \\\
+	$\Leftrightarrow \underbrace{det_{\mathcal B}(f(\mathcal B))}_{=det(f)} \neq 0$
+	si c'est le cas : \\
+	$f f^{-1}=Id_E$ \\
+	$det(ff^{-1})=det(Id_E)$ \\
+	$det(f)det(f^{-1})=1$
 	\section{$det({}^tA)=det(A)$}
+	\textcolor{green}{Propriété :} \\
+	$\forall A \in M_n(\mathbb K), det({}^tA)=det(A)$ \\
+	\textcolor{red}{Démonstration :} \\
+	$A=(a_{ij}) \in M_n(\mathbb K)$  ${}^tA=(a'_{ij}) \in M_n(\mathbb K)$ avec $a'_{ij}=a_{ji}$ \\
+	$det({}^tA)= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a'_{\sigma(j),j}$ \\
+	$det({}^tA)= \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a_{j,\sigma(j)}$  \\
+	en posant $\sigma= \gamma^{-1}$ $det({}^tA)= \sum_{\gammma \in S_n} \underbrace{\epsilon(\gamma^{-1})}_{=\epsilon(\gamma)} \prod_{j=1}^n a_{j,\gamma^{-1}(j)}$ \\
+	Dans le produit pour $\gamma$ donnée, posons $j= \gamma(i)$ : \\
+	$det({}^tA)= \sum_{\gamma \in S_n} \epsilon(\gamma) \prod_{i=1}^n a_{\gamma(i),i}$ \\
+	$det({}^tA)=det(A)$
 	\section{Déterminant triangulaire}
+	\textcolor{green}{Propriété :} soit $A=(a_{ij}) \in M_n{\mathbb K}$
 	\end{document}
