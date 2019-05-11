@@ -158,4 +158,17 @@ par définition de $\phi$ : $det_{\mathcal B}(f(\mathcal F))=det(f)det_{\mathcal
 	$det({}^tA)=det(A)$
 	\section{Déterminant triangulaire}
 	\textcolor{green}{Propriété :} soit $A=(a_{ij}) \in M_n{\mathbb K}$
+	Si A est triangulaire (éventuellement diagonale) : \\
+	$det(A)= \prod_{j=1}^n a_{jj}$ \\
+	\textcolor{red}{Démonstration :} \\
+	Si $A \in \mathcal T^s_n(\mathcal K)$ : \\
+	pour $i>j, a_ij=0$ \\
+	$det(A)=\sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j),j}$ \\
+	Soit $\sigma \in S_n$ dès qu'il existe un $j \in [[1,n]]$ tel que $\sigma(j)>j$, le produit est nul. Les seules $\sigma$ considéré sont ceux tel que $\sigma(j)\leq j$ pour $j \in [[1,n]]$ : \\
+	$\sigma(1) \leq 1$ donc $\sigma(1)=1$ \\
+	$\sigma(2) \leq 2$ et $\sigma(1)\neq \sigma(2)$ (car $\sigma$ injective) donc $\sigma(2)=2$ etc. \\
+	donc $\sigma=id$ \\
+	$det(A) = \epsilon(id) \prod_{j=1}^n a_jj $ \\
+	Si $A \in \mathcal T^i_n$ : \\
+	$det(A)=det({}^t A)$ cas précédent.
 	\end{document}
