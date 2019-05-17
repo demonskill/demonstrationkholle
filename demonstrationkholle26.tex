@@ -28,6 +28,34 @@
 \renewcommand{\thesection}{\Roman{section}}
 \setlength{\parindent}{1.5cm}
 \section{Dévellopement par rapport à une ligne ou une colonne.}
+\textcolor{green}{Propriété :} \\
+$A \in M_n(\mathbb K) $ \\
+$A_{ij}$, obtenue en supprimant la ligne i et la colonne j de A ($A_{ij} \in M_{n-1}(\mathbb K)$) \\
+$\Delta_{ij}=det(A_{ij})$ mineur principal i-j \\
+\textcolor{green}{1)} Pour $j \in [[1,n]]$ fixé : \\
+$det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$ développement par rapport à la j-ième colonne \\
+\textcolor{green}{2)} Pour $i \in [[1,n]]$ fixé : \\
+$det(A)= \sum_{j=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$ développement par rapport à la i-ème ligne \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $det(A)=\sum_{i=1}^n a_{ij}$
+$\begin{vmatrix} &0 & \\ & \vdots &\\
+  coeffA & 1 & coeffA \\
+  & \vdots & \\
+  & 0 &
+\end{vmatrix}$
+par linéarité sur la j-ième colonne \\
+par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\ \vdots \\ 1 \\ \vdots \\ 0\end{pmatrix}$ en position n \\
+  puis permutation circulaire des lignes i à n, on ammène la ligne i en position n \\
+  $det(A)= \sum_{i=1}^n a_{ij} \underbrace{(-1)^{n-j} (-1)^{n-i}}_{=(-1)^{2n}(-1)^{i+j}} \underbrace{\begin{vmatrix} & 0 \\
+    A_{ij} & \vdots \\
+    & 0 \\
+    ? & 1\end{vmatrix}}_{\Delta_{ij}}$ \\
+    $det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$
+    \textcolor{green}{2)} $det(A)= \sum_{j=1}^n a_{ij} \begin{vmatrix} coeff A \\
+      0 & \cdots & 1 & \cdots \\ coeff A \end{vmatrix}$
+    cycle sur les lignes puis les colonnes  : \\
+    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix}A_{ij} & &  & ? \\
+    0 & \cdots & 0 & 1\end{vmatrix} $
 \section{Relation $A {}^tCom(A)={}^tCom(A)A=det(A)I_n$.}
 \section{Déterminant triangulaire par blocs.}
 \section{Déterminant de Vandermonde}
