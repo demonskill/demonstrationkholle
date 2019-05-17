@@ -50,13 +50,27 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
     A_{ij} & \vdots \\
     & 0 \\
     ? & 1\end{vmatrix}}_{\Delta_{ij}}$ \\
-    $det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$
-    \textcolor{green}{2)} $det(A)= \sum_{j=1}^n a_{ij} \begin{vmatrix} coeff A \\
-      0 & \cdots & 1 & \cdots \\ coeff A \end{vmatrix}$
+    $det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$ \\
+    \textcolor{green}{2)} $det(A)= \sum_{j=1}^n a_{ij} \begin{vmatrix} coeff A \\ 0 & \cdots & 1 & \cdots \\ coeff A \end{vmatrix}$
     cycle sur les lignes puis les colonnes  : \\
-    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix}A_{ij} & &  & ? \\
-    0 & \cdots & 0 & 1\end{vmatrix} $
-\section{Relation $A {}^tCom(A)={}^tCom(A)A=det(A)I_n$.}
+    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix}A_{ij} & &  & ? \\ 0 & \cdots & 0 & 1\end{vmatrix}$
+      
+      \section{Relation $A {}^tCom(A)={}^tCom(A)A=det(A)I_n$.}
+      \textcolor{green}{Propriété :} \\
+      $\forall A \in M_n(\mathbb K),  A {}^t Com(A)= {}^t Com(A)= det(A)I_n$
+      \textcolor{red}{Démonstration : } \\
+      coeff i-j de $A{}^t Com(A)$ \\
+      $\sum_{k=1}^n a_{ik} (-1)^{j+k} \Delta_{jk}$(cofacteur j-k car transposée) \\
+      {\bf si \boldmath $i = j$ :} On reconnait le développement de det(A) par rapport à la ligne i : \\
+      $\sum_{k=1}^n (-1)^{i+k}a_{ik}\Delta_{il}=det(A)$ \\
+      {\bf si \boldmath $i \neq j$ :} Soit B ayant les mêmes coefficients  que A sauf la ligne j, que l'on remplace par la ligne i de A. \\
+      Alors $det(B) = 0$ car deux lignes sont égales dévellopement de B par rapport à la ligne j : \\
+      $0=\sum_{k=1}^n (-1)^{j+k} b_{jk} \Delta_{jk}$ \\
+      Comme B a les mêmes coefficient que A en hors de la ligne j : \\
+      $0=a_{ij}$ par définitions de B \\
+      idem avec les colonnes : \\
+      $\sum_{k=1}^n (-1)^{i+k} \Delta_{ki} a_{kj}$ \\
+      {\bf \boldmath si $i\neq j$ :} on remplace la colonne i de A par sa colonne j
 \section{Déterminant triangulaire par blocs.}
 \section{Déterminant de Vandermonde}
 \section{Inégalité de Cauchy-Schwarz et cas d'égalité.}
