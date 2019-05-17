@@ -55,9 +55,9 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
     cycle sur les lignes puis les colonnes  : \\
     $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix}A_{ij} & &  & ? \\ 0 & \cdots & 0 & 1\end{vmatrix}$
       
-      \section{Relation $A {}^tCom(A)={}^tCom(A)A=det(A)I_n$.}
+\section{Relation $A {}^tCom(A)={}^tCom(A)A=det(A)I_n$.}
       \textcolor{green}{Propriété :} \\
-      $\forall A \in M_n(\mathbb K),  A {}^t Com(A)= {}^t Com(A)= det(A)I_n$
+      $\forall A \in M_n(\mathbb K),  A {}^t Com(A)= {}^t Com(A)= det(A)I_n$ \\
       \textcolor{red}{Démonstration : } \\
       coeff i-j de $A{}^t Com(A)$ \\
       $\sum_{k=1}^n a_{ik} (-1)^{j+k} \Delta_{jk}$(cofacteur j-k car transposée) \\
@@ -72,6 +72,18 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
       $\sum_{k=1}^n (-1)^{i+k} \Delta_{ki} a_{kj}$ \\
       {\bf \boldmath si $i\neq j$ :} on remplace la colonne i de A par sa colonne j
 \section{Déterminant triangulaire par blocs.}
+\textcolor{green}{Propriété :} \\
+  Avec $A \in M_{r} (\mathbb K)$ et $B \in M_{n-r}(\mathbb K)$ : \\
+  $\begin{vmatrix} A & \ast \\ 0 & B \end{vmatrix}=det(A) det(B)$ \\
+  et $\begin{vmatrix} A & 0 \\ \ast & B \end{vmatrix}=det(A) det(B)$ \\
+  \textcolor{red}{Démonstration :} \\
+  $\begin{pmatrix} A & C \\ 0 & B \end{pmatrix}= \begin{pmatrix} I_r & 0 \\ 0 & B \end{pmatrix} \begin{pmatrix} I_r & C \\ 0 & I_{n-r} \end{pmatrix}\begin{pmatrix} A & 0 \\ 0 & I_{n-r} \end{pmatrix} $ \\
+  donc $\begin{vmatrix} A & C \\ 0 & B \end{vmatrix}= \begin{vmatrix} I_r & 0 \\ 0 & B \end{vmatrix} \begin{vmatrix} I_r & C \\ 0 & I_{n-r} \end{vmatrix}\begin{vmatrix} A & 0 \\ 0 & I_{n-r} \end{vmatrix} $
+  or $\begin{vmatrix} I_r & 0 \\ 0 & B \end{vmatrix}= \begin{vmatrix} I_{r-1} & 0 \\ 0  & B\end{vmatrix}$\\
+    par développement par rapport à la première colonne on repète jusqu'à $det(B)$ \\
+    de meme : $\begin{vmatrix} A & 0 \\ 0 & I_{n-r} \end{vmatrix}= (-1)^{n+n} \begin{vmatrix} A & 0 \\ 0 & I_{n-r-1} \end{vmatrix}$ \\
+      par développement par rapport à la dernière colonne on repète jusqu'à $det(A)$ \\
+      enfin: $\begin{vmatrix} I_r& C \\ 0 & I_{n-r} \end{vmatrix}=1$ car $\begin{pmatrix} I_r & C \\ 0 & I_{n-r} \end{pmatrix}= \begin{pmatrix} 1& & \ast \\  & \ddots \\ (0) & & 1 \end{pmatrix} \in \mathcal T^s_n(\mathbb K)$
 \section{Déterminant de Vandermonde}
 \section{Inégalité de Cauchy-Schwarz et cas d'égalité.}
 \section{Inégalité triangulaire et cas d'égalité}
