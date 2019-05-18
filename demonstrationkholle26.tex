@@ -27,7 +27,7 @@
 \maketitle
 \renewcommand{\thesection}{\Roman{section}}
 \setlength{\parindent}{1.5cm}
-\section{Dévellopement par rapport à une ligne ou une colonne.}
+\section{Développement par rapport à une ligne ou une colonne.}
 \textcolor{green}{Propriété :} \\
 $A \in M_n(\mathbb K) $ \\
 $A_{ij}$, obtenue en supprimant la ligne i et la colonne j de A ($A_{ij} \in M_{n-1}(\mathbb K)$) \\
@@ -46,7 +46,7 @@ $\begin{vmatrix} &0 & \\ & \vdots &\\
 par linéarité sur la j-ième colonne \\
 par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\ \vdots \\ 1 \\ \vdots \\ 0\end{pmatrix}$ en position n \\
   puis permutation circulaire des lignes i à n, on ammène la ligne i en position n \\
-  $det(A)= \sum_{i=1}^n a_{ij} \underbrace{(-1)^{n-j} (-1)^{n-i}}_{=(-1)^{2n}(-1)^{i+j}} \underbrace{\begin{vmatrix} \begin{array}{l|cr}
+  $det(A)= \sum_{i=1}^n a_{ij} \underbrace{(-1)^{n-j} (-1)^{n-i}}_{=(-1)^{2n}(-1)^{i+j}}$ $\underbrace{\begin{vmatrix} \begin{array}{l|cr}
     & 0 \\
     A_{ij} &  \vdots \\
         & 0\\
@@ -55,7 +55,7 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
     $det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$ \\
     \textcolor{green}{2)} $det(A)= \sum_{j=1}^n a_{ij} \begin{vmatrix} & & coeff A \\ 0 & \cdots & 1 & \cdots &0 \\  & & coeff A \end{vmatrix}$ \\
     cycle sur les lignes puis les colonnes  : \\
-    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix} \begin{array}{lcr|r}
+    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j}$ $ \begin{vmatrix} \begin{array}{lcr|r}
       & A_{ij} &  &  ?\\
       \hline 0 & \cdots & 0  & 1
         \end{array} \end{vmatrix}   $
@@ -68,10 +68,10 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
       {\bf si \boldmath $i = j$ :} On reconnait le développement de det(A) par rapport à la ligne i : \\
       $\sum_{k=1}^n (-1)^{i+k}a_{ik}\Delta_{ik}=det(A)$ \\
       {\bf si \boldmath $i \neq j$ :} Soit B ayant les mêmes coefficients  que A sauf la ligne j, que l'on remplace par la ligne i de A. \\
-      Alors $det(B) = 0$ car deux lignes sont égales dévellopement de B par rapport à la ligne j : \\
+      Alors $det(B) = 0$ car deux lignes sont égales développement de B par rapport à la ligne j : \\
       $0=\sum_{k=1}^n (-1)^{j+k} b_{jk} \Delta_{jk}$ \\
       Comme B a les mêmes coefficient que A hors de la ligne j : \\
-      $0=a_{ij}$ par définitions de B \\
+      $0=a_{ij}$ par définition de B \\
       idem avec les colonnes : \\
       $\sum_{k=1}^n (-1)^{i+k} \Delta_{ki} a_{kj}$ \\
       {\bf \boldmath si $i\neq j$ :} on remplace la colonne i de A par sa colonne j
@@ -79,9 +79,9 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
 \textcolor{green}{Propriété :} \\
   Avec $A \in M_{r} (\mathbb K)$ et $B \in M_{n-r}(\mathbb K)$ : \\
   $\begin{vmatrix} \begin{array}{l|r}
-A & \ast \\ \hline  0 & B \end{array} \end{vmatrix}=det(A) det(B)$ \\
+A & \ast \\ \hline  0 & B \end{array} \end{vmatrix}$ $=det(A) det(B)$ \\
   et $\begin{vmatrix} \begin{array}{l|r}
-A & 0 \\ \hline \ast & B \end{array} \end{vmatrix}=det(A) det(B)$ \\
+A & 0 \\ \hline \ast & B \end{array} \end{vmatrix}$ $=det(A) det(B)$ \\
   \textcolor{red}{Démonstration :} \\
   $\begin{pmatrix} A & C \\ 0 & B \end{pmatrix}= \begin{pmatrix} I_r & 0 \\ 0 & B \end{pmatrix} \begin{pmatrix} I_r & C \\ 0 & I_{n-r} \end{pmatrix}\begin{pmatrix} A & 0 \\ 0 & I_{n-r} \end{pmatrix} $ \\
   donc $\begin{vmatrix} A & C \\ 0 & B \end{vmatrix}= \begin{vmatrix} I_r & 0 \\ 0 & B \end{vmatrix} \begin{vmatrix} I_r & C \\ 0 & I_{n-r} \end{vmatrix}\begin{vmatrix} A & 0 \\ 0 & I_{n-r} \end{vmatrix} $ \\
@@ -104,7 +104,7 @@ $n=1 :$ $|1|=1=$ produit vide \\
 Soit $n \geq 2$ tel que la formule soit vrai au rang n-1. \\
 si deux des $a_k$ sont égaux : deux lignes égales donc $V_n(a_1,...,a_n)=0$ et le produit en un facteur nul. \\
 Sinon : \\
-Poosons pour $x \in \mathbb K$ : \\
+Posons pour $x \in \mathbb K$ : \\
 $f(x)=V_n(a_1,...,a_{n-1},x) = \begin{vmatrix}
 1 & a_1 &\cdots &a_1^{n-1} \\
 \vdots & \vdots & &\vdots \\
@@ -131,7 +131,7 @@ avec égalité si et seulement si $(\vec x, \vec y)$ est liée \\
 \textcolor{red}{Démonstration :} \\
 Posons pour $t \in \mathbb R$ : \\
 $P(t)= \| \vec x + t \vec y \|^2$ \\
-Alors : $P(t)= \| \vec x \|^2 +2 \langle \vec x, t \vec y \| + \| y\vec y \|^2$ \\
+Alors : $P(t)= \| \vec x \|^2 +2 \langle \vec x, t \vec y \rangle + \| \vec y \|^2$ \\
 $P(t)=\| \vec x \|^2 +2 t \langle \vec x ,\vec y \rangle + t^2 \| \vec y \|^2$ \\
 donc $P \in \mathbb R_2 [X]$ \\
 $1^{er}$ cas : $\vec y= \vec 0$, alors $\langle \vec x , \vec y \rangle=0= \| \vec y \|$ \\
@@ -139,8 +139,9 @@ l'inégalité est vraie et est même une égalité $0 \leq 0$ \\
 $2^{nd}$ cas : $\vec y \neq \vec 0$. Alors : $deg(P)=2$ \\
 or $\forall t \in \mathbb R, P(t) \geq 0,$ ainsi, P a au plus une racine réelle donc son discriminant est $\leq 0$ : \\
 $(2 \langle \vec x , \vec y \rangle)^2-4 \| \vec x \|^2 \| \vec y \|^2 \leq 0$ \\
-$4 \langle \vec x ,\vec y \rangle^2 \leq \| \vec x \|^2 \| \vec y \|^2$ \\
-Cas d'égalité : \\
+$4 \langle \vec x ,\vec y \rangle^2 \leq \| 4 \vec x \|^2 \| \vec y \|^2$ \\
+$ \langle \vec x ,\vec y \rangle^2 \leq \|  \vec x \|^2 \| \vec y \|^2$ \\
+{\bf Cas d'égalité : }\\
 $\Rightarrow :$ on suppose $\langle \vec x, \vec y \rangle^2= \| x \|^2 \| \vec y \|^2$ \\
 si $\vec y= \vec 0 : (\vec x, \vec y)$ liée \\
 sinon :  P possède une racine réelle $t_0$ car son discriminant est nul : \\
@@ -157,7 +158,7 @@ on a bien : $( \lambda \| \vec y \|^2)^2=(\lambda^2 \| \vec y \|^2) \| \vec y \|
 \section{Inégalité triangulaire et cas d'égalité}
 \textcolor{green}{Propriété :} \\
 \textcolor{green}{1)} $\forall (x,y) \in E^2, \| \vec x + \vec y \| \leq \| \vec x \| + \| \vec y \|$ \\
-\textcolor{green}{2)} C'est une inégalité si et seulement $(\vec x, \vec y)$ est positivement liée, \\
+\textcolor{green}{2)} C'est une égalité si et seulement $(\vec x, \vec y)$ est positivement liée, \\
 c'est-à-dire : $\vec y =\vec 0$ ou $\exists \lambda \in \mathbb R_+, \vec x= \lambda \vec y$ \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{1)} inégalité : \\
@@ -199,7 +200,6 @@ $\| \lambda \vec x \|= \underbrace{\sqrt{\lambda^2}}_{= | \lambda |} \| \vec x \
 \textcolor{green}{2)} $2 \langle \vec x , \vec y \rangle= \| \vec x + \vec y \|^2- \| \vec x \|^2- \| \vec y \|^2$ identité de polarisation. \\
 \textcolor{green}{3)} $\| \vec x+ \vec y \|^2 + \| \vec x - \vec y \|^2= 2 (\|\vec x \|^2 + \| \vec y \|^2)$ identité de parrallélogramme \\
 \textcolor{green}{4)} $\| \vec x \|^2 - \| y \|^2= \langle \vec x + \vec y, \vec x - \vec y \rangle$ \\
-$\langle \vec x + \vec y , \vec  x - \vec y \rangle = \langle \vec x, \vec x \rangle + \langle \vec y, - \vec y \rangle $ \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{1)} $\| \vec x + \vec y \|^2= \langle \vec x + \vec y, \vec x + \vec y \rangle$ \\
 $\| \vec x + \vec y \|^2= \langle \vec x, \vec x + \vec y \rangle+\langle \vec y, \vec x + \vec y \rangle$ linéarité par rapport à la première variable \\
@@ -209,6 +209,7 @@ Par symétrie : $\langle \vec x, \vec y \rangle =\langle \vec y, \vec x \rangle$
 \textcolor{green}{3)}$|\ \vec x - \vec y \|^2= \| \vec x \|^2 + \underbrace{2 \langle \vec x, - \vec y \rangle}_{=-2 \langle \vec x, \vec y \rangle} + \underbrace{\| - \vec y \|^2}_{=\| \vec y \|^2}$  \\
 Or $\| \vec x +\vec y \|^2= \| \vec x \|^2 + 2 \langle \vec x , \vec y \rangle + \| \vec y \|^2$ \\
 on les somme : $\| \vec x+ \vec y \|^2 + \| \vec x - \vec y \|^2= 2 (\|\vec x \|^2 + \| \vec y \|^2)$ \\
+\textcolor{green}{4)} $\langle \vec x + \vec y , \vec  x - \vec y \rangle = \langle \vec x, \vec x \rangle + \langle \vec y, - \vec y \rangle = \| \vec x \|^2 - \| y \|^2$ \\
 \textcolor{green}{Théorème de Pythagore :} \\
 Soit $(\vec x_1,...,\vec x_p) \in E^p$ une famille orthogonale alors : \\
 $\| \vec x_1 +...+ \vec x_p \|^2= \| \vec x_1 \|^2 + ... + \| \vec x_p\|^2$ \\
@@ -222,12 +223,12 @@ $\| \vec x_1 +...+ \vec x_p \|^2=\sum_{i=1}^p \langle \vec x_i, \vec x_i \rangle
 \textcolor{green}{1)} $\emptyset^{\perp}= \lbrace \vec 0 \rbrace^{\perp}=E$ \\
 \textcolor{green}{2)} $E^{\perp}= \lbrace \vec 0 \rbrace$ \\
 \textcolor{red}{Démonstration :} \\
-\textcolor{green}{1)} $\emptyset^{\perp}= \lbrace \vec y \in E : \underbrace{\forall \vec x \in \emptyset }_{Toujours\quad vrai}, \langle \vec x , \vec y \rangle = 0 \rbrace$ \\
+\textcolor{green}{1)} $\emptyset^{\perp}= \lbrace \vec y \in E : \underbrace{\forall \vec x \in \emptyset, \langle \vec x , \vec y \rangle = 0 }_{Toujours\quad vrai} \rbrace$ \\
 $\emptyset^{\perp}=E$ \\
 $\lbrace \vec 0 \rbrace^{\perp}= \lbrace \vec y \in E : \langle \vec 0, \vec y \rangle =0 \rbrace $ \\
 $\lbrace \vec 0 \rbrace^{\perp}= E$ \\
 \textcolor{green}{2)} Soit $\vec y \in E^{\perp} :$ \\
-$\forall x \in E, \langle \vec x, \vec y  \rbrace =0$ en particulier, pour $\vec x= \vec y$ : $\| \vec y \| = 0$ \\
+$\forall x \in E, \langle \vec x, \vec y  \rangle =0$ en particulier, pour $\vec x= \vec y$ : $\| \vec y \| = 0$ \\
 ainsi : $E \subset \lbrace \vec 0 \rbrace$ \\
 Par ailleurs : $\forall \vec x \in E, \langle \vec x ,\vec 0 \rangle =0$ donc $\vec 0 \in E^{\perp}$ \\
 \textcolor{green}{Propriété :} \\
@@ -256,6 +257,6 @@ $\forall \vec y \in X, \langle \vec y, \vec z \rangle=0$ donc $\vec z \in X^{\pe
  Soit $\vec z \in Vect(X)$ : \\
  il existe $(\vec x_1,...,\vec x_p) \in X^p$ et $(\lambda_1,...,\lambda_p) \in \mathbb K^p$ tel que : \\
  $\vec z= \sum_{k=1}^p \lambda_k \vec x_k$ \\
- $\langle \vec y, \vec z \rangle = \sum_{k=1}^p \lambda_k \langle \vec y, \underbrace{\vec x_k \rangle}_{=0 \quad car \quad \vec y \in X^{\perp}}$ \\
+ $\langle \vec y, \vec z \rangle = \sum_{k=1}^p \lambda_k \underbrace{ \langle \vec y, \vec x_k \rangle}_{=0 \quad car \quad \vec y \in X^{\perp}}$ \\
  ainsi : $\forall \vec z \in Vect(X), \langle \vec y, \vec z \rangle =0$ donc $\vec y \in (Vect(X))^{\perp}$
 \end{document}
