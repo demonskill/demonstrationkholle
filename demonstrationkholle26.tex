@@ -143,12 +143,38 @@ $\|\vec x + t_0 \vec y \|^2=0$ \\
 $\underbrace{1}_{\neq 0} \vec x + t_0 \vec y = \vec 0 $  \\
 donc $(\vec x, \vec y)$ liée \\
 $\Leftarrow :$ on suppose $(\vec x, \vec y)$ liée. \\
-- si $\vec y =\vec 0$: on a l'égalité (déjà vu) \\ 
+- si $\vec y =\vec 0$: on a l'égalité (déjà vu) \\
 -sinon : $\exists \lambda \in \mathbb R, \vec x= \lambda \vec y$ \\
 Alors : $\| \vec x \|^2= \lambda^2 \| \vec y \|^2$ \\
 et $\langle x,y \rangle = \lambda \langle y,y \rangle= \lambda \| \vec y \|^2$ \\
 on a bien : $( \lambda \| \vec y \|^2)^2=(\lambda^2 \| \vec y \|^2) \| \vec y \|^2$
 \section{Inégalité triangulaire et cas d'égalité}
+\textcolor{green}{Propriété :} \\
+\textcolor{green}{1)} $\forall (x,y) \in E^2, \| \vec x + \vec y \| \leq \| \vec x \| + \| \vec y \|$ \\
+\textcolor{green}{2)} C'est une inégalité si et seulement $(\vec x, \vec y)$ est positivement liée, \\
+c'est-à-dire : $\vec y =\vec 0$ ou $\exists \lambda \in \mathbb R_+, \vec x= \lambda \vec y$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} inégalité : \\
+$\| \vec x + \vec y \|^2= \|x \|^2+ 2 \langle \vec x, \vec y \rangle + \| \vec y \|^2 $ \\
+et $(\| \vec x \| + \| \vec y \|)^2= \| \vec x \|^2 + 2 \| \vec x \| \| \vec y \| + \| \vec y \|^2$ \\
+Or : $\langle \vec x, \vec y \rangle \leq | \langle \vec x , \vec y \rangle | \leq \| \vec x \| \| \vec y \|$ \\
+donc : $\| \vec x + \vec y \|^2\leq (\| \vec x \| + \| \vec y \|)^2$ \\
+Or $\| \vec x + \vec y \|$ et $\| \vec x \| + \| \vec y \|$ sont $>0$ \\
+donc $\| \vec x +\vec y \| \leq \| \vec x \| + \| \vec y \|$ \\
+\textcolor{green}{2)} $\Rightarrow$ si $\| \vec x + \vec y \|= \| \vec x \| + \| \vec y \|$ \\
+alors : $\langle \vec x, \vec y \rangle = | \langle \vec x, \vec y \rangle |= \| \vec x \| \| \vec y \|$
+donc $\exists \lambda \in \mathbb R ,\vec x = \lambda \vec y$ \\
+Si $\vec y \neq \vec 0$ : \\
+$\langle \lambda \vec y, \vec y \rangle = | \langle \lambda \vec y,\vec y \rangle |$ \\
+$\lambda \| \vec y \|^2= |\lambda| \| \vec y \|^2$ \\
+Or $\| \vec y \|^2 \neq 0$ donc $\lambda=|\lambda|\geq 0$ \\
+$\Leftarrow :$ si $\vec y= \vec 0$ : $\|\vec x + \vec 0 \|= \| \vec x \| + \| \vec 0 \|$ \\
+Si $\vec x = \lambda \vec y$ avec $\lambda \in \mathbb R_+$ : \\
+$\| \vec x + \vec y \| = \| \underbrace{(\lambda +1)}_{\geq 0} \vec y \|$ \\
+$\| \vec x + \vec y \| = (\lambda + 1) \| \vec y \|$ \\
+$\| \vec x + \vec y \| = \lambda \|\vec y \| + \| \vec y \|$ \\
+$\| \vec x + \vec y \| = \| \lambda \vec y \| + \| \vec y \|$ \\
+$\| \vec x + \vec y \| = \| \vec x \| + \| \vec y \|$
 \section{Propriétés variées de la norme + théorème de Pythagore}
 \section{Propriétés générales de l'orthogonal d'une partie}
 \end{document}
