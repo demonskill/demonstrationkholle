@@ -42,19 +42,23 @@ $\begin{vmatrix} &0 & \\ & \vdots &\\
   coeffA & 1 & coeffA \\
   & \vdots & \\
   & 0 &
-\end{vmatrix}$
+\end{vmatrix}$\\
 par linéarité sur la j-ième colonne \\
 par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\ \vdots \\ 1 \\ \vdots \\ 0\end{pmatrix}$ en position n \\
   puis permutation circulaire des lignes i à n, on ammène la ligne i en position n \\
-  $det(A)= \sum_{i=1}^n a_{ij} \underbrace{(-1)^{n-j} (-1)^{n-i}}_{=(-1)^{2n}(-1)^{i+j}} \underbrace{\begin{vmatrix} & 0 \\
-    A_{ij} & \vdots \\
+  $det(A)= \sum_{i=1}^n a_{ij} \underbrace{(-1)^{n-j} (-1)^{n-i}}_{=(-1)^{2n}(-1)^{i+j}} \underbrace{\begin{vmatrix} \begin{array}{l|cr}
     & 0 \\
-    ? & 1\end{vmatrix}}_{\Delta_{ij}}$ \\
+    A_{ij} &  \vdots \\
+        & 0\\
+    \hline ? & 1
+      \end{array} \end{vmatrix} }_{\Delta_{ij}}$ \\
     $det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \Delta_{ij}$ \\
-    \textcolor{green}{2)} $det(A)= \sum_{j=1}^n a_{ij} \begin{vmatrix} coeff A \\ 0 & \cdots & 1 & \cdots \\ coeff A \end{vmatrix}$
+    \textcolor{green}{2)} $det(A)= \sum_{j=1}^n a_{ij} \begin{vmatrix} & & coeff A \\ 0 & \cdots & 1 & \cdots &0 \\  & & coeff A \end{vmatrix}$ \\
     cycle sur les lignes puis les colonnes  : \\
-    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix}A_{ij} & &  & ? \\ 0 & \cdots & 0 & 1\end{vmatrix}$
-
+    $det(A)=\sum_{j=1}^n a_{ij} (-1)^{n-i}(-1)^{n-j} \begin{vmatrix} \begin{array}{lcr|r}
+      & A_{ij} &  &  ?\\
+      \hline 0 & \cdots & 0  & 1
+        \end{array} \end{vmatrix}   $
 \section{Relation $A {}^tCom(A)={}^tCom(A)A=det(A)I_n$.}
       \textcolor{green}{Propriété :} \\
       $\forall A \in M_n(\mathbb K),  A {}^t Com(A)= {}^t Com(A)= det(A)I_n$ \\
@@ -62,11 +66,11 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
       coeff i-j de $A{}^t Com(A)$ \\
       $\sum_{k=1}^n a_{ik} (-1)^{j+k} \Delta_{jk}$(cofacteur j-k car transposée) \\
       {\bf si \boldmath $i = j$ :} On reconnait le développement de det(A) par rapport à la ligne i : \\
-      $\sum_{k=1}^n (-1)^{i+k}a_{ik}\Delta_{il}=det(A)$ \\
+      $\sum_{k=1}^n (-1)^{i+k}a_{ik}\Delta_{ik}=det(A)$ \\
       {\bf si \boldmath $i \neq j$ :} Soit B ayant les mêmes coefficients  que A sauf la ligne j, que l'on remplace par la ligne i de A. \\
       Alors $det(B) = 0$ car deux lignes sont égales dévellopement de B par rapport à la ligne j : \\
       $0=\sum_{k=1}^n (-1)^{j+k} b_{jk} \Delta_{jk}$ \\
-      Comme B a les mêmes coefficient que A en hors de la ligne j : \\
+      Comme B a les mêmes coefficient que A hors de la ligne j : \\
       $0=a_{ij}$ par définitions de B \\
       idem avec les colonnes : \\
       $\sum_{k=1}^n (-1)^{i+k} \Delta_{ki} a_{kj}$ \\
@@ -74,11 +78,13 @@ par permutation circulaire des colonnes j à n, on ammène $\begin{pmatrix} 0 \\
 \section{Déterminant triangulaire par blocs.}
 \textcolor{green}{Propriété :} \\
   Avec $A \in M_{r} (\mathbb K)$ et $B \in M_{n-r}(\mathbb K)$ : \\
-  $\begin{vmatrix} A & \ast \\ 0 & B \end{vmatrix}=det(A) det(B)$ \\
-  et $\begin{vmatrix} A & 0 \\ \ast & B \end{vmatrix}=det(A) det(B)$ \\
+  $\begin{vmatrix} \begin{array}{l|r}
+A & \ast \\ \hline  0 & B \end{array} \end{vmatrix}=det(A) det(B)$ \\
+  et $\begin{vmatrix} \begin{array}{l|r}
+A & 0 \\ \hline \ast & B \end{array} \end{vmatrix}=det(A) det(B)$ \\
   \textcolor{red}{Démonstration :} \\
   $\begin{pmatrix} A & C \\ 0 & B \end{pmatrix}= \begin{pmatrix} I_r & 0 \\ 0 & B \end{pmatrix} \begin{pmatrix} I_r & C \\ 0 & I_{n-r} \end{pmatrix}\begin{pmatrix} A & 0 \\ 0 & I_{n-r} \end{pmatrix} $ \\
-  donc $\begin{vmatrix} A & C \\ 0 & B \end{vmatrix}= \begin{vmatrix} I_r & 0 \\ 0 & B \end{vmatrix} \begin{vmatrix} I_r & C \\ 0 & I_{n-r} \end{vmatrix}\begin{vmatrix} A & 0 \\ 0 & I_{n-r} \end{vmatrix} $
+  donc $\begin{vmatrix} A & C \\ 0 & B \end{vmatrix}= \begin{vmatrix} I_r & 0 \\ 0 & B \end{vmatrix} \begin{vmatrix} I_r & C \\ 0 & I_{n-r} \end{vmatrix}\begin{vmatrix} A & 0 \\ 0 & I_{n-r} \end{vmatrix} $ \\
   or $\begin{vmatrix} I_r & 0 \\ 0 & B \end{vmatrix}= \begin{vmatrix} I_{r-1} & 0 \\ 0  & B\end{vmatrix}$\\
     par développement par rapport à la première colonne on repète jusqu'à $det(B)$ \\
     de meme : $\begin{vmatrix} A & 0 \\ 0 & I_{n-r} \end{vmatrix}= (-1)^{n+n} \begin{vmatrix} A & 0 \\ 0 & I_{n-r-1} \end{vmatrix}$ \\
@@ -112,7 +118,7 @@ Or par alternance : $f(a_1)=...=f(a_{n-1})=0$ \\
 ce qui donne n-1 racines distincts de f \\
 Ainsi f est scindé simple : \\
 $\forall x \in \mathbb K, f(x)=V_{n-1}(a_1,...,a_{n-1})\prod_{i=1}^{n-1}(x-a_i)$ \\
-pour $x=a_n$ ;
+pour $x=a_n$ ; \\
 $V_{n-1}(a_1,...,a_n)= (\prod_{1 \leq i<j \leq n-1}(a_j-a_i))(\prod_{1 \leq i <j = n}(a_j-a_i))$ \\
 $V_{n-1}(a_1,...,a_n)= \prod_{1 \leq i <j \leq n} (a_j-a_i)$
 \section{Inégalité de Cauchy-Schwarz et cas d'égalité.}
@@ -162,7 +168,7 @@ donc : $\| \vec x + \vec y \|^2\leq (\| \vec x \| + \| \vec y \|)^2$ \\
 Or $\| \vec x + \vec y \|$ et $\| \vec x \| + \| \vec y \|$ sont $>0$ \\
 donc $\| \vec x +\vec y \| \leq \| \vec x \| + \| \vec y \|$ \\
 \textcolor{green}{2)} $\Rightarrow$ si $\| \vec x + \vec y \|= \| \vec x \| + \| \vec y \|$ \\
-alors : $\langle \vec x, \vec y \rangle = | \langle \vec x, \vec y \rangle |= \| \vec x \| \| \vec y \|$
+alors : $\langle \vec x, \vec y \rangle = | \langle \vec x, \vec y \rangle |= \| \vec x \| \| \vec y \|$ \\
 donc $\exists \lambda \in \mathbb R ,\vec x = \lambda \vec y$ \\
 Si $\vec y \neq \vec 0$ : \\
 $\langle \lambda \vec y, \vec y \rangle = | \langle \lambda \vec y,\vec y \rangle |$ \\
@@ -176,5 +182,80 @@ $\| \vec x + \vec y \| = \lambda \|\vec y \| + \| \vec y \|$ \\
 $\| \vec x + \vec y \| = \| \lambda \vec y \| + \| \vec y \|$ \\
 $\| \vec x + \vec y \| = \| \vec x \| + \| \vec y \|$
 \section{Propriétés variées de la norme + théorème de Pythagore}
+\textcolor{green}{Propriété :} \\
+\textcolor{green}{1)} $\forall \vec x \in E, \| \vec x \| \geq 0$ \\
+\textcolor{green}{2)} $\| \vec x \| =0 \Leftrightarrow \vec x = \vec 0$ \\
+\textcolor{green}{3)} $\forall \vec x \in E, \forall \lambda \in \mathbb R, \| \lambda \vec x \| = |\lambda| \| \vec x \|$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $\sqrt{\cdot }$ est à valeur dans $\mathbb R_+$ \\
+\textcolor{green}{2)} $\|\vec x \| =0 \Leftrightarrow \| \vec x \|=0$ \\
+$\Leftrightarrow \langle \vec x, \vec x \rangle=0$ \\
+$\Leftrightarrow \vec x =  \vec 0$ \\
+\textcolor{green}{3)} $\| \lambda \vec x \| = \sqrt{\langle \lambda \vec x, \lambda \vec x \rangle}$ \\
+$\| \lambda \vec x \|= \sqrt{\lambda^2\langle \vec x, \vec x \rangle}$ \\
+$\| \lambda \vec x \|= \underbrace{\sqrt{\lambda^2}}_{= | \lambda |} \| \vec x \|$ \\
+\textcolor{green}{Propriété :} Soit $(E, \langle \cdot,\cdot \rangle)$ préhilbertien réel, $\vec x$ et $\vec y \in E$ \\
+\textcolor{green}{1)} $\| \vec x +\vec y \|^2= \| \vec x \|^2 + 2 \langle \vec x , \vec y \rangle + \| \vec y \|^2$ \\
+\textcolor{green}{2)} $2 \langle \vec x , \vec y \rangle= \| \vec x + \vec y \|^2- \| \vec x \|^2- \| \vec y \|^2$ identité de polarisation. \\
+\textcolor{green}{3)} $\| \vec x+ \vec y \|^2 + \| \vec x - \vec y \|^2= 2 (\|\vec x \|^2 + \| \vec y \|^2)$ identité de parrallélogramme \\
+\textcolor{green}{4)} $\| \vec x \|^2 - \| y \|^2= \langle \vec x + \vec y, \vec x - \vec y \rangle$ \\
+$\langle \vec x + \vec y , \vec  x - \vec y \rangle = \langle \vec x, \vec x \rangle + \langle \vec y, - \vec y \rangle $ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $\| \vec x + \vec y \|^2= \langle \vec x + \vec y, \vec x + \vec y \rangle$ \\
+$\| \vec x + \vec y \|^2= \langle \vec x, \vec x + \vec y \rangle+\langle \vec y, \vec x + \vec y \rangle$ linéarité par rapport à la première variable \\
+$\| \vec x + \vec y \|^2= \langle \vec x, \vec x \rangle+ \langle \vec x, \vec y \rangle +\langle \vec y, \vec x \rangle + \langle \vec y, \vec y \rangle$ \\
+Par symétrie : $\langle \vec x, \vec y \rangle =\langle \vec y, \vec x \rangle$ : $| \vec x + \vec y \|^2= \| \vec x \|^2 +2 \langle \vec x, \vec y \rangle + \| \vec y \|^2 $ \\
+\textcolor{green}{2)} Trivial \\
+\textcolor{green}{3)}$|\ \vec x - \vec y \|^2= \| \vec x \|^2 + \underbrace{2 \langle \vec x, - \vec y \rangle}_{=-2 \langle \vec x, \vec y \rangle} + \underbrace{\| - \vec y \|^2}_{=\| \vec y \|^2}$  \\
+Or $\| \vec x +\vec y \|^2= \| \vec x \|^2 + 2 \langle \vec x , \vec y \rangle + \| \vec y \|^2$ \\
+on les somme : $\| \vec x+ \vec y \|^2 + \| \vec x - \vec y \|^2= 2 (\|\vec x \|^2 + \| \vec y \|^2)$ \\
+\textcolor{green}{Théorème de Pythagore :} \\
+Soit $(\vec x_1,...,\vec x_p) \in E^p$ une famille orthogonale alors : \\
+$\| \vec x_1 +...+ \vec x_p \|^2= \| \vec x_1 \|^2 + ... + \| \vec x_p\|^2$ \\
+\textcolor{red}{Démonstration :} \\
+$\| \vec x_1 +...+ \vec x_p \|^2= \langle \sum_{i=1}^p \vec x_i, \sum_{j=1}^p \vec x_j \rangle$ \\
+$\| \vec x_1 +...+ \vec x_p \|^2= \sum_{i=1}^p \langle \vec x_i, \sum_{j=1}^p \vec x_j \rangle$ \\
+$\| \vec x_1 +...+ \vec x_p \|^2= \sum_{i=1}^p \sum_{j=1}^p \underbrace{\langle \vec x_i , \vec x_j \rangle}_{=0 \quad si \quad i \neq j}$ \\
+$\| \vec x_1 +...+ \vec x_p \|^2=\sum_{i=1}^p \langle \vec x_i, \vec x_i \rangle =\sum_{i=1}^p \| \vec x_i \|^2$
 \section{Propriétés générales de l'orthogonal d'une partie}
+\textcolor{green}{Propriété :} \\
+\textcolor{green}{1)} $\emptyset^{\perp}= \lbrace \vec 0 \rbrace^{\perp}=E$ \\
+\textcolor{green}{2)} $E^{\perp}= \lbrace \vec 0 \rbrace$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} $\emptyset^{\perp}= \lbrace \vec y \in E : \underbrace{\forall \vec x \in \emptyset }_{Toujours\quad vrai}, \langle \vec x , \vec y \rangle = 0 \rbrace$ \\
+$\emptyset^{\perp}=E$ \\
+$\lbrace \vec 0 \rbrace^{\perp}= \lbrace \vec y \in E : \langle \vec 0, \vec y \rangle =0 \rbrace $ \\
+$\lbrace \vec 0 \rbrace^{\perp}= E$ \\
+\textcolor{green}{2)} Soit $\vec y \in E^{\perp} :$ \\
+$\forall x \in E, \langle \vec x, \vec y  \rbrace =0$ en particulier, pour $\vec x= \vec y$ : $\| \vec y \| = 0$ \\
+ainsi : $E \subset \lbrace \vec 0 \rbrace$ \\
+Par ailleurs : $\forall \vec x \in E, \langle \vec x ,\vec 0 \rangle =0$ donc $\vec 0 \in E^{\perp}$ \\
+\textcolor{green}{Propriété :} \\
+$\forall X \in \mathcal P (E), X^{\perp}$ est un sous-espace vectoriel de E \\
+\textcolor{red}{Démonstration :} \\
+soit $X \in \mathcal P(E)$ \\
+$X^{\perp} \subset E,$ par définition \\
+$\forall \vec x \in X, \langle \vec x ,\vec 0 \rangle = 0$ donc $\vec 0 \in X^{\perp}$ \\
+pour $(\vec y, \vec z) \in (X^{\perp})^2$ et $\lambda \in \mathbb R$ : \\
+soit $\vec x \in X :$ \\
+$\langle \vec x , \vec y + \lambda \vec z \rangle = \langle \vec x, \vec y \rangle + \lambda \langle \vec x, \vec z \rangle$ \\
+$\langle \vec x , \vec y + \lambda \vec z \rangle = 0 + \lambda 0=0$ \\
+donc: $\forall \vec x \in X, \langle \vec x, \vec y + \lambda \vec z \rangle = 0, \vec y +\lambda \vec y \in X^{\perp}$ \\
+\textcolor{green}{Propriété :} \\
+Soit $(X,Y) \in (\mathcal P(E))^2$ : \\
+$X \subset Y \Rightarrow Y^{\perp} \subset X^{\perp}$ \\
+\textcolor{red}{Démonstration :} \\
+soit $\vec z \in Y^{\perp}$ : $\forall \vec y \in Y, \langle \vec y, \vec z \rangle =0$ \\
+Or $X \subset Y$, a fortiori : \\
+$\forall \vec y \in X, \langle \vec y, \vec z \rangle=0$ donc $\vec z \in X^{\perp}$ \\
+ \textcolor{green}{Propriété :} \\
+ $\forall X \in \mathcal P(E), X^{\perp}=(Vect(X))^{\perp}$ \\
+ \textcolor{red}{Démonstration :} \\
+ D'une part : $X\subset Vect(X)$ donc $(Vect(X))^{\perp} \subset X^{\perp}$ \\
+ D'autre part : pour $\vec y \in X^{\perp}$ \\
+ Soit $\vec z \in Vect(X)$ : \\
+ il existe $(\vec x_1,...,\vec x_p) \in X^p$ et $(\lambda_1,...,\lambda_p) \in \mathbb K^p$ tel que : \\
+ $\vec z= \sum_{k=1}^p \lambda_k \vec x_k$ \\
+ $\langle \vec y, \vec z \rangle = \sum_{k=1}^p \lambda_k \langle \vec y, \underbrace{\vec x_k \rangle}_{=0 \quad car \quad \vec y \in X^{\perp}}$ \\
+ ainsi : $\forall \vec z \in Vect(X), \langle \vec y, \vec z \rangle =0$ donc $\vec y \in (Vect(X))^{\perp}$
 \end{document}
