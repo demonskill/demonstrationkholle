@@ -287,5 +287,41 @@ b & b\sin(\theta)+ b \cos(\theta)
 \end{vmatrix}=(a^2+b^2)\sin(\theta)= \|\vec u \| \| f(\vec u) \| \sin(\theta)$ \\
 donc l'angle orienté $(\vec u, f(\vec u))$ a pour mesure $\theta$
 \section{Etude de $O^-(E)$($E$ plan vectoriel orienté)}
-\textcolor{green}{Propriété :}
+\textcolor{green}{Propriété :} \\
+E: plan euclidien orienté \\
+$f \in O(E)$ \\
+Alors f est une reflexion. Il existe une base orthonormée directe dans laquelle sa matrice est $\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}$
+\textcolor{red}{Démonstration :} \\
+Soit $\mathcal B$ une base orthonormés (direct) : \\
+$Mat_{\mathcal B}(f) \in O_2^-(\mathbb R)$ \\
+donc : \\
+$\exists \theta \in \mathbb R, Mat_{\mathcal B}(f)=\begin{pmatrix}
+\cos(\theta) & \sin(\theta) \\
+\sin(\theta) & - \cos(\theta)
+\end{pmatrix}$ \\
+On remarque que $(Mat_{\mathcal B}(f))^2=I_2$ \\
+f est donc une symétrie orthogonale \\
+Si $dim(Ker(f-Id))=2$ : $f-Id=\tilde 0$ \\
+$f=Id$ \\
+$det(f)=1$ exclu
+si $dim(Ker(f-Id))=0$ :
+$E=Ker(f-Id) \oplus Ker(f+Id)$ \\
+donc $f+Id=0$ $f=-Id$ \\
+$det(f)=(-1)^2=1$ exclu \\
+ainsi : $dim(Ker(f-Id))=1=dim(E)-1$ donc f est une reflexion \\
+On a donc aussi $dim(Ker(f+Id))=1$ \\
+Soit $(\vec u_1)$ base orthonormée de $Ker(f-Id)$ \\
+$(\vec u_2)$ base othonormée de $Ker(f+Id)$ \\
+Comme f est une symetrie orthogonale , $\vec u_1 \perp \vec u_2$ donc $(\vec u_1,\vec u_2)$ est une base orthonormée de E. \\
+Posons $\mathcal B_0=$ $ \left\{\begin{array}{l}
+( \vec u_1,\vec u_2) si \quad  (\vec u_1,\vec u_2)  \quad  directe \\
+(- \vec u_1,\vec u_2) sinon
+\end{array}$ \\ 
+Alors : $\mathcal B_0$ est une base orthonormée directe de E et $Mat_{\mathcal B}(f)=\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}$
 \end{document}
