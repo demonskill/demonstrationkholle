@@ -1,4 +1,4 @@
-X\documentclass{article}
+\documentclass{article}
 \renewcommand*\familydefault{\sfdefault}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -57,14 +57,14 @@ où $\int_0^1(t^2-at-b)^2dt= \| X^2-(aX +b) \|^2$ \\
 Il est atteint pour $(a,b)$ tel que $p_F(X^2)=aX+b$ uniquement : \\
 $X^2-p_F(X^2) \in (\mathbb R_1[X])^\perp$ \\
 donc : \\
-$\langle X^2-p_F(X^2),1 \rangle=0$ \\
-$\langle X^2-p_F(X^2),X \rangle=0$ \\ \\
-$\langle aX+b,1 \rangle = \langle X^2,1 \rangle $ \\
-$\langle aX+b,X \rangle = \langle X^2,X \rangle$  \\ \\
-$\langle X,1 \rangle a + \langle 1,1 \rangle b= \langle X^2,1 \rangle$ \\
-$\langle X,X \rangle a + \langle 1,X \rangle b= \langle X^2,X \rangle$ \\ \\
-$\frac{1}{2} a +b = \frac{1}{3}$ \\
-$\frac{1}{3}a +\frac{1}{2}b =\frac{1}{4}$ \\ \\
+$ \left\{\begin{array}{l} \langle X^2-p_F(X^2),1 \rangle=0 \\
+\langle X^2-p_F(X^2),X \rangle=0 \end{array} \right .$ \\ \\
+$ \left\{\begin{array}{l} \langle aX+b,1 \rangle = \langle X^2,1 \rangle  \\
+\langle aX+b,X \rangle = \langle X^2,X \rangle \end{array} \right. $  \\ \\
+$ \left\{\begin{array}{l}\langle X,1 \rangle a + \langle 1,1 \rangle b= \langle X^2,1 \rangle \\
+\langle X,X \rangle a + \langle 1,X \rangle b= \langle X^2,X \rangle \end{array} \right.$ \\ \\
+$ \left\{\begin{array}{l}\frac{1}{2} a +b = \frac{1}{3} \\
+\frac{1}{3}a +\frac{1}{2}b =\frac{1}{4} \end{array} \right. $ \\ \\
 $\begin{pmatrix}
 \frac{1}{2} & 1 \\ \\
 \frac{1}{3} & \frac{1}{2}
@@ -93,7 +93,7 @@ b \\
 \end{pmatrix}$ \\
 $(a,b)=(1, \frac {-1} 6)$ \\
 Le minimum cherché est : \\
-$\int_0^1 (t^2-t+\frac{1}{4})^2dt$ \\
+$\int_0^1 (t^2-t+\frac{1}{6})^2dt$ \\
 On peut écrire : \\
 $X^2=\underbrace{p_F(X^2)}_{ \in F}+ \underbrace{(X^2-p_F(X^2))}_{\in F^\perp}$ \\
 donc par Pythagore : \\
@@ -102,7 +102,7 @@ $m= \| X^2 \|^2 - \| aX+b \|^2$ \\
 $m= \int_0^1 t^4 dt - \int_0^1 (t-\frac{1}{6})^2dt$ \\
 ce qui est le plus simple à calculer \\
 On obtient : \\
-$m= \frac 1 5 - [ \frac 1 2 t^3 - \frac 1 6 t^2 + \frac 1 {36} t]_0^1$ \\
+$m= \frac 1 5 - [ \frac 1 3 t^3 - \frac 1 6 t^2 + \frac 1 {36} t]_0^1$ \\
 $m= \frac 15 - \frac 1 3 + \frac 1 6 - \frac 1 {36}= \frac 1 {180}$
 \section{Si $E$ est un espace euclidien, isomorphisme \\ $\phi : u \in E \mapsto \langle u, \cdot \rangle \in \mathcal L(E, \mathbb R)$}
 \textcolor{green}{Théorème :} \\
@@ -114,8 +114,8 @@ est un isomorphisme \\
 Montrons que {\bf \boldmath $\phi$ est linéaire} c'est-à-dire : $\phi \in \mathcal L(E,\mathcal L(E,\mathbb R))$ \\
 Soit $(\vec u, \vec v) \in E^2$ et $\lambda \in \mathbb R$ \\
 Pour $\vec x \in E :$ \\
-$\langle \vec u + \lambda \vec vn \vec x \rangle = \langle \vec u ,\vec x \rangle + \lambda \langle \vec v, \vec u \rangle$ \\
-nombre réels  donc : $\phi(\vec u+ \lambda \vec v)(\vec x)=\phi(\vec u)(\vec x) + \lambda \phi(\vec v)(\vec x)$ \\
+$\langle \vec u + \lambda \vec v, \vec x \rangle = \langle \vec u ,\vec x \rangle + \lambda \langle \vec v, \vec u \rangle$ \\
+nombres réels  donc : $\phi(\vec u+ \lambda \vec v)(\vec x)=\phi(\vec u)(\vec x) + \lambda \phi(\vec v)(\vec x)$ \\
 Vrai pour tout $\vec x$ donc : \\
 application de E dans $\mathbb R$ $\phi(\vec u + \lambda \vec v)=\phi(\vec u)+ \lambda \phi(\vec v)$ \\
 {\bf \boldmath Soit $\vec u \in Ker(\phi)$} : \\
@@ -135,7 +135,7 @@ Montrons que { \boldmath $O(E) \subset GL(E) :$} \\
 Soit $f \in O(E) : f \in \mathcal L(E)$ et : \\
 $\forall \vec x \in E, \| f(\vec x) \|= \|\vec x \|$ \\
 Soit $\vec x \in Ker(f) : \|\vec x \|= \|f(\vec x)\| = \| \vec 0 \| =0$ donc $\vec x =\vec 0$ \\
-f est un endomorphisme injectif d'un espace de dimension finie don f est bijectif (corrolaire du théorème du rang) \\
+f est un endomorphisme injectif d'un espace de dimension finie donc f est bijectif (corrolaire du théorème du rang) \\
 {\boldmath $O(E) \neq \emptyset$}  car $Id_E \in O(E)$ \\
 Soit {\boldmath $(f,g) \in (O(E))^2} :$ }\\
 Pour $\vec x \in E$ : \\
@@ -146,9 +146,9 @@ Soit $\vec x \in E$ \\
 avec $\vec y=f^-1(\vec x) \in E :$ \\
 $\|f(\vec y) \|= \| \vec y \|$ car $f \in O(E)$ \\
 $\|\vec x \| = \|f^{-1}(\vec x) \|$ ainsi {\boldmath $f^{-1} \in O(E)$ } \\
-\textcolor{green}{Propriété :} soit $f \in \mathcal L(E)$ Les proposition suivante sont équivalentes : \\
+\textcolor{green}{Propriété :} soit $f \in \mathcal L(E)$ Les propositions suivantes sont équivalentes : \\
 \textcolor{green}{1)} $\forall \vec x \in E, \| f(\vec x) \| = \| \vec x \|$ \\
-\textcolor{green}{2)} $\forall (\vec x, \vec y) \in E^2,\langle f(\vec x), f(\vec y) \rangle =\langle \vec x, \vec y$ \\
+\textcolor{green}{2)} $\forall (\vec x, \vec y) \in E^2,\langle f(\vec x), f(\vec y) \rangle =\langle \vec x, \vec y \rangle $ \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} ; Soit $\vec x \in E :$ Avec $\vec y=\vec x :$ \\
 $\| f(\vec x) \|^2=\|\vec x \|^2$ \\
@@ -156,10 +156,10 @@ $\| f(\vec x) \|=\| \vec x \|$ car les normes sont positives \\
 \textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} : Soit $(\vec x, \vec y) \in E^2$ \\
 polarisation : \\
 $2 \langle f(\vec x), f(\vec y) \rangle = \| f(\vec x) + f(\vec y) \|^2- \| f(\vec x) \|^2 - \|f(\vec y) \|^2$ \\
-comme $f\in \mathcal L(E)$, $2 \langle f(\vec x), f(\vec y) \rangle =\| f(\vec x + \vec y) \|^2- \| f(\vec x) \|^2 - \|f(\vec y) \|^2$ \\
-Par hypothèse : $2\langle f(\vec x),f(\vec y) \rangle = \| \vec x+ \vec y \|^2- \| \vec x \|^2 - \|\vec y \|^2$ \\
-par polarisation: $\langle f(\vec x),f(\vec y) \rangle = \langle \vec x, \vec y \rangle$ \\
-\textcolor{green}{Propriété :} E euclidien, $f\in \mathcal L(E)$ Les propriété suivante sont équivalentes : \\
+$2 \langle f(\vec x), f(\vec y) \rangle =\| f(\vec x + \vec y) \|^2- \| f(\vec x) \|^2 - \|f(\vec y) \|^2$ car $f\in \mathcal L(E)$ \\
+$2\langle f(\vec x),f(\vec y) \rangle = \| \vec x+ \vec y \|^2- \| \vec x \|^2 - \|\vec y \|^2$ Par hypothèse \\
+ $\langle f(\vec x),f(\vec y) \rangle = \langle \vec x, \vec y \rangle$ par polarisation\\
+\textcolor{green}{Propriété :} E euclidien, $f\in \mathcal L(E)$ Les propriétés suivantes sont équivalentes : \\
 \textcolor{green}{1)} $f\in O(E)$ \\
 \textcolor{green}{2)} Pour toute base orthonormée $\mathcal B$ de E $f(\mathcal B)$ est une base orthonormée de E \\
 \textcolor{green}{3)} Il existe une base orthonormée $\mathcal B$ de $E$ tel que $f(\mathcal B)$ soient une base orthonormée de E \\
@@ -188,9 +188,9 @@ $\langle f(\vec x), f(\vec y) \rangle = \sum_{i=1}^n \langle \vec x, \vec e_i \r
 $\langle f(\vec x), f(\vec y) \rangle =\langle \vec x,\vec y \rangle $
 \section{Démontrer que $O_n(\mathbb R)$ est un sous-groupe de $GL_n(\mathbb R)$ + description de $O_2 (\mathbb R)$ + commutativité de $SO_2(\mathbb R)$}
 \textcolor{green}{Propriété :} \\
-$O_n(\mathbb R)$ est un sous-groupe de $(Gl_n(\mathbb R),X\times )$ \\
+$O_n(\mathbb R)$ est un sous-groupe de $(Gl_n(\mathbb R),\times )$ \\
 \textcolor{red}{Démonstration :} \\
-{\boldmath $O_n(\mathbb R) \subset GK_n(\mathbb R)$} par définition \\
+{\boldmath $O_n(\mathbb R) \subset GL_n(\mathbb R)$} par définition \\
 {\boldmath $O_n(\mathbb R) \neq \emptyset$} car $I_n \in O_n(\mathbb R)$ \\
 Soit {\boldmath $(A,B) \in (O_n(\mathbb R))^2$} : \\
 $(AB)^{-1}=B^{-1}A^{-1}={}^tB{}^tA={}^t(AB)$ \\
@@ -223,7 +223,7 @@ $a=\cos(\theta),b=\sin(\theta)$ \\
 $c=\cos(\phi),d=\sin(\phi)$ \\
 or : $0= ac+bd=  \cos(\phi-\theta)$ \\
 donc $\phi- \theta \equiv \pm \frac \pi 2 [2\pi]$ \\
-Si $\phi - \theta \equiv \frac \pi 2 [2 \pi ]$ : \\
+Si $\phi - \theta \equiv  +\frac \pi 2 [2 \pi ]$ : \\
 $c=\cos(\phi)=\cos(\theta + \frac \pi 2)=-\sin(\theta)$ \\
 $d=\sin(\phi)=\sin(\theta + \frac \pi 2)=\cos(\theta)$ \\
 $A=\begin{pmatrix}
@@ -238,7 +238,7 @@ $A=\begin{pmatrix}
 \sin(\theta) & -\cos(\theta)
 \end{pmatrix}$ du deuxième type \\
 \textcolor{green}{Propriété :} \\
-$SO_2(\mathbb R)$ est commutatif\\
+$SO_2(\mathbb R)=O_2^+$ est commutatif\\
 \textcolor{red}{Démonstration :} \\
 $\begin{pmatrix}
 \cos(\theta) & -\sin(\theta) \\
@@ -255,13 +255,12 @@ $\begin{pmatrix}
 \end{pmatrix}$
 \section{Etude de $SO(E)$ ($E$ plan vectoriel orienté)}
 \textcolor{green}{Propriété :} \\
-E: plan euclidien orientée \\
-$f \in SO(E)$ \\
+E: plan euclidien orientée et $f \in SO(E)$ \\
 \textcolor{green}{1)} Il existe $\theta \in \mathbb R$, unique à $2\pi$ près tel que pour toute base orthonormée direct $\mathcal B$, $Mat_{\mathcal B}(f) = \begin{pmatrix}
 \cos(\theta) & -\sin(\theta) \\
 \sin(\theta) & \cos(\theta)
 \end{pmatrix}$ \\
-\textcolor{green}{2)} pour tout $\vec u \in E \backslash \lbrace \vec 0 \rbrace, \theta$ est une mesure de l'angle orienté $(\vec u, f(\vec u))$ f est appelée rotation vectorielle d'angle $\theta$ \\
+\textcolor{green}{2)} Pour tout $\vec u \in E \backslash \lbrace \vec 0 \rbrace, $ $\theta$ est une mesure de l'angle orienté $(\vec u, f(\vec u))$ f est appelée rotation vectorielle d'angle $\theta$ \\
 \textcolor{red}{Démonstration :} \\
 \textcolor{green}{1)} Soit $\mathcal B$ une base orthonormée directe : \\
 $Mat_{\mathcal B}(f) \in SO_2(\mathbb R)$ donc on a vu qu'il existe $\theta \in \mathbb R$ tel que : \\
@@ -283,13 +282,12 @@ $\langle \vec u,f(\vec u) \rangle= (a^2 +b^2) \cos(\theta)$ \\
 $\langle \vec u,f(\vec u) \rangle= \|\vec u \| \| f(\vec u) \| \cos(\theta)$ \\
 $[\vec u, f(\vec u)]= \begin{vmatrix}
 a & a\cos(\theta)-b\sin(\theta) \\
-b & b\sin(\theta)+ b \cos(\theta)
+b & a\sin(\theta)+ b \cos(\theta)
 \end{vmatrix}=(a^2+b^2)\sin(\theta)= \|\vec u \| \| f(\vec u) \| \sin(\theta)$ \\
 donc l'angle orienté $(\vec u, f(\vec u))$ a pour mesure $\theta$
 \section{Etude de $O^-(E)$($E$ plan vectoriel orienté)}
 \textcolor{green}{Propriété :} \\
-E: plan euclidien orienté \\
-$f \in O(E)$ \\
+E: plan euclidien orienté et  $f \in O^-(E)$ \\
 Alors f est une reflexion. Il existe une base orthonormée directe dans laquelle sa matrice est $\begin{pmatrix}
 1 & 0 \\
 0 & -1
@@ -306,10 +304,10 @@ On remarque que $(Mat_{\mathcal B}(f))^2=I_2$ \\
 f est donc une symétrie orthogonale \\
 Si $dim(Ker(f-Id))=2$ : $f-Id=\tilde 0$ \\
 $f=Id$ \\
-$det(f)=1$ exclu
-si $dim(Ker(f-Id))=0$ :
+$det(f)=1$ exclu \\
+si $dim(Ker(f-Id))=0$ : \\
 $E=Ker(f-Id) \oplus Ker(f+Id)$ \\
-donc $f+Id=0$ $f=-Id$ \\
+donc $f+Id= \tilde 0$ $f=-Id$ \\
 $det(f)=(-1)^2=1$ exclu \\
 ainsi : $dim(Ker(f-Id))=1=dim(E)-1$ donc f est une reflexion \\
 On a donc aussi $dim(Ker(f+Id))=1$ \\
@@ -319,7 +317,7 @@ Comme f est une symetrie orthogonale , $\vec u_1 \perp \vec u_2$ donc $(\vec u_1
 Posons $\mathcal B_0=$ $ \left\{\begin{array}{l}
 ( \vec u_1,\vec u_2) si \quad  (\vec u_1,\vec u_2)  \quad  directe \\
 (- \vec u_1,\vec u_2) sinon
-\end{array}$ \\ 
+\end{array} \right. $ \\
 Alors : $\mathcal B_0$ est une base orthonormée directe de E et $Mat_{\mathcal B}(f)=\begin{pmatrix}
 1 & 0 \\
 0 & -1

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.30)  30 MAY 2019 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.30)  30 MAY 2019 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,19 +6,6 @@ entering extended mode
 **demonstrationkholle27.tex
 (./demonstrationkholle27.tex
 LaTeX2e <2018-04-01> patch level 5
-
-./demonstrationkholle27.tex:1: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 X
-     \documentclass{article}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no X in font nullfont!
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -30,17 +17,12 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \c@subsubsection=\count83
 \c@paragraph=\count84
 \c@subparagraph=\count85
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--274
-[]
- []
-
 \c@figure=\count86
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-[1{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}])
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
@@ -1235,8 +1217,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--107
 
  []
 
-[2
-
+[1
+Non-PDF special ignored!
+<special> header=pstricks.pro
+Non-PDF special ignored!
+<special> header=pst-algparser.pro
+Non-PDF special ignored!
+<special> header=pst-tools.pro
+Non-PDF special ignored!
+<special> header=pst-dots.pro
+Non-PDF special ignored!
+<special> header=pst-node.pro
+Non-PDF special ignored!
+<special> header=pst-3d.pro
+Non-PDF special ignored!
+<special> header=pst-math.pro
+Non-PDF special ignored!
+<special> header=pstricks-add.pro
+Non-PDF special ignored!
+<special> header=pst-eucl.pro
 
 Non-PDF special ignored!
 <special> ps: /pssetRGBcolor /setrgbcolor load def /pssetCMYKcolor /setcmyk...
@@ -1246,7 +1245,7 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
-]
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (4.44919pt too wide) in paragraph at lines 130--130
 []\T1/phv/b/n/14.4 Isométries vec-to-rielles : $\OML/cmm/m/it/14.4 O\OT1/cmr/m/
 n/14.4 (\OML/cmm/m/it/14.4 E\OT1/cmr/m/n/14.4 )$ \T1/phv/b/n/14.4 est un sous-g
@@ -1263,8 +1262,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[3] [4]
-Overfull \hbox (20.23155pt too wide) in paragraph at lines 257--289
+[2] [3]
+Overfull \hbox (20.23155pt too wide) in paragraph at lines 257--288
 []\T1/phv/m/n/10 1)[] Il ex-iste $\OML/cmm/m/it/10 ^^R \OMS/cmsy/m/n/10 2 \U/ms
 b/m/n/10 R$\T1/phv/m/n/10 , unique à $\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ^^Y$ \T
 1/phv/m/n/10 près tel que pour toute base or-thonor-mée di-rect $\OMS/rsfs/m/n/
@@ -1272,53 +1271,41 @@ b/m/n/10 R$\T1/phv/m/n/10 , unique à $\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ^^Y$ \T
 f\OT1/cmr/m/n/10 ) = []$ 
  []
 
-[5]
-./demonstrationkholle27.tex:322: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.322 \end{array}$
-                   \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[6] (./demonstrationkholle27.aux) ) 
+[4] [5] (./demonstrationkholle27.aux) ) 
 Here is how much of TeX's memory you used:
  38284 strings out of 492701
  873806 string characters out of 6134503
- 1092397 words of memory out of 5000000
+ 1091407 words of memory out of 5000000
  41548 multiletter control sequences out of 15000+600000
  559615 words of font info for 83 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  62i,10n,96p,742b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvi
-ps/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
-bsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvr8a.pfb>
-Output written on demonstrationkholle27.pdf (6 pages, 196176 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc
+/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmbsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on demonstrationkholle27.pdf (5 pages, 195896 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
