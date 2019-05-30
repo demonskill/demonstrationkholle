@@ -187,6 +187,76 @@ Or $f(\mathcal B)$ est une base orthonormée de E : \\
 $\langle f(\vec x), f(\vec y) \rangle = \sum_{i=1}^n \langle \vec x, \vec e_i \rangle \langle \vec y, \vec e_i \rangle$ \\
 $\langle f(\vec x), f(\vec y) \rangle =\langle \vec x,\vec y \rangle $
 \section{Démontrer que $O_n(\mathbb R)$ est un sous-groupe de $GL_n(\mathbb R)$ + description de $O_2 (\mathbb R)$ + commutativité de $SO_2(\mathbb R)$}
+\textcolor{green}{Propriété :} \\
+$O_n(\mathbb R)$ est un sous-groupe de $(Gl_n(\mathbb R),X\times )$ \\
+\textcolor{red}{Démonstration :} \\
+{\boldmath $O_n(\mathbb R) \subset GK_n(\mathbb R)$} par définition \\
+{\boldmath $O_n(\mathbb R) \neq \emptyset$} car $I_n \in O_n(\mathbb R)$ \\
+Soit {\boldmath $(A,B) \in (O_n(\mathbb R))^2$} : \\
+$(AB)^{-1}=B^{-1}A^{-1}={}^tB{}^tA={}^t(AB)$ \\
+\textcolor{green}{Propriété :} soit $A\in O_2(\mathbb R)$ : \\
+- si $det(A)=1$ : \\
+$A=\begin{pmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{pmatrix}$
+($\theta \in \mathbb R$ unique modulo $2\pi$)  et toute matrice de cette forme de $O_2^+(\mathbb R)$ \\
+- si $det(A)=-1$ : \\
+$A=\begin{pmatrix}
+\cos(\theta) & \sin(\theta) \\
+\sin(\theta) & -\cos(\theta)
+\end{pmatrix}$ \\
+($\theta \in \mathbb R$ unique modulo $2 \pi$) et tout matrice de cette forme $\in O_2^-(\mathbb R)$ \\
+\textcolor{red}{Démonstration :} \\
+Il est clair que toute matrices de ces formes conviennent \\
+Réciproquement, soit $A\in O_1(\mathbb R) :$ \\
+$A=\begin{pmatrix}
+a & c \\
+b & d \\
+\end{pmatrix}$
+colonnes orthonormés donc : \\
+$a^2+b^2=1$\\
+$c^2 +d^2=1$ \\
+$ac+bd=0$ \\
+Il existe $(\theta,\phi) \in \mathbb R^2$ tel que: \\
+$a=\cos(\theta),b=\sin(\theta)$ \\
+$c=\cos(\phi),d=\sin(\phi)$ \\
+or : $0= ac+bd=  \cos(\phi-\theta)$ \\
+donc $\phi- \theta \equiv \pm \frac \pi 2 [2\pi]$ \\
+Si $\phi - \theta \equiv \frac \pi 2 [2 \pi ]$ : \\
+$c=\cos(\phi)=\cos(\theta + \frac \pi 2)=-\sin(\theta)$ \\
+$d=\sin(\phi)=\sin(\theta + \frac \pi 2)=\cos(\theta)$ \\
+$A=\begin{pmatrix}
+\cos(\theta) &- \sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{pmatrix}$ du premier type  \\
+si $\phi - \theta \equiv - \frac \pi 2 [2\pi] :$ \\
+$c=\cos(\phi)=\cos(\theta-\frac \pi 2)= \sin(\theta)$ \\
+$d=\sin(\phi)=\sin(\theta-\frac \pi 2)=-\cos(\theta)$ \\
+$A=\begin{pmatrix}
+\cos(\theta) & \sin(\theta) \\
+\sin(\theta) & -\cos(\theta)
+\end{pmatrix}$ du deuxième type \\
+\textcolor{green}{Propriété :} \\
+$SO_2(\mathbb R)$ est commutatif\\
+\textcolor{red}{Démonstration :} \\
+$\begin{pmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{pmatrix}
+\begin{pmatrix}
+\cos(\phi) & - \sin(\phi) \\
+\sin(\phi) & \cos(\phi)
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos(\theta + \phi) & - \sin(\theta + \phi) \\
+\sin(\theta + \phi) & \cos(\theta + \phi)
+\end{pmatrix}$
 \section{Etude de $SO(E)$ ($E$ plan vectoriel orienté)}
+\textcolor{green}{Propriété :} \\
+E: plan euclidien orientée \\
+$f \in SO(E)$ \\
+\textcolor{green}{1)}
 \section{Etude de $O^-(E)$($E$ plan vectoriel orienté)}
 \end{document}
