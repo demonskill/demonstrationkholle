@@ -128,6 +128,64 @@ $dim(Im(\phi))= dim(E)-dim(Ker(\phi))$ \\
 $dim(Im(\phi))=n=dim(\mathcal L(E,\mathbb R))$ \\
 or $Im(\phi) \subset \mathcal L(E,\mathbb R)$ donc $Im(\phi) = \mathcal L(E, \mathbb R)$
 \section{Isométries vectorielles : $O(E)$ est un sous-groupe de $GL(E)$, équivalence entre conservation de la norme et conservation du produit scalaire, caractérisation par l'image d'une base orthonormée}
+\textcolor{green}{Propriété :} \\
+l'ensemble $O(E)$ des isometries vectorielles d'un espace euclidien E est un sous-groupe de $(GL(E),\circ)$. C'est le groupe orthogonal de E, les isometries sont aussi appelée automorphismes orthogonaux \\
+\textcolor{red}{Démonstration :} \\
+Montrons que { \boldmath $O(E) \subset GL(E) :$} \\
+Soit $f \in O(E) : f \in \mathcal L(E)$ et : \\
+$\forall \vec x \in E, \| f(\vec x) \|= \|\vec x \|$ \\
+Soit $\vec x \in Ker(f) : \|\vec x \|= \|f(\vec x)\| = \| \vec 0 \| =0$ donc $\vec x =\vec 0$ \\
+f est un endomorphisme injectif d'un espace de dimension finie don f est bijectif (corrolaire du théorème du rang) \\
+{\boldmath $O(E) \neq \emptyset$}  car $Id_E \in O(E)$ \\
+Soit {\boldmath $(f,g) \in (O(E))^2} :$ }\\
+Pour $\vec x \in E$ : \\
+$\|f(g(\vec x))\| =\| g(\vec x) \| = \|\vec x \|$ car  $(f,g) \in (O(E))^2$ \\
+donc $fg \in O(E)$ \\
+Soit $f \in O(E)$ : \\
+Soit $\vec x \in E$ \\
+avec $\vec y=f^-1(\vec x) \in E :$ \\
+$\|f(\vec y) \|= \| \vec y \|$ car $f \in O(E)$ \\
+$\|\vec x \| = \|f^{-1}(\vec x) \|$ ainsi {\boldmath $f^{-1} \in O(E)$ } \\
+\textcolor{green}{Propriété :} soit $f \in \mathcal L(E)$ Les proposition suivante sont équivalentes : \\
+\textcolor{green}{1)} $\forall \vec x \in E, \| f(\vec x) \| = \| \vec x \|$ \\
+\textcolor{green}{2)} $\forall (\vec x, \vec y) \in E^2,\langle f(\vec x), f(\vec y) \rangle =\langle \vec x, \vec y$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{2} $\Rightarrow$ \textcolor{green}{1} ; Soit $\vec x \in E :$ Avec $\vec y=\vec x :$ \\
+$\| f(\vec x) \|^2=\|\vec x \|^2$ \\
+$\| f(\vec x) \|=\| \vec x \|$ car les normes sont positives \\
+\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} : Soit $(\vec x, \vec y) \in E^2$ \\
+polarisation : \\
+$2 \langle f(\vec x), f(\vec y) \rangle = \| f(\vec x) + f(\vec y) \|^2- \| f(\vec x) \|^2 - \|f(\vec y) \|^2$ \\
+comme $f\in \mathcal L(E)$, $2 \langle f(\vec x), f(\vec y) \rangle =\| f(\vec x + \vec y) \|^2- \| f(\vec x) \|^2 - \|f(\vec y) \|^2$ \\
+Par hypothèse : $2\langle f(\vec x),f(\vec y) \rangle = \| \vec x+ \vec y \|^2- \| \vec x \|^2 - \|\vec y \|^2$ \\
+par polarisation: $\langle f(\vec x),f(\vec y) \rangle = \langle \vec x, \vec y \rangle$ \\
+\textcolor{green}{Propriété :} E euclidien, $f\in \mathcal L(E)$ Les propriété suivante sont équivalentes : \\
+\textcolor{green}{1)} $f\in O(E)$ \\
+\textcolor{green}{2)} Pour toute base orthonormée $\mathcal B$ de E $f(\mathcal B)$ est une base orthonormée de E \\
+\textcolor{green}{3)} Il existe une base orthonormée $\mathcal B$ de $E$ tel que $f(\mathcal B)$ soient une base orthonormée de E \\
+\textcolor{red}{Démonstration :} \\
+notons $n=dim(E) \in \mathbb N^*$ \\
+\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} $f \in O(E)$ \\
+Soit $\mathcal B=(\vec e_1,...,\vec e_n)$ une base orthonormée de E \\
+Alors pour $(i,j) \in [[1,n]]^2 :$ \\
+$\langle f(\vec e_i), f(\vec e_j) \rangle=\langle \vec e_i,\vec e_j \rangle$ car $f\in O(E)$ \\
+$\langle f(\vec e_i), f(\vec e_j) \rangle=\delta_{ij}$ car $\mathcal B$ orthonormée. \\
+ainsi: $f(\mathcal{B})$ est une famille orthonormée donc libre. \\
+Comme elle a $n=dim(E)$ vecteurs, c'est une base orthonormée de E \\
+\textcolor{green}{2} $\Rightarrow$ \textcolor{green}{3} : Il existe au moins une base orthonormée de E elle convient (par \textcolor{green}{2}) \\
+\textcolor{green}{3} $\Rightarrow$ \textcolor{green}{1} : Soit $\mathcal B$ une base orthonormée de E tel que $f (\mathcal B)$ le soit aussi on a donc: \\
+$\forall(i,j) \in [[1,n]]^2, \langle f(\vec e_i),f(\vec e_j) \rangle = \langle \vec e_i, \vec e_j \rangle =\delta_{ij}$ \\
+Soit $(\vec x, \vec y) \in E^2$ \\
+On a : $\vec x= \sum_{i=1}^n \langle \vec x, \vec e_i \rangle \vec e_i$ \\
+$\vec y= \sum_{i=1}^n \langle \vec y, \vec e_i \rangle  \vec e_i$ \\
+donc comme $\mathcal B$ est une base orthonormée donc : \\
+$\langle \vec x, \vec y \rangle= \sum_{i=1}^n \langle \vec x, \vec e_i \rangle \langle \vec y, \vec e_i \rangle$ \\
+en appliquant f à $\vec x$ et $\vec y$ : \\
+$f(\vec x)=\sum_{i=1}^n \langle \vec x, \vec e_i \rangle f(\vec e_i)$ car $f\in \mathcal L(E)$ \\
+$f(\vec y)= \sum_{i=1}^n \langle \vec y, \vec e_i \rangle f(\vec e_i)$ \\
+Or $f(\mathcal B)$ est une base orthonormée de E : \\
+$\langle f(\vec x), f(\vec y) \rangle = \sum_{i=1}^n \langle \vec x, \vec e_i \rangle \langle \vec y, \vec e_i \rangle$ \\
+$\langle f(\vec x), f(\vec y) \rangle =\langle \vec x,\vec y \rangle $
 \section{Démontrer que $O_n(\mathbb R)$ est un sous-groupe de $GL_n(\mathbb R)$ + description de $O_2 (\mathbb R)$ + commutativité de $SO_2(\mathbb R)$}
 \section{Etude de $SO(E)$ ($E$ plan vectoriel orienté)}
 \section{Etude de $O^-(E)$($E$ plan vectoriel orienté)}
