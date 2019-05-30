@@ -257,6 +257,35 @@ $\begin{pmatrix}
 \textcolor{green}{Propriété :} \\
 E: plan euclidien orientée \\
 $f \in SO(E)$ \\
-\textcolor{green}{1)}
+\textcolor{green}{1)} Il existe $\theta \in \mathbb R$, unique à $2\pi$ près tel que pour toute base orthonormée direct $\mathcal B$, $Mat_{\mathcal B}(f) = \begin{pmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{pmatrix}$ \\
+\textcolor{green}{2)} pour tout $\vec u \in E \backslash \lbrace \vec 0 \rbrace, \theta$ est une mesure de l'angle orienté $(\vec u, f(\vec u))$ f est appelée rotation vectorielle d'angle $\theta$ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1)} Soit $\mathcal B$ une base orthonormée directe : \\
+$Mat_{\mathcal B}(f) \in SO_2(\mathbb R)$ donc on a vu qu'il existe $\theta \in \mathbb R$ tel que : \\
+$Mat_{\mathcal B}(f)= \begin{pmatrix}
+\cos(\theta) & - \sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{pmatrix}$ \\
+Si $\mathcal C$ est une base orthonormée directe quelconque : \\
+$Mat_{\mathcal C}(f)=P_{\mathcal{CB}} Mat_{\mathcal B}(f) P_{\mathcal{BC}}$ \\
+$(P_{\mathcal{CB}},P_{\mathcal{BC}}) \in SO_2(\mathbb R)$ car $\mathcal B$ et $\mathcal C$ base orthonormée de même sens \\
+$Mat_{\mathcal C}(f)=P_{\mathcal{CB}} P_{\mathcal{BC}} Mat_{\mathcal B}(f)=Mat_{\mathcal B}(f)$ car $SO_2(\mathbb R)$ est commutatif \\
+\textcolor{green}{2)} Soit $(\vec i,\vec j)$ une base orthonormée directe de E \\
+$\vec u=a \vec i + b\vec j$ \\
+$f(\vec u)=(a\cos(\theta)-b \sin(\theta))\vec i + (a\sin(\theta)+b\cos(\theta))\vec j$ \\
+$\| \vec u \| = \sqrt{a^2+b^2}$ \\
+$\| f(\vec u) \|= \| \vec u \|$ car $f \in O(E)$ \\
+$\langle \vec u,f(\vec u) \rangle= a(a\cos(\theta)-b\sin(\theta))+ b(a\sin(\theta)+b\cos(\theta))$ \\
+$\langle \vec u,f(\vec u) \rangle= (a^2 +b^2) \cos(\theta)$ \\
+$\langle \vec u,f(\vec u) \rangle= \|\vec u \| \| f(\vec u) \| \cos(\theta)$ \\
+$[\vec u, f(\vec u)]= \begin{vmatrix}
+a & a\cos(\theta)-b\sin(\theta) \\
+b & b\sin(\theta)+ b \cos(\theta)
+\end{vmatrix}=(a^2+b^2)\sin(\theta)= \|\vec u \| \| f(\vec u) \| \sin(\theta)$ \\
+donc l'angle orienté $(\vec u, f(\vec u))$ a pour mesure $\theta$
 \section{Etude de $O^-(E)$($E$ plan vectoriel orienté)}
+\textcolor{green}{Propriété :}
 \end{document}
