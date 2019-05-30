@@ -111,8 +111,22 @@ $\phi : E \rightarrow \mathcal L (E, \mathbb R)$ \\
 $\vec u \mapsto \langle \vec u, \cdot \rangle $ \\
 est un isomorphisme \\
 \textcolor{red}{Démonstration :} \\
-rappel : $\langle \vec u, \cdot \rangle : E \rightarrow \mathbb R$ \\
-$\vec x \mapsto \langle \vec u, \vec x \rangle$
+Montrons que {\bf \boldmath $\phi$ est linéaire} c'est-à-dire : $\phi \in \mathcal L(E,\mathcal L(E,\mathbb R))$ \\
+Soit $(\vec u, \vec v) \in E^2$ et $\lambda \in \mathbb R$ \\
+Pour $\vec x \in E :$ \\
+$\langle \vec u + \lambda \vec vn \vec x \rangle = \langle \vec u ,\vec x \rangle + \lambda \langle \vec v, \vec u \rangle$ \\
+nombre réels  donc : $\phi(\vec u+ \lambda \vec v)(\vec x)=\phi(\vec u)(\vec x) + \lambda \phi(\vec v)(\vec x)$ \\
+Vrai pour tout $\vec x$ donc : \\
+application de E dans $\mathbb R$ $\phi(\vec u + \lambda \vec v)=\phi(\vec u)+ \lambda \phi(\vec v)$ \\
+{\bf \boldmath Soit $\vec u \in Ker(\phi)$} : \\
+$\phi(\vec u)= \tilde{0}$ \\
+$\forall \vec x \in E, \underbrace{\phi(\vec u, \vec x)}_{\langle \vec u,\vec x \rangle}=0$ \\
+pour $\vec x = \vec u$ : $\| \vec u \|^2=0$ donc $\vec u= \vec 0$ \\
+$Ker(\phi)= \lbrace \vec 0 \rbrace$ \\
+{\bf Théorème du rang :} \\
+$dim(Im(\phi))= dim(E)-dim(Ker(\phi))$ \\
+$dim(Im(\phi))=n=dim(\mathcal L(E,\mathbb R))$ \\
+or $Im(\phi) \subset \mathcal L(E,\mathbb R)$ donc $Im(\phi) = \mathcal L(E, \mathbb R)$
 \section{Isométries vectorielles : $O(E)$ est un sous-groupe de $GL(E)$, équivalence entre conservation de la norme et conservation du produit scalaire, caractérisation par l'image d'une base orthonormée}
 \section{Démontrer que $O_n(\mathbb R)$ est un sous-groupe de $GL_n(\mathbb R)$ + description de $O_2 (\mathbb R)$ + commutativité de $SO_2(\mathbb R)$}
 \section{Etude de $SO(E)$ ($E$ plan vectoriel orienté)}
