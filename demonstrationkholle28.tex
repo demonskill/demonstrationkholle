@@ -42,6 +42,38 @@ ainsi : f est bijective $\lbrace x_0 \rbrace \times F$ est finie et $Card(\lbrac
 Si $x_1,..., x_n$ sont les éléments distincts de E : \\
 Notons $F_k= \lbrace x_k \rbrace $ et $F(1 \leq k \leq n)$ \\
 Alors : $(F_1,...,F_n)$ est une partition de $E \times F$
+en effet :
+$F_k \subset E \times F$ pour tout k donc $\bigcup_{k=1}^n F_k \subset E \times F$ \\
+Soit $(x,y) \in E \times F$ \\
+Alors : $\exists k \in [[1,n]],x=x_k$ \\
+Or $E= \lbrace x_1,..,x_n \rbrace $ donc $(x,y) \in F_k$ \\
+A fortiori  $E \times F \subset \bigcup_{k=1}^n F_k$ \\
+si $i \neq j$ et $(x,y) \in F_i \cap F_j$ : \\
+$x=x_i$ et $x=x_j$ \\
+or $x_i\neq x_j $ \\
+ainsi : $F_i \cap F_j = \emptyset $ \\
+On a bien ; \\
+$E \times F= \bigcup_{k=1}^n F_k$  avec les $F_k$ disjoint \\
+$E \times F$ est fini et : \\
+$Card(E\times F)= \sum_{k=1}^n Card(F_k)$ \\
+Or on a vu prédemment : $\forall k \in [[1,n]], Card(F_k)=Card(F)$ \\
+donc $Card(E \times F) = n Card(F)=Card(E) Card(F)$ \\
+\textcolor{green}{Propriété :} \\
+Si on effectue un $1^{er}$ choix parmi n options puis un second ayant p options (pouvant dépendre du $1^{er}$ choix), il y a np couples de choix possibles \\
+Formellement : $A$ fini de cardinal $n \geq 1$ \\
+F ensemble quelconque et, pour tout $x \in A$ \\
+Soit $B_x \subset F$ fini de cardinal $p \in \mathbb N^*$ (indépendant de x) \\
+Alors : \\
+$Card ( \bigcup_{x \in A}\underbrace{(\lbrace x \rbrace \times B_x))}_{\lbrace (x,y),y\in B_x \rbrace}=np$ \\
+\textcolor{red}{Démonstration :} \\
+Soit $G= \bigcup_{x \in A} {(\lbrace x \rbrace \times B_x))}$ \\
+l'union est disjointe car, si $x \neq x'$ : \\
+$\lbrace x \rbrace \times B_x = \lbrace (x,y) : y\in B_x \rbrace $ \\
+$ \lbrace x' \rbrace \times B_{x'}=\lbrace (x',z) : z \in B_{x'}$ \\
+pas d'élément commun car la première composante diffère toujours \\
+De plus : \\
+$\forall x \in A, Card(\lbrace x \rbrace \times B_x)= \underbrace{Card(B_x)}_{p}$ \\
+donc G est fini de cardinal $np$
 \section{Dénombrement des arrangements, des injections}
 \section{Expression des combinaisons avec des factorielles}
 \section{Cardinal de $\mathcal P (E)$ et $\sum_{k=0}^n \binom{n}{k}=2^n$ }
