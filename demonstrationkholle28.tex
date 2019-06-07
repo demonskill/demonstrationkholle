@@ -147,5 +147,18 @@ soit $p \binom n p$ \\
 $2^{eme}$ calcul : on choisit $x \in E :$ n choix on choisit A en complétant x par p-1 éléments, parmi les n-1 restants \\
 soit $\binom{n-1}{p-1}$ choix soit $n\binom{n-1}{p-1}$ choix \\
 \section{Exercice : calcul combinatoire de $\sum_{k=p}^n \binom{p-1}{k-1} $ }
+\textcolor{green}{Propriété :} \\
+$\sum_{k=p}^n \binom{p-1}{k-1}= \binom{n}{p} $
+\textcolor{red}{Démonstration :} \\
+On pose : \\
+$E_k= \lbrace A \subset [[1,n]] : Card(A)=p$ et $max(A)=k \rbrace$ \\
+$F_k=\lbrace B \subset [[1,k-1]] : Card(B)=p-1 \rbrace$ \\
+$\phi_k : E_k \rightarrow F_k$ \\
+$A \mapsto A \backslash \lbrace k \rbrace$ \\
+$\psi_k : F_k \rightarrow E_k$ \\
+$B \mapsto B \cup \lbrace k \rbrace $ \\
+sont des bijections réciproques \\
+$P_p([[ 1,n ]] )= \bigcup_{k=p}^n E_k$  avec $E_k$ disjoints : \\
+$\binom{n}{p}= \sum^n_{k=p} \binom{k-1}{p-1}$
 \section{ Exercice : Formule de Vandermonde}
 \end{document}
