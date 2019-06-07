@@ -135,6 +135,17 @@ $A \mapsto A \cup \lbrace n \rbrace $ \\
 Ces applications sont réciproques ainsi : \\
 $Card(U)= \binom{n-1}{p-1}$
 \section{Démonstration combinatoire de $\binom{n}{p}= \frac n p \binom{n-1}{p-1}$}
+\textcolor{green}{Propriété :} \\
+pour $1 \leq p \leq n$, : \\
+$p\binom{n}{p} = n \binom{n-1}{p-1}$ \\
+$\binom n p = \frac n p \binom{n}{p-1}$ \\
+\textcolor{red}{Démonstration : } \\
+E de cardinal n \\
+$X= \lbrace (x,A) : x \in A \subset E$ et $Card(A)=p \rbrace$ \\
+$1^{er}$ calcul de $Card(X)$ on choisit A :$\binom{n}{p}$ choix puis $x\in A$ : p choix \\
+soit $p \binom n p$ \\
+$2^{eme}$ calcul : on choisit $x \in E :$ n choix on choisit A en complétant x par p-1 éléments, parmi les n-1 restants \\
+soit $\binom{n-1}{p-1}$ choix soit $n\binom{n-1}{p-1}$ choix \\
 \section{Exercice : calcul combinatoire de $\sum_{k=p}^n \binom{p-1}{k-1} $ }
 \section{ Exercice : Formule de Vandermonde}
 \end{document}
