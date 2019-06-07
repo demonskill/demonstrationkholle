@@ -122,7 +122,18 @@ $\binom{n}{p}=\binom{n-1}{p} +\binom{n-1}{p-1}$ \\
 \textcolor{red}{Démonstration :}
 $E=[[1,n]]$ \\
 $\mathcal U= \lbrace A \in \mathcal P(E): Card(A)=p$ et $n\in A \rbrace$ \\
-$\mathcal V= \lbrace A \in \mathcal P(E) : Card(A)=p$ et $n \notin A \rbrace$ \\ 
+$\mathcal V= \lbrace A \in \mathcal P(E) : Card(A)=p-1$ et $n \notin A \rbrace$ \\
+Alors : $\mathcal P(E)= \mathcal U \cup \mathcal V$ \\
+donc $\binom{n}{p}= Card(\mathcal  U) + Card(\mathcal V)$ \\
+on a $\mathcal V= \lbrace A \subset [[1,n-1]] : Card(A)=p \rbrace $ \\
+donc $Card(\mathcal V)=\binom{n-1}{p}$ \\
+Pour $\mathcal U$ posons : \\
+$\phi : \mathcal U \rightarrow \mathcal P_{p-1}([[1,n-1]])$ \\
+$A \mapsto A \backslash \lbrace n \rbrace$ \\
+$\psi : \mathcal P_{p-1}([[1,n-1]])\rightarrow \mathcal U$ \\
+$A \mapsto A \cup \lbrace n \rbrace $ \\
+Ces applications sont réciproques ainsi : \\
+$Card(U)= \binom{n-1}{p-1}$
 \section{Démonstration combinatoire de $\binom{n}{p}= \frac n p \binom{n-1}{p-1}$}
 \section{Exercice : calcul combinatoire de $\sum_{k=p}^n \binom{p-1}{k-1} $ }
 \section{ Exercice : Formule de Vandermonde}
