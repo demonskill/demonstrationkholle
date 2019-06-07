@@ -96,8 +96,19 @@ ainsi : $\psi=\Phi_{|Inj(E,F)} $ \\
 $\psi$ est une injection de $Inj(E,F)$ vers $F^p$, elle réalise donc une bijection sur son image ainsi : \\
 $Card(Inj(E,F))=Card(Im(\psi))$ \\
 Or $Im(\psi)$ est l'ensembles des p-arrangements de f : \\
-$Card(Inj(E,F))=A_n^p$ 
+$Card(Inj(E,F))=A_n^p$
 \section{Expression des combinaisons avec des factorielles}
+\textcolor{green}{Propriété :} \\
+Pour $0 \leq p \leq n , \binom{n}{p}=\frac {n!} {p!(n-p)!}$ \\
+\textcolor{red}{Démonstration :} $1^{ere}$ démonstration : \\
+$\binom{n}{p}=\frac n p \binom{n-1}{p-1}$ \\
+$\binom{n}{p}= \frac n p ... \frac {n-p+1} 1 \binom {n-p} 0$
+Or :$\binom {n-p} 0 =1$ car la seule partie de cardinal 0 est $\emptyset$ \\
+$\binom n p = \frac {n!} {p!(n-p)!}$ \\
+$2^{nde}$ démonstration : \\
+pour choisir un p-arrangements on peut choisir une p-combinaison : $\binom n p$ choix puis une permutation de ces p valeurs : $p!$ choix \\
+d'où $\underbrace{A_n^p}_{=\frac {n!} {(n-p)!}}=p! \binom n p $ \\
+$\binom n p= \frac {n!} {(n-p)! p!}$
 \section{Cardinal de $\mathcal P (E)$ et $\sum_{k=0}^n \binom{n}{k}=2^n$ }
 \textcolor{green}{Propriété :} \\
 Si E est fini, $\mathcal P(E)$ aussi et $Card(\mathcal P(E))=2^{Card(E)}$
