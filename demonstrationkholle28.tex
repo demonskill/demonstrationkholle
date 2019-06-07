@@ -161,4 +161,35 @@ sont des bijections réciproques \\
 $P_p([[ 1,n ]] )= \bigcup_{k=p}^n E_k$  avec $E_k$ disjoints : \\
 $\binom{n}{p}= \sum^n_{k=p} \binom{k-1}{p-1}$
 \section{ Exercice : Formule de Vandermonde}
+\textcolor{green}{Propriété :} \\
+Pour $0 \leq p \leq m,n$ on a : \\
+$\sum_{k=0}^p \binom{m}{k} \binom{n}{p-k}= \binom{m+n}{p}$ \\
+\textcolor{red}{Démonstration :} \\
+Soit A et B deux ensembles disjoints de cardinaux respectifs m et n : \\
+Nombre de $A\cup B$ à p éléments :$\binom{m+n}{p}$ car $Card(A \cup B)=m+n$ \\
+Posonx : \\
+$E=\lbrace X \subset A\cup B : Card(X)=p \rbrace $ \\
+$E_k= \lbrace X \subset A \cup B : Card(A \cap X)=k  \rbrace $ avec $0 \leq k \leq p$ \\
+Alors : $E= \bigcup_{k=0}^p E_k$ avec $E_k$ disjoints \\
+donc : $\binom{m+n}{p}= \sum_{k=0}^n Card(E_k)$ \\
+On a à k fixé : \\
+$\phi_k : E_k \rightarrow  \mathcal P_k(A) \times \mathcal P_{p-k}(B)$ \\
+$X \mapsto (A \cap X, B \cap X)$ \\
+est bien définie de réciproque : \\
+$\psi_k: \mathcal P_k(A) \times \mathcal P_{p-k} (B) \rightarrow E_k$ \\
+$(Y,Z) \mapsto Y \cup Z$ \\
+pour $X \in E_k$ : \\
+$\psi_k(\phi_k(X))=(A\cap X) \cup (B \cap X)$ \\
+$\psi_k(\phi_k(X))=(A\cup B)\cap X$ \\
+$\psi_k(\phi_k(X))=X$ car $X \subset A\cup B$ \\
+pour $(Y,Z) \in \mathcal P_k(A) \times \mathcal P_{p-k}(B) :$ \\
+$\phi_k(\psi_k(Y,Z))=(A\cap(Y\cup Z), B \cap(Y \cup Z))$ \\
+$\phi_k(\psi_k(Y,Z))=((A\cap Y)\cup(A \cap Z),(B\cap Y) \cup (B \cap Z))$ \\
+Or : $Y \subset A$ donc $A\cap Y= Y$ \\
+et $A\cap B= \emptyset$ donc $B \cap Y=\emptyset$ \\
+de meme : $A \cap Z = \emptyset$ et $B \cap Z=Z$ donc : \\
+$\phi_k(\psi_k(Y,Z))=(Y,Z)$ \\
+Ainsi : $Card(E_k)=\binom{m}{k} \binom{n}{p-k} $ \\
+On remplace : \\
+$\binom{m+n}{p}= \sum_{k=0}^p \binom{m}{k} \binom{n}{p-k}$ \\
 \end{document}
