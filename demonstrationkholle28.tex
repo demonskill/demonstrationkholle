@@ -32,7 +32,7 @@
 Si E et F sont finis $E \times F $ aussi et $Card(E \times F)= Card(E) Card(F)$ \\
 \textcolor{red}{Démonstration :} \\
 {\bf \boldmath Si E ou F $= \emptyset$} alors $E \times F= \emptyset$ $0=0$ \\
-Si $E= \lbrace x_0 \rbrace$, singleton \\
+{\bf \boldmath Si $E= \lbrace x_0 \rbrace$,} singleton \\
 Soit $f: F \rightarrow \lbrace x_0 \rbrace \times F $ \\
 $y \mapsto (x_0,y)$ \\
 et $g : \lbrace x_0 \rbrace \times F \rightarrow F$ \\
@@ -40,7 +40,7 @@ $(x_0,y) \mapsto y$ \\
 Ces applications sont trivialements réciproques. \\
 ainsi : f est bijective $\lbrace x_0 \rbrace \times F$ est finie et $Card(\lbrace x_0 \rbrace \times F)= Card(F) $ \\
 Si $x_1,..., x_n$ sont les éléments distincts de E : \\
-Notons $F_k= \lbrace x_k \rbrace $ et $F(1 \leq k \leq n)$ \\
+Notons $F_k= \lbrace x_k \rbrace \times F$ \\
 Alors : $(F_1,...,F_n)$ est une partition de $E \times F$ \\
 en effet : \\
 $F_k \subset E \times F$ pour tout k donc $\bigcup_{k=1}^n F_k \subset E \times F$ \\
@@ -69,7 +69,7 @@ $Card ( \bigcup_{x \in A}\underbrace{(\lbrace x \rbrace \times B_x))}_{\lbrace (
 Soit $G= \bigcup_{x \in A} {(\lbrace x \rbrace \times B_x))}$ \\
 l'union est disjointe car, si $x \neq x'$ : \\
 $\lbrace x \rbrace \times B_x = \lbrace (x,y) : y\in B_x \rbrace $ \\
-$ \lbrace x' \rbrace \times B_{x'}=\lbrace (x',z) : z \in B_{x'}$ \\
+$ \lbrace x' \rbrace \times B_{x'}=\lbrace (x',z) : z \in B_{x'} \rbrace$ \\
 pas d'élément commun car la première composante diffère toujours \\
 De plus : \\
 $\forall x \in A, Card(\lbrace x \rbrace \times B_x)= \underbrace{Card(B_x)}_{p}$ \\
@@ -133,7 +133,7 @@ $\binom{n}{p}=\binom{n-1}{p} +\binom{n-1}{p-1}$ \\
 \textcolor{red}{Démonstration :} \\
 $E=[[1,n]]$ \\
 $\mathcal U= \lbrace A \in \mathcal P(E): Card(A)=p$ et $n\in A \rbrace$ \\
-$\mathcal V= \lbrace A \in \mathcal P(E) : Card(A)=p-1$ et $n \notin A \rbrace$ \\
+$\mathcal V= \lbrace A \in \mathcal P(E) : Card(A)=p$ et $n \notin A \rbrace$ \\
 Alors : $\mathcal P(E)= \mathcal U \cup \mathcal V$ \\
 donc $\binom{n}{p}= Card(\mathcal  U) + Card(\mathcal V)$ \\
 on a $\mathcal V= \lbrace A \subset [[1,n-1]] : Card(A)=p \rbrace $ \\
@@ -144,7 +144,7 @@ $A \mapsto A \backslash \lbrace n \rbrace$ \\
 $\psi : \mathcal P_{p-1}([[1,n-1]])\rightarrow \mathcal U$ \\
 $A \mapsto A \cup \lbrace n \rbrace $ \\
 Ces applications sont réciproques ainsi : \\
-$Card(U)= \binom{n-1}{p-1}$
+$Card(\mathcal U)= \binom{n-1}{p-1}$
 \section{Démonstration combinatoire de $\binom{n}{p}= \frac n p \binom{n-1}{p-1}$}
 \textcolor{green}{Propriété :} \\
 pour $1 \leq p \leq n$, : \\
@@ -157,9 +157,9 @@ $1^{er}$ calcul de $Card(X)$ on choisit A :$\binom{n}{p}$ choix puis $x\in A$ : 
 soit $p \binom n p$ \\
 $2^{eme}$ calcul : on choisit $x \in E :$ n choix on choisit A en complétant x par p-1 éléments, parmi les n-1 restants \\
 soit $\binom{n-1}{p-1}$ choix soit $n\binom{n-1}{p-1}$ choix \\
-\section{Exercice : calcul combinatoire de $\sum_{k=p}^n \binom{p-1}{k-1} $ }
+\section{Exercice : calcul combinatoire de $\sum_{k=p}^n \binom{k-1}{p-1} $ }
 \textcolor{green}{Propriété :} \\
-$\sum_{k=p}^n \binom{p-1}{k-1}= \binom{n}{p} $ \\
+$\sum_{k=p}^n \binom{k-1}{p-1}= \binom{n}{p} $ \\
 \textcolor{red}{Démonstration :} \\
 On pose : \\
 $E_k= \lbrace A \subset [[1,n]] : Card(A)=p$ et $max(A)=k \rbrace$ \\
@@ -169,7 +169,7 @@ $A \mapsto A \backslash \lbrace k \rbrace$ \\
 $\psi_k : F_k \rightarrow E_k$ \\
 $B \mapsto B \cup \lbrace k \rbrace $ \\
 sont des bijections réciproques \\
-$P_p([[ 1,n ]] )= \bigcup_{k=p}^n E_k$  avec $E_k$ disjoints : \\
+$\mathcal P_p([[ 1,n ]] )= \bigcup_{k=p}^n E_k$  avec $E_k$ disjoints : \\
 $\binom{n}{p}= \sum^n_{k=p} \binom{k-1}{p-1}$
 \section{ Exercice : Formule de Vandermonde}
 \textcolor{green}{Propriété :} \\
@@ -178,9 +178,9 @@ $\sum_{k=0}^p \binom{m}{k} \binom{n}{p-k}= \binom{m+n}{p}$ \\
 \textcolor{red}{Démonstration :} \\
 Soit A et B deux ensembles disjoints de cardinaux respectifs m et n : \\
 Nombre de $A\cup B$ à p éléments :$\binom{m+n}{p}$ car $Card(A \cup B)=m+n$ \\
-Posonx : \\
+Posons : \\
 $E=\lbrace X \subset A\cup B : Card(X)=p \rbrace $ \\
-$E_k= \lbrace X \subset A \cup B : Card(A \cap X)=k  \rbrace $ avec $0 \leq k \leq p$ \\
+$E_k= \lbrace X \in E : Card(A \cap X)=k  \rbrace $ avec $0 \leq k \leq p$ \\
 Alors : $E= \bigcup_{k=0}^p E_k$ avec $E_k$ disjoints \\
 donc : $\binom{m+n}{p}= \sum_{k=0}^n Card(E_k)$ \\
 On a à k fixé : \\
