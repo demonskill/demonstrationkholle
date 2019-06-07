@@ -34,7 +34,7 @@ Si E et F sont finis $E \times F $ aussi et $Card(E \times F)= Card(E) Card(F)$ 
 {\bf \boldmath Si E ou F $= \emptyset$} alors $E \times F= \emptyset$ $0=0$ \\
 Si $E= \lbrace x_0 \rbrace$, singleton \\
 Soit $f: F \rightarrow \lbrace x_0 \rbrace \times F $ \\
-$y \maps (x_0,y)$
+$y \mapsto (x_0,y)$
 et $g : \lbrace x_0 \rbrace \times F \rightarrow F$ \\
 $(x_0,y) \mapsto y$ \\
 Ces applications sont trivialements réciproques. \\
@@ -75,6 +75,28 @@ De plus : \\
 $\forall x \in A, Card(\lbrace x \rbrace \times B_x)= \underbrace{Card(B_x)}_{p}$ \\
 donc G est fini de cardinal $np$
 \section{Dénombrement des arrangements, des injections}
+\textcolor{green}{Propriété : } \\
+pour $0 \leq p \leq n $, $A_n^p=\frac{n!}{(n-p)!}$ \\
+\textcolor{red}{Démonstration :} \\
+si $p=0: A_n^0=1$ (liste vide) \\
+si $p \geq 1$ : on a n choix pour la première composante \\
+puis n-1 choix pour la seconde composante \\
+$\vdots$ \\
+$\vdots$ \\
+puis $n-p-1$ choix pour la p-ième composante \\
+donc : $A_n^p=n(n-1)...(n-p+1)$ \\
+$A_n^p=\frac{n!}{(n-p)!}$ \\
+\textcolor{green}{Propriété :} \\
+E fini de cardinal p et F fini de cardinal n alors $Card(Inj(E,F))=A_n^p$ \\
+\textcolor{red}{Démonstration: } \\
+Notons $x_1,...,x_p$ les éléments distincts on a vu que : \\
+$\Phi : F^E \rightarrow F^p$ \\
+$f \mapsto (f(x_1),...,f(x_p))$ est une bijection \\
+ainsi : $\psi=\Phi_{|Inj(E,F)} $ \\
+$\psi$ est une injection de $Inj(E,F)$ vers $F^p$, elle réalise donc une bijection sur son image ainsi : \\
+$Card(Inj(E,F))=Card(Im(\psi))$ \\
+Or $Im(\psi)$ est l'ensembles des p-arrangements de f : \\
+$Card(Inj(E,F))=A_n^p$ 
 \section{Expression des combinaisons avec des factorielles}
 \section{Cardinal de $\mathcal P (E)$ et $\sum_{k=0}^n \binom{n}{k}=2^n$ }
 \section{Formule du triangle de Pascal.}
