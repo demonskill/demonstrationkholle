@@ -99,7 +99,30 @@ Or $Im(\psi)$ est l'ensembles des p-arrangements de f : \\
 $Card(Inj(E,F))=A_n^p$ 
 \section{Expression des combinaisons avec des factorielles}
 \section{Cardinal de $\mathcal P (E)$ et $\sum_{k=0}^n \binom{n}{k}=2^n$ }
+\textcolor{green}{Propriété :} \\
+Si E est fini, $\mathcal P(E)$ aussi et $Card(\mathcal P(E))=2^{Card(E)}$
+\textcolor{red}{Démonstration :} \\
+Posons $\Phi : \mathcal (E) \rightarrow \lbrace 0,1 \rbrace^E$ \\
+$A \mapsto 1|_{A}$ \\
+$\Psi : \lbrace 0,1 \rbrace^E \rightarrow \mathcal P(E)$ \\
+$f \mapsto \lbrace x \in E : f(x)=1 \rbrace=f^{-1}(\lbrace 1 \rbrace)$ \\
+Elles sont réciproques ainsi : \\
+$ \mathcal P(E)$ est fini de cardinal : $Card(\lbrace 0,1 \rbrace^E)=2^{Card(E)} $ \\
+\textcolor{green}{Propriété :} \\
+$\forall n \in \mathbb N, \sum_{k=0}^n \binom{n}{k}=2^n$ \\
+\textcolor{red}{Démonstration :} \\
+Soit E de cardinal n : \\
+$\mathcal P(E)= \bigcup_{k=0}^n \mathcal P_k(E)$ avec $\mathcal P_k(E)$ disjoints donc : \\
+$Card(\mathcal P(E))=\sum_{k=0}^n Card(\mathcal P_k(E)$ \\
+$2^n=\sum_{k=0}^n \binom{n}{k}$
 \section{Formule du triangle de Pascal.}
+\textcolor{green}{Propriété :} \\
+pour $1 \leq p \leq n$ \\
+$\binom{n}{p}=\binom{n-1}{p} +\binom{n-1}{p-1}$ \\
+\textcolor{red}{Démonstration :}
+$E=[[1,n]]$ \\
+$\mathcal U= \lbrace A \in \mathcal P(E): Card(A)=p$ et $n\in A \rbrace$ \\
+$\mathcal V= \lbrace A \in \mathcal P(E) : Card(A)=p$ et $n \notin A \rbrace$ \\ 
 \section{Démonstration combinatoire de $\binom{n}{p}= \frac n p \binom{n-1}{p-1}$}
 \section{Exercice : calcul combinatoire de $\sum_{k=p}^n \binom{p-1}{k-1} $ }
 \section{ Exercice : Formule de Vandermonde}
