@@ -1,0 +1,247 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+%%%<
+\usepackage{verbatim}
+%%%>
+\begin{document}
+\title{Démonstration kholle 4}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{Résolution des équations $\sin(x)=\sin(a)$ et $\cos(x) =\cos(a)$}
+	\textcolor{green}{Propriété :} soit $a \in \mathbb{R}$ :\\
+	\indent \textcolor{green}{1)} Pour $x \in \mathbb{R}$ \\
+	\indent \indent $\sin(x)=\sin(a)\Leftrightarrow (x\equiv a[2 \pi ]$ ou $x \equiv \pi - a [2 \pi]$ ) \\
+	\indent \textcolor{green}{2)} Pour $x \in \mathbb{R}$ : \\
+	\indent \indent $\cos(x)=cos(a) \Leftrightarrow (x \equiv a [2 \pi]$ ou $x \equiv -a [2 \pi]$ ) \\
+\textcolor{red}{Démonstration :} \\
+ \textcolor{green}{1)} $\sin(x)=sin(a) \Leftrightarrow \sin(x) -\sin(a)=0$ \\
+\indent \indent $\Leftrightarrow 2 \sin(\frac{x-a}{2})\cos(\frac{x+a}{2})=0$ \\
+\indent \indent $\Leftrightarrow \sin(\frac{x-a}{2})=0$ ou $cos(\frac{x+a}{2})=0$ \\
+\indent \indent $\Leftrightarrow(\frac{x-a}{2})=0[\pi]$ ou $x+a=\pi[2 \pi]$ \\
+\indent \indent $\Leftrightarrow x-a \equiv 0[2\pi]$ ou $x+a \equiv \pi[2\pi]$ \\
+\indent \indent $x \equiv a[2\pi]$ ou $x\equiv \pi-a[2\pi]$ \\
+\textcolor{green}{2)} $\cos(x)-\cos(a)=0 \Leftrightarrow -2\sin(\frac{x+a}{2})sin(\frac{x-a}{2})=0$ \\
+\indent \indent $\Leftrightarrow \sin(\frac{x+a}{2})=0$ ou $\sin(\frac{x-a}{2})=0$ \\
+\indent \indent $\Leftrightarrow \frac{x+a}{2}\equiv 0 [\pi]$ ou $\frac{x-a}{2} \equiv 0[\pi]$ \\
+\indent \indent $\Leftrightarrow x\equiv -a[2\pi]$ ou $x\equiv a [2\pi]$ \\
+
+	\section{Tangente: dérivée, $\tan (a \pm b)$, expression de $\sin(\theta)$, $\cos(\theta)$ et $\tan(\theta)$ en fonction de $t=\tan(\theta /2)$ }
+	\textcolor{green}{Propriété :} \\
+	\indent $\forall x \in \mathcal{D}_{tan}, \tan'(x)=1+\tan^2(x)= \frac{1}{\cos^2(x)}$ \\ \\
+	\textcolor{red}{Démonstration :} \\
+	\indent $\tan'(x)= \frac{\sin'(x)\cos(x)-sin(x)cos'(x)}{\cos^2(x)}$ \\
+	\indent $=\frac{\sin^2(x)+cos^2(x)}{\cos^2(x)} = \frac{1}{\cos^2(x)}$ ou $\frac{\sin^2(x)}{\cos^2(x)} + \frac{\cos^2(x)}{\cos^2(x)}= 1 + \tan^2(x)$ \\ \\
+	\textcolor{green}{Propriété :} Lorsque cela a un sens : \\
+	\indent $\tan(a+b)=\frac{\tan(a)+\tan(b)}{1-\tan(a)\tan(b)}$ \\
+	\indent $\tan(a-b)=\frac{\tan(a)-\tan(b)}{1+\tan(a)\tan(b)}$ \\
+	\indent $\tan(2a)=\frac{2\tan(a)}{1-\tan^2(a)}$ ou $\tan(\theta)=\frac{2\tan(\frac{\theta}{2})}{1-\tan^2(\frac{\theta}{2}}$ \\\\
+	\textcolor{red}{Démonstration :} $\tan(a+b)= \frac{\sin(a+b)}{\cos(a+b)}$ \\
+	\indent$\tan(a+b)= \frac{\sin(a)\cos(b)+\cos(a)sin(b)}{\cos(a)\cos(b)-\sin(a)\sin(b)}$\\
+	\indent $\tan(a+b)=\frac{\tan(a)+\tan(b)}{1-\tan(a)\tan(b)}$ \\ \\
+	\textcolor{green}{Propriété : }formules d'angle moitié. \\
+\indent Soit $\theta \in \mathbb{R}$ et $t=\tan(\frac{\theta}{2})$ \\
+Alors : \\
+ \indent $\sin(\theta)=\frac{2t}{1+t^2}$ \\
+ \indent $\cos(\theta)=\frac{1-t^2}{1+t^2}$ \\
+ \indent$\tan(\theta)=\frac{2t}{1-t^2}$ (lorsque cela a un sens) \\ \\
+\textcolor{red}{Démonstration :} \\
+ $\sin(\theta)=2\sin(\frac{\theta}{2})\cos(\frac{\theta}{2})$ \\
+ \indent $=2\tan(\frac{\theta}{2})\underbrace{\cos^2(\frac{\theta}{2})}_{\frac{1}{1+\tan^2(\frac{\theta}{2})}}$ \\
+ \indent $=\frac{2t}{1+t^2}$ \\ \\
+ Comme $\cos(\theta)=2\cos^2(\frac{\theta}{2})-1$ \\
+ \indent $\cos(\theta)=2*\frac{1}{1-t^2}-1$ \\
+ \indent \indent $= \frac{1-t^2}{1+t^2}$ \\
+$\tan(\theta)$: avec les formules précédentes et $\tan(\theta)=\frac{\sin(\theta)}{\cos(\theta)}$ donc $\tan(\theta)=\frac{2t}{1-t^2}$
+\section{Inégalité triangulaire complète dans $\mathbb{C}$}
+\textcolor{green}{Propriété : } \\
+\indent \textcolor{green}{1) }$\forall(u,v)\in \mathbb{C}^2, |u+v| \leq |u|+|v|$ \\
+\indent \textcolor{green}{2) }$\forall(u,v)\in \mathbb{C}^2, |u-v| \leq |u|+|v|$ \\
+\indent \textcolor{green}{3) }$\forall(u,v)\in \mathbb{C}^2, ||u|-|v|| \leq |u-v|$ \\
+\indent \textcolor{green}{4) }$\forall(u,v)\in \mathbb{C}^2, ||u|-|v|| \leq |u+v|$ \\
+c'est-à-dire:$||u|-|v|| \leq |u \pm v | \geq |u|+|v|$ \\ \\
+\textcolor{red}{Démonstration :} \\
+\textcolor{green}{1) } $|u+v|^2=(u+v)\overline{(u+v)}$ \\
+\indent $=(u+v)(\overline{u}+\overline{v})$ \\
+\indent $=u\overline{u}+u\overline{v}+v\overline{u}+v\overline{v}$ \\
+\indent $= |u|^2+2\mathbf{Re}(u\overline{v})+|v|^2$ car $v\overline{u}=\overline{u\overline{v}}$ \\
+or : \\
+$ \mathbf{Re} (u\overline{v}) \leq | \mathbf{Re}(u\overline{v})| \leq |u \overline{v} |=| u|| \overline{v} |=|u| |v|$ \\
+d'où : \\
+$|u+v|^2 \leq |u|^2 +2|u||v|+|v|^2=(|u|+|v|)^2$ \\
+Comme $|u+v|$ et $|u|+|v|\geq 0$ : \\
+\indent $|u+v| \leq |u|+|v|$ \\ \\
+\textcolor{green}{2) } Avec u et -v : \\
+$|u+(-v)| \leq |u|+|-v|$ \\
+$|u-v| \leq |u| +|v|$ \\ \\
+\textcolor{green}{3) }Avec u-v et v dans \textcolor{green}{1) } : \\
+\indent $|(u-v)+v| \leq |u-v|+|v|$ \\
+c'est-à-dire $|u| -|v| \leq |u-v|$ \\
+En échangeant les roles de u et v : \\
+$|v|-|u|\leq |v-u|=|u-v|$ \\
+Comme $|v|-|u| \leq |u-v|$ et $|u|-|v| \leq |u-v|$ donc \\
+\indent $||u|-|v|| \leq |u-v|$ \\
+\textcolor{green}{4) } On applique \textcolor{green}{3} à u et -v 
+\section{$|\sum_{k=1}^{n}z_k| \leq \sum_{k=1}^{n} |z_k|$ avec égalité}
+\textcolor{green}{Propriété :} (inégalité triangulaire) \\
+\indent Soit $(z_1,..,z_n) \in \mathbb{C}^n$ alors : \\
+\textcolor{green}{1) } $|\sum_{k=1}^n z_k| \leq \sum_{k=1}^n|z_k|$ \\
+\textcolor{green}{2) } C'est une égalité si et seulement si : \\
+\indent $\exists \theta \in \mathbb{R}, 
+\forall k \in [[1,n]], z_k e^{-i\theta} \in \mathbb{R}_+$ \\
+c'est-à-dire : tous les $z_k$ non nuls et de même arguments \\ \\
+\textcolor{red}{Démonstration :} \textcolor{green}{1) } Notons $S=\sum_{k=1}^n z_k \in \mathbb{C}$ \\
+\indent $T= \sum_{k=1}^n |z_k| \in \mathbb{R}_+$ \\
+\indent Soit $\theta \in \mathbb{R}$ tel que $S=|S|e^{-i\theta}$ \\
+Alors : \\
+\indent $|S|=S e^{-i\theta}$ \\
+\indent $= \sum_{k=1}^nz_ke^{-i\theta}$ \\
+\indent Partie réelle : \\
+\indent $ \mathbb{R} \ni |S| = \sum_{k=1}^n \mathbf{Re}(z_k e^{-i\theta)}$ \\
+\indent $\leq \sum_{k=1}^n|z_ke^{i\theta|}$ car $\forall u \in \mathbb{C}, \mathbf{Re}(u) \leq |u|$ \\ \indent \indent $=|z_k||e^{-i\theta}=|z_k|$ \\
+c'est-à-dire : $|S| \leq T$ \\
+\textcolor{green}{2)} \\ $\Longrightarrow$ on suppose $|S|=T$ \\
+différence : $\sum_{k=1}^n[|z_ke^{-i\theta}|-\mathbf{Re}(z_ke^{-i\theta})]=0$ \\
+donc : \\
+\indent $\forall k \in [[1,n]],|z_k e^{i\theta}|-\mathbf{Re}(z_k e^{-i\theta})=0$ \\
+donc, pour $k\in [[1,n]]$, $z_ke^{-i\theta} \in \mathbb{R}_+$ \\
+$\Longleftarrow$ soit $\theta$ convient : \\
+\indent $|S|=|\sum_{k=1}^n z_k|$ \\
+\indent $= |\sum_{k=1}^n(|z_k|e^{i\theta})$ \\
+\indent $=|Te^{i\theta)}|$ \\
+\indent $=T$ car $T \in \mathbb{R}_+$
+\section{Formule $e^{i(\theta + \phi)}=e^{i \theta}e^{i \phi}$ puis exemples de linéarisation}
+\textcolor{green}{Propriété :} \\
+\indent $\forall(\theta,\phi) \in \mathbb{R}^2,e^{i(\theta+\phi)}=e^{i\theta}e^{i\phi}$ \\
+\textcolor{red}{Démonstration :} \\
+\indent $e^{\theta+\phi}=\cos(\theta +\phi)+ i \sin(\theta +\phi)$ \\
+\indent $=\cos(\theta)\cos(\phi)-\sin(\theta)\sin(\phi)+i	(\sin(\theta)cos(\phi)+\cos(\theta)\sin(\phi))$ \\
+\indent $=(\cos(\theta)+i\sin(\theta))(cos(\phi)+i\sin(\phi))$ \\
+\indent $=e^{i\theta}e^{i\phi}$\\
+\textcolor{green}{Propriété :} (formules d'Euler) \\
+\indent Pour $\theta \in \mathbb{R}$ \\
+\indent $\cos(\theta)=\frac{e^{i\theta}+e^{-i\theta}}{2}$  \\
+\indent $\sin(\theta)=\frac{e^{i\theta}-e^{-i\theta}}{2i}$ \\ \\
+\textcolor{red}{Définition :} "linéariser" : transformer un produit de fonctions circulaires en somme de fonctions circulaires. \\
+{\bf ex :} \\
+{\bf 1)} $\sin^3(t)=(\frac{e^{it}-e^{-it}}{2i})^3$ \\
+\indent $=\frac{1}{(2i)^3}[(e^{it})^3-3(e^{it})^2e^{-it}+3e^{it}(e^{-it})^2-(e^{-it})^3]$ \\
+\indent $=\frac{1}{(2i)^3}[e^{3it}-e^{-3it}-3(e^{it}-e^{-it})]$ \\
+\indent $=\frac{1}{(2i)^2}[\sin(3t)-3\sin(t)]$ \\
+\indent $=\frac{3}{4}\sin(t)-\frac{1}{4}\sin(3t)$ \\
+d'où : $\int_0^{\frac{\pi}{2}} \sin^3(t)dt=[-3/4 \cos(t) +\frac{1}{12}\cos(3t)]_0^{\frac{\pi}{2}}$ \\
+\indent $=0-(-\frac{3}{4}+\frac{1}{12})=\frac{2}{3}$ \\
+{\bf 2)} $\cos(p)\cos(q)=\frac{e^{ip}+e^{-ip}}{2}\times \frac{e^{iq}+e^{-iq}}{2}$ \\
+\indent $=\frac{1}{4}(e^{i(p+q)}e^{i(p-q)}+e^{-i(p-q)}e^{-i(p+q)})$ \\
+\indent $=\frac{\cos(p+q)+\cos(p-q)}{2}$
+\section{Calcul de $\sum_{k=0}^n \cos(kx)$ et $\sum_{k=0}^n\sin(kx)$}
+Pour $x \in \mathbb{R}$, et $n \in \mathbb{N}$ notons : \\
+\indent $C_n=\sum_{k=0}^n\cos(kx)$ \\
+\indent $S_n=\sum_{k=0}^n\sin(kx)$ \\
+Calculons plutôt : \\
+\indent $T_n=C_n+iS_n=\sum_{k=0}^ne^{ikx}$ \\
+\indent $T_n=\sum_{k=0}^n(e^{ix})^k$ \\
+Si $e^{ix} \neq 1$, c'est-à-dire $x \not\equiv 0 [2\pi]$ \\
+On reconnait une suite géométrique donc : \\
+\indent $T_n=\frac{1-(e^{ix})^{n+1}}{1-e^{ix}}$ \\
+\indent $=\frac{1-(e^{i(n+1)x}}{1-e^{ix}}$ \\
+\indent $=\frac{1-(e^{i(n+1)x}}{1-e^{ix}}$ \\
+\indent $=\frac{e^{\frac{i(n+1)x}{2}}(e^{\frac{-i(n+1)x}{2}}-e^{\frac{i(n+1)x}{2})}}{e^{\frac{ix}{2}}(e^{\frac{-ix}{2}}-e^{\frac{ix}{2}})}$ \\
+$T_n=e^{\frac{in}{2}}\frac{-2i\sin(\frac{n+1}{2}x)}{-2i\sin(\frac{x}{2})}$ \\
+$T_n=e^{\frac{in}{2}}\frac{\sin(\frac{n+1}{2}x)}{\sin(\frac{x}{2})}$ \\
+\indent $C_n=\cos(\frac{n/2}{x})\frac{\sin(\frac{n+1}{2}x)}{\sin(\frac{x}{2})}$ \\ \\
+\indent $S_n=\sin(\frac{n/2}{x})\frac{\sin(\frac{n+1}{2}x)}{\sin(\frac{x}{2})}$ \\ \\
+Si $e^{ix}=1$ c'est-à-dire $x\equiv 0[2 \pi]$ \\
+$\sum_{k=0}^n1=n+1$ \\ \\
+$\sum_{k=0}^n0=0$ 
+\section{Second degré complexe : forme canonique, racines, factorisation. Cas des coefficients réels}
+\textcolor{red}{Définition :} forme canonique du trinôme \\
+\indent $az^2+bz+c=a((z+\frac{b}{2a})^2-\frac{\Delta}{4a^2})$ où $ \Delta= b^2-4ac \in \mathbb{C}$ \\
+\textcolor{red}{Démonstration :} \\
+\indent $az^2+bz+c=a(\underbrace{z^2+\frac{b}{a}z}_{debut \quad de \quad (z+\frac{b}{2a})^2}+\frac{c}{a})$ \\ \\
+\indent \indent $=a((z+\frac{b}{2a})^2-\frac{b^2}{4a^2}+\frac{c}{a}$ \\
+\indent \indent $=a((z+\frac{b}{2a})^2-\frac{\Delta}{4a^2}$ \\ \\
+\textcolor{green}{Propriété :} racines et factorisation \\
+\indent $az^2+bz+c=0$ \\
+\textcolor{green}{1)} si $\Delta=0$ : l'unique solution est: \\
+\indent \indent $z=\frac{-b}{2a}$ \\
+On a $az^2+bz+c=a(z-z_0)^2$ \\
+\textcolor{green}{2)} Si $\Delta \in \mathbb{C}^*$ l'équation possède deux solutions. \\
+En notant $\delta$, une racine carré complexe de $\Delta$, ce sont : \\
+$z_1=\frac{-b-\delta}{2a}$ et $z_2=\frac{-b+\delta}{2a}$ \\
+On a : $az^2+bz+c=a(z-z_1)(a-z_2)$ \\
+\textcolor{red}{Démonstration :} \\
+\indent \textcolor{green}{1)}$az^2+bz+c=a(z+\frac{b}{2a})^2$ si $\Delta=0$ \\
+\indent \indent $=a(z-z_0)^2$ \\
+\indent \indent nul si et seulement si $z=z_0$ \\
+\indent \textcolor{green}{2)}$az^2+bz+c=a((z+\frac{b}{2a})^2-(\frac{\delta}{2a})^2)$ \\
+\indent \indent $=a(z+\frac{b+\delta}{2a})(z+\frac{b-\delta}{2a})$ \\
+\indent \indent $=a(z-z_1)(z-z_2)$ \\
+\indent \indent nul si et seulement si $z=z_1$ ou $z=z_2$ \\
+\textcolor{green}{Propriété :} cas des coefficients réels \\
+$(a,b,c) \in \mathbb{R}^* \times \mathbb{R}^2$ \\
+Si $\Delta > 0,$ les deux racines sont réelles : \\
+\indent $\frac{-b-\sqrt{\Delta}}{2a}$ et $\frac{-b+\sqrt{\Delta}}{2a}$ \\ \\
+Si $\Delta =0$ La racine double est réelle : \\
+\indent $z=\frac{-b}{2a}$ \\ \\
+Si $\Delta<0$ les racines sont complexes non réelles conjuguées : \\
+\indent $z_1=\frac{-b-i\sqrt{-\Delta}}{2a}$ et $z_2=\frac{-b+i\sqrt{-\Delta}}{2a}=\overline{z_1}$
+\section{Racines n-ièmes de l'unité (avec les cas $n \in \lbrace 2,3,4,6 \rbrace$ )}
+\textcolor{red}{Définition :} $\mathbb{U}_m=\lbrace z \in \mathbb{C}: z^n=1 \rbrace$ \\
+C'est le groupe des racines n-ièmes de l'unité \\
+\begin{tikzpicture}[scale=5.0,cap=round,>=latex]
+        % draw the coordinates
+        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+
+        % draw the unit circle
+        \draw[thick] (0cm,0cm) circle(1cm);
+
+
+        % draw each angle in radians
+        \foreach \x/\xtext in {
+            60/\frac{\pi}{3},
+            120/\frac{2\pi}{3},
+            240/\frac{-2\pi}{3},
+            300/\frac{-\pi}{3}}
+                \draw (\x:0.85cm) node[fill=white] {$\xtext$};
+
+        \foreach \x/\xtext/\y in {
+            % the coordinates for the first quadrant
+            60/-j^2,
+            % the coordinates for the second quadrant
+            120/j,
+            % the coordinates for the third quadrant
+            240/j^2,
+            % the coordinates for the fourth quadrant
+            300/j}
+                \draw (\x:1.25cm) node[fill=white] {$\xtext$};
+
+        % draw the horizontal and vertical coordinates
+        % the placement is better this way
+        \draw (-1.25cm,0cm) node[above=0.5pt] {$-1$}
+              (1.25cm,0cm)  node[above=0.5pt] {$1$}
+              (0cm,-1.25cm) node[fill=white] {$-i$}
+              (0cm,1.25cm)  node[fill=white] {$i$};
+    \end{tikzpicture}
+  \\Les éléments de $\mathbb{U}_m$ sont les affixes d'un poligone régulier de cotés n \\
+\indent  $\mathbb{U}_2=\lbrace -1,1 \rbrace$ \\
+\indent  $\mathbb{U}_4=\lbrace 1,i,-1,-i \rbrace$ \\
+\indent  $\mathbb{U}_3=\lbrace 1,j,j^2 \rbrace$ \\
+\indent   $\mathbb{U}_6=\lbrace 1,-j^2,j,j^2,-j,-1 \rbrace$ \\
+\end{document}

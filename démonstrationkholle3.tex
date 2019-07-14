@@ -1,0 +1,115 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\title{Démonstration kholle 3}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{Unicité du neutre}
+	\textcolor{green}{Propriété :} Si le neutre existe, il est unique \\
+	\indent Le magma est dit unif\`ere ou unitaire \\
+	\textcolor{red}{Démonstration :} Soit $e$ et $e'$ neutres : \\
+	$e \star e' = e'$ car e est neutre \\
+	$e \star e' = e$ car e' est neutre \\
+	donc $e'=e$
+	\section{Symétrisabilité et symétrique de $x^-1$ de $x \star y$ dans un monoïde}
+	\textcolor{green}{Propriété :} \\
+	 \indent $\forall x \in U(m)$, ($x^{-1} \in U(M)$ et $(x^{-1})^{-1}=x$) \\
+	Pour une loi + : $-(-x)=x$ \\
+	\textcolor{red}{Démonstration :} Notons $y =x^{-1} \in M$ \\
+	\indent alors : $ x \star y = e$ et $ y \star x = e $ \\
+	\indent donc : $y \in U(M)$ donc $y^{-1}=x$ \\
+	\textcolor{green}{Propriété :} \\ $\forall (x,y) \in (U(M))^2, ( x \star y) \in U(M)$ et $(x \star y)^{-1} = x^{-1} \star y^{-1}$ \\
+	$U(M)$ est donc stable par $\star$ \\
+	\textcolor{red}{Démonstration :} \\ D'une part avec $u= x \star y$ et $v=y^{-1}\star x^{-1}$ \\
+\indent $u \star v = (x \star y) \star (y^{-1} \star x^{-1})$\\
+\indent $u \star v= x \star (y \star y^{-1}) \star x^{-1}$ \\
+\indent $u \star v= x \star e \star x^{-1}$ \\
+\indent $u \star v= x \star x^{-1}$ \\
+\indent $u \star v= e$ \\
+D'autre part : \\
+ \indent
+$v \star u = y^{-1} \star x^{-1} \star x \star y$ \\
+\indent $v \star u =y^{-1} \star e \star y$ \\
+\indent $v \star u = y^{-1} \star y$ \\
+\indent $v \star u = e$
+ \\
+	Ainsi: $ u \in U(M)$ et $u^{-1}=v$
+	\section{régularité des symétrisables dans un monoïde}
+	\textcolor{green}{Propriété :} Dans un mono\"ide, tout \'el\'ement sym\'etrisable est r\'egulier \\
+	\textcolor{red}{Démonstration :} $(M,\star)$ mono\"ide de neutre e, $a \in U(M)$ \\
+	\indent Soit $(x,y) \in M^2$ \\
+	1) Si $a \star x = a \star y$ \\
+	\indent $a^{-1} \star ( a \star x)= a^{-1} \star ( a \star y)$ \\
+	\indent Par associativit\'e : $(a^{-1} \star a) \star x = (a^{-1} \star a) \star y$ \\
+	 \indent $e \star x = e \star y$ \\
+	\indent $x=y$ \\
+2) si $x \star a = y \star a$ \\
+\indent $ x \star a \star a^{-1}=y \star a \star a^{-1}$ \\
+\indent $x=y$
+
+	\section{$x^n$, ses propriétés, cas $n \in \mathbb{Z}$ dans un monoïde multiplicatif}
+	\textcolor{green}{Propriété :} Pour $(x,y) \in M^2$ et $(m,n) \in \mathbb{N}^2$ \\
+	\indent\textcolor{green}{1)} $ x^{m+n} = x^m \star x^n$ \\
+	\indent \textcolor{green}{2)} $(x^m)^n=x^{mn}$ \\
+	\indent \textcolor{green}{3)} Si $x \star y =y \star x$ : $(x \star y)^n=x^n \star y^n$ \\
+	\textcolor{red}{Démonstration :} \\
+	\textcolor{green}{1)} Si $n=0 :$ \\
+	\indent $x^m =x^m \star e$ \\
+	Si $m=0$ : \\
+	\indent $x^n=e \star x^n$ \\
+	Si $m$ et $n \geq 1$ : \\
+$x^{m+n} =$ $\overbrace{(x \star ... \star x)}^{m + n \quad fois \quad x}$ \vspace{0.5cm}\\
+$x^{m+n} =$ $\underbrace{(x \star ... \star x)}_{m \quad fois \quad x}$ $\star$ $\underbrace{(x \star ... \star x)}_{n \quad fois \quad x}$ \vspace{0.5cm}\\
+	\textcolor{green}{2)} Si $n=0$ $(x^m)^0=e=x^{m\times 0}$ \\
+	Si $n \geq 1$ \\
+	\indent $ (x^m)^n =(x^m) \star ... \star (x^m)$ \\
+	\indent $(x^m)^n=x^{m+...+m}$ par \textcolor{green}{1} \\
+	\indent $(x^m)^n=x^{mn}$
+	\\
+	\textcolor{green}{3)} Si $n=0$ $e=e \star e$ \\
+	si $n \geq 1$ : \\
+	 \indent $(x\star y)^n =x \star y \star x \star y \star ... \star x \star y$ \\
+\indent $(x\star y)^n	  = x \star ... \star x \star y \star ... \star y \text{ car }  x \star y = y \star x$ \\
+\indent $(x\star y)^n	  = x^n \star y^n$ \\
+Soit $x \in U(M)$ Pour $n \in \mathbb{N}^*$ on pose : \\
+\indent $x^{-n} =(x^{-1})^n $ \\
+\indent $x^{-n}	= x^{-1} \star ... \star x^{-1}$ \\
+\indent $x^{-n}	=(x \star ... \star x)^{-1}$ \\
+	\indent $x^{-n}=(x^n)^{-1}  $ \\
+On obtient donc les m\^eme propri\'ete avec $m,n \in \mathbb{Z}^2$
+	\section{relation d'équivalence de la congruence modulo $m \in \mathbb{R}^*_+$ dans $\mathbb{R}$}
+	\textcolor{green}{Propriété :} soit $m \in \mathbb{R}^*_+$ \\
+	\indent $\bullet \equiv \bullet [m]$ est une relation d'\'equivalence   \vspace{0.5cm} \\
+	\textcolor{red}{Démonstration :}  \vspace{0.5cm} \\
+	{\bf Reflexivit\'e :} \\
+	 \indent Posons $ k = 0 \in \mathbb{Z}$ \\
+	\indent $x=x + 0\cdot m$ \\
+	 \indent donc : $x \equiv x[m]$ \\
+	{ \bf Transitivit\'e :} \\
+	 \indent Soit $(x,y,z) \in \mathbb{R}^3 tel que :$ \\
+	\indent $x \equiv y[m]$ et $y \equiv z[m]$ \\
+ \indent Alors : $\exists k \in \mathbb{Z}, x =y + km$ et $\exists l \in \mathbb{Z}, y = z + lm$ \\
+ \indent Alors : $x = z + \underbrace{(k +l)}_{ \in \mathbb{Z} }$ $m$ \\
+ \indent donc $ x \equiv z [m]$ \\
+{ \bf Sym\'etrie :} \\
+\indent Soit $(x,y) \in \mathbb{R}^2$ tel que \\
+\indent $x \equiv [m]$ \\
+\indent $\exists k \in \mathbb{Z},$ $x= y + k m$ \\
+ \indent $y= x + \underbrace{(-k)}_{\in \mathbb{Z}}m$ \vspace{0.5cm} \\
+\indent donc $y \equiv x [m]$
+	\end{document}

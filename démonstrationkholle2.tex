@@ -1,0 +1,117 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\begin{document}
+	\renewcommand{\thesection}{\Roman{section}}
+
+	\section{d\'emonstration injectivit\'e}
+
+	 $Soit (x,y)$ $\in$ $E^2$ tel que  $f(x)=f(y)$ :\\
+	 \setlength{\parindent}{1cm}
+ 	\indent $g(f(x))=g(f(y))$\\
+	\indent comme $g \circ f$ est injective c'est-\`a-dire il existe au plus un unique x tel que $f(x)=y$ \\
+		 \setlength{\parindent}{2cm}
+	\indent		$\bf donc\  x=y,\  f \ est\ injective$
+	\section{d\'emonstration surjectivit\'e}
+	Soit $z \in G$\\
+	Comme $g \circ f$ est surjective donc :\\
+	$\exists x \in E\,\ z=(g \circ f) (x) = g(f(x))$\\
+	Posons $y=f(x) \in F \ :$\\
+	$z = g(y)$\\
+	$\bf donc \quad g \quad est \quad surjective$
+	\section{d\'emonstration bijectivit\'e}
+	$1)$ Soit $y \in F$\\
+	Notons $x=f^{-1}(y) \in E$\\
+	Par d\'efinition $f(x)=y$\\
+	Ainsi : $f(f^{-1}(y))=y$\\
+	$\forall y \in F$, $f(f^{-1}(y)=y)$\\
+	$\bf donc \ f \circ f^{-1}=Id_F$\\
+	$2)$ Soit $x \in E$,\\
+	Notons $y=f(x) \in F$\\
+	Alors x est l'ant\'ec\'edent de y par f donc par d\'efinition\\
+	$x=f^{-1}(y)$\\
+	$x=f^{-1}(f(x))$\\
+	$\forall x \in E \, \ f^{-1}(f(x))=x$\\
+	$\bf donc \ f^{-1} \circ f = Id_E$
+	\section{d\'emonstration r\'eciproque}
+	Soit $y \in F$\\
+	$\bf analyse\ :$ s'il existe $x \in E$ tel que $f(x)=y$ : \\
+	$g(f(x))=g(y)$\\
+	$(g \circ f)(x)=x$ car $g \circ f=Id_E$\\
+	$\bf donc \ x=g(y) \ unique \ candidat \ donc \ g \ est \ bijective$\\
+	$\bf Synth\grave{e} se:$ Posons $x=g(y) \in E$\\
+	on a $f(x)=f(g(y))$\\
+	$f(x)=(f \circ g)(y)$\\
+	$f(x)=y$ car $f \circ g=Id_F$\\
+	$ \bf donc \ g(y)$  $\bf est \quad l'unique \quad ant\acute{e}c\acute{e}dent \quad de \quad y \quad par \quad f, \quad f \quad est \quad donc \quad bijective$\\
+	Notons $g=f^{-1}:F\rightarrow E$\\
+	On a : $g \circ f = Id_E$\\
+	et $f \circ g = Id_F$\\
+	$\bf donc \quad g \quad est \quad bijective \quad et \quad g^{-1}=f$
+	\section{d\'emonstration  bijectivit\'e et r\'eciproque}
+	\setlength{\parindent}{3.20cm}
+	\underline{ \bf d'une part :}\\
+	$(g \circ f) \circ(f^{-1}\circ g^{-1})=g\circ(f\circ f^{-1})\circ g^{-1} \quad par \quad associativit\acute{e}$\\
+	\indent$= g \circ Id_F \circ g^{-1}$\\
+	\indent$=g \circ g^{-1}$\\
+    \indent$=Id_G$\\
+    \underline{ \bf d'autre  part :}\\
+    $(f^{-1} \circ g^{-1}) \circ (g \circ f)= f^{-1} \circ (g^{-1}\circ g) \circ f$\\
+    \indent $= f^{-1} \circ Id_F \circ f$\\
+    \indent $=f^{-1} \circ f$\\
+    \indent $=Id_E$
+    \section{diff\'erence sym\'etrique fonction indicatrice}
+    \section{d\'emonstration  relation d'ordre}
+    On a le cycle suivant :\\
+    $(x_1\mathcal{R}x_2) \quad et \quad ... \quad et \quad (x_{n-1} \quad\mathcal{R}\quad x_n) \quad et \quad (x_n \quad\mathcal{R}\quad x_1)$\\
+    $ \bf \underline{D\acute{e}monstration :}$ soit $i \in [[2,n]]$\\
+    Par transitivit\'e $[\forall (x,y,z) \in E^3, \quad (x \quad\mathcal{R}\quad y \quad et \quad y \quad\mathcal{R}\quad z )\quad \Rightarrow \quad (x \quad\mathcal{R}\quad z)]$ :\\
+    \indent $(x_1 \quad\mathcal{R}\quad x_i) \quad et \quad (x_i \quad\mathcal{R}\quad x_1)$\\
+    Par antisym\'etrie :\\
+    \indent $x_1=x_i$
+     \section{d\'emonstration unicit\'e du maximum }
+    \section{d\'emonstration maximum ensemble finie totalement ordonn\'ee }
+    r\'eccurence sur le nombre n d'\'el\'ement de A\\
+    $ \bf \underline{Initialisation :}$ $n=1 \quad A=\left\lbrace x_1\right\rbrace $\\
+    $x_1=max(A)=min(A)$ car $x_1\mathcal{R} x_1$ par r\'efl\'exivit\'e et $x_1 \in A$\\
+     \underline{\bf{H\'er\'edit\'e :}} si vrai au rang n,\\
+    Soit $A=\left\lbrace  x_1, ... ,x_{n+1} \right\rbrace \subset E$\\
+    Soit $B=\left\lbrace x_1, ..., x_n \right\rbrace :$ par hypoth\`ese de r\'eccurence\\
+    il existe $j \in [[1,n]]$ tel que :\\
+    \indent $\forall i \in [[1,n]], x_i\mathcal{R}x_j$\\
+    l'ordre \'etant \underline{total} :\\
+    	$(x_j\mathcal{R}x_{n+1})ou(x_{n+1}\mathcal{R}x_j)$\\
+    $ \bf 1^{er} \quad cas :$ si ${x_j\mathcal{R}x_{n+1}}$\\
+    alors  par transitivit\'e : $\forall i \in [[1,n]], x_i\mathcal{R}x_{n+1}$\\
+    et par r\'eflexivit\'e :\\
+    \indent $\forall i \in [[1,n+1]], x_i\mathcal{R}x_{n+1}$\\
+    et $x_{n+1} \in A$ donc $x_{n+1}=max(A)$\\
+     $ \bf 2^{nd} \quad cas :$ si $x_{n+1}\mathcal{R}x_j$ alors :\\
+     \indent $\forall i \in [[1,n+1]], x_i\mathcal{R}x_{j}$\\
+     et $x_j \in A$ donc $x_j=max(A)$
+     \section{Classe d'\'equivalence et partition }
+     \underline{ Propri\'et\'e :}  E: ensemble, $\mathcal{R}$: relation d'\'equivalence\\
+     1) $\forall x \in E, x \in Cl(x) \neq \emptyset$\\
+     2) Pour $(x,y) \in E^2 :$\\
+     \indent - soit $x\mathcal{R}y$, auquel cas Cl(x)=Cl(y)\\
+     \indent - soit non($x\mathcal{R}y$), auquel cas $Cl(x) \cap Cl(y) = \emptyset$\\
+     {\bf D\'emonstration :} 1) reflexivit\'e\\
+     2) \\
+     - Si $\bf \underline{x \quad \mathcal{R} \quad y}$ : montrons que Cl(x)=Cl(y)\\
+     $ \underline \subset :$ soit $z \in Cl(x)$\\
+     $z\mathcal{R}x$ or $x\mathcal{R}y$ donc par transitivit\'e : $z\mathcal{R}y$\\
+     c'est-\`a-dire : $z \in Cl(y)$\\
+     $\underline \supset :$ pour sym\'etrie $yRx$ donc\\
+     la premi\`ere $\underline \subset$ appliqu\'e avec (y,x) au lieu de (x,y) donne $Cl(y)\subset Cl(x)$\\
+     - Si non ($\bf \underline{x \quad\mathcal{R}\quad y}$) si l'on avait $Cl(x) \cap Cl(y) \neq \emptyset$,\\
+     consid\'erons $z \in Cl(x) \cap Cl(y) :$\\
+     \indent $z\mathcal{R}x $ et $z\mathcal{R}y$\\
+     Par sym\'etrie : $x \mathcal{R}z$\\
+     Par transitivi\'e: $x \mathcal{R} y$ contradiction\\
+\end{document}

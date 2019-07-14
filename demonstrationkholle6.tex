@@ -1,0 +1,171 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\title{Démonstration kholle 6}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{Unicité des coefficients d'une fonction polynomiale réelle}
+	\textcolor{green}{Propriété :} \\
+	L'écriture des fonctions polynomiales est unique à l'ajout de termes à coefficients nuls près \\
+	\textcolor{red}{Démonstration :} \\
+	$1^{er}$ cas : si $f \in \mathbb{R}[X]$ \\
+	Supposons $f =\tilde{0}$, c'est-à-dire $\forall x \in \mathbb{R}, f(x)=0$  \\
+	Soit $n \in \mathbb{N}, (a_0,...,a_n) \in \mathbb{R}^{n+1}$ tel que $\forall x \in \mathbb{R}, f(x)= \sum_{k=0}^{n} a_kx^k$ \\
+	Montrons que $a_0=...=a_n=0$ \\
+	Raisonnons par l'absurde :
+		notons A=$\lbrace k \in [[0,n]],a_k \neq 0 \rbrace \in \mathbb{N}$ \\
+		On a donc $A \neq \emptyset$ Par la propriété du bon ordre on peut poser $p=min(A)$ \\
+		Alors : $\forall x \in \mathbb{R}, \sum_{k=p}^{n}a_k x^k =0$ \\
+		car $a_k=0$ si $k<p=min(A)$ \\
+		c'est-à-dire : $a_p x^p+...+a_nx^n=0$ \\
+		Alors : $\forall x \in \mathbb{R}^*, \sum_{k=p}^n a_k x^{k-p}=0$ \\
+		limite quand x tend vers 0 : \\
+		$\lim_{x \rightarrow 0} x^{k-p}=0$ si k>p \\
+		$\lim_{x \rightarrow 0} x^{k-p}=1$ si k=p alors il reste $a_p=0$ \\
+		Or $p \in A$ car $p=min(A)$ donc $a_p \neq 0$ absurde donc $A = \emptyset$ $\forall k \in [[0,n]], a_k=0$ \\
+		Cas général : \\
+		$f :x \in \mathbb{R} \rightarrow \sum_{k=0}^n a_k x^k$ \\
+		$ g: x \in \mathbb{R} \rightarrow \sum_{k=0}^m b_k x^k$ \\
+		Avec $(n,m) \in \mathbb{N}^2$ et $(a_k,b_k) \in \mathbb{R}$ \\
+		On suppose $f=g$ (c'est-à-dire $\forall x \in \mathbb{R}, f(x)=g(x)$ \\
+		Posons $N=max(m,n)$ \\
+		et $a_k=0$ si k>n, $b_k=0$ si k>m \\
+		$\forall x \in \mathbb{R}, f(x)=\sum_{k=0}^N a_k x^k$ et $g(x)= \sum_{k=0} b_k x^k $ \\
+		Comme $f=g, f-g=\tilde{0}$, $ \forall x \in \mathbb{R}, (f-g)(x)=\sum_{k=0}^N(a_k-b_k)x^k$ \\
+		Donc d'après le cas 1 : $\forall k \in [[0,N]], a_k-b_k=0 \quad a_k=b_k$
+	\section{Caractérisation des racines par la factorisation de x-c}
+	\textcolor{green}{Propriété :} \\
+	Soit $f \in \mathbb{R}[X]$ et $c \in \mathbb{R}$ Les propositions suivantes sont équivalentes : \\
+	\textcolor{green}{1)} f(c)=0 \\
+	\textcolor{green}{2)} $\exists y \in \mathbb{R}[X], \forall x \in \mathbb{R}, f(x)= (x-c) g(x)$ \\
+	\textcolor{red}{Démonstration :} \textcolor{green}{2 }$\Rightarrow$ \textcolor{green}{ 1} : évident \\
+	\textcolor{green}{1} $\Rightarrow$ \textcolor{green}{2} : Notons \\
+	$f:x \rightarrow \sum_{k=0}^n a_k x^k$ avec $ n\geq 1$ et $( a_0,...,a_n) \in \mathbb{R}^{n+1}$ \\
+	Pour $x \in \mathbb{R}$ : \\
+	$f(x)=f(x)-f(c) = \sum_{k=1}^n a_k (x^k-c^k)$ \\
+	Or pour $ k \geq 1$ \\
+	$x^k-c^k=(x-c) \underbrace{\sum_{i=0}^{k-1} c^{k-1-i}x^{i}}_{g_k(x)}$ \\
+	d'où : \\
+	$\forall x \in \mathbb{R}, f(x)=(x-c) \underbrace{\sum_{k=1}^n a_k g_k(x)}_{g(x)}$ \\
+	On a $\forall k \in [[1,n]], g_k \in \mathbb{R}[X]$ donc $g \in \mathbb{R}[X]$
+	\section{Une fonction polynomiale n'a pas plus de racine que son degré}
+	\textcolor{green}{Propriété :} \\
+	Soit $f \in \mathbb{R}[X]$ de degré $n \in \mathbb{N}$. Alors f possède au plus n racines. \\
+	\textcolor{red}{Démonstration} : récurrence sur n \\
+	\textcolor{red}{Initialisation} : n=0, $f \in \mathbb{R}^*$ aucune racine . \\
+	\textcolor{red}{Hérédité :} Soit $ n \in \mathbb{N}^*$ tel que la propriété est vraie au rang n-1 \\
+	Soit $ f \in \mathbb{R}[X]$ de degré n : \\
+	-si f n'a pas de racine : il n'en a pas plus de n\\
+	- si f a au moins une racine $c \in \mathbb{R}$,
+		soit $g \in \mathbb{R}[X]$ tel que : \\
+		$\forall x \in \mathbb{R}, f(x)=(x-c)g(x)$ \\
+		alors $deg(g)=n-1$ \\
+			g a donc au plus n-1 racines \\
+			On a pour $x \in \mathbb{R}$ : \\
+				$f(x)=0 \Leftrightarrow (x-c)$ ou $g(x)=0$ \\
+			f possède au plus une racine de plus que g donc au plus n au total
+	\section{Factorisation d'une fonction polynomiale ayant autant de racine que son degré}
+	\textcolor{green}{Propriété :} Soit $f \in \mathbb{R}[X]$ de degré $ n \in \mathbb{N}^*$ \\
+	coefficient dominant $ \lambda \in \mathbb{R}^*$ \\
+	Supposons que f possède exactement n racines distinctes $ x_1,...,x_n$ \\
+	On a la factorisation : \\
+	$\forall x \in \mathbb{R},f(x)= \lambda \prod_{k=1}^n (x-c_k)$ \\
+	\indent $= \lambda (x-c_1)...(x-c_n)$ \\
+	\textcolor{red}{Démonstration :} Posons le polynome : \\
+	\indent $g : x \in \mathbb{R} \rightarrow f(x) - \lambda \prod_{k=1}^n (x-c_k)$ \\
+	D'une part : \\
+	$\forall j \in [[1,n]], g(c_j)=0-0=0$ \\
+	D'autre part : \\
+	\indent $deg(g)<n$ car $f$ et $\lambda \prod_{k=1}^n (x-c_k)$ sont de degré n et ont le même coefficients dominant. \\
+	\textcolor{red}{Conclusion :} Comme les $c_j$ sont 2 à 2 distincts, le polynome g a plus de racines que son degré $g= \tilde{0}$
+	\section{Formule d'interpolation de Lagrange}
+	\textcolor{green}{Propriété :} \\
+	Soient $ n \in \mathbb{N}^*$, \\ 
+	\indent $(a_1,...,a_n) \in \mathbb{R}^n$ deux à deux distincts quelconque, \\ 
+	\indent $(b_1,...,b_n) \in \mathbb{R}^n$ \\
+	Alors il existe un unique $f \in \mathbb{R}[X]$ tel que : \\
+	$ \forall j \in [[1,n]], f(a_j)=b_j$ et $deg(f)<n$ \\
+	On a la formule : \\
+	\indent $f = \sum_{k=1}^nb_k L_k$ \\
+	où pour $k \in [[1,n]] :$ \\
+	\indent $L_k : x \in \mathbb{R} \rightarrow \prod_{i=1\quad i \neq k}^n \frac{x-a_i}{a_k-a_i}$ \\
+	$(L_1,...,L_n)$ polynomes de Lagrange associés à $(a_1,...,a_n)$ \\
+	\textcolor{red}{Démonstration :} Lemme : $L_k(a_j) = \delta_{k,j}$ \\
+	En effet : $L_k(a_k)$ est un produit de 1 : $L_k(a_k)=1$ \\
+	Si $j \neq k$ on a  $L_k(a_j)$ un facteur d'indice  \\
+	i=j ce facteur vaut $\frac{a_j-a_j}{a_k-a_j}=0$ : $L_k(a_j)=0$ \\
+	Existence: verifier que $f = \sum_{k=1}^n b_k L_k$ convient d'une part, pour $j \in [[1,n]]$ : \\
+	$f(a_j)= \sum^n_{k=1} b_k \underbrace{L(a_j)}_{\delta_{k,j}}$ \\
+	\indent $= b_j$ \\
+	d'autre part : tous les $L_k$ sont de degré n-1 donc f est de degré$ \geq n-1 $ donc $< n$ \\
+	Unicité : si f et g conviennent : \\
+	\indent $\forall j \in [[1,n]], f(a_j)=bj=g(a_j)$ \\
+	et $deg(f)<n, deg(g)<n$ \\
+	Le polynome $f-g$ est de degré $\leq max(deg(f),deg(g))<0$ et possède au moins n racines distinctes (les $a_j$) \\
+	ainsi : $f-g= \tilde{0}$ \\
+	$f=g$
+	\section{Décomposition en éléments simples de f/g avec deg(f)<deg(g) et g scindé simple}
+	\textcolor{green}{Propriété :} \\
+	Soit $\frac{f}{g} \in \mathbb{R}(X)$ avec : \\
+	$f \in \mathbb{R}[X]$ \\
+	$g \in \mathbb{R}[X]$ scindé simple: $g(x)=C (x-a_1)...(x-a_n)$ \\
+	où $n \in \mathbb{N}^*$ \\
+	$a_1<...<a_n$ réels \\
+	$C \in \mathbb{R}^*$ \\
+	avec $deg(f)<n=deg(g)$ \\
+	Il existe un unique $(\lambda_1, ... , \lambda_n)\in \mathbb{R}^n$ tel que : \\
+	$\frac{f(x)}{g(x)}= \sum_{k=1}^n \frac{\lambda_k}{x-a_k}$ \\
+	décomposition en éléments simples de $\frac{f}{g}$ \\
+	Pour $j \in [[1,n]]$ on a : \\
+	\indent $\lambda_j = \lim_{x \rightarrow a_j} (x-a_j) \frac{f(x)}{g(x)}$ \\
+	\textcolor{red}{Démonstration :} \\
+	\textcolor{red}{Existence :} puisque les $a_k$ sont n réels 2 à 2 distincts est $deg(f)<n_1$ on a par la formule de Lagrange.
+ \\
+ $\forall x \in \mathbb{R}, f(x)= \sum_{k=1}^n f(a_k) L_k(x)$ \\
+ où $L_k(x)=\prod^n_{i=1 \quad i \neq k} \frac{x-a_i}{a_k-a_i}$ \\
+ $\frac{f(x)}{g(x)}=\sum_{k=1}^n f(a_k) \frac{L_k(x)}{g(x)}$ \\
+ Or $L_k(x)= C_k(x-a_1)...(x-a_n)$ sans le facteur  $(x-a_k)$\\ 
+ avec $C_k$ une constante \\
+ $g(x)= C (x-a_1)...(x-a_n)$ \\
+ donc $f(a_k) \frac{L_k(x)}{g(x)}= \frac{f(a_k)C_k}{C} \times \frac{1}{x-a_k}$ \\
+ Avec $ \lambda_k=\frac{f(a_k) C_k}{C}$ \\
+ \textcolor{red}{Unicité :} \\
+ Pour $ j \in [[1,n]]$ \\
+ $(x-a_j)\frac{f(x)}{g(x)}= \lambda_j + \sum_{k=1 k \neq j}^n \lambda_k \times \frac{x-a_j}{x-a_k}$ \\
+ $\lim_{x \rightarrow a_j)} (x-a_j) \frac{f(x)}{g(x)}= \lambda_j$ d'où l'unicité des coefficients
+	\section{Formule d'intégration par parties + relations de récurrence des intégrales de Wallis}
+		\textcolor{green}{Propriété :} \\
+		Soient u et v $\in \mathcal{C}^1(I)$ \\
+		et $(a,b) \in I^2$  on a : \\
+		$\int_a^b u'(t) v(t)dt = [u(t)v(t)]^b_a - \int_a^b u(t) v'(t) dt$ \\
+		où $\mathcal{C}^1(I)=\lbrace f \in \mathcal{D}^1(I) : f \in \mathcal{C}^(I) \rbrace $ \\
+		\textcolor{red}{Démonstration :} \\
+		$[u(t)v(t)]^b_a= \int_a^b(uv)'(t)dt$ \\
+		$[u(t)v(t)]^b_a= \int_a^b u'(t) v(t) + v'(t) u(t) dt$ \\
+		$[u(t)v(t)]^b_a= \int_a^b u'(t) v(t)dt + \int_a^b u(t) v'(t) dt$ \\
+		$\int_a^b u'(t) v(t)dt = [u(t)v(t)]^b_a - \int_a^b u(t) v'(t) dt$ \\ \\
+		\textcolor{red}{Récurrence intégrale de Wallis :} \\
+		Pour $n \in \mathbb{N}$ on pose: \\
+		$W_n= \int_0^{\frac{\pi}{2}}cos^n(t)dt$ \\
+		$W_{n+2}= \int_0^{\frac{\pi}{2}}cos^{n+2}(t)dt$ \\
+		$W_{n+2}= \int_0^{\frac{\pi}{2}}\underbrace{cos(t)}_{P} \underbrace{cos^{n+1}(t)}{D}dt$ \\
+		$W_{n+2}=\underbrace{[sin(t)cos^{n+1}(t)]^{\frac{\pi}{2}}_0}_{=0} +\int_0^{\frac{\pi}{2}}sin(t) (n+1) cos^n(t)dt$ \\
+		$W_{n+2}=(n+1)\int_0^{\frac{\pi}{2}}\underbrace{sin^2(t)}_{1-cos^2(t)}cos^n(t)dt$ \\
+		$W_{n+2}=(n+1) (W_n-W_{n+2})$ \\
+		$W_{n+2}=\frac{n+1}{n+2} (W_{n})$
+	\end{document}
