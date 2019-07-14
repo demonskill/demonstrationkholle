@@ -1,0 +1,113 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\title{Démonstration kholle 7}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{Intégration : positivité,croissance,valeur absolue}
+	\textcolor{green}{Propriété :} $(f;g) \in \mathcal{C}^0(I)$ et $(a,b)\in \mathbb{I}$ \\
+	\textcolor{green}{1)}Si $\forall t \in [a,b], f(t)\geq 0$ et $a \leq b$ \\ 
+	alors $\int_{a}^bf(t)dt\geq 0$ \\ 
+	\textcolor{green}{2)} Si $\forall t \in [a,b], f(t)\geq 0$ et $a < b$ et $\int_{a}^bf(t)dt=0$ \\ 
+	alors $\forall t \in [a,b],f(t)=0$ \\ 
+	\textcolor{green}{3)} Si $\forall t \in [a,b], g(t) \leq f(t)$ et $a \leq b$ \\ 
+	alors $\int_a^bg(t)dt\leq \int_a^bf(t)dt$ \\
+	\textcolor{green}{4)} Avec $a \leq b$ on a : $|\int_{a}^bf(t)dt|\leq \int_{a}^b|f(t)|dt$ \\ 
+	\textcolor{red}{Démonstration :} \textcolor{green}{1)} Soit F tel que F'=f : $F \geq 0$ donc F croissante or $a < b$ donc : \\ 
+	$F(a)\leq F(b)$ \\ 
+	$\int_{a}^bf(t)dt = F(b)-F(a)\geq 0$ \\ 
+	\textcolor{green}{3)} en appliquant \textcolor{green}{1} à f-g : \\ 
+	$\int_{a}^bf(t)-g(t)dt \geq 0$ \\ 
+	$\int_{a}^bf(t)dt-\int_{a}^bg(t)dt\geq 0$ par linéarité \\ 
+	$\int_{a}^bf(t)dt \geq \int_{a}^bg(t)dt$ \\ 
+	\textcolor{green}{2)} F croissante et F(a)=F(b) donc F constante sur [a,b], \\ 
+	$\forall t \in [a,b],f(t)=F'(t)=0$ \\ 
+	\textcolor{green}{4)} Notons $A=\int_{a}^bf(t)dt$, $B=\int_{a}^b|f(t)|dt$ \\ 
+	Pour $t \in [a,b]$ : \\ 
+	\indent $-|f(t)|\leq f(t) \leq |f(t)|$ \\ 
+	Puisque $a \leq b$ : \\ 
+	\indent $-B \leq A \leq B$ \\ 
+	donc $|A| \leq B $ \\ 
+	\section{Formule de changement de variable}
+	\textcolor{green}{Propriété :} formule de changement de variable \\ 
+	Si $f \in \mathcal{C}^0(I)$ et $\phi \in \mathcal{C}^1(I)$ tel que : \\ 
+	$\phi(I) \subset I$ et $(a,b) \in I^2$ : \\ 
+	$\int_{\phi(a)}^{\phi(b)}f(x)dx=\int_a^bf(\phi(t)) \phi'(t)dt$ \\ 
+	\textcolor{red}{Démonstration :} Soit F une primitive de f sur I \\ 
+	$\int_{\phi(a)}^{\phi(b)}f(x)dx=[F(x)]^{\phi(b)}_{\phi(a)}$ \\ 
+	$= F(\phi(b)) -F(\phi(a))$ \\ 
+	$= [F(\phi(t)]_a^b$ \\ 
+	$= \int_a^bF'(\phi(t))\phi'(t)dt$ \\ 
+	Comme $F'=f$ \\ 
+	$= \int_a^b f(\phi(t)) \phi'(t)dt$ \\
+	\section{Si f T-périodique : $\int_{a+T}^{b+T}f(t)dt=\int_{a}^{b}f(t)dt$ puis $\int_{a+T}^{a}f(t)dt=\int_{b+T}^{b}f(t)dt$}
+\textcolor{green}{Propriété :} Soit f continue et T-périodique \\
+	\textcolor{green}{1)} $\int_a^bf(t)dt=\int_{a+T}^{b+T}f(t)dt$ \\ 
+	\textcolor{green}{2)} $\int_{a+T}^{a}f(t)dt=\int_{b+T}^{b}f(t)dt$ \\
+	\textcolor{red}{Démonstration :} \textcolor{green}{1)} posons $x=t+T$ \\ 
+	$\int_a^bf(t)dt=\int_{a+T}^{b+T}f(x-T)dx$ \\ 
+	$=\int^{b+T}_{a+T}{f(x)dx}$ \\
+    \textcolor{green}{2)}$\int_b^{b+T}f(t)dt=\int_{b}^{a}f(t)dt+\int_{a}^{a+T}f(t)dt+\int_{a+T}^{b+T}f(t)dt$ \\ $= - \int_a^bf(t)dt + \int_{a+T}^{b+T}f(t)dt + \int_{a}^{a+T} f(t)dt=\int_{a+T}^{a}f(t)dt$ \\
+    $\int_{a+T}^{a}f(t)dt=\int_{b+T}^{b}f(t)dt$ 
+	\section{Exploitation des invariances $f(a+b-x)=\pm f(x)$}
+	\textcolor{green}{Propriété :} \\ 
+	$a<b, f \in \mathcal{C}^0([a,b])$ \\ 
+	\textcolor{green}{1)} Si $\forall t \in [a,b], f(a+b-t)=-f(t)$ \\ 
+	alors : $\int_a^bf(t)dt=0$ \\ 
+	\textcolor{green}{2)} Si $\forall t \in [a,b], f(a+b-t)=f(t)$ \\ 
+	alors : $\int_a^bf(t)dt=2\int_a^{\frac{a+b}{2}}f(t)dt=2\int^b_{\frac{a+b}{2}}f(t)dt$ \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	\textcolor{green}{1)}$\int_a^bf(t)dt=-\int_b^af(a+b-x)dx$ car $(a+b-x)'=-1$ \\ 
+	$=\int_a^bf(a+b-x)dx$ \\ 
+	$\int_a^bf(t)dt=-\int_a^bf(x)dx$ nulle car égale à son opposé \\ 
+	\textcolor{green}{2)} $-\int_a^{\frac{a+b}{2}}f(a+b-x)dx$ \\ 
+	$=\int_{\frac{a+b}{2}}^bf(a+b-x)dx$ \\ 
+	$=\int_{\frac{a+b}{2}}^{b}f(x)dx$ \\ 
+	Par Chasles : $\int_a^bf(t)dt=\int_a^{\frac{a+b}{2}}f(t)dt + \int_{\frac{a+b}{2}}^bf(t)dt$ \\ 
+	Or $\int_a^{\frac{a+b}{2}}f(t)dt = \int_{\frac{a+b}{2}}^bf(t)dt$ \\ 
+	On a donc : $\int_a^bf(t)dt=2\int_a^{\frac{a+b}{2}}f(t)dt=2\int^b_{\frac{a+b}{2}}f(t)dt$
+    \section{Encaderment d'une somme pour une fonction décroissante, application à $S_n=\sum_{k=n+1}^{2n} \frac{1}{k}$}
+    \textcolor{green}{Propriété :} Soit $f \in \mathcal{C}^0(I), monotone$ \\ 
+    Soit $(a,b) \in I^2$ avec $a< b$ entiers \\ 
+    \textcolor{green}{1)} Si f est décroissante $((a-1) \in I et (b+1) \in I)$ \\ 
+    $\int_a^{b+1}f(t)dt \leq \sum_{k=a}^b\leq \int_{a-1}^{b}f(t)dt$ \\ 
+    \textcolor{red}{Démonstration :} \\ 
+    \textcolor{green}{1)} Pour $k \in [[a,b]]$ et $t \in [k,k+1]$ \\ 
+    $f(t)\leq f(k)$ \\ 
+    $\int_k^{k+1}f(t)dt \leq \int_k^{k+1}f(k)dt$ \\ 
+    $=f(k)(k+1-k)=f(k)$ \\ 
+    $\sum_{k=a}^{b}\int_k^{k+1}f(t)dt \leq \sum_{k=a}^bf(k)$ \\ 
+    $\int_a^{b+1}f(t)dt\leq \sum_{k=a}^bf(k)$ \\ 
+    De même, pour $t \in [k-1,k]$ \\ 
+    $f(k) \leq f(t)$ \\ 
+    $\int_{k-1}^kf(k)dt \leq \int_{k-1}^kf(t)dt$ \\
+    $\sum_{k=a}^bf(k)\leq \int{a-1}^bf(t)dt$ \\ 
+    {\bf Application : $S_n=\sum_{k=n+1}^{2n} \frac{1}{k}$} \\ 
+    $f:\mathbb{R}^*_+ \rightarrow \mathbb{R}$, décroissante \\ 
+    $\int_{n+1}^{2n+1}f(t)dt \leq \sum_{k=n+1}^{2n}f(k) \leq \int_n^{2n}f(t)dt$ \\ 
+    Comme $\int_n^{2n}f(t)dt=ln(2)$ $\lim_{n \rightarrow + \infty} S_n= ln(2)$
+    \section{Calcul $\int_{0}^{x}t\cos(t)dt$ et $\int_{0}^{x}t\sin(t)dt$ par les complexes}
+    $\int_0^xt e^{it}dt=[t \frac{1}{i}e^{it}]_0^x-\int_0^x\frac{1}{i}e^{it}dt$
+    $\frac{x}{i}e^{ix}=-ixe^{ix}$ \\ 
+    et $\int_0^xe^{it}dt=[\frac{1}{i}e^{it}]^x_0=\frac{1}{i}(e^{ix}-1)=-i(e^{ix}-1)$ \\ 
+    donc $\int_0^xte^{it}dt=-ixe^{ix}+e^{ix}-1$ \\ 
+    {\bf Partie réelle :} \\ 
+    $\int_0^xt\cos(t)dt=x\sin(x)+\cos(x)+1$ \\ 
+    {\bf Partie imaginaire :} \\ 
+    $\int_0^xt\sin(t)dt=-xcos(x)+sin(x)$
+    \end{document}

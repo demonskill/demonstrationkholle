@@ -1,0 +1,247 @@
+\documentclass{article}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength{\textwidth}{481pt}
+\setlength{\textheight}{650pt}
+\setlength{\headsep}{10pt}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{calrsfs}
+\usepackage{geometry}
+\geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\title{Démonstration kholle 8}
+\date{}
+\maketitle
+	\renewcommand{\thesection}{\Roman{section}}
+	\setlength{\parindent}{1.5cm}
+	\section{équation différentielles linéaire du premier ordre : résolution d'équation homogène associée}
+	\textcolor{green}{Propriété :}
+	Soit une EDL1H : \\
+	$a(x)y'+b(x)y=0$ \\ 
+	Si a ne s'annule pas sur I. \\
+	Notons A une primitive de $\frac{b}{a}$ sur I. \\
+	Les solutions sont les fonctions sous la forme : \\ 
+	$x \in I \rightarrow \lambda e^{-A(x)}$ avec $\lambda \in \mathbb{K}$ \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	\textcolor{red}{1)} Ces fonctions conviennent bien : \\ 
+	soit $f : I \rightarrow \mathbb{K}$ avec $\lambda \in \mathbb{K}$ fixé \\ 
+	\indent $x \rightarrow \lambda e^{-A(x)}$ \\ 
+	Pour $x \in I$: \\ 
+	$a(x)f'(x)+b(x)f(x)= a(x)(-\frac{b(x)}{a(x)}f(x))+ b(x)f(x) =0$ \\ 
+	\textcolor{red}{2)}Soit $f \in S_h$ \\ 
+	Posons $g: I \rightarrow \mathbb{K}$ \\ 
+	\indent $x \rightarrow f(x)e^{A(x)}$ \\ 
+	Pour $x \in I$ : \\ 
+	$g'(x)=f'(x)e^{A(x)}+f(x)\frac{b(x)}{a(x)}e^{A(x)}$ \\ 
+	$g'(x)=\frac{e^{A(x)}}{a(x)}\underbrace{(a(x)f'(x)+b(x)f(x))}_{=0}$ \\ 
+	$g=\tilde{0}$ sur l'intervalle I donc g est constante : \\
+	$\exists \lambda \in \mathbb{K}, \forall x \in I, g(x)=\lambda$ \\ 
+	$f(x)e^{A(x)}=\lambda \quad f(x)=\lambda e^{A(x)}$
+	\section{équation différentielles linéaire du premier ordre : méthode de variation de la constante}
+	\textcolor{green}{Propriété :} \\ 
+	Soit une EDL1 : \\ 
+	$a(x)y'+b(x)y=c(x)$ \\ 
+	On peut chercher une solution particulière $y_p$ de la forme : \\ 
+	$y_p : I \rightarrow \mathbb{K}$ \\ 
+	\indent $x \rightarrow \lambda(x)e^{-A(x)}$ \\ 
+	     avec $ \lambda \in \mathcal{D}^1(I,\mathbb{K})$ à déterminer \\ 
+	 \textcolor{red}{Démonstration :} Si la fonction $\lambda$ existe : \\ 
+	 Pour $x \in I$ : \\ 
+	 \indent $a(x)y'_p(x)+b(x)y_p(x)=c(x)$ \\ 
+	 $a(x)\lambda'(x)e^{-A(x)}\underbrace{-a(x)\lambda(x) A'(x)e^{-A(x)}+b(x) \lambda(x) e^{-A(x)}}_{=0 \quad car \quad A'(x)=\frac{b(x)}{a(x)}}=c(x)$ \\ 
+	 donc : $a(x)\lambda'(x)e^{-A(x)}=c(x)$ \\ 
+	 \indent $\lambda'(x)= \frac{c(x)}{a(x)}e^{A(x)}$ \\ 
+	 synthèse : \\ 
+	 Soit $\lambda : I \rightarrow \mathbb{K}$: une primitive de $x \rightarrow \frac{c(x)}{a(x)}e^{A(x)}$ \\ 
+	 Posons $f : I \rightarrow \mathbb{R}$ \\ 
+	 \indent $x \rightarrow \lambda(x)e^{-A(x)}$ \\ 
+	 Pour $x \in I$ : \\ 
+	 $a(x)f'(x)+b(x)f(x)=a(x)\lambda'(x)e^{-A(x)}\underbrace{-a(x)\lambda(x)A'(x)e^{-A(x)}+b(x)\lambda(x)e^{-A(x)}}_{=0 \quad car \quad A'(x)=\frac{b(x)}{a(x)}}$ \\ 
+	 $a(x)\lambda'(x)e^{-A(x)}=a(x)\frac{c(x)}{a(x)}e^{A(x)}e^{-A(x)} =c(x)$ \\ 
+	 donc f est bien solution de l'équation \\
+	\section{équation différentielles linéaire du 2 ordre à coefficient constant homogène : $\mathbb{K} = \mathbb{C}$ , équation caractéristiques de discriminant $\neq 0$}
+	\textcolor{green}{Propriété :} $\mathbb{K} =\mathbb{C}$ \\ 
+	Soit une EDL2CCH : \\ 
+	$ay''+by'+cy=0$ avec $(a,b,c) \in \mathbb{C}^* \times \mathbb{C} \times \mathbb{C}$ \\ 
+	Soit l'équation : \\ 
+	$az^2+bz+c=0$ d'inconnue $z \in \mathbb{C}$ \\ 
+	Alors : \\ 
+	Si l'équation possède deux racines simples de r et s : \\ 
+	$S_h= \mathbb{R} \rightarrow \mathbb{C}$ \\ 
+	\indent $x \rightarrow \lambda e^{rs}+\mu e^{sx}$ avec $(\lambda,\mu)\in \mathbb{C}^2$ \\ 
+	le couple $\lambda,\mu$) est uniquement déterminé pour chaque solution \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	Comme s et r sont des racines simples : \\ 
+	$r+s=-\frac{b}{a}$ \\ 
+	$rs=\frac{c}{a}$ \\
+	\textcolor{red}{1)} Ces fonctions conviennent : \\ 
+	si $f:x \in \mathbb{R} \rightarrow \lambda e^{rs}+\mu e^{sx}$ avec $(\lambda,\mu) \in \mathbb{C}^2$: \\ 
+	$\forall x \in \mathbb{R}, f'(x)=\lambda r e^{rx}+\mu s e^{sx}$ \\ 
+	\indent $f''(x)=\lambda r^2e^{rx}+\mu s^2 e^{sx}$ \\ 
+	$af''(x)+b'f(x)+cf(x)=\lambda e^{rx}\underbrace{(ar^2+br+c)}_{=0}+ \mu e^{sx}\underbrace{(as^2+bs+c)}_{=0}=0$ \\ 
+	\textcolor{red}{2)} Montrons que toute solution est de cette forme : \\ 
+	Soit $f \in S_h :af''+bf'+cf=0$ \\ 
+	Posons $g : \mathbb{R} \rightarrow \mathbb{C}$ \\ 
+	\indent $x \rightarrow f(x)e^{-rx}$ \\ 
+	Pour $x \in \mathbb{R}:g'(x)=f'(x)e^{-rx}-rf(x)e^{-rx}$ \\ 
+	\indent $g''(x)=f''(x)e^{-rx}-2rf'(x)e^{-rx}+r^2f(x)e^{-rx}$ \\
+	$g''(x)=(- \frac{b}{a}f'(x)-\frac{c}{a}f(x))e^{-rx} -2r f'(x)e^{-rx}+r^2f(x)e^{-rx}$ \\ 
+	$g''(x)=((s-r)f'(x)-(s-r)rf(x))e^{-rx}$ \\ 
+	$g''(x)=(s-r)e^{-rx}(f'(x)-rf(x))e^{-rx}=(s-r)g'(x)$ \\ 
+	Posons h=g' : \\ 
+	$h'-(s-r)h=0$ \\ 
+	Ainsi il existe $\alpha \in \mathbb{C}$ tel que : \\ 
+	$\forall x \in \mathbb{R},h(x)=\alpha e^{(s-r)x}$ \\ 
+	Comme $g'=h$, et $s-r \neq 0$ donc il existe $\beta \in \mathbb{C}$ tel que : \\ 
+	$\forall x \in \mathbb{R},g(x)=\beta+\frac{\alpha}{s-r}e^{(s-r)x}$ \\ 
+	$\forall x \in \mathbb{R},f(x)=\beta e^{rx}+\frac{\alpha}{s-r}e^{sx}$ \\
+	\textcolor{red}{3)} Si on se donne $f \in S_E$: \\ 
+	$f(0)=\lambda + \mu $ \\ 
+	$f'(0)=\lambda r + \mu s$ \\ 
+	donc : $ \mu (s-r)=f'(0)-rf(0) $ \\ 
+	$\lambda (s-r)=sf(0)-f(0)$ \\ 
+	Comme $s-r \neq 0$: \\ 
+	$\lambda =\frac{sf(0)-f'(0)}{s-r}$ \\ 
+	$\mu = \frac{f'(0)-rf(0)}{s-r}$
+	\section{équation différentielles linéaire du 2 ordre à coefficient constant homogène : $\mathbb{K} = \mathbb{C}$, équation caractéristique de discrimant = 0 }
+	\textcolor{green}{Propriété :}
+	$\mathbb{K} =\mathbb{C}$ \\ 
+	Soit une EDL2CCH : \\ 
+	$ay''+by'+cy=0$ avec $(a,b,c) \in \mathbb{C}^* \times \mathbb{C} \times \mathbb{C}$ \\ 
+	Soit l'équation : \\ 
+	$az^2+bz+c=0$ d'inconnue $z \in \mathbb{C}$ \\ 
+	Alors : \\ 
+	Si l'équation admet une racine double r : \\ 
+	$S_H=\mathbb{R} \rightarrow \mathbb{C}$ \\ 
+	\indent $x \rightarrow (x+\mu x)e^{rx}$ avec $(\lambda , \mu ) \in \mathbb{C}^2$ \\ 
+	\textcolor{red}{Démonstration :} Comme r est une racine double donc : \\ 
+	$2r_0=-\frac{b}{a}$ \\ 
+	$r_0^2=\frac{c}{a}$ \\ 
+	\textcolor{red}{1)} soit $f : \mathbb{R} \rightarrow \mathbb{C}$ \\ 
+	\indent $x \rightarrow (\lambda + \mu x)e^{r_0x}$ \\ 
+	avec $(\lambda,\mu) \in \mathbb{C}^2$ \\ 
+	Pour $x \in \mathbb{R}$ : \\ 
+	$f'(x)=\mu e^{r_0x}+(\lambda +\mu x)r_0e^{r_0x}$ \\ 
+	$f''(x)=2\mu r_0 e^{r_0x}+(\lambda + \mu x){r_0}^2 e^{r_0x}$ \\ 
+	$af''(x)+bf'(x)+cf(x)=e^{r_0x}(\underbrace{(ar_0^2+br_0+c)}_{=0}(\lambda + \mu x)+\mu\underbrace{(2r_0a+b)}_{=0})=0$ \\ 
+	\textcolor{red}{b)} Soit $f \in S_H$ : \\ 
+	Posons $g: \mathbb{R} \rightarrow \mathbb{C}$ \\ 
+	\indent $x \rightarrow f(x) e^{-r_0x}$ \\ 
+	Posons $x \in \mathbb{R}$ : \\ 
+	$g'(x)=f'(x)e^{-r_0x}-r_0f(x)e^{r_0x}$ \\ 
+	$g''(x)= f''(x)e^{-r_0x}-2r_0f'(x)e^{-r_0x}+{r_0}^2f(x)e^{-r_0x}$ \\ 
+	$f''(x)e^{-r_0x}= \frac{-b}{a}f'(x)-\frac{c}{a}f(x)$\\ 
+	$f''(x)e^{-r_0x}=2r_0 f'(x)-{r_0}^2f(x)$ \\ 
+	$g''(x)=\tilde 0$ \\ 
+	$\exists \mu \in \mathbb{C}, \forall x \in \mathbb{R}, g'(x)=\mu$ \\ 
+	$\exists \mu \in \mathbb{C}, \forall x \in \mathbb{R}, g(x)=\lambda +\mu x$ \\ 
+	$f(x)=(\lambda + \mu x)e^{r_0x}$ \\ 
+	\textcolor{red}{3)} Si $f \in S_H$ est donnée : \\ 
+	$f(0)=\lambda$ \\ 
+	$f'(0)=\mu +\lambda r_0$ \\ 
+	$\lambda = f(0)$ \\ 
+	$\mu =f'(0)-r_0f(0)$
+	\section{équation différentielles linéaire du 2 ordre à coefficient constant homogène : $\mathbb{K} = \mathbb{R}$, équation caractéristique de discrimant > 0 }
+	\textcolor{green}{Propriété :} $\mathbb{K} =\mathbb{R}$, soit une EDL2CCH : \\ 
+	$ay''+by'+cy=0$ où $(a,b,c)\in \mathbb{R}^* \times \mathbb{R} \times \mathbb{R}$ \\ 
+	$az^2+bz+c=0$ \\ 
+	Si l'équation a deux racines réelles simples r et s : \\ 
+	$S_H= \mathbb{R} \rightarrow \mathbb{R}$ \\ 
+	$x \rightarrow \lambda e^{rx}+\mu e^{sx}$ avec $(\lambda , \mu) \in \mathbb{R}^2$ \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	\textcolor{red}{1)} f(x) convient bien voir cas complexe \\ 
+	\textcolor{red}{2)} soit $f \in S_H$ par la propriété précédente : \\ 
+	$\exists ! (\lambda,\mu)\in \mathbb{C}^2,\forall x \in \mathbb{R},f(x)= \lambda e^{rx}+ \mu e^{sx}$ \\ 
+	alors : $\forall x \in \mathbb{R}, \overline{f(x)}=\overline{\lambda}e^{\overline{rx}}+\overline{\mu} e^{\overline{sx}}$ \\ 
+	Comme r et s sont réels et $f: \mathbb{R}\rightarrow \mathbb{R}$ : \\ 
+	$\forall x \in \mathbb{R}, \overline{f(x)}=\overline{\lambda}e^{rx}+ \overline{\mu} e^{sx}$ \\ 
+	Par unicité des coefficients dans le cas complexe on a donc : \\ 
+	$\lambda=\overline{\lambda}, \mu =\overline{\mu}$ \\ 
+	c'est-à-dire $(\lambda , \mu ) \in \mathbb{R}^2$ \\ 
+	\textcolor{red}{3)} unicité : acquise
+	\section{équation différentielles linéaire du 2 ordre à coefficient constant homogène : $\mathbb{K} = \mathbb{R}$, équation caractéristique de discrimant < 0 }
+	\textcolor{green}{Propriété :} $\mathbb{K} =\mathbb{R}$, soit une EDL2CCH : \\ 
+	$ay''+by'+cy=0$ où $(a,b,c)\in \mathbb{R}^* \times \mathbb{R} \times \mathbb{R}$ \\ 
+	$az^2+bz+c=0$ \\ 
+	Si l'équation a deux racines réelles complexes non réelles conjuguées : \\
+	$\alpha \pm i \omega (\alpha \in \mathbb{R}, \omega \in \mathbb{R}^*)$ \\ 
+	$S_H= \mathbb{R} \rightarrow \mathbb{R}$ \\ 
+	$x \rightarrow \underbrace{e^{\alpha x}(C \cos(\omega x) + D \sin(\omega x)}_{=A e^{\alpha x} \cos(\omega x - \phi )}$ \\
+	Coefficient (C,D) uniquement déterminé \\ 
+	\textcolor{red}{Démonstration :} \\ 
+	\textcolor{red}{1)} Notons $r=\alpha + i \omega$ \\ 
+	Nous savons que la fonction $f : \mathbb{R} \rightarrow \mathbb{C}$ \\ 
+	\indent $x \rightarrow e^{ix}$ \\ 
+	verifie : $af''+bf'+cf=0$ \\ 
+	avec $u= \mathcal{Re}(f)$ et $v=\mathcal{Img}(f(x))$ \\ 
+	comme $(a,b,c) \in \mathbb{R}^3$: \\
+	$au''+bu'+cu=0$ \\ 
+	$av''+bv'+cv=0$ \\ 
+	Pour $(\lambda, \mu) \in \mathbb{R}^2$ : \\ 
+	$a(\lambda u + \mu v)''+b(\lambda u +\mu v)'+c(\lambda u +\lambda v)=0$ \\ 
+	$\lambda u +\mu v \in S_H$ \\ 
+	On a bien : $\forall x \in \mathbb{R}, \lambda u(x)+\mu v(x)=\lambda \mathcal{Re}(e^{\alpha x} e^{i\omega x})+\mu \mathcal{Img}(e^{ax}e^{i \omega x})$ \\ 
+	$= \lambda e^{\alpha x} \cos(\omega x)+ \mu e^{\alpha x}\sin(\omega x)$ \\ 
+	\textcolor{red}{2)} Soit $f \in S_H$ : \\ 
+	$af''+bf'+cf=0$ avec $f:\mathbb{R} \rightarrow \mathbb{R}$ : \\ 
+	On sait qu'il existe $(\lambda,\mu) \in \mathbb{C}^2$ tel que : \\ 
+	$\forall x \in \mathbb{R}, f(x)=\lambda e^{(\alpha +i \omega)x}+ \mu e^{(a-i\omega)x}$ \\ 
+	donc : $\forall x \in \mathbb{R}, \overline{f(x)}=\overline {\lambda e^{(\alpha +i \omega)x}+ \mu e^{(a-i\omega)x}}$ \\ 
+	$\forall x \in \mathbb{R}, f(x)=\overline {\lambda} e^{(\alpha -i \omega)x}+ \overline{\mu} e^{(a+i\omega)x}$ car $f: \mathbb{R} \rightarrow \mathbb{R}$ \\ 
+	Par unicité des coefficients dans le cas complexe : \\ 
+	\indent $\lambda=\overline{\mu}$ $\mu= \overline{\lambda}$ \\ 
+	Sous forme exponnentielle ; $\mu = B e^{i \phi}$ $(B \in \mathbb{R}_+, \phi \in \mathbb{R})$ donc $\lambda=Be^{-i\phi}$ \\ 
+	Pour $x \in \mathbb{R}$ : $f(x) = Be^{-i\phi}e^{(\alpha+i\omega)x}+Be^{i \phi}e^{(\alpha- i \omega)x}$ \\ 
+	$f(x)= B e^{\alpha x}(e^{i(\omega x-\phi)}+e^{i(\phi -\omega x)})$ \\ 
+	$f(x)=2Be^{\alpha x}\cos(\omega x - \phi)$ \\ 
+	Posons $A= 2B \in \mathbb{R}$ \\ 
+	$\forall x \in \mathbb{R},f(x)=e^{\alpha x}(C cos(\omega x)+D sin(\omega x))$ \\ 
+	avec $ C= A \cos(\phi) \in \mathbb{R}$ \\ 
+	$D= A \sin(\phi) \in \mathbb{R}$ \\ 
+	\textcolor{red}{3)} Pour $f \in S_H$ donnée : \\ 
+	$f(0)=C$ \\ 
+	$f(\frac{\pi}{2\omega})=\underbrace{e^{\frac{\alpha \pi}{2 \omega}}}_{\neq 0}D$
+	\section{équation différentielles linéaire du 2 ordre à coefficient constant à second membre de la forme $P(x)e^{mx}$ : recherche d'une solution particulière (uniquement P=1) }
+	\textcolor{green}{Propriété :} solution particulière pour second membre polynôme $\times$ exponnentielle : \\ 
+	$ay''+by'+cy=P(x)e^{mx}$ \\
+	avec $(a,b,c)\in \mathbb{K}^* \times \mathbb{K} \times \mathbb{K}$, $P(x)$ : polynôme $m \in \mathbb{K}$ \\ 
+	$az^2+bz+c=0$ \\ 
+	\textcolor{green}{1)} Si m n'est pas racine de l'équation on cherche une solution particulière de E sous la forme : \\ 
+	$x \rightarrow Q(x)e^{mx}$ \\ 
+	Avec $Q(x)$polynome de même degré que P \\ 
+	\textcolor{green}{2)} Si m est racine simple de l'équation on a : \\
+	$x \rightarrow xQ(x)e^{mx}$ \\ 
+	\textcolor{green}{3)} Si m est racine double de l'équation on a alors : \\ 
+	$x \rightarrow x^2Q(x)e^{mx}$
+	\textcolor{red}{Démonstration :} cas P=1 uniquement \\ 
+	\textcolor{green}{1)}$y_p(x)= \lambda e^{mx}$ \\ 
+	$y'_p= \lambda m e^{mx}$ \\ 
+	$y''_p=\lambda m^2 e^{mx}$
+	Or : \\ 
+	$ay''_p+by'_p+cy_p=e^{mx}$ \\ 
+	c'est-à-dire : $\lambda(am^2+bm+c)e^{mx}=e^{mx}$ \\ 
+	$\lambda= \frac{1}{am^2+bm+c}$ \\ 
+	\textcolor{green}{2)} $y_p(x)=\lambda x e^{mx}$ \\ 
+	$y'_p(x)= \lambda e^{mx}+\lambda x me^{mx}$ \\ 
+	$y''_p(x)=2\lambda e^{mx}+ \lambda m^2xe^{mx}$ \\ 
+	or : $ay''_p+by'_p+cy_p=e^{mx}$ \\ 
+	$\lambda \underbrace{(am^2+bm+c)}_{=0}xe^{mx}+ \lambda (2am+b)e^{mx}=e^{mx}$ \\
+	$\lambda (2am +b)=1$ \\ 
+	avec m' l'autre racine du polynôme :
+	$m+m'=-\frac{b}{a}$ \\ 
+	donc si on avait $2am=0$: \\ 
+	 $m=\frac{-b}{2a}$ \\ 
+	 $m'=-\frac{b}{a}+\frac{b}{2a}=-\frac{b}{2a}=m$ \\ 
+	 impossible car m racine simple donc : \\ 
+	 $\lambda = \frac{1}{2am+b}$ \\ 
+	 \textcolor{green}{3)} $y_p(x)=\lambda x^2 e^{mx}$ \\ 
+	 $y'_p(x)=2\lambda x e^{mx}+ \lambda m x^2 e^{mx}$ \\ 
+	 $y''_p(x)=2 \lambda e^{mx}+4 \lambda m x e^{mx}+\lambda m^2 x^2 e^{mx}$ \\ 
+	 $\lambda\underbrace{(am^2+bm+c)}_{=0}x^2e^{mx}+2 \lambda \underbrace{(2am+b)}_{=0 \quad m \quad racine \quad double}x e^{mx}+2\lambda a e^{mx}=e^{mx}$ \\
+	 Comme $a \neq 0$ on a donc $\lambda=\frac{1}{2a}$
+	\end{document}
